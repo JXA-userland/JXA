@@ -117,7 +117,7 @@
                         <xref target="display dialog"/>
 		</command>
 		<record-type name="alert reply" code="aleR" description="Reply record for the ‘display alert’ command">
-			<prvhfoperty name="button returned" code="bhit" type="text" access="r" description="name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)"/>
+			<property name="button returned" code="bhit" type="text" access="r" description="name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)"/>
 			<property name="gave up" code="gavu" type="boolean" access="r" description="Did the alert time out? (present only if ‘giving up after’ was supplied)"/>
 		</record-type>
 		<command name="display dialog" code="sysodlog" description="Display a dialog box, optionally requesting user input">
@@ -176,7 +176,7 @@
 					as it is not used to produce the speech in that case.</p>
 				]]>
 				</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<enumeration name="stic" code="stic">
 			<enumerator name="stop" code="0x00000000" description="The Stop alert icon"/>
@@ -214,7 +214,7 @@
  					This command is deprecated; use &lsquo;tell application "System Events" to get the properties of …&rsquo;.
                            ]]>
                            	</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<record-type name="file information" code="asfe" description="Reply record for the ‘info for’ command">
 			<property name="name" code="pnam" type="text" access="r" description="the name of the item"/>
@@ -251,7 +251,7 @@
  					This command is deprecated; use &lsquo;tell application "System Events" to get the name of every disk&rsquo;.
                            ]]>
                            	</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<command name="list folder" code="earslfdr" description="Return the contents of a specified folder">
 			<direct-parameter type="file" description="an alias or file reference to the folder"/>
@@ -265,7 +265,7 @@
  					This command is deprecated; use &lsquo;tell application "System Events" to get the name of every item of folder …&rsquo;.
                            ]]>
                            	</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<command name="mount volume" code="aevtmvol" description="Mount the specified server volume">
 			<direct-parameter type="text" description="the name or URL path (e.g. ‘afp://server/volume/’) of the volume to mount"/>
@@ -408,7 +408,7 @@
  					This command is deprecated; use &lsquo;character id …&rsquo;.
                            ]]>
                            	</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<command name="ASCII number" code="sysocton" description="Convert a character to a number">
 			<direct-parameter type="text" description="the character"/>
@@ -420,7 +420,7 @@
  					This command is deprecated; use &lsquo;id …&rsquo;.
                            ]]>
                            	</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<command name="localized string" code="sysolocS" description="Return the localized string for the specified key">
 			<direct-parameter type="text" description="the key"/>
@@ -565,7 +565,7 @@
 						<a href="http://developer.apple.com/technotes/tn2002/tn2065.html">Technical Note TN2065</a>.
 					]]>
 				</html>
-			</documentation>
+			</documentation>			
 		</command>
 		<command name="get volume settings" code="sysogtvl" description="Get the sound output and input volume settings">
 			<result type="volume settings" description="a record containing the sound output and input volume settings"/>

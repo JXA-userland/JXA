@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)" />
+	<suite name="Reminders Suite" code="remi" description="Terms and Events for controlling the Reminders application">
+		
+        <command name="GetURL" code="GURLGURL" description="Open a Reminder in the UI" hidden="yes">
+            <access-group identifier="com.apple.Reminders.read-write" access="rw"/>
+			<cocoa class="RemindersScriptGetURLCommand"/>
+            <access-group identifier="*"/>
+			<direct-parameter type="text" description="the Reminders URL"/>
+		</command>
+        
+        <command name="show" code="remishow" description="Show an object in the UI">
+            <access-group identifier="com.apple.Reminders.UI"/>
+			<direct-parameter description="The object to be shown">
+				<type type="list"/>
+				<type type="reminder"/>
+			</direct-parameter>
+			<result description="The object shown.">
+				<type type="list"/>
+				<type type="reminder"/>
+			</result>
+		</command>
+        
+        <class-extension extends="application" description="the Reminders application">
+            <access-group identifier="com.apple.Reminders.read-write" access="rw"/>
+            <access-group identifier="com.apple.Reminders.read" access="r"/>
+            <cocoa class="RemindersApplication" />
+			<element type="account">
+				<cocoa key="scriptingAccounts"/>
+			</element>
+            <element type="list">
+                <cocoa key="scriptingLists" />
+            </element>
+            <element type="reminder">
+                <cocoa key="scriptingReminders" />
+            </element>
+            <property name="default account" code="dact" type="account" access="r" description="the account currently active in the Reminders application">
+                <cocoa key="scriptingDefaultAccount"/>
+            </property>
+            <property name="default list" code="dlis" type="list" access="r" description="the list currently active in the Reminders application">
+                <cocoa key="scriptingDefaultList"/>
+            </property>
+        </class-extension>
+        
+        <class name="account" code="acct" description="an account in the Notes application">
+            <access-group identifier="com.apple.Reminders.read-write" access="rw"/>
+            <access-group identifier="com.apple.Reminders.read" access="r"/>
+            <cocoa class="RemindersAccount"/>
+            <element type="list">
+                <cocoa key="scriptingLists" />
+            </element>
+            <property name="name" code="pnam" type="text" access="r" description="the name of the account">
+                <cocoa key="scriptingTitle"/>
+            </property>
+            <property name="id" code="ID  " type="text" access="r" description="the unique identifier of the account">
+                <cocoa key="scriptingIdentifier"/>
+            </property>
+        </class>
+        
+        <class name="list" plural="lists" code="list" inherits="item" description="a list in the Reminders application">
+            <access-group identifier="com.apple.Reminders.List.read-write" access="rw"/>
+            <access-group identifier="com.apple.Reminders.read" access="r"/>
+            <cocoa class="RemindersCalendarList" />
+			<responds-to command="show">
+				<cocoa method="handleShowScriptCommand:"/>
+			</responds-to>
+            <element type="reminder">
+                <cocoa key="scriptingReminders" />
+            </element>
+            <property name="name" code="pnam" type="text" description="the name of the list">
+                <cocoa key="scriptingTitle" />
+            </property>
+            <property name="id" code="ID  " type="text" access="r" description="the unique identifier of the list">
+                <cocoa key="scriptingIdentifier" />
+            </property>
+            <property name="container" code="cntr" type="account" access="r" description="the container of the list">
+                <cocoa key="scriptingContainer" />
+            </property>
+        </class>
+        
+        <class name="reminder" plural="reminders" code="remi" inherits="item" description="a reminder in the Reminders application">
+            <access-group identifier="com.apple.Reminders.read-write" access="rw"/>
+            <access-group identifier="com.apple.Reminders.read" access="r"/>
+            <cocoa class="EKReminder" />
+			<responds-to command="show">
+				<cocoa method="handleShowScriptCommand:"/>
+			</responds-to>
+            <property name="name" code="pnam" type="text" description="the name of the reminder">
+                <cocoa key="scriptingTitle" />
+            </property>
+            <property name="id" code="ID  " type="text" access="r" description="the unique identifier of the reminder">
+                <cocoa key="scriptingUUID" />
+            </property>
+            <property name="body" code="body" type="text" description="the notes attached to the reminder">
+                <cocoa key="scriptingNotes" />
+            </property>
+            <property name="completed" code="comb" type="boolean" description="Is the reminder completed?">
+                <cocoa key="scriptingCompleted" />
+            </property>
+            <property name="completion date" code="comd" type="date" description="the completion date of the reminder">
+                <cocoa key="scriptingCompletionDate" />
+            </property>
+            <property name="container" code="cntr" type="list" access="r" description="the container of the reminder">
+                <cocoa key="scriptingContainer" />
+            </property>
+            <property name="creation date" code="ascd" type="date" access="r" description="the creation date of the reminder">
+                <cocoa key="scriptingCreationDate" />
+            </property>
+            <property name="due date" code="dued" type="date" description="the due date of the reminder">
+                <cocoa key="scriptingDueDate" />
+            </property>
+            <property name="modification date" code="asmo" type="date" access="r" description="the modification date of the reminder">
+                <cocoa key="scriptingLastModifiedDate" />
+            </property>
+            <property name="remind me date" code="rmdt" type="date" description="the remind date of the reminder">
+                <cocoa key="scriptingRemindMeDate" />
+            </property>
+            <property name="priority" code="prio" type="integer" description="the priority of the reminder">
+                <cocoa key="scriptingPriority" />
+            </property>
+        </class>
+        
+        
+        <!--    this is required by Cocoa Scripting -->
+        <enumeration name="saveable file format" code="savf">
+            <enumerator name="text" code="ctxt" description="Text File Format">
+                <cocoa string-value="public.text"/>
+            </enumerator>
+        </enumeration>
+	</suite>
+</dictionary>

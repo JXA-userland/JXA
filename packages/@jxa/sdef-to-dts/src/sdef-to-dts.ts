@@ -144,7 +144,7 @@ const recordToJSONSchema = (command: Record): JSONSchema => {
     }
 };
 
-const commandToDeclare = async (namespace: string, command: Command, recordSchema: JSONSchema[]): Promise<{
+const commandToDeclare = async (namespace: string, command: Command, recordSchema: JSONSchema[], optionalMap: Map<string, number>): Promise<{
     header: string;
     body: string;
 }> => {
@@ -170,7 +170,12 @@ const commandToDeclare = async (namespace: string, command: Command, recordSchem
     const parameters = command.children.filter(node => {
         return node.type === "element" && node.name === "parameter" && typeof node.attributes === "object";
     });
-    const optionalParameterTypeName = `${pascalCaseName}OptionalParameter`;
+    let optionalParameterTypeName = `${pascalCaseName}OptionalParameter`;
+    const optionalParameterTypeNameCount = optionalMap.get(optionalParameterTypeName) || 0;
+    if(optionalParameterTypeNameCount > 0){
+        optionalParameterTypeName += String(optionalParameterTypeNameCount);
+    }
+    optionalMap.set(optionalParameterTypeName, optionalParameterTypeNameCount + 1);
     const optionalParameterType = await createOptionalParameter(optionalParameterTypeName, parameters);
     const optionalParameters = optionalParameterType ? `option?: ${namespace}.${optionalParameterTypeName}` : "";
     const optionalParameterDoc = optionalParameterType ? `* @param option` : "";
@@ -225,8 +230,9 @@ export const transform = async (namespace: string, sdefContent: string) => {
     const recordDefinitions = await Promise.all(recordSchema.map(schema => {
         return compile(schema, schema.title!)
     }));
+    const optionalBindingMap = new Map<string, number>();
     const functionDefinitions = await Promise.all(commands.map(command => {
-        return commandToDeclare(namespace, command, recordSchema);
+        return commandToDeclare(namespace, command, recordSchema,optionalBindingMap);
     }));
     const functionDefinitionHeaders = functionDefinitions.map(def => def.header);
     const functionDefinitionBodies = functionDefinitions.map(def => def.body);
@@ -237,7 +243,7 @@ ${indentString(recordDefinitions.join("\n"), 4)}
     // Function options
 ${indentString(functionDefinitionHeaders.join("\n"), 4)}
 }
-export interface ${namespace}{
+export interface ${namespace} {
     // Functions
 ${indentString(functionDefinitionBodies.join("\n"), 4)}
 }

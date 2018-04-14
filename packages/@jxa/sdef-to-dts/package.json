@@ -1,6 +1,6 @@
 {
-  "name": "sdef-to-dts",
-  "version": "1.0.0",
+  "name": "@jxa/sdef-to-dts",
+  "version": "0.1.0",
   "description": "Scripting definition files (sdefs) to TypeScript(d.ts)",
   "keywords": [
     "applescript",
@@ -37,6 +37,9 @@
     "updateSnapshot": "cross-env UPDATE_SNAPSHOT=1 mocha \"test/**/*.ts\"",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "watch": "tsc -p . --watch"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "prettier": {
     "printWidth": 120,

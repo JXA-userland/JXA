@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Dictionary">
+	<suite name="Standard Suite" code="core" description="Common classes and commands for all applications.">
+        <access-group identifier="com.apple.ichat.applescript" access="rw"/>
+		<cocoa name="NSCoreSuite"/>
+		<enumeration name="save options" code="savo">
+			<enumerator name="yes" code="yes " description="Save the file."/>
+			<enumerator name="no" code="no  " description="Do not save the file."/>
+			<enumerator name="ask" code="ask " description="Ask the user whether or not to save the file."/>
+		</enumeration>
+		<class name="item" code="cobj" description="A scriptable object.">
+			<cocoa class="AbstractObject"/>
+			<property name="class" code="pcls" type="type" access="r" description="The class of the object.">
+				<cocoa key="classCode"/>
+			</property>
+			<property name="properties" code="pALL" type="record" description="All of the object's properties.">
+				<cocoa key="scriptingProperties"/>
+			</property>
+			<responds-to command="count">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="delete">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="duplicate">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="exists">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="get">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="move">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="set">
+				<cocoa method=""/>
+			</responds-to>
+		</class>
+		<class name="application" code="capp" description="The application&apos;s top-level scripting object.">
+			<cocoa class="NSApplication"/>
+			<element type="document">
+				<cocoa key="orderedDocuments"/>
+			</element>
+			<element type="window" access="r">
+				<cocoa key="orderedWindows"/>
+			</element>
+			<property name="name" code="pnam" description="The name of the application." type="text" access="r"/>
+			<property name="frontmost" code="pisf" description="Is this the frontmost (active) application?" type="boolean" access="r">
+				<cocoa key="isActive"/>
+			</property>
+			<property name="version" code="vers" description="The version of the application." type="text" access="r"/>
+			<responds-to command="open">
+				<cocoa method="handleOpenScriptCommand:"/>
+			</responds-to>
+			<responds-to command="print">
+				<cocoa method="handlePrintScriptCommand:"/>
+			</responds-to>
+			<responds-to command="quit">
+				<cocoa method="handleQuitScriptCommand:"/>
+			</responds-to>
+		</class>
+		<class name="color" code="colr" description="A color.">
+			<cocoa class="NSColor"/>
+		</class>
+		<class name="document" code="docu" description="An Messages document.">
+			<cocoa class="NSDocument"/>
+			<property name="name" code="pnam" description="The document&apos;s name." type="text" access="r">
+				<cocoa key="displayName"/>
+			</property>
+			<property name="modified" code="imod" description="Has the document been modified since the last save?" type="boolean" access="r">
+				<cocoa key="isDocumentEdited"/>
+			</property>
+			<property name="file" code="file" description="The document&apos;s location on disk." type="file" access="r">
+				<cocoa key="fileURL"/>
+			</property>
+			<responds-to command="close">
+				<cocoa method="handleCloseScriptCommand:"/>
+			</responds-to>
+			<responds-to command="print">
+				<cocoa method="handlePrintScriptCommand:"/>
+			</responds-to>
+			<responds-to command="save">
+				<cocoa method="handleSaveScriptCommand:"/>
+			</responds-to>
+		</class>
+		<class name="window" code="cwin" description="A window.">
+			<cocoa class="NSWindow"/>
+			<property name="name" code="pnam" description="The full title of the window." type="text" access="r">
+				<cocoa key="title"/>
+			</property>
+			<property name="id" code="ID  " description="The unique identifier of the window." type="integer" access="r">
+				<cocoa key="uniqueID"/>
+			</property>
+			<property name="index" code="pidx" description="The index of the window, ordered front to back." type="integer">
+				<cocoa key="orderedIndex"/>
+			</property>
+			<property name="bounds" code="pbnd" description="The bounding rectangle of the window." type="rectangle">
+				<cocoa key="boundsAsQDRect"/>
+			</property>
+			<property name="closeable" code="hclb" description="Whether the window has a close box." type="boolean" access="r">
+				<cocoa key="hasCloseBox"/>
+			</property>
+			<property name="minimizable" code="ismn" description="Whether the window can be minimized." type="boolean" access="r">
+				<cocoa key="isMiniaturizable"/>
+				<synonym name="miniaturizable"/>
+			</property>
+			<property name="minimized" code="pmnd" description="Whether the window is currently minimized." type="boolean">
+				<cocoa key="isMiniaturized"/>
+				<synonym name="miniaturized"/>
+			</property>
+			<property name="resizable" code="prsz" description="Whether the window can be resized." type="boolean" access="r">
+				<cocoa key="isResizable"/>
+			</property>
+			<property name="visible" code="pvis" description="Whether the window is currently visible." type="boolean">
+				<cocoa key="isVisible"/>
+			</property>
+			<property name="zoomable" code="iszm" description="Whether the window can be zoomed." type="boolean" access="r">
+				<cocoa key="isZoomable"/>
+			</property>
+			<property name="zoomed" code="pzum" description="Whether the window is currently zoomed." type="boolean">
+				<cocoa key="isZoomed"/>
+			</property>
+			<property name="document" code="docu" description="The document whose contents are being displayed in the window." type="document" access="r"/>
+			<responds-to command="close">
+				<cocoa method="handleCloseScriptCommand:"/>
+			</responds-to>
+			<responds-to command="print">
+				<cocoa method="handlePrintScriptCommand:"/>
+			</responds-to>
+			<responds-to command="save">
+				<cocoa method="handleSaveScriptCommand:"/>
+			</responds-to>
+		</class>
+		<command name="open" code="aevtodoc" description="Open a document.">
+			<direct-parameter description="The file(s) to be opened.">
+				<type type="file" list="yes"/>
+			</direct-parameter>
+		</command>
+		<command name="close" code="coreclos" description="Close a document.">
+			<cocoa class="NSCloseCommand"/>
+			<direct-parameter description="the document(s) or window(s) to close." type="specifier"/>
+			<parameter name="saving" code="savo" description="Whether or not changes should be saved before closing." type="save options" optional="yes">
+				<cocoa key="SaveOptions"/>
+			</parameter>
+			<parameter name="saving in" code="kfil" description="The file in which to save the document." type="file" optional="yes">
+				<cocoa key="File"/>
+			</parameter>
+		</command>
+		<command name="save" code="coresave" description="Save a document.">
+			<direct-parameter description="The document(s) or window(s) to save." type="specifier"/>
+			<parameter name="in" code="kfil" description="The file in which to save the document." type="file" optional="yes">
+				<cocoa key="File"/>
+			</parameter>
+			<parameter name="as" code="fltp" description="The type of file to save." type="text" optional="yes">
+				<cocoa key="FileType"/>
+			</parameter>
+		</command>
+		<command name="set" code="coresetd" description="Set an object's data.">
+			<cocoa class="NSSetCommand"/>
+			<direct-parameter type="specifier"/>
+<!-- "set" is supposed to return the fully evaluated "to" data.
+				<result type="any"/>
+				-->
+			<parameter name="to" code="data" type="any" description="The new value.">
+				<cocoa key="Value"/>
+			</parameter>
+		</command>
+		<command name="print" description="Print an object." code="aevtpdoc">
+			<direct-parameter type="file" description="The file(s) or document(s) to be printed."/>
+		</command>
+		<command name="quit" code="aevtquit" description="Quit the application.">
+			<cocoa class="NSQuitCommand"/>
+			<parameter name="saving" code="savo" description="Whether or not changed documents should be saved before closing." type="save options" optional="yes">
+				<cocoa key="SaveOptions"/>
+			</parameter>
+		</command>
+		<command name="count" code="corecnte" description="Return the number of elements of a particular class within an object.">
+			<cocoa class="NSCountCommand"/>
+			<direct-parameter description="the object whose elements are to be counted" type="specifier"/>
+			<parameter name="each" code="kocl" description="The class of objects to be counted." type="type" optional="yes">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<result description="the number of elements" type="integer"/>
+		</command>
+		<command name="delete" code="coredelo" description="Delete an object.">
+			<cocoa class="FezDeleteCommand"/>
+			<direct-parameter description="the object to delete" type="specifier"/>
+		</command>
+		<command name="duplicate" code="coreclon" description="Copy object(s) and put the copies at a new location.">
+			<cocoa class="NSCloneCommand"/>
+			<direct-parameter description="the object(s) to duplicate" type="specifier"/>
+			<parameter name="to" code="insh" description="The location for the new object(s)." type="location specifier" optional="yes">
+				<cocoa key="ToLocation"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" description="Properties to be set in the new duplicated object(s)." type="record" optional="yes">
+				<cocoa key="WithProperties"/>
+			</parameter>
+			<result description="to the duplicated object(s)" type="specifier"/>
+		</command>
+		<command name="exists" code="coredoex" description="Verify if an object exists.">
+			<cocoa class="NSExistsCommand"/>
+			<direct-parameter description="the object in question" type="specifier"/>
+			<result description="true if it exists, false if not" type="boolean"/>
+		</command>
+		<command name="get" code="coregetd" description="Get the data for an object.">
+			<cocoa class="NSGetCommand"/>
+			<direct-parameter type="specifier"/>
+			<result type="any"/>
+		</command>
+		<command name="make" code="corecrel" description="Make a new object.">
+			<cocoa class="FezCreateCommand"/>
+			<parameter name="new" code="kocl" description="The class of the new object." type="type">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<parameter name="at" code="insh" description="The location at which to insert the object." type="location specifier" optional="yes">
+				<cocoa key="Location"/>
+			</parameter>
+			<parameter name="with contents" code="data" description="The initial contents of the object." type="any" optional="yes">
+				<cocoa key="ObjectData"/>
+				<synonym name="with data"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" description="The initial values for properties of the object." type="record" optional="yes">
+				<cocoa key="KeyDictionary"/>
+			</parameter>
+			<result description="to the new object" type="specifier"/>
+		</command>
+		<command name="move" code="coremove" description="Move object(s) to a new location.">
+			<cocoa class="NSMoveCommand"/>
+			<direct-parameter description="the object(s) to move" type="specifier"/>
+			<parameter name="to" code="insh" description="The new location for the object(s)." type="location specifier">
+				<cocoa key="ToLocation"/>
+			</parameter>
+			<result description="to the moved object(s)" type="specifier"/>
+		</command>
+	</suite>
+	<!--
+		TEXT SUITE
+	-->
+	<suite name="Text Suite" code="TEXT" description="A set of basic classes for text processing.">
+        <access-group identifier="com.apple.ichat.applescript" access="rw"/>
+		<value-type name="color" code="cRGB">
+			<cocoa class="NSColor"/>
+		</value-type>
+		<class name="rich text" code="rtfx" description="Rich (styled) text" plural="rich text">
+			<cocoa class="NSTextStorage"/>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+			<property name="color" code="colr" description="The color of the first character." type="color">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" description="The name of the font of the first character." type="text">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" description="The size in points of the first character." type="real">
+				<cocoa key="fontSize"/>
+			</property>
+		</class>
+		<class name="character" code="cha " description="This subdivides the text into characters.">
+			<cocoa class="NSTextStorage"/>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+			<property name="color" code="colr" description="The color of the first character." type="color">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" description="The name of the font of the first character." type="text">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" description="The size in points of the first character." type="integer">
+				<cocoa key="fontSize"/>
+			</property>
+		</class>
+		<class name="paragraph" code="cpar" description="This subdivides the text into paragraphs.">
+			<cocoa class="NSTextStorage"/>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+			<property name="color" code="colr" description="The color of the first character." type="color">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" description="The name of the font of the first character." type="text">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" description="The size in points of the first character." type="integer">
+				<cocoa key="fontSize"/>
+			</property>
+		</class>
+		<class name="word" code="cwor" description="This subdivides the text into words.">
+			<cocoa class="NSTextStorage"/>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+			<property name="color" code="colr" description="The color of the first character." type="color">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" description="The name of the font of the first character." type="text">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" description="The size in points of the first character." type="integer">
+				<cocoa key="fontSize"/>
+			</property>
+		</class>
+		<class name="attribute run" code="catr" description="This subdivides the text into chunks that all have the same attributes.">
+			<cocoa class="NSTextStorage"/>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+			<property name="color" code="colr" description="The color of the first character." type="color">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" description="The name of the font of the first character." type="text">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" description="The size in points of the first character." type="integer">
+				<cocoa key="fontSize"/>
+			</property>
+		</class>
+		<class name="attachment" code="atts" description="Represents an inline text attachment. This class is used mainly for make commands." inherits="rich text">
+			<cocoa class="NSAttachmentTextStorage"/>
+			<property name="file" code="atfn" description="The path to the file for the attachment" type="file" access="r">
+				<cocoa key="filename"/>
+				<synonym name="file name"/>
+			</property>
+		</class>
+	</suite>
+	<suite name="Messages Suite" code="icht" description="commands and classes for Messages scripting.">
+        <access-group identifier="com.apple.ichat.applescript" access="rw"/>
+		<value-type name="TIFF picture" code="TIFF">
+			<cocoa class="NSData"/>
+		</value-type>
+		<enumeration name="InviteType" code="invt">
+			<enumerator name="audio invitation" code="acon">
+				<cocoa name="AudioInvitation"/>
+			</enumerator>
+			<enumerator name="text chat invitation" code="tcon">
+				<cocoa name="TextInvitation"/>
+			</enumerator>
+			<enumerator name="video invitation" code="vcon">
+				<cocoa name="VideoInvitation"/>
+			</enumerator>
+		</enumeration>
+		<enumeration name="AccountStatus" code="psta">
+			<enumerator name="available" code="aval">
+				<cocoa name="Available"/>
+			</enumerator>
+			<enumerator name="away" code="away">
+				<cocoa name="Away"/>
+			</enumerator>
+			<enumerator name="offline" code="offl">
+				<cocoa name="Offline"/>
+			</enumerator>
+			<enumerator name="invisible" code="invs" hidden="yes">
+				<cocoa name="Invisible"/>
+			</enumerator>
+            <enumerator name="idle" code="idle">
+				<cocoa name="Idle"/>
+			</enumerator>
+			<enumerator name="unknown" code="unkn">
+				<cocoa name="Unknown"/>
+			</enumerator>
+		</enumeration>
+		<enumeration name="MyStatus" code="msta">
+			<enumerator name="away" code="away">
+				<cocoa name="Away"/>
+			</enumerator>
+			<enumerator name="available" code="aval">
+				<cocoa name="Available"/>
+			</enumerator>
+			<enumerator name="offline" code="offl">
+				<cocoa name="Offline"/>
+			</enumerator>
+			<enumerator name="invisible" code="invs">
+				<cocoa name="Invisible"/>
+			</enumerator>
+		</enumeration>
+		<enumeration name="connection status" code="ssta">
+			<enumerator name="disconnecting" code="dcng">
+				<cocoa name="Disconnecting"/>
+			</enumerator>
+			<enumerator name="connected" code="conn">
+				<cocoa name="Connected"/>
+			</enumerator>
+			<enumerator name="connecting" code="cong">
+				<cocoa name="Connecting"/>
+			</enumerator>
+			<enumerator name="disconnected" code="dcon">
+				<cocoa name="Disconnected"/>
+			</enumerator>
+		</enumeration>
+		<enumeration name="Capabilities" code="ccap">
+			<enumerator name="video chat" code="vcon">
+				<cocoa name="VideoChat"/>
+			</enumerator>
+			<enumerator name="audio chat" code="acon">
+				<cocoa name="AudioChat"/>
+			</enumerator>
+			<enumerator name="multiperson video" code="mwvc">
+				<cocoa name="MultiwayVideo"/>
+			</enumerator>
+			<enumerator name="multiperson audio" code="mwac">
+				<cocoa name="MultiwayAudio"/>
+			</enumerator>
+		</enumeration>
+		<enumeration name="service type" code="styp">
+			<enumerator name="AIM" code="saim"/>
+			<enumerator name="Bonjour" code="ssub"/>
+			<enumerator name="Jabber" code="sjab"/>
+			<enumerator name="iMessage" code="sims"/>
+		</enumeration>
+		<enumeration name="direction" code="FTdr">
+			<enumerator name="incoming" code="FTic"/>
+			<enumerator name="outgoing" code="FTog"/>
+		</enumeration>
+		<enumeration name="transfer status" code="FTst">
+			<enumerator name="preparing" code="FTsp"/>
+			<enumerator name="waiting" code="FTsw"/>
+			<enumerator name="transferring" code="FTsg"/>
+			<enumerator name="finalizing" code="FTsz"/>
+			<enumerator name="finished" code="FTsf"/>
+			<enumerator name="failed" code="FTse"/>
+		</enumeration>
+		<enumeration name="av type" code="ICAt">
+			<enumerator name="audio" code="ICAa"/>
+			<enumerator name="video" code="ICAv"/>
+		</enumeration>
+		<enumeration name="chat type" code="ICTt">
+			<enumerator name="instant message" code="ICim"/>
+			<enumerator name="direct instant message" code="ICdi"/>
+			<enumerator name="chat room" code="ICcr"/>
+		</enumeration>
+		<enumeration name="join state" code="ICJs">
+			<enumerator name="not joined" code="ICJc"/>
+			<enumerator name="joining" code="ICJg"/>
+			<enumerator name="joined" code="ICJj"/>
+		</enumeration>
+        <enumeration name="av connection status" code="ICAC">
+            <enumerator name="invited" code="ICAi" />
+            <enumerator name="waiting" code="ICAw" />
+            <enumerator name="connecting" code="ICAx" />
+            <enumerator name="connected" code="ICAc" />
+            <enumerator name="ended" code="ICAn" />
+        </enumeration>
+		<class name="application" code="capp" description="Messages application." plural="applications" inherits="application">
+			<cocoa class="NSApplication"/>
+			<element type="buddy" access="r">
+				<cocoa key="buddies"/>
+			</element>
+			<element type="service" access="r">
+				<cocoa key="services"/>
+			</element>
+			<element type="file transfer" access="r">
+				<cocoa key="scriptFileTransfers"/>
+			</element>
+			<element type="chat" access="r">
+				<cocoa key="scriptChats"/>
+			</element>
+			<element type="text chat" access="r">
+				<cocoa key="scriptTextChats"/>
+			</element>
+			<element type="audio chat" access="r">
+				<cocoa key="scriptAudioChats"/>
+			</element>
+			<element type="video chat" access="r">
+				<cocoa key="scriptVideoChats"/>
+			</element>
+			<element type="authorization request" access="r">
+				<cocoa key="scriptAuthorizationRequests"/>
+			</element>
+			<property name="idle time" code="idtm" description="Time in seconds that I have been idle." type="integer" access="r">
+				<cocoa key="myIdleTime"/>
+			</property>
+			<property name="image" code="imaA" description="My image as it appears in all services." type="TIFF picture">
+				<cocoa key="myImage"/>
+			</property>
+			<property name="status" code="stat" type="MyStatus" description="My status on all services.">
+				<cocoa key="myStatus"/>
+			</property>
+			<property name="status message" code="smsg" description="My status message, visible to other people while I am online." type="text">
+				<cocoa key="myStatusMessage"/>
+			</property>
+			<property name="active av chat" code="iaav" type="audio chat" description="The currently active audio or video chat.">
+				<cocoa key="scriptActiveAVChat"/>
+			</property>
+			<responds-to command="log in">
+				<cocoa method="loginScriptCommand:"/>
+			</responds-to>
+			<responds-to command="log out">
+				<cocoa method="logoutScriptCommand:"/>
+			</responds-to>
+			<responds-to command="show chat chooser">
+				<cocoa method="showChatChooserCommand:"/>
+			</responds-to>
+			<responds-to command="store recent picture">
+				<cocoa method="storeRecentPictureCommand:"/>
+			</responds-to>
+			<responds-to command="invite">
+				<cocoa method="inviteScriptCommand:"/>
+			</responds-to>
+		</class>
+		<class name="buddy" code="pres" description="A buddy on a service." plural="buddies"  inherits="item">
+			<synonym name="account"/>
+			<cocoa class="Presentity"/>
+			<property name="id" code="ID  " description="The buddy&apos;s service and handle. For example: AIM:JohnDoe007" type="text" access="r">
+				<cocoa key="uniqueId"/>
+			</property>
+			<property name="service" code="icsv" type="service" access="r" description="The service on which this buddy exists.">
+				<cocoa key="scriptService"/>
+			</property>
+			<property name="name" code="pnam" description="The buddy&apos;s name as it appears in the buddy list." type="text" access="r">
+				<cocoa key="scriptName"/>
+			</property>
+			<property name="handle" code="hndl" description="The buddy&apos;s online account name." type="text" access="r">
+				<cocoa key="scriptAccountName"/>
+			</property>
+			<property name="status" code="stat" description="The buddy&apos;s current status." type="AccountStatus" access="r">
+				<cocoa key="scriptStatus"/>
+			</property>
+			<property name="status message" code="smsg" description="The buddy&apos;s current status message." type="text" access="r">
+				<cocoa key="scriptStatusMessage"/>
+			</property>
+			<property name="idle time" code="idtm" description="The time in seconds the buddy has been idle." type="integer" access="r">
+				<cocoa key="scriptIdleTime"/>
+			</property>
+			<property name="capabilities" code="caps" description="The buddy&apos;s messaging capabilities." access="r">
+				<cocoa key="scriptCaps"/>
+				<type type="Capabilities" list="yes"/>
+			</property>
+			<property name="image" code="imaA" description="The buddy&apos;s custom image." type="TIFF picture" access="r">
+				<cocoa key="scriptImage"/>
+			</property>
+			<property name="scriptAccountLegacyName" code="hand" type="text" access="r" hidden="yes">
+				<cocoa key="scriptAccountLegacyName"/>
+			</property>
+			<property name="first name" code="prfn" description="The first name from this buddy&apos;s Contacts card, if available" type="text" access="r">
+				<cocoa key="scriptFirstName"/>
+			</property>
+			<property name="last name" code="prLn" description="The last name from this buddy&apos;s Contacts card, if available" type="text" access="r">
+				<cocoa key="scriptLastName"/>
+			</property>
+			<property name="full name" code="prFn" description="The full name from this buddy&apos;s Contacts card, if available" type="text" access="r">
+				<cocoa key="scriptFullName"/>
+			</property>
+			<responds-to command="invite">
+				<cocoa method="inviteScriptCommand:"/>
+			</responds-to>
+		</class>
+		<class name="service" code="icsv" description="A service that can be logged in from this system" plural="services" inherits="item">
+			<cocoa class="Account"/>
+			<element type="buddy" access="r"/>
+			<property name="id" code="ID  " description="A guid identifier for this service." type="text" access="r">
+				<cocoa key="uniqueID"/>
+			</property>
+			<property name="name" code="pnam" description="The name of this service as defined in Account preferences description field" type="text">
+				<cocoa key="scriptName"/>
+			</property>
+			<property name="image" code="imaA" description="My image as it appears in all services." type="TIFF picture" hidden="yes">
+				<cocoa key="scriptImage"/>
+			</property>
+			<property name="enabled" code="enbl" description="Is the service enabled?" type="boolean">
+				<cocoa key="scriptEnabled"/>
+			</property>
+			<property name="connection status" code="ssta" type="connection status" access="r" description="The connection status for this account.">
+				<cocoa key="scriptConnectionStatus"/>
+			</property>
+			<property name="status" code="stat" type="MyStatus" description="My status on this service.">
+				<cocoa key="scriptServiceStatus"/>
+			</property>
+			<property name="status message" code="smsg" description="My status message, visible to other people on this service while I am online." type="text">
+				<cocoa key="scriptServiceStatusMessage"/>
+			</property>
+			<property name="service type" code="styp" description="The type of protocol for this service" type="service type" access="r">
+				<cocoa key="scriptServiceType"/>
+			</property>
+			<element type="chat" access="r">
+				<cocoa key="scriptChats"/>
+			</element>
+			<responds-to command="log out">
+				<cocoa method="logoutScriptCommand:"/>
+			</responds-to>
+			<responds-to command="log in">
+				<cocoa method="loginScriptCommand:"/>
+			</responds-to>
+			<responds-to command="send">
+				<cocoa method="sendScriptCommand:"/>
+			</responds-to>
+		</class>
+        <class name="chat" code="icct" description="An audio, video, or text chat.">
+			<cocoa class="Chat"/>
+			<property name="id" code="ID  " type="text" access="r" description="A guid identifier for this chat.">
+				<cocoa key="scriptID"/>
+			</property>
+			<property name="service" code="icsv" type="service" access="r" description="The service which is participating in this chat.">
+				<cocoa key="scriptService"/>
+			</property>
+			<property name="participants" code="ICpt" access="r" description="Other participants of this chat. This property may be specified at time of creation.">
+                <type type="buddy" list="yes"/>
+				<cocoa key="scriptParticipants"/>
+			</property>
+            <property name="secure" code="ICCr" type="boolean" access="r" description="Is this chat secure?">
+                <cocoa key="scriptSecure"/>
+            </property>
+            <property name="invitation" code="ICin" type="boolean" access="r" description="Is this an invitation to a chat?">
+                <cocoa key="scriptInvitation"/>
+            </property>
+            <property name="active" code="ICCv" type="boolean" access="r" description="Is this chat currently active?">
+                <cocoa key="scriptActive"/>
+            </property>
+            <property name="started" code="ICCC" type="date" access="r" description="The date on which this chat started.">
+                <cocoa key="scriptStarted"/>
+            </property>
+            <property name="updated" code="ICCu" type="date" access="r" description="The date when this chat was last updated.">
+                <cocoa key="scriptUpdated"/>
+            </property>
+			<responds-to command="accept">
+				<cocoa method="acceptInvitationScriptCommand:"/>
+			</responds-to>
+			<responds-to command="decline">
+				<cocoa method="declineInvitationScriptCommand:"/>
+			</responds-to>
+        </class>
+        <class name="text chat" code="ictt" description="A text chat." inherits="chat">
+            <cocoa class="Chat"/>
+        	<property name="subject" code="ICCs" type="text" access="r" description="The subject of this chat, if available.">
+                <cocoa key="scriptSubject"/>
+            </property>
+        	<property name="invitation message" code="Ivtm" type="text" access="r" description="An invitation message. This may only be specified at the time of creation. This message will be sent to chat participants when the chat is created.">
+                <cocoa key="scriptInvitationMessage"/>
+            </property>
+            <property name="join state" code="ICJS" type="join state" access="r" description="How you are joined to this chat">
+                <cocoa key="scriptJoinState"/>
+            </property>
+            <property name="name" code="pnam" type="text" access="r" description="The address or room name of this chat. This property may be specified at time of creation.">
+                <cocoa key="scriptName"/>
+            </property>
+            <property name="chat type" code="ICCt" type="chat type" access="r" description="The type of this chat.">
+                <cocoa key="scriptChatType"/>
+            </property>
+			<responds-to command="send">
+				<cocoa method="sendScriptCommand:"/>
+			</responds-to>
+		</class>
+        <class name="audio chat" code="icaa" description="An audio or video chat." inherits="chat">
+            <cocoa class="AVChat"/>
+			<property name="muted" code="icMd" type="boolean" access="rw" description="Is the chat muted?">
+				<cocoa key="scriptMuted"/>
+			</property>
+            <property name="av connection status" code="icAc" type="av connection status" access="r" description="The connection state for this av chat.">
+                <cocoa key="scriptAVConnectionState"/>
+            </property>
+			<responds-to command="request recording">
+				<cocoa method="requestRecordingScriptCommand:"/>
+			</responds-to>
+			<responds-to command="stop recording">
+				<cocoa method="stopRecordingScriptCommand:"/>
+			</responds-to>
+        </class>
+        <class name="video chat" code="icvc" inherits="audio chat">
+            <cocoa class="AVChat"/>
+			<property name="paused" code="icPd" type="boolean" access="rw" description="Is the chat paused?">
+				<cocoa key="scriptPaused"/>
+			</property>
+			<property name="showing full screen" code="icFd" type="boolean" access="rw" description="Is the chat being displayed in full screen mode?">
+				<cocoa key="scriptShowFullScreen"/>
+			</property>
+			<property name="showing local video" code="icLd" type="boolean" access="rw" description="Is the local video preview being displayed?">
+				<cocoa key="scriptShowLocalVideo"/>
+			</property>
+			<responds-to command="take snapshot">
+				<cocoa method="takeVideoSnapshotScriptCommand:"/>
+			</responds-to>
+        </class>
+        <class name="authorization request" code="barq" description="A request to be added to someone else's buddy list" inherits="item">
+            <cocoa class="JabberAuthRequest"/>
+            <property name="id" code="ID  " description="The guid for this authorization request" type="text" access="r">
+                <cocoa key="scriptID"/>
+            </property>
+			<property name="service" code="icsv" type="service" access="r" description="The service on which authorization was requested.">
+				<cocoa key="scriptService"/>
+			</property>
+            <property name="buddy" code="pres" description="The buddy requesting authorization" type="buddy" access="r">
+                <cocoa key="scriptBuddy"/>
+            </property>
+			<responds-to command="accept">
+				<cocoa method="acceptScriptCommand:"/>
+			</responds-to>
+			<responds-to command="decline">
+				<cocoa method="declineScriptCommand:"/>
+			</responds-to>
+        </class>
+        <class name="file transfer" code="tnfr" description="A file being sent or received" plural="file transfers" inherits="item">
+            <cocoa class="FileTransfer"/>
+            <property name="id" code="ID  " description="The guid for this file transfer" type="text" access="r">
+                <cocoa key="scriptID"/>
+            </property>
+            <property name="name" code="pnam" description="The name of this file" type="text" access="r">
+                <cocoa key="scriptName"/>
+            </property>
+			<property name="file" code="ftpt" description="The local path to this file transfer" type="file" access="r">
+				<cocoa key="scriptFilePath"/>
+			</property>
+            <property name="direction" code="FTdr" description="The direction in which this file is being sent" type="direction" access="r">
+                <cocoa key="scriptDirection"/>
+            </property>
+            <property name="service" code="icsv" description="The service on which this file transfer is taking place" type="service" access="r">
+                <cocoa key="scriptService"/>
+            </property>
+            <property name="buddy" code="pres" description="The account participating in this file transfer" type="buddy" access="r">
+                <cocoa key="scriptParticipant"/>
+            </property>
+            <property name="secure" code="ICCr" description="Is this file transfer secure?" type="boolean" access="r">
+                <cocoa key="scriptSecure"/>
+            </property>
+            <property name="file size" code="FTpz" description="The total size in bytes of the completed file transfer" type="integer" access="r">
+                <cocoa key="scriptTransferSize"/>
+            </property>
+            <property name="file progress" code="FTpp" description="The number of bytes that have been transferred" type="integer" access="r">
+                <cocoa key="scriptTransferProgress"/>
+            </property>
+            <property name="transfer status" code="FTpf" description="The current status of this file transfer" type="transfer status" access="r">
+                <cocoa key="scriptTransferStatus"/>
+            </property>
+            <property name="started" code="ICCC" description="The date that this file transfer started" type="date" access="r">
+                <cocoa key="scriptStarted"/>
+            </property>
+			<responds-to command="accept">
+				<cocoa method="acceptTransferCommand:"/>
+			</responds-to>
+			<responds-to command="decline">
+				<cocoa method="declineTransferCommand:"/>
+			</responds-to>
+        </class>
+		<command name="invite" code="ichtINVT" description="Invites a buddy to join an existing chat.">
+			<cocoa class="InviteCommand"/>
+			<direct-parameter>
+				<type type="buddy" list="yes"/>
+			</direct-parameter>
+			<parameter name="to" code="INVa">
+				<cocoa key="to"/>
+				<type type="text chat"/>
+				<type type="audio chat"/>
+			</parameter>
+			<parameter name="with message" code="INVm" type="text" description="For text chats, an invitation message to send to this participant. This parameter is required for text chat invitations and ignored for other types of chats." optional="yes">
+				<cocoa key="message"/>
+			</parameter>
+		</command>
+		
+		<command name="log in" code="ichtlogi" description="Log in to the specified service, or all services if none is specified. If the account password is not in the keychain the user will be prompted to enter one.">
+			<direct-parameter optional="yes">
+				<type type="service"/>
+			</direct-parameter>
+		</command>
+		<command name="log out" code="ichtlogo" description="Logs out of a service, or all services if none is specified.">
+			<direct-parameter optional="yes">
+				<type type="service"/>
+			</direct-parameter>
+		</command>
+		<command name="send" code="ichtsend" description="Sends a message or file to a buddy or to a chat.">
+			<cocoa class="SendCommand"/>
+			<direct-parameter>
+				<type type="text"/>
+				<type type="file"/>
+				<type type="InviteType" hidden="yes"/>
+			</direct-parameter>
+			<parameter name="to" code="TO  ">
+				<cocoa key="to"/>
+				<type type="buddy"/>
+				<type type="text chat"/>
+			</parameter>
+		</command>
+        <command name="store recent picture" code="ichtstrp" description="Stores the currently set buddy picture into your recent pictures.">
+        </command>
+        <command name="show chat chooser" code="ichtiscc" description="displays a dialog in Messages to start a new chat with the specified buddy">
+            <parameter name="for" code="ccpr" type="buddy">
+                <cocoa key="forAccount"/>
+            </parameter>
+        </command>
+        <command name="take snapshot" code="ichttvsp" description="Takes a snapshot of a video chat and saves it to a desktop.">
+			<direct-parameter>
+				<type type="video chat"/>
+			</direct-parameter>
+        </command>
+        <command name="accept" code="ichtacpt" description="Accepts an incoming text, audio, or video chat invitation, or file transfer">
+			<direct-parameter>
+				<type type="chat"/>
+				<type type="file transfer"/>
+			</direct-parameter>
+        </command>
+        <command name="decline" code="ichtdcln" description="Declines an incoming text, audio, or video chat invitation, or file transfer">
+			<direct-parameter>
+				<type type="chat"/>
+				<type type="file transfer"/>
+			</direct-parameter>
+        </command>
+		<command name="request recording" code="ichtstrr" description="Sends a recording request to all participants of an audio or video chat. Recording will not start until all participants have agreed to allow recording.">
+			<direct-parameter>
+				<type type="audio chat"/>
+			</direct-parameter>
+        </command>
+        <command name="stop recording" code="ichtstpr" description="Ends recording of an audio or video chat.">
+			<direct-parameter>
+				<type type="audio chat"/>
+			</direct-parameter>
+        </command>
+	</suite>
+	<suite name="Messages Event Handler Suite" code="icht" description="commands that are executed as Messages event handlers.">
+		<event name="login finished" code="ichthe00" description="This handler is called when Messages finishes logging in.">
+			<cocoa name="LogInFinished" class="EventHandlerCommand"/>
+			<parameter code="heac" name="for" description="The account that logged in." type="service">
+				<cocoa key="Service"/>
+			</parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="logout finished" code="ichthe01" description="This handler is called when Messages finished logging  out.">
+			<cocoa name="LogOutFinished" class="EventHandlerCommand"/>
+			<parameter code="heac" name="for" description="The account that logged in." type="service">
+				<cocoa key="Service"/>
+			</parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="buddy became available" code="ichthe02" description="This handler is called when a buddy becomes available">
+			<cocoa name="BuddyAvailable" class="EventHandlerCommand"/>
+			<direct-parameter description="The buddy that became available" type="buddy"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="buddy became unavailable" code="ichthe03" description="This handler is called when a buddy becomes unavailable">
+			<cocoa name="BuddyUnavailable" class="EventHandlerCommand"/>
+			<direct-parameter description="The buddy that became unavailable" type="buddy"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="buddy authorization requested" code="ichthe14" description="This handler is called when a buddy requests authorization">
+			<cocoa name="BuddyAuthRequest" class="EventHandlerCommand"/>
+			<direct-parameter description="The authorization request" type="authorization request"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+        <event name="chat room message received" code="ichthe12" description="This handler is called for incoming messages in chat rooms. If the handler returns a text value, it will replace the incoming message.">
+			<cocoa name="ChatRoomMessageReceived" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming message" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy who sent this message." type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+        <event name="addressed chat room message received" code="ichthe17" description="This handler is called for incoming messages in chat rooms that are addressed to you. If the handler returns a text value, it will replace the incoming message.">
+			<cocoa name="ChatRoomMessageReceivedAddressed" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming message" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy who sent this message." type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+        <event name="active chat message received" code="ichthe18" description="This handler is called for incoming messages in the focused chat. If the handler returns a text value, it will replace the incoming message.">
+			<cocoa name="SubsequentMessageActive" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming message" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy who sent this message." type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="message received" code="ichthe04" description="This handler is called for incoming messages. If the handler returns a text value, it will replace the incoming message.">
+			<cocoa name="MessageReceived" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming message" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy who sent this message." type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="addressed message received" code="ichthe19" description="This handler is called for incoming messages that are addressed to you. If the handler returns a text value, it will replace the incoming message.">
+			<cocoa name="MessageReceivedAddressed" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming message" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy who sent this message." type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="message sent" code="ichthe05" description="This handler is called for outgoing messages. If the handler returns a text value, it will replace the outgoing message.">
+			<cocoa name="MessageSent" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the outgoing message" type="text"/>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="received text invitation" code="ichthe06" description="This handler is called for incoming text invitations.">
+			<cocoa name="TextInvitation" class="EventHandlerCommand"/>
+			<direct-parameter description="The text of the incoming invitation" type="text"/>
+			<parameter name="from" code="hepr" description="The buddy for this event" type="buddy">
+				<cocoa key="Buddy"/>
+			</parameter>
+            <parameter code="hect" name="for" type="text chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="received audio invitation" code="ichthe07" description="This handler is called for incoming audio invitations.">
+			<cocoa name="AudioInvitation" class="EventHandlerCommand"/>
+            <parameter code="hepr" name="from" type="buddy">
+                <cocoa key="Buddy"/>
+            </parameter>
+            <parameter code="hect" name="for" type="audio chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="received video invitation" code="ichthe08" description="This handler is called for incoming video invitations.">
+			<cocoa name="VideoInvitation" class="EventHandlerCommand"/>
+            <parameter code="hepr" name="from" type="buddy">
+                <cocoa key="Buddy"/>
+            </parameter>
+            <parameter code="hect" name="for" type="video chat">
+                <cocoa key="forChat"/>
+            </parameter>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="av chat started" code="ichthe09" description="This handler is called when an audio or video chat successfully connects.">
+			<cocoa name="BuddyAcceptedAVInvitation" class="EventHandlerCommand"/>
+			<direct-parameter description="The audio or video chat that started" type="audio chat"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="av chat ended" code="ichthe13" description="This handler is called when an audio or video chat ends.">
+			<cocoa name="AVChatEnded" class="EventHandlerCommand"/>
+			<direct-parameter description="The audio or video chat that ended." type="audio chat"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="received file transfer invitation" code="ichthe10" description="This handler is called when a buddy sends you a file.">
+			<cocoa name="FileTransferInvitation" class="EventHandlerCommand"/>
+			<direct-parameter description="The file transfer being sent." type="file transfer"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+		<event name="completed file transfer" code="ichthe11" description="This handler is called when a file transfer is completed.">
+			<cocoa name="FileTransferCompleted" class="EventHandlerCommand"/>
+			<direct-parameter description="The file transfer being sent." type="file transfer"/>
+            <parameter name="with" code="heed" description="A text description of the event" type="text">
+				<cocoa key="eventDescription"/>
+			</parameter>
+		</event>
+    </suite>
+</dictionary>

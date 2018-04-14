@@ -190,7 +190,7 @@ export namespace SystemEvents {
     }
 
 }
-export interface SystemEvents{
+export interface SystemEvents {
     // Functions
 
      /**

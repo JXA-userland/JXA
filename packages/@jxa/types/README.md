@@ -12,6 +12,13 @@ Install with [npm](https://www.npmjs.com/):
 
 - [ ] Write usage instructions
 
+### Update Core d.ts
+
+1. Update `tools/sdefs/*.sdefes`
+2. Update d.ts with follows command:
+    
+    yarn run dts:update
+
 ## Changelog
 
 See [Releases page](https://github.com/JXA-userland/JXA/releases).

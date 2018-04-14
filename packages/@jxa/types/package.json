@@ -1,6 +1,6 @@
 {
-  "name": "types",
-  "version": "1.0.0",
+  "name": "@jxa/types",
+  "version": "0.1.0",
   "description": "TypeScript definition for JXA core.",
   "keywords": [
     "JXA",
@@ -35,7 +35,8 @@
     "prepublish": "npm run --if-present build",
     "test": "mocha \"test/**/*.ts\"",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
-    "watch": "tsc -p . --watch"
+    "watch": "tsc -p . --watch",
+    "dts:update": "node tools/sdef-to-dts.js"
   },
   "prettier": {
     "printWidth": 120,
@@ -50,6 +51,8 @@
     "prettier": "^1.12.0",
     "ts-node": "^5.0.1",
     "ts-node-test-register": "^2.0.0",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "camelcase": "^5.0.0",
+    "@jxa/sdef-to-dts": "^0.1.0"
   }
 }

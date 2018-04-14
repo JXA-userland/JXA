@@ -1,12 +1,12 @@
-# sdef-to-dts
+# @jxa/sdef-to-dts
 
-Scripting definition files (sdefs) to TypeScript(d.ts)
+Convert Scripting definition files (sdefs) to TypeScript(d.ts)
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install sdef-to-dts
+    npm install @jxa/sdef-to-dts
 
 ## Usage
 
@@ -15,12 +15,6 @@ Install with [npm](https://www.npmjs.com/):
 ## Changelog
 
 See [Releases page](https://github.com/JXA-userland/JXA/releases).
-
-## Running tests
-
-Install devDependencies and Run `npm test`:
-
-    npm i -d && npm test
 
 ## Contributing
 

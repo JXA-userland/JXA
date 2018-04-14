@@ -803,7 +803,7 @@ export namespace StandardAdditions {
      * and run json-schema-to-typescript to regenerate this file.
      */
 
-    export interface PathToOptionalParameter {
+    export interface PathToOptionalParameter1 {
       /**
        * where to look for the indicated folder
        */
@@ -1382,7 +1382,7 @@ export namespace StandardAdditions {
     }
 
 }
-export interface StandardAdditions{
+export interface StandardAdditions {
     // Functions
 
      /**
@@ -1540,7 +1540,7 @@ export interface StandardAdditions{
       * @param option
       * @return the path to the specified folder
       */
-     pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter): any
+     pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter1): any
 
      /**
       * Return the full path to the specified resource
