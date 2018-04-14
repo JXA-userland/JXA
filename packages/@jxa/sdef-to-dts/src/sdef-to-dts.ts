@@ -209,6 +209,7 @@ export const transform = async (sdefContent: string) => {
     const suites = dictionary.children.filter(node => node.name === "suite");
     const commands: Command[] = [];
     const records: Record[] = [];
+    // TODO: support enum
     suites.forEach(suite => {
         suite.children.forEach((node: Node) => {
             if (isCommand(node)) {
