@@ -13,9 +13,7 @@ export namespace SpeechRecognitionServer {
       /**
        * text computer will speak as a prompt
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * how many seconds to wait before giving up
        */
@@ -27,9 +25,7 @@ export namespace SpeechRecognitionServer {
       /**
        * an optional list of commands to be displayed
        */
-      displaying?: {
-        [k: string]: any;
-      };
+      displaying?: any;
     }
 
     /**
@@ -42,9 +38,7 @@ export namespace SpeechRecognitionServer {
       /**
        * text computer will speak as a prompt
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * how many seconds to wait before giving up
        */
@@ -56,27 +50,19 @@ export namespace SpeechRecognitionServer {
       /**
        * a unique identifier string for this recognizer
        */
-      withIdentifier?: {
-        [k: string]: any;
-      };
+      withIdentifier?: string;
       /**
        * a section title under which the commands will be listed
        */
-      withSectionTitle?: {
-        [k: string]: any;
-      };
+      withSectionTitle?: string;
       /**
        * an optional list of commands to be displayed
        */
-      displaying?: {
-        [k: string]: any;
-      };
+      displaying?: any;
       /**
        * only listen for commands when this application is frontmost
        */
-      attachTo?: {
-        [k: string]: any;
-      };
+      attachTo?: any;
     }
 
 

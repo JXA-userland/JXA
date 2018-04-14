@@ -13,9 +13,7 @@ export namespace Calendar {
       /**
        * the calendar new name
        */
-      withName?: {
-        [k: string]: any;
-      };
+      withName?: string;
     }
 
 
@@ -29,9 +27,7 @@ export namespace Calendar {
       /**
        * the calendar view to be displayed
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -44,9 +40,7 @@ export namespace Calendar {
       /**
        * the date to be displayed
        */
-      at: {
-        [k: string]: any;
-      };
+      at: any;
     }
 
 
@@ -61,15 +55,11 @@ export namespace Calendar {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -77,9 +67,7 @@ export namespace Calendar {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 

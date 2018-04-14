@@ -45,15 +45,11 @@ export namespace QuickTimePlayer {
       /**
        * start time in seconds
        */
-      from: {
-        [k: string]: any;
-      };
+      from: any;
       /**
        * end time in seconds
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -70,15 +66,11 @@ export namespace QuickTimePlayer {
       /**
        * the destination file
        */
-      in: {
-        [k: string]: any;
-      };
+      in: any;
       /**
        * the name of the export settings preset to use
        */
-      usingSettingsPreset: {
-        [k: string]: any;
-      };
+      usingSettingsPreset: string;
     }
 
 

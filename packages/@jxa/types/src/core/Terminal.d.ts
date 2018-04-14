@@ -11,43 +11,43 @@ export namespace Terminal {
       /**
        * the number of copies of a document to be printed
        */
-      copies?: number;
+      copies: number;
       /**
        * Should printed copies be collated?
        */
-      collating?: boolean;
+      collating: boolean;
       /**
        * the first page of the document to be printed
        */
-      startingPage?: number;
+      startingPage: number;
       /**
        * the last page of the document to be printed
        */
-      endingPage?: number;
+      endingPage: number;
       /**
        * number of logical pages laid across a physical page
        */
-      pagesAcross?: number;
+      pagesAcross: number;
       /**
        * number of logical pages laid out down a physical page
        */
-      pagesDown?: number;
+      pagesDown: number;
       /**
        * how errors are handled
        */
-      errorHandling?: {
+      errorHandling: {
         [k: string]: any;
       };
       /**
        * for fax number
        */
-      faxNumber?: {
+      faxNumber: {
         [k: string]: any;
       };
       /**
        * for target printer
        */
-      targetPrinter?: {
+      targetPrinter: {
         [k: string]: any;
       };
     }
@@ -64,15 +64,11 @@ export namespace Terminal {
       /**
        * Whether or not changes should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
       /**
        * The file in which to save the document.
        */
-      savingIn?: {
-        [k: string]: any;
-      };
+      savingIn?: any;
     }
 
     /**
@@ -85,9 +81,7 @@ export namespace Terminal {
       /**
        * The file in which to save the document.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
     }
 
     /**
@@ -100,9 +94,7 @@ export namespace Terminal {
       /**
        * The print settings to use.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
       /**
        * Should the application show the print dialog?
        */
@@ -119,9 +111,7 @@ export namespace Terminal {
       /**
        * Whether or not changed documents should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
     }
 
     /**
@@ -134,9 +124,7 @@ export namespace Terminal {
       /**
        * The class of objects to be counted.
        */
-      each?: {
-        [k: string]: any;
-      };
+      each?: any;
     }
 
 
@@ -150,15 +138,11 @@ export namespace Terminal {
       /**
        * The location for the new object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * Properties to be set in the new duplicated object(s).
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -172,15 +156,11 @@ export namespace Terminal {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -188,9 +168,7 @@ export namespace Terminal {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -203,9 +181,7 @@ export namespace Terminal {
       /**
        * The new location for the object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -218,15 +194,11 @@ export namespace Terminal {
       /**
        * Data to be passed to the Terminal application as the command line. Deprecated; use direct parameter instead.
        */
-      withCommand?: {
-        [k: string]: any;
-      };
+      withCommand?: any;
       /**
        * The tab in which to execute the command
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
     }
 
 

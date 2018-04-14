@@ -13,15 +13,11 @@ export namespace Safari {
       /**
        * Preview text for the Reading List item, usually the first few sentences of the article
        */
-      andPreviewText?: {
-        [k: string]: any;
-      };
+      andPreviewText?: string;
       /**
        * Title of the Reading List item
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
     }
 
     /**
@@ -34,9 +30,7 @@ export namespace Safari {
       /**
        * The tab that the JavaScript should be evaluated in.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
     }
 
     /**
@@ -49,9 +43,7 @@ export namespace Safari {
       /**
        * The tab to send.
        */
-      of?: {
-        [k: string]: any;
-      };
+      of?: any;
     }
 
     /**
@@ -64,15 +56,11 @@ export namespace Safari {
       /**
        * The tab that the search results should shown in.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
       /**
        * The query to search for.
        */
-      for: {
-        [k: string]: any;
-      };
+      for: string;
     }
 
 

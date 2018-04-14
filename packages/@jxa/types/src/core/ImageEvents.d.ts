@@ -14,9 +14,7 @@ export namespace ImageEvents {
       /**
        * The new location for the disk item(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -30,15 +28,11 @@ export namespace ImageEvents {
       /**
        * Specifies whether changes should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
       /**
        * The file in which to save the image.
        */
-      savingIn?: {
-        [k: string]: any;
-      };
+      savingIn?: string;
     }
 
     /**
@@ -51,9 +45,7 @@ export namespace ImageEvents {
       /**
        * the width and height of the new image, respectively, in pixels, as a pair of integers
        */
-      toDimensions: {
-        [k: string]: any;
-      };
+      toDimensions: any;
     }
 
     /**
@@ -66,9 +58,7 @@ export namespace ImageEvents {
       /**
        * the profile to embed in the image
        */
-      withSource: {
-        [k: string]: any;
-      };
+      withSource: any;
     }
 
     /**
@@ -98,9 +88,7 @@ export namespace ImageEvents {
       /**
        * the destination profile for the match
        */
-      toDestination: {
-        [k: string]: any;
-      };
+      toDestination: any;
     }
 
     /**
@@ -113,15 +101,11 @@ export namespace ImageEvents {
       /**
        * the width and height of the new image, respectively, in pixels, as a pair of integers
        */
-      toDimensions: {
-        [k: string]: any;
-      };
+      toDimensions: any;
       /**
        * the RGB color values with which to pad the new image, as a list of integers
        */
-      withPadColor?: {
-        [k: string]: any;
-      };
+      withPadColor?: any;
     }
 
     /**
@@ -134,9 +118,7 @@ export namespace ImageEvents {
       /**
        * rotate using an angle
        */
-      toAngle: {
-        [k: string]: any;
-      };
+      toAngle: any;
     }
 
     /**
@@ -149,9 +131,7 @@ export namespace ImageEvents {
       /**
        * file type in which to save the image ( default is to make no change )
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
       /**
        * Shall an icon be added? ( default is false )
        */
@@ -159,9 +139,7 @@ export namespace ImageEvents {
       /**
        * file path in which to save the image, in HFS or POSIX form
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: string;
       /**
        * Are the bytes to be compressed with PackBits? ( default is false, applies only to TIFF )
        */
@@ -169,9 +147,7 @@ export namespace ImageEvents {
       /**
        * specifies the compression level of the resultant file ( applies only to JPEG )
        */
-      withCompressionLevel?: {
-        [k: string]: any;
-      };
+      withCompressionLevel?: any;
     }
 
     /**
@@ -184,9 +160,7 @@ export namespace ImageEvents {
       /**
        * scale using a scalefactor
        */
-      byFactor?: {
-        [k: string]: any;
-      };
+      byFactor?: any;
       /**
        * scale using a max width/length
        */

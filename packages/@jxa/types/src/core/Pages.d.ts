@@ -11,57 +11,57 @@ export namespace Pages {
       /**
        * EPUB title
        */
-      title?: {
+      title: {
         [k: string]: any;
       };
       /**
        * EPUB author
        */
-      author?: {
+      author: {
         [k: string]: any;
       };
       /**
        * EPUB genre
        */
-      genre?: {
+      genre: {
         [k: string]: any;
       };
       /**
        * EPUB language (Language name or ISO language code)
        */
-      language?: {
+      language: {
         [k: string]: any;
       };
       /**
        * EPUB publisher
        */
-      publisher?: {
+      publisher: {
         [k: string]: any;
       };
       /**
        * EPUB first page is cover
        */
-      cover?: boolean;
+      cover: boolean;
       /**
        * EPUB fixed layout
        */
-      fixedLayout?: boolean;
+      fixedLayout: boolean;
       /**
        * password
        */
-      password?: {
+      password: {
         [k: string]: any;
       };
       /**
        * password hint
        */
-      passwordHint?: {
+      passwordHint: {
         [k: string]: any;
       };
       /**
        * image quality
        */
-      imageQuality?: {
+      imageQuality: {
         [k: string]: any;
       };
     }
@@ -91,15 +91,11 @@ export namespace Pages {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -107,9 +103,7 @@ export namespace Pages {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -124,18 +118,12 @@ export namespace Pages {
       /**
        * The column to sort by.
        */
-      by: {
-        [k: string]: any;
-      };
-      direction?: {
-        [k: string]: any;
-      };
+      by: any;
+      direction?: any;
       /**
        * Limit the sort to the specified rows.
        */
-      inRows?: {
-        [k: string]: any;
-      };
+      inRows?: any;
     }
 
 
@@ -149,15 +137,11 @@ export namespace Pages {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -165,9 +149,7 @@ export namespace Pages {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -180,21 +162,15 @@ export namespace Pages {
       /**
        * the destination file
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * The format to use.
        */
-      as: {
-        [k: string]: any;
-      };
+      as: any;
       /**
        * Optional export settings.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 }

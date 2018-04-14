@@ -15,9 +15,7 @@ export namespace VoiceOver {
       /**
        * Mouse button to click
        */
-      with?: {
-        [k: string]: any;
-      };
+      with?: any;
     }
 
 
@@ -35,9 +33,7 @@ export namespace VoiceOver {
       /**
        * The place to move to
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
     }
 
     /**
@@ -50,9 +46,7 @@ export namespace VoiceOver {
       /**
        * Type of reading
        */
-      with?: {
-        [k: string]: any;
-      };
+      with?: any;
     }
 
 

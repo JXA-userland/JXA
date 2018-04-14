@@ -217,7 +217,7 @@ ${directParametersDocs.join("\n")}${
             }
   * ${resultDescription}
   */
- ${name}(${directParametersArgs.join(", ")}${directParametersArgs.length > 0 ? ", " : ""}${optionalParameters}): ${returnType}`
+ ${name}(${directParametersArgs.join(", ")}${directParametersArgs.length > 0 ? ", " : ""}${optionalParameters}): ${returnType};`
 
     }
 };

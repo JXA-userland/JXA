@@ -14,15 +14,11 @@ export namespace Mail {
       /**
        * The location for the new copy or copies.
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * Properties to set in the new copy or copies right away.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -35,9 +31,7 @@ export namespace Mail {
       /**
        * The new location for the object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -51,9 +45,7 @@ export namespace Mail {
       /**
        * Specify the account that you wish to check for mail
        */
-      for?: {
-        [k: string]: any;
-      };
+      for?: any;
     }
 
 
@@ -82,9 +74,7 @@ export namespace Mail {
       /**
        * the mailbox or folder of mailboxes to import
        */
-      at: {
-        [k: string]: any;
-      };
+      at: any;
     }
 
 
@@ -98,15 +88,11 @@ export namespace Mail {
       /**
        * If the script is being executed by the user selecting an item in the scripts menu, this argument will specify the mailboxes that are currently selected. Otherwise it will not be specified.
        */
-      inMailboxes?: {
-        [k: string]: any;
-      };
+      inMailboxes?: any;
       /**
        * If the script is being executed by a rule action, this argument will be the rule being invoked. Otherwise it will not be specified.
        */
-      forRule?: {
-        [k: string]: any;
-      };
+      forRule?: any;
     }
 
     /**
@@ -150,9 +136,7 @@ export namespace Mail {
       /**
        * The account to synchronize
        */
-      with: {
-        [k: string]: any;
-      };
+      with: any;
     }
 
 }

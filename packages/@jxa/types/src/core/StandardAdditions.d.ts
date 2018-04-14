@@ -14,13 +14,13 @@ export namespace StandardAdditions {
       /**
        * name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)
        */
-      buttonReturned?: {
+      buttonReturned: {
         [k: string]: any;
       };
       /**
        * Did the alert time out? (present only if ‘giving up after’ was supplied)
        */
-      gaveUp?: boolean;
+      gaveUp: boolean;
     }
 
     /**
@@ -36,19 +36,19 @@ export namespace StandardAdditions {
       /**
        * name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
        */
-      buttonReturned?: {
+      buttonReturned: {
         [k: string]: any;
       };
       /**
        * text entered (present only if ‘default answer’ was supplied)
        */
-      textReturned?: {
+      textReturned: {
         [k: string]: any;
       };
       /**
        * Did the dialog time out? (present only if ‘giving up after’ was supplied)
        */
-      gaveUp?: boolean;
+      gaveUp: boolean;
     }
 
     /**
@@ -64,123 +64,123 @@ export namespace StandardAdditions {
       /**
        * the name of the item
        */
-      name?: {
+      name: {
         [k: string]: any;
       };
       /**
        * the user-visible name of the item
        */
-      displayedName?: {
+      displayedName: {
         [k: string]: any;
       };
       /**
        * the short name (CFBundleName) of the item (if the item is an application)
        */
-      shortName?: {
+      shortName: {
         [k: string]: any;
       };
       /**
        * the name extension of the item (such as “txt”)
        */
-      nameExtension?: {
+      nameExtension: {
         [k: string]: any;
       };
       /**
        * the item’s bundle identifier (if the item is a package)
        */
-      bundleIdentifier?: {
+      bundleIdentifier: {
         [k: string]: any;
       };
       /**
        * the item’s type identifier
        */
-      typeIdentifier?: {
+      typeIdentifier: {
         [k: string]: any;
       };
       /**
        * the kind of the item
        */
-      kind?: {
+      kind: {
         [k: string]: any;
       };
       /**
        * the application that normally opens this kind of item
        */
-      defaultApplication?: {
+      defaultApplication: {
         [k: string]: any;
       };
       /**
        * the date the item was created
        */
-      creationDate?: {
+      creationDate: {
         [k: string]: any;
       };
       /**
        * the date the item was last modified
        */
-      modificationDate?: {
+      modificationDate: {
         [k: string]: any;
       };
       /**
        * the file type of the item
        */
-      fileType?: {
+      fileType: {
         [k: string]: any;
       };
       /**
        * the creator type of the item
        */
-      fileCreator?: {
+      fileCreator: {
         [k: string]: any;
       };
       /**
        * the item’s short version string (from the Finder’s ‘Get Info’ box)
        */
-      shortVersion?: {
+      shortVersion: {
         [k: string]: any;
       };
       /**
        * the item’s long version string (from the Finder’s ‘Get Info’ box)
        */
-      longVersion?: {
+      longVersion: {
         [k: string]: any;
       };
       /**
        * the size of the item in bytes
        */
-      size?: number;
+      size: number;
       /**
        * Is the item an alias file?
        */
-      alias?: boolean;
+      alias: boolean;
       /**
        * Is the item a folder?
        */
-      folder?: boolean;
+      folder: boolean;
       /**
        * Is the item a package (a folder treated as a file?)
        */
-      packageFolder?: boolean;
+      packageFolder: boolean;
       /**
        * Is the item’s name extension hidden from the user?
        */
-      extensionHidden?: boolean;
+      extensionHidden: boolean;
       /**
        * Is the item visible?
        */
-      visible?: boolean;
+      visible: boolean;
       /**
        * Is the item locked?
        */
-      locked?: boolean;
+      locked: boolean;
       /**
        * Is the item currently in use?
        */
-      busyStatus?: boolean;
+      busyStatus: boolean;
       /**
        * the coordinates of the folder’s window (if the item is a folder)
        */
-      folderWindow?: {
+      folderWindow: {
         [k: string]: any;
       };
     }
@@ -198,19 +198,19 @@ export namespace StandardAdditions {
       /**
        * the sound output volume
        */
-      outputVolume?: number;
+      outputVolume: number;
       /**
        * the sound input volume
        */
-      inputVolume?: number;
+      inputVolume: number;
       /**
        * the alert volume (as a percentage of the output volume)
        */
-      alertVolume?: number;
+      alertVolume: number;
       /**
        * Is the sound output muted?
        */
-      outputMuted?: boolean;
+      outputMuted: boolean;
     }
 
     /**
@@ -226,93 +226,93 @@ export namespace StandardAdditions {
       /**
        * the AppleScript version
        */
-      appleScriptVersion?: {
+      appleScriptVersion: {
         [k: string]: any;
       };
       /**
        * the AppleScript Studio version
        */
-      appleScriptStudioVersion?: {
+      appleScriptStudioVersion: {
         [k: string]: any;
       };
       /**
        * the system version
        */
-      systemVersion?: {
+      systemVersion: {
         [k: string]: any;
       };
       /**
        * the current user’s short name
        */
-      shortUserName?: {
+      shortUserName: {
         [k: string]: any;
       };
       /**
        * the current user’s long name
        */
-      longUserName?: {
+      longUserName: {
         [k: string]: any;
       };
       /**
        * the current user’s ID
        */
-      userID?: number;
+      userID: number;
       /**
        * the current user’s locale
        */
-      userLocale?: {
+      userLocale: {
         [k: string]: any;
       };
       /**
        * the current user’s home directory
        */
-      homeDirectory?: {
+      homeDirectory: {
         [k: string]: any;
       };
       /**
        * the boot volume
        */
-      bootVolume?: {
+      bootVolume: {
         [k: string]: any;
       };
       /**
        * the computer name
        */
-      computerName?: {
+      computerName: {
         [k: string]: any;
       };
       /**
        * the host name
        */
-      hostName?: {
+      hostName: {
         [k: string]: any;
       };
       /**
        * the IPv4 address
        */
-      IPv4Address?: {
+      IPv4Address: {
         [k: string]: any;
       };
       /**
        * the primary Ethernet address
        */
-      primaryEthernetAddress?: {
+      primaryEthernetAddress: {
         [k: string]: any;
       };
       /**
        * the CPU type
        */
-      CPUType?: {
+      CPUType: {
         [k: string]: any;
       };
       /**
        * the clock speed of the CPU in MHz
        */
-      CPUSpeed?: number;
+      CPUSpeed: number;
       /**
        * the amount of physical RAM in MB
        */
-      physicalMemory?: number;
+      physicalMemory: number;
     }
 
     // Function options
@@ -327,15 +327,11 @@ export namespace StandardAdditions {
       /**
        * the dialog window title
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
       /**
        * the prompt to be displayed in the dialog box
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * Allow multiple items to be selected? (default is false)
        */
@@ -343,9 +339,7 @@ export namespace StandardAdditions {
       /**
        * the desired type of result. May be application (the default) or alias.
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
     /**
@@ -358,9 +352,7 @@ export namespace StandardAdditions {
       /**
        * the default color
        */
-      defaultColor?: {
-        [k: string]: any;
-      };
+      defaultColor?: any;
     }
 
     /**
@@ -373,21 +365,15 @@ export namespace StandardAdditions {
       /**
        * the prompt to be displayed in the dialog box
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * a list of file types or type identifiers. Only files of the specified types will be selectable.
        */
-      ofType?: {
-        [k: string]: any;
-      };
+      ofType?: any;
       /**
        * the default file location
        */
-      defaultLocation?: {
-        [k: string]: any;
-      };
+      defaultLocation?: any;
       /**
        * Show invisible files and folders? (default is false)
        */
@@ -412,21 +398,15 @@ export namespace StandardAdditions {
       /**
        * the prompt to be displayed in the dialog box
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * the default name for the new file
        */
-      defaultName?: {
-        [k: string]: any;
-      };
+      defaultName?: string;
       /**
        * the default file location
        */
-      defaultLocation?: {
-        [k: string]: any;
-      };
+      defaultLocation?: any;
     }
 
     /**
@@ -439,15 +419,11 @@ export namespace StandardAdditions {
       /**
        * the prompt to be displayed in the dialog box
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * the default folder location
        */
-      defaultLocation?: {
-        [k: string]: any;
-      };
+      defaultLocation?: any;
       /**
        * Show invisible files and folders? (default is false)
        */
@@ -472,33 +448,23 @@ export namespace StandardAdditions {
       /**
        * the dialog window title
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
       /**
        * the prompt to be displayed in the dialog box
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * a list of items to initially select (an empty list if no selection)
        */
-      defaultItems?: {
-        [k: string]: any;
-      };
+      defaultItems?: any;
       /**
        * the name of the OK button
        */
-      OKButtonName?: {
-        [k: string]: any;
-      };
+      OKButtonName?: string;
       /**
        * the name of the Cancel button
        */
-      cancelButtonName?: {
-        [k: string]: any;
-      };
+      cancelButtonName?: string;
       /**
        * Allow multiple items to be selected?
        */
@@ -519,15 +485,11 @@ export namespace StandardAdditions {
       /**
        * the dialog window title
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
       /**
        * the prompt to be displayed above the list of applications
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
     }
 
     /**
@@ -540,9 +502,7 @@ export namespace StandardAdditions {
       /**
        * which network services to show
        */
-      showing?: {
-        [k: string]: any;
-      };
+      showing?: any;
       /**
        * Allow user to type in a URL?
        */
@@ -560,33 +520,23 @@ export namespace StandardAdditions {
       /**
        * the explanatory message (will be displayed in small system font)
        */
-      message?: {
-        [k: string]: any;
-      };
+      message?: string;
       /**
        * the type of alert (default is informational)
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
       /**
        * a list of up to three button names
        */
-      buttons?: {
-        [k: string]: any;
-      };
+      buttons?: any;
       /**
        * the name or number of the default button
        */
-      defaultButton?: {
-        [k: string]: any;
-      };
+      defaultButton?: any;
       /**
        * the name or number of the cancel button
        */
-      cancelButton?: {
-        [k: string]: any;
-      };
+      cancelButton?: any;
       /**
        * number of seconds to wait before automatically dismissing the alert
        */
@@ -603,9 +553,7 @@ export namespace StandardAdditions {
       /**
        * the default editable text
        */
-      defaultAnswer?: {
-        [k: string]: any;
-      };
+      defaultAnswer?: string;
       /**
        * Should editable text be displayed as bullets? (default is false)
        */
@@ -613,33 +561,23 @@ export namespace StandardAdditions {
       /**
        * a list of up to three button names
        */
-      buttons?: {
-        [k: string]: any;
-      };
+      buttons?: any;
       /**
        * the name or number of the default button
        */
-      defaultButton?: {
-        [k: string]: any;
-      };
+      defaultButton?: any;
       /**
        * the name or number of the cancel button
        */
-      cancelButton?: {
-        [k: string]: any;
-      };
+      cancelButton?: any;
       /**
        * the dialog window title
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
       /**
        * …or an alias or file reference to a ‘.icns’ file
        */
-      withIcon?: {
-        [k: string]: any;
-      };
+      withIcon?: any;
       /**
        * number of seconds to wait before automatically dismissing the dialog
        */
@@ -656,21 +594,15 @@ export namespace StandardAdditions {
       /**
        * the title of the notification (default is the name of the calling application).
        */
-      withTitle?: {
-        [k: string]: any;
-      };
+      withTitle?: string;
       /**
        * the subtitle of the notification
        */
-      subtitle?: {
-        [k: string]: any;
-      };
+      subtitle?: string;
       /**
        * the name of the sound to play
        */
-      soundName?: {
-        [k: string]: any;
-      };
+      soundName?: string;
     }
 
     /**
@@ -683,15 +615,11 @@ export namespace StandardAdditions {
       /**
        * the text to display in the feedback window (if different). Ignored unless Speech Recognition is on.
        */
-      displaying?: {
-        [k: string]: any;
-      };
+      displaying?: string;
       /**
        * the voice to speak with. (Default is the system voice.)
        */
-      using?: {
-        [k: string]: any;
-      };
+      using?: string;
       /**
        * the rate of speech in words per minute. Average human speech occurs at a rate of 180 to 220 words per minute. (Default depends on the voice used. If “using” is not given, the system speaking rate is the default.)
        */
@@ -759,27 +687,19 @@ export namespace StandardAdditions {
       /**
        * the server on which the volume resides; omit if URL path provided
        */
-      onServer: {
-        [k: string]: any;
-      };
+      onServer: string;
       /**
        * the AppleTalk zone in which the server resides; omit if URL path provided
        */
-      inAppleTalkZone?: {
-        [k: string]: any;
-      };
+      inAppleTalkZone?: string;
       /**
        * the user name with which to log in to the server; omit for guest access
        */
-      asUserName?: {
-        [k: string]: any;
-      };
+      asUserName?: string;
       /**
        * the password for the user name; omit for guest access
        */
-      withPassword?: {
-        [k: string]: any;
-      };
+      withPassword?: string;
     }
 
     /**
@@ -792,9 +712,7 @@ export namespace StandardAdditions {
       /**
        * the type to return: alias or string (default is alias)
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
     /**
@@ -807,15 +725,11 @@ export namespace StandardAdditions {
       /**
        * where to look for the indicated folder
        */
-      from?: {
-        [k: string]: any;
-      };
+      from?: any;
       /**
        * the type to return: alias or string (default is alias)
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
       /**
        * Create the folder if it doesn’t exist? (default is true)
        */
@@ -832,15 +746,11 @@ export namespace StandardAdditions {
       /**
        * an alias or file reference to the bundle containing the resource (default is the target application or current script bundle)
        */
-      inBundle?: {
-        [k: string]: any;
-      };
+      inBundle?: any;
       /**
        * the name of a subdirectory in the bundle’s “Resources” directory
        */
-      inDirectory?: {
-        [k: string]: any;
-      };
+      inDirectory?: string;
     }
 
 
@@ -855,15 +765,11 @@ export namespace StandardAdditions {
       /**
        * the name of the strings file excluding the “.strings” suffix (default is “Localizable”)
        */
-      fromTable?: {
-        [k: string]: any;
-      };
+      fromTable?: string;
       /**
        * an alias or file reference to the bundle containing the strings file (default is the current application/script bundle)
        */
-      inBundle?: {
-        [k: string]: any;
-      };
+      inBundle?: any;
     }
 
     /**
@@ -876,15 +782,11 @@ export namespace StandardAdditions {
       /**
        * the source text to find the position of
        */
-      of: {
-        [k: string]: any;
-      };
+      of: string;
       /**
        * the target text to search in
        */
-      in: {
-        [k: string]: any;
-      };
+      in: string;
     }
 
     /**
@@ -911,9 +813,7 @@ export namespace StandardAdditions {
       /**
        * the type of data desired
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
     /**
@@ -926,9 +826,7 @@ export namespace StandardAdditions {
       /**
        * restricts to information about only this data type
        */
-      for?: {
-        [k: string]: any;
-      };
+      for?: any;
     }
 
     /**
@@ -967,33 +865,23 @@ export namespace StandardAdditions {
       /**
        * …or read up to but not including this character…
        */
-      before?: {
-        [k: string]: any;
-      };
+      before?: string;
       /**
        * …or read up to and including this character
        */
-      until?: {
-        [k: string]: any;
-      };
+      until?: string;
       /**
        * the value that separates items to read…
        */
-      usingDelimiter?: {
-        [k: string]: any;
-      };
+      usingDelimiter?: string;
       /**
        * …or a list of values that separate items to read
        */
-      usingDelimiters?: {
-        [k: string]: any;
-      };
+      usingDelimiters?: any;
       /**
        * the form in which to read and return data
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
     /**
@@ -1018,9 +906,7 @@ export namespace StandardAdditions {
       /**
        * how to write the data: as text, data, list, etc.
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
 
@@ -1048,15 +934,11 @@ export namespace StandardAdditions {
       /**
        * an alias or file reference to the file to store the script object in
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
       /**
        * control display of the Save As dialog
        */
-      replacing?: {
-        [k: string]: any;
-      };
+      replacing?: any;
     }
 
     /**
@@ -1069,15 +951,11 @@ export namespace StandardAdditions {
       /**
        * a list of parameters
        */
-      withParameters?: {
-        [k: string]: any;
-      };
+      withParameters?: any;
       /**
        * the scripting component to use; default is the current scripting component
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: string;
     }
 
 
@@ -1092,9 +970,7 @@ export namespace StandardAdditions {
       /**
        * the desired type of result; default is text (UTF-8)
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
       /**
        * execute the command as the administrator
        */
@@ -1102,21 +978,15 @@ export namespace StandardAdditions {
       /**
        * use this administrator account to avoid a password dialog (If this parameter is specified, the “password” parameter must also be specified.)
        */
-      userName?: {
-        [k: string]: any;
-      };
+      userName?: string;
       /**
        * use this administrator password to avoid a password dialog
        */
-      password?: {
-        [k: string]: any;
-      };
+      password?: string;
       /**
        * the prompt to be displayed in the password dialog when the name and password are not specified or are incorrect
        */
-      withPrompt?: {
-        [k: string]: any;
-      };
+      withPrompt?: string;
       /**
        * change all line endings to Mac-style and trim a trailing one (default true)
        */
@@ -1155,9 +1025,7 @@ export namespace StandardAdditions {
       /**
        * the rounding direction; if omitted, rounds to nearest. “to nearest” rounds .5 cases to the nearest even integer in order to decrease cumulative errors. To always round .5 away from zero, use “as taught in school.”
        */
-      rounding?: {
-        [k: string]: any;
-      };
+      rounding?: any;
     }
 
     /**
@@ -1212,9 +1080,7 @@ export namespace StandardAdditions {
       /**
        * the previous coordinates of folder window (you can get the new coordinates from the Finder)
        */
-      from: {
-        [k: string]: any;
-      };
+      from: any;
     }
 
     /**
@@ -1227,9 +1093,7 @@ export namespace StandardAdditions {
       /**
        * a list of the items the folder received
        */
-      afterReceiving: {
-        [k: string]: any;
-      };
+      afterReceiving: any;
     }
 
     /**
@@ -1242,9 +1106,7 @@ export namespace StandardAdditions {
       /**
        * a list of the items the folder lost. For permanently deleted items, only the names (in strings) are provided.
        */
-      afterLosing: {
-        [k: string]: any;
-      };
+      afterLosing: any;
     }
 
     /**
@@ -1270,105 +1132,71 @@ export namespace StandardAdditions {
       /**
        * the data for the GET method or data after the ‘?’ in a POST method
        */
-      searchingFor?: {
-        [k: string]: any;
-      };
+      searchingFor?: string;
       /**
        * the POST arguments
        */
-      withPostedData?: {
-        [k: string]: any;
-      };
+      withPostedData?: string;
       /**
        * the MIME content type of POST arguments
        */
-      ofContentType?: {
-        [k: string]: any;
-      };
+      ofContentType?: string;
       /**
        * either ‘GET’ or ‘POST’
        */
-      usingAccessMethod?: {
-        [k: string]: any;
-      };
+      usingAccessMethod?: string;
       /**
        * the IP address of the entity making the request
        */
-      fromAddress?: {
-        [k: string]: any;
-      };
+      fromAddress?: string;
       /**
        * the user name associated with the request
        */
-      fromUser?: {
-        [k: string]: any;
-      };
+      fromUser?: string;
       /**
        * the password sent with the request
        */
-      usingPassword?: {
-        [k: string]: any;
-      };
+      usingPassword?: string;
       /**
        * additional information about the user, usually the email address
        */
-      withUserInfo?: {
-        [k: string]: any;
-      };
+      withUserInfo?: string;
       /**
        * the name of the server application sending this request
        */
-      fromServer?: {
-        [k: string]: any;
-      };
+      fromServer?: string;
       /**
        * the IP port number of the server
        */
-      viaPort?: {
-        [k: string]: any;
-      };
+      viaPort?: string;
       /**
        * the path to the script executing this CGI, in URL form
        */
-      executingBy?: {
-        [k: string]: any;
-      };
+      executingBy?: string;
       /**
        * the URL of the page the client used to link to the CGI
        */
-      referredBy?: {
-        [k: string]: any;
-      };
+      referredBy?: string;
       /**
        * the name of the client software
        */
-      fromBrowser?: {
-        [k: string]: any;
-      };
+      fromBrowser?: string;
       /**
        * the path to the file or CGI
        */
-      usingAction?: {
-        [k: string]: any;
-      };
+      usingAction?: string;
       /**
        * either PREPROCESSOR, POSTPROCESSOR, CGI, or ACGI
        */
-      ofActionType?: {
-        [k: string]: any;
-      };
+      ofActionType?: string;
       /**
        * the Internet address of the client
        */
-      fromClientIPAddress?: {
-        [k: string]: any;
-      };
+      fromClientIPAddress?: string;
       /**
        * the full request as sent to the server
        */
-      withFullRequest?: {
-        [k: string]: any;
-      };
+      withFullRequest?: string;
       /**
        * the ID of the connection from the server to the client
        */
@@ -1376,9 +1204,7 @@ export namespace StandardAdditions {
       /**
        * the URL of the root folder of the virtual host
        */
-      fromVirtualHost?: {
-        [k: string]: any;
-      };
+      fromVirtualHost?: string;
     }
 
 }

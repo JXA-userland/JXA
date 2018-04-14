@@ -11,67 +11,67 @@ export namespace Keynote {
       /**
        * compressed image quality, ranging from 0.0 (maximum compression, lowest quality) to 1.0 (lossless compression, highest quality). This option only pertains to JPEG format images.
        */
-      compressionFactor?: {
+      compressionFactor: {
         [k: string]: any;
       };
       /**
        * format for resulting images.
        */
-      imageFormat?: {
+      imageFormat: {
         [k: string]: any;
       };
       /**
        * format for exported movie.
        */
-      movieFormat?: {
+      movieFormat: {
         [k: string]: any;
       };
       /**
        * choose whether to include notes, etc.
        */
-      exportStyle?: {
+      exportStyle: {
         [k: string]: any;
       };
       /**
        * print each stage of builds
        */
-      allStages?: boolean;
+      allStages: boolean;
       /**
        * include skipped slides
        */
-      skippedSlides?: boolean;
+      skippedSlides: boolean;
       /**
        * add borders around slides
        */
-      borders?: boolean;
+      borders: boolean;
       /**
        * include slide numbers
        */
-      slideNumbers?: boolean;
+      slideNumbers: boolean;
       /**
        * include date
        */
-      date?: boolean;
+      date: boolean;
       /**
        * export in raw KPF
        */
-      rawKPF?: boolean;
+      rawKPF: boolean;
       /**
        * password
        */
-      password?: {
+      password: {
         [k: string]: any;
       };
       /**
        * password hint
        */
-      passwordHint?: {
+      passwordHint: {
         [k: string]: any;
       };
       /**
        * quality of images in PDF document
        */
-      PDFImageQuality?: {
+      PDFImageQuality: {
         [k: string]: any;
       };
     }
@@ -89,23 +89,23 @@ export namespace Keynote {
       /**
        * Should the transition begin automatically? A value of false indicates to transition on click.
        */
-      automaticTransition?: boolean;
+      automaticTransition: boolean;
       /**
        * The number of seconds to wait until beginning the transition.
        */
-      transitionDelay?: {
+      transitionDelay: {
         [k: string]: any;
       };
       /**
        * The number of seconds allocated for the transition to occur.
        */
-      transitionDuration?: {
+      transitionDuration: {
         [k: string]: any;
       };
       /**
        * The transition effect to apply between the current and following slides.
        */
-      transitionEffect?: {
+      transitionEffect: {
         [k: string]: any;
       };
     }
@@ -121,21 +121,15 @@ export namespace Keynote {
       /**
        * the destination file
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * The format to use.
        */
-      as: {
-        [k: string]: any;
-      };
+      as: any;
       /**
        * Optional export settings.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -148,15 +142,11 @@ export namespace Keynote {
       /**
        * The location for the new copy or copies.
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * Properties to set in the new copy or copies right away.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -183,15 +173,11 @@ export namespace Keynote {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -199,9 +185,7 @@ export namespace Keynote {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -216,18 +200,12 @@ export namespace Keynote {
       /**
        * The column to sort by.
        */
-      by: {
-        [k: string]: any;
-      };
-      direction?: {
-        [k: string]: any;
-      };
+      by: any;
+      direction?: any;
       /**
        * Limit the sort to the specified rows.
        */
-      inRows?: {
-        [k: string]: any;
-      };
+      inRows?: any;
     }
 
 
@@ -238,21 +216,11 @@ export namespace Keynote {
      */
 
     export interface AddChartOptionalParameter {
-      rowNames?: {
-        [k: string]: any;
-      };
-      columnNames?: {
-        [k: string]: any;
-      };
-      data?: {
-        [k: string]: any;
-      };
-      type?: {
-        [k: string]: any;
-      };
-      groupBy?: {
-        [k: string]: any;
-      };
+      rowNames?: any;
+      columnNames?: any;
+      data?: any;
+      type?: any;
+      groupBy?: any;
     }
 
     /**
@@ -265,9 +233,7 @@ export namespace Keynote {
       /**
        * slide at which to start playing
        */
-      from?: {
-        [k: string]: any;
-      };
+      from?: any;
     }
 
     /**
@@ -280,13 +246,9 @@ export namespace Keynote {
       /**
        * a list of image files to add
        */
-      files: {
-        [k: string]: any;
-      };
+      files: any;
       setTitles?: boolean;
-      master?: {
-        [k: string]: any;
-      };
+      master?: any;
     }
 
 

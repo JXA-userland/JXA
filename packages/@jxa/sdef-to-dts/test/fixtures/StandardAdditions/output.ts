@@ -1216,7 +1216,7 @@ export interface StandardAdditions {
       * @param directParameter number of times to beep
       * 
       */
-     beep(directParameter?: number, ): void
+     beep(directParameter?: number, ): void;
 
      /**
       * Choose an application on this machine or the network
@@ -1224,7 +1224,7 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen application
       */
-     chooseApplication(option?: StandardAdditions.ChooseApplicationOptionalParameter): any
+     chooseApplication(option?: StandardAdditions.ChooseApplicationOptionalParameter): any;
 
      /**
       * Choose a color
@@ -1232,7 +1232,7 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen color
       */
-     chooseColor(option?: StandardAdditions.ChooseColorOptionalParameter): any
+     chooseColor(option?: StandardAdditions.ChooseColorOptionalParameter): any;
 
      /**
       * Choose a file on a disk or server
@@ -1240,7 +1240,7 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen file
       */
-     chooseFile(option?: StandardAdditions.ChooseFileOptionalParameter): any
+     chooseFile(option?: StandardAdditions.ChooseFileOptionalParameter): any;
 
      /**
       * Get a new file reference from the user, without creating the file
@@ -1248,7 +1248,7 @@ export interface StandardAdditions {
       * @param option
       * @return the file the user specified
       */
-     chooseFileName(option?: StandardAdditions.ChooseFileNameOptionalParameter): any
+     chooseFileName(option?: StandardAdditions.ChooseFileNameOptionalParameter): any;
 
      /**
       * Choose a folder on a disk or server
@@ -1256,7 +1256,7 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen folder
       */
-     chooseFolder(option?: StandardAdditions.ChooseFolderOptionalParameter): any
+     chooseFolder(option?: StandardAdditions.ChooseFolderOptionalParameter): any;
 
      /**
       * Choose one or more items from a list
@@ -1264,7 +1264,7 @@ export interface StandardAdditions {
       * @param option
       * @return the list of selected items
       */
-     chooseFromList(directParameter: {}, option?: StandardAdditions.ChooseFromListOptionalParameter): void
+     chooseFromList(directParameter: {}, option?: StandardAdditions.ChooseFromListOptionalParameter): void;
 
      /**
       * Choose a running application on a remote machine or on this machine
@@ -1272,7 +1272,7 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen application
       */
-     chooseRemoteApplication(option?: StandardAdditions.ChooseRemoteApplicationOptionalParameter): any
+     chooseRemoteApplication(option?: StandardAdditions.ChooseRemoteApplicationOptionalParameter): any;
 
      /**
       * Choose a service on the Internet
@@ -1280,14 +1280,14 @@ export interface StandardAdditions {
       * @param option
       * @return the chosen URL
       */
-     chooseURL(option?: StandardAdditions.ChooseUrlOptionalParameter): any
+     chooseURL(option?: StandardAdditions.ChooseUrlOptionalParameter): any;
 
      /**
       * Pause for a fixed amount of time
       * @param directParameter the number of seconds to delay (default is 0)
       * 
       */
-     delay(directParameter?: number, ): void
+     delay(directParameter?: number, ): void;
 
      /**
       * Display an alert
@@ -1295,7 +1295,7 @@ export interface StandardAdditions {
       * @param option
       * @return a record containing the button clicked
       */
-     displayAlert(directParameter: string, option?: StandardAdditions.DisplayAlertOptionalParameter): StandardAdditions.AlertReply
+     displayAlert(directParameter: string, option?: StandardAdditions.DisplayAlertOptionalParameter): StandardAdditions.AlertReply;
 
      /**
       * Display a dialog box, optionally requesting user input
@@ -1303,7 +1303,7 @@ export interface StandardAdditions {
       * @param option
       * @return a record containing the button clicked and text entered (if any)
       */
-     displayDialog(directParameter: string, option?: StandardAdditions.DisplayDialogOptionalParameter): StandardAdditions.DialogReply
+     displayDialog(directParameter: string, option?: StandardAdditions.DisplayDialogOptionalParameter): StandardAdditions.DialogReply;
 
      /**
       * Display a notification. At least one of the body text and the title must be specified.
@@ -1311,7 +1311,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     displayNotification(directParameter?: string, option?: StandardAdditions.DisplayNotificationOptionalParameter): void
+     displayNotification(directParameter?: string, option?: StandardAdditions.DisplayNotificationOptionalParameter): void;
 
      /**
       * Speak the given text
@@ -1319,7 +1319,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     say(directParameter: string, option?: StandardAdditions.SayOptionalParameter): void
+     say(directParameter: string, option?: StandardAdditions.SayOptionalParameter): void;
 
      /**
       * Return information for a file or folder
@@ -1327,14 +1327,14 @@ export interface StandardAdditions {
       * @param option
       * @return a record containing the information for the specified file or folder
       */
-     infoFor(directParameter: any, option?: StandardAdditions.InfoForOptionalParameter): StandardAdditions.FileInformation
+     infoFor(directParameter: any, option?: StandardAdditions.InfoForOptionalParameter): StandardAdditions.FileInformation;
 
      /**
       * Return a list of the currently mounted volumes
 
       * @return a list of the currently mounted volumes.
       */
-     listDisks(): void
+     listDisks(): void;
 
      /**
       * Return the contents of a specified folder
@@ -1342,7 +1342,7 @@ export interface StandardAdditions {
       * @param option
       * @return a list of the items in the specified folder
       */
-     listFolder(directParameter: any, option?: StandardAdditions.ListFolderOptionalParameter): void
+     listFolder(directParameter: any, option?: StandardAdditions.ListFolderOptionalParameter): void;
 
      /**
       * Mount the specified server volume
@@ -1350,7 +1350,7 @@ export interface StandardAdditions {
       * @param option
       * @return a specifier for the mounted volume
       */
-     mountVolume(directParameter: string, option?: StandardAdditions.MountVolumeOptionalParameter): any
+     mountVolume(directParameter: string, option?: StandardAdditions.MountVolumeOptionalParameter): any;
 
      /**
       * Return the full path to the specified application or script
@@ -1358,7 +1358,7 @@ export interface StandardAdditions {
       * @param option
       * @return the path to the specified item
       */
-     pathTo(directParameter: {}, option?: StandardAdditions.PathToOptionalParameter): void
+     pathTo(directParameter: {}, option?: StandardAdditions.PathToOptionalParameter): void;
 
      /**
       * Return the full path to the specified folder
@@ -1366,7 +1366,7 @@ export interface StandardAdditions {
       * @param option
       * @return the path to the specified folder
       */
-     pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter1): any
+     pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter1): any;
 
      /**
       * Return the full path to the specified resource
@@ -1374,21 +1374,21 @@ export interface StandardAdditions {
       * @param option
       * @return the path to the resource
       */
-     pathToResource(directParameter: string, option?: StandardAdditions.PathToResourceOptionalParameter): any
+     pathToResource(directParameter: string, option?: StandardAdditions.PathToResourceOptionalParameter): any;
 
      /**
       * Convert a number to a character
       * @param directParameter the code point of the specified character
       * @return the character
       */
-     ASCIICharacter(directParameter: number, ): string
+     ASCIICharacter(directParameter: number, ): string;
 
      /**
       * Convert a character to a number
       * @param directParameter the character
       * @return the code point of the specified character
       */
-     ASCIINumber(directParameter: string, ): number
+     ASCIINumber(directParameter: string, ): number;
 
      /**
       * Return the localized string for the specified key
@@ -1396,7 +1396,7 @@ export interface StandardAdditions {
       * @param option
       * @return the localized string
       */
-     localizedString(directParameter: string, option?: StandardAdditions.LocalizedStringOptionalParameter): string
+     localizedString(directParameter: string, option?: StandardAdditions.LocalizedStringOptionalParameter): string;
 
      /**
       * Find one piece of text inside another
@@ -1404,7 +1404,7 @@ export interface StandardAdditions {
       * @param option
       * @return the position of the source text in the target, or 0 if not found
       */
-     offset(option?: StandardAdditions.OffsetOptionalParameter): number
+     offset(option?: StandardAdditions.OffsetOptionalParameter): number;
 
      /**
       * Summarize the specified text or text file
@@ -1412,14 +1412,14 @@ export interface StandardAdditions {
       * @param option
       * @return a summarized version of the text or file
       */
-     summarize(directParameter: {}, option?: StandardAdditions.SummarizeOptionalParameter): string
+     summarize(directParameter: {}, option?: StandardAdditions.SummarizeOptionalParameter): string;
 
      /**
       * Place data on an application’s clipboard. Use inside a ‘tell’ block and activate the application first
       * @param directParameter the data to place on the clipboard
       * 
       */
-     setTheClipboardTo(directParameter: any, ): void
+     setTheClipboardTo(directParameter: any, ): void;
 
      /**
       * Return the contents of an application’s clipboard. Use in a ‘tell’ block after activating the application
@@ -1427,7 +1427,7 @@ export interface StandardAdditions {
       * @param option
       * @return the data
       */
-     theClipboard(option?: StandardAdditions.TheClipboardOptionalParameter): any
+     theClipboard(option?: StandardAdditions.TheClipboardOptionalParameter): any;
 
      /**
       * Return information about the clipboard
@@ -1435,7 +1435,7 @@ export interface StandardAdditions {
       * @param option
       * @return a list of {data type, size} for each type of data on the clipboard
       */
-     clipboardInfo(option?: StandardAdditions.ClipboardInfoOptionalParameter): void
+     clipboardInfo(option?: StandardAdditions.ClipboardInfoOptionalParameter): void;
 
      /**
       * Open a disk file for the read and write commands
@@ -1443,14 +1443,14 @@ export interface StandardAdditions {
       * @param option
       * @return a file reference number; use for ‘read’, ‘write’, and ‘close access’
       */
-     openForAccess(directParameter: any, option?: StandardAdditions.OpenForAccessOptionalParameter): number
+     openForAccess(directParameter: any, option?: StandardAdditions.OpenForAccessOptionalParameter): number;
 
      /**
       * Close a file that was opened for access
       * @param directParameter the file reference number, alias, or file reference of the file to close
       * 
       */
-     closeAccess(directParameter: any, ): void
+     closeAccess(directParameter: any, ): void;
 
      /**
       * Read data from a file that has been opened for access
@@ -1458,7 +1458,7 @@ export interface StandardAdditions {
       * @param option
       * @return the data read from the file
       */
-     read(directParameter: any, option?: StandardAdditions.ReadOptionalParameter): any
+     read(directParameter: any, option?: StandardAdditions.ReadOptionalParameter): any;
 
      /**
       * Write data to a file that was opened for access with write permission
@@ -1466,14 +1466,14 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     write(directParameter: any, option?: StandardAdditions.WriteOptionalParameter): void
+     write(directParameter: any, option?: StandardAdditions.WriteOptionalParameter): void;
 
      /**
       * Return the length, in bytes, of a file
       * @param directParameter a file reference number, alias, or file reference of a file
       * @return the total number of bytes in the file
       */
-     getEof(directParameter: any, ): number
+     getEof(directParameter: any, ): number;
 
      /**
       * Set the length, in bytes, of a file
@@ -1481,14 +1481,14 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     setEof(directParameter: any, option?: StandardAdditions.SetEofOptionalParameter): void
+     setEof(directParameter: any, option?: StandardAdditions.SetEofOptionalParameter): void;
 
      /**
       * Return a script object loaded from a specified file
       * @param directParameter an alias or file reference to the file containing the script object
       * @return the script object. You can get this object’s properties or call its handlers as if it were a local script object.
       */
-     loadScript(directParameter: any, ): any
+     loadScript(directParameter: any, ): any;
 
      /**
       * Store a script object into a file
@@ -1496,7 +1496,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     storeScript(directParameter?: any, option?: StandardAdditions.StoreScriptOptionalParameter): void
+     storeScript(directParameter?: any, option?: StandardAdditions.StoreScriptOptionalParameter): void;
 
      /**
       * Run a specified script or script file
@@ -1504,21 +1504,21 @@ export interface StandardAdditions {
       * @param option
       * @return the result of running the script
       */
-     runScript(directParameter: any, option?: StandardAdditions.RunScriptOptionalParameter): any
+     runScript(directParameter: any, option?: StandardAdditions.RunScriptOptionalParameter): any;
 
      /**
       * Return a list of all scripting components (e.g. AppleScript)
 
       * @return a list of installed scripting components
       */
-     scriptingComponents(): void
+     scriptingComponents(): void;
 
      /**
       * Return the current date and time
 
       * @return the current date and time. Use ‘month of (current date)’, etc. to get individual parts.
       */
-     currentDate(): any
+     currentDate(): any;
 
      /**
       * Execute a shell script using the ‘sh’ shell
@@ -1526,14 +1526,14 @@ export interface StandardAdditions {
       * @param option
       * @return the command output
       */
-     doShellScript(directParameter: string, option?: StandardAdditions.DoShellScriptOptionalParameter): string
+     doShellScript(directParameter: string, option?: StandardAdditions.DoShellScriptOptionalParameter): string;
 
      /**
       * Get the sound output and input volume settings
 
       * @return a record containing the sound output and input volume settings
       */
-     getVolumeSettings(): StandardAdditions.VolumeSettings
+     getVolumeSettings(): StandardAdditions.VolumeSettings;
 
      /**
       * Generate a random number
@@ -1541,7 +1541,7 @@ export interface StandardAdditions {
       * @param option
       * @return a number between the “from” and “to” limits, including limit values. If all specified limits are integers, the result is an integer. Otherwise, the result is a real.
       */
-     randomNumber(directParameter?: number, option?: StandardAdditions.RandomNumberOptionalParameter): number
+     randomNumber(directParameter?: number, option?: StandardAdditions.RandomNumberOptionalParameter): number;
 
      /**
       * Round number to integer
@@ -1549,7 +1549,7 @@ export interface StandardAdditions {
       * @param option
       * @return the rounded value
       */
-     round(directParameter: any, option?: StandardAdditions.RoundOptionalParameter): number
+     round(directParameter: any, option?: StandardAdditions.RoundOptionalParameter): number;
 
      /**
       * Set the sound output and/or input volume
@@ -1557,7 +1557,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     setVolume(directParameter?: number, option?: StandardAdditions.SetVolumeOptionalParameter): void
+     setVolume(directParameter?: number, option?: StandardAdditions.SetVolumeOptionalParameter): void;
 
      /**
       * Test attributes of this computer
@@ -1565,35 +1565,35 @@ export interface StandardAdditions {
       * @param option
       * @return the result of the query (or a list of all environment variables, if no attribute is provided)
       */
-     systemAttribute(directParameter?: any, option?: StandardAdditions.SystemAttributeOptionalParameter): any
+     systemAttribute(directParameter?: any, option?: StandardAdditions.SystemAttributeOptionalParameter): any;
 
      /**
       * Get information about the system
 
       * @return a record containing the system information
       */
-     systemInfo(): StandardAdditions.SystemInformation
+     systemInfo(): StandardAdditions.SystemInformation;
 
      /**
       * Return the difference between local time and GMT (Universal Time)
 
       * @return the difference between current time zone and Universal Time, in seconds
       */
-     timeToGMT(): number
+     timeToGMT(): number;
 
      /**
       * Called after a folder has been opened into a window
       * @param directParameter the folder that was opened
       * 
       */
-     openingFolder(directParameter: any, ): void
+     openingFolder(directParameter: any, ): void;
 
      /**
       * Called after a folder window has been closed
       * @param directParameter the folder that was closed
       * 
       */
-     closingFolderWindowFor(directParameter: any, ): void
+     closingFolderWindowFor(directParameter: any, ): void;
 
      /**
       * Called after a folder window has been moved or resized
@@ -1601,7 +1601,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     movingFolderWindowFor(directParameter: any, option?: StandardAdditions.MovingFolderWindowForOptionalParameter): void
+     movingFolderWindowFor(directParameter: any, option?: StandardAdditions.MovingFolderWindowForOptionalParameter): void;
 
      /**
       * Called after new items have been added to a folder
@@ -1609,7 +1609,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     addingFolderItemsTo(directParameter: any, option?: StandardAdditions.AddingFolderItemsToOptionalParameter): void
+     addingFolderItemsTo(directParameter: any, option?: StandardAdditions.AddingFolderItemsToOptionalParameter): void;
 
      /**
       * Called after items have been removed from a folder
@@ -1617,7 +1617,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     removingFolderItemsFrom(directParameter: any, option?: StandardAdditions.RemovingFolderItemsFromOptionalParameter): void
+     removingFolderItemsFrom(directParameter: any, option?: StandardAdditions.RemovingFolderItemsFromOptionalParameter): void;
 
      /**
       * Opens a URL with the appropriate program
@@ -1625,7 +1625,7 @@ export interface StandardAdditions {
       * @param option
       * 
       */
-     openLocation(directParameter?: string, option?: StandardAdditions.OpenLocationOptionalParameter): void
+     openLocation(directParameter?: string, option?: StandardAdditions.OpenLocationOptionalParameter): void;
 
      /**
       * Sent to a script to process a Common Gateway Interface request
@@ -1633,5 +1633,5 @@ export interface StandardAdditions {
       * @param option
       * @return An HTML page resulting from the CGI execution
       */
-     handleCGIRequest(directParameter: string, option?: StandardAdditions.HandleCgiRequestOptionalParameter): any
+     handleCGIRequest(directParameter: string, option?: StandardAdditions.HandleCgiRequestOptionalParameter): any;
 }

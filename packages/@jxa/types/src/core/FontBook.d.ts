@@ -15,9 +15,7 @@ export namespace FontBook {
       /**
        * Specifies whether changes should be saved before quitting.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
     }
 
     /**
@@ -30,15 +28,11 @@ export namespace FontBook {
       /**
        * Specifies whether changes should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
       /**
        * The file in which to save the object.
        */
-      savingIn?: {
-        [k: string]: any;
-      };
+      savingIn?: any;
     }
 
     /**
@@ -51,9 +45,7 @@ export namespace FontBook {
       /**
        * The class of objects to be counted.
        */
-      each?: {
-        [k: string]: any;
-      };
+      each?: any;
     }
 
 
@@ -67,9 +59,7 @@ export namespace FontBook {
       /**
        * The location for the new object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -84,15 +74,11 @@ export namespace FontBook {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial data for the object.
        */
@@ -100,9 +86,7 @@ export namespace FontBook {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -115,9 +99,7 @@ export namespace FontBook {
       /**
        * The new location for the object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -130,15 +112,11 @@ export namespace FontBook {
       /**
        * The file in which to save the object.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: string;
       /**
        * The file type in which to save the data.
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: string;
     }
 
     /**
@@ -164,9 +142,7 @@ export namespace FontBook {
       /**
        * The container to which to add the object
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
     }
 
     /**
@@ -179,9 +155,7 @@ export namespace FontBook {
       /**
        * The container from which to remove the object
        */
-      from?: {
-        [k: string]: any;
-      };
+      from?: any;
     }
 
     /**
@@ -194,9 +168,7 @@ export namespace FontBook {
       /**
        * The path to which to export the objeccts
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -221,9 +193,7 @@ export namespace FontBook {
       /**
        * Additional parameters.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 }

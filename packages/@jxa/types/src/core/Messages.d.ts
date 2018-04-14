@@ -14,15 +14,11 @@ export namespace Messages {
       /**
        * Whether or not changes should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
       /**
        * The file in which to save the document.
        */
-      savingIn?: {
-        [k: string]: any;
-      };
+      savingIn?: any;
     }
 
     /**
@@ -35,15 +31,11 @@ export namespace Messages {
       /**
        * The file in which to save the document.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
       /**
        * The type of file to save.
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: string;
     }
 
     /**
@@ -70,9 +62,7 @@ export namespace Messages {
       /**
        * Whether or not changed documents should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
     }
 
     /**
@@ -85,9 +75,7 @@ export namespace Messages {
       /**
        * The class of objects to be counted.
        */
-      each?: {
-        [k: string]: any;
-      };
+      each?: any;
     }
 
 
@@ -101,15 +89,11 @@ export namespace Messages {
       /**
        * The location for the new object(s).
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * Properties to be set in the new duplicated object(s).
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -124,15 +108,11 @@ export namespace Messages {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -140,9 +120,7 @@ export namespace Messages {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -155,9 +133,7 @@ export namespace Messages {
       /**
        * The new location for the object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -167,15 +143,11 @@ export namespace Messages {
      */
 
     export interface InviteOptionalParameter {
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * For text chats, an invitation message to send to this participant. This parameter is required for text chat invitations and ignored for other types of chats.
        */
-      withMessage?: {
-        [k: string]: any;
-      };
+      withMessage?: string;
     }
 
 
@@ -187,9 +159,7 @@ export namespace Messages {
      */
 
     export interface SendOptionalParameter {
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -200,9 +170,7 @@ export namespace Messages {
      */
 
     export interface ShowChatChooserOptionalParameter {
-      for: {
-        [k: string]: any;
-      };
+      for: any;
     }
 
 

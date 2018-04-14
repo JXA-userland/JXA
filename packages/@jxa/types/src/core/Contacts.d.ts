@@ -13,15 +13,11 @@ export namespace Contacts {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -29,9 +25,7 @@ export namespace Contacts {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -44,9 +38,7 @@ export namespace Contacts {
       /**
        * where to add this child to.
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -59,9 +51,7 @@ export namespace Contacts {
       /**
        * where to remove this child from.
        */
-      from: {
-        [k: string]: any;
-      };
+      from: any;
     }
 
 
@@ -80,9 +70,7 @@ export namespace Contacts {
       /**
        * Currently selected person.
        */
-      for: {
-        [k: string]: any;
-      };
+      for: any;
     }
 
     /**
@@ -99,9 +87,7 @@ export namespace Contacts {
       /**
        * Currently selected person.
        */
-      for: {
-        [k: string]: any;
-      };
+      for: any;
     }
 
     /**
@@ -118,9 +104,7 @@ export namespace Contacts {
       /**
        * Currently selected person.
        */
-      for: {
-        [k: string]: any;
-      };
+      for: any;
     }
 
 }

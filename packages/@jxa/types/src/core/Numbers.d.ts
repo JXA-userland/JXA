@@ -11,23 +11,23 @@ export namespace Numbers {
       /**
        * Whether to exclude a summary worksheet in Excel workbook.
        */
-      excludeSummaryWorksheet?: boolean;
+      excludeSummaryWorksheet: boolean;
       /**
        * Password.
        */
-      password?: {
+      password: {
         [k: string]: any;
       };
       /**
        * Password hint.
        */
-      passwordHint?: {
+      passwordHint: {
         [k: string]: any;
       };
       /**
        * Image quality.
        */
-      imageQuality?: {
+      imageQuality: {
         [k: string]: any;
       };
     }
@@ -57,15 +57,11 @@ export namespace Numbers {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial contents of the object.
        */
@@ -73,9 +69,7 @@ export namespace Numbers {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -90,18 +84,12 @@ export namespace Numbers {
       /**
        * The column to sort by.
        */
-      by: {
-        [k: string]: any;
-      };
-      direction?: {
-        [k: string]: any;
-      };
+      by: any;
+      direction?: any;
       /**
        * Limit the sort to the specified rows.
        */
-      inRows?: {
-        [k: string]: any;
-      };
+      inRows?: any;
     }
 
 
@@ -116,21 +104,15 @@ export namespace Numbers {
       /**
        * the destination file
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * The format to use.
        */
-      as: {
-        [k: string]: any;
-      };
+      as: any;
       /**
        * Optional export settings.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 

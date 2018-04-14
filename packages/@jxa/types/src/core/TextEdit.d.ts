@@ -13,15 +13,11 @@ export namespace TextEdit {
       /**
        * Specifies whether changes should be saved before closing.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
       /**
        * The file in which to save the object.
        */
-      savingIn?: {
-        [k: string]: any;
-      };
+      savingIn?: any;
     }
 
     /**
@@ -34,9 +30,7 @@ export namespace TextEdit {
       /**
        * The class of objects to be counted.
        */
-      each?: {
-        [k: string]: any;
-      };
+      each?: any;
     }
 
 
@@ -50,15 +44,11 @@ export namespace TextEdit {
       /**
        * The location for the new object(s).
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * Properties to be set in the new duplicated object(s).
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -73,15 +63,11 @@ export namespace TextEdit {
       /**
        * The class of the new object.
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The location at which to insert the object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * The initial data for the object.
        */
@@ -89,9 +75,7 @@ export namespace TextEdit {
       /**
        * The initial values for properties of the object.
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -104,9 +88,7 @@ export namespace TextEdit {
       /**
        * The new location for the object(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -124,9 +106,7 @@ export namespace TextEdit {
       /**
        * the print settings
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -139,9 +119,7 @@ export namespace TextEdit {
       /**
        * Specifies whether changes should be saved before quitting.
        */
-      saving?: {
-        [k: string]: any;
-      };
+      saving?: any;
     }
 
     /**
@@ -154,15 +132,11 @@ export namespace TextEdit {
       /**
        * The file type in which to save the data.
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: string;
       /**
        * The file in which to save the object.
        */
-      in?: {
-        [k: string]: any;
-      };
+      in?: any;
     }
 
     /**

@@ -11,55 +11,55 @@ export namespace ITunes {
       /**
        * the number of copies of a document to be printed
        */
-      copies?: number;
+      copies: number;
       /**
        * Should printed copies be collated?
        */
-      collating?: boolean;
+      collating: boolean;
       /**
        * the first page of the document to be printed
        */
-      startingPage?: number;
+      startingPage: number;
       /**
        * the last page of the document to be printed
        */
-      endingPage?: number;
+      endingPage: number;
       /**
        * number of logical pages laid across a physical page
        */
-      pagesAcross?: number;
+      pagesAcross: number;
       /**
        * number of logical pages laid out down a physical page
        */
-      pagesDown?: number;
+      pagesDown: number;
       /**
        * how errors are handled
        */
-      errorHandling?: {
+      errorHandling: {
         [k: string]: any;
       };
       /**
        * the time at which the desktop printer should print the document
        */
-      requestedPrintTime?: {
+      requestedPrintTime: {
         [k: string]: any;
       };
       /**
        * printer specific options
        */
-      printerFeatures?: {
+      printerFeatures: {
         [k: string]: any;
       };
       /**
        * for fax number
        */
-      faxNumber?: {
+      faxNumber: {
         [k: string]: any;
       };
       /**
        * for target printer
        */
-      targetPrinter?: {
+      targetPrinter: {
         [k: string]: any;
       };
     }
@@ -79,21 +79,15 @@ export namespace ITunes {
       /**
        * the print settings
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
       /**
        * the kind of printout desired
        */
-      kind?: {
-        [k: string]: any;
-      };
+      kind?: any;
       /**
        * name of theme to use for formatting the printout
        */
-      theme?: {
-        [k: string]: any;
-      };
+      theme?: string;
     }
 
 
@@ -107,9 +101,7 @@ export namespace ITunes {
       /**
        * the class of the elements to be counted. Keyword 'each' is optional in AppleScript
        */
-      each: {
-        [k: string]: any;
-      };
+      each: any;
     }
 
 
@@ -123,9 +115,7 @@ export namespace ITunes {
       /**
        * the new location for the object(s)
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
     }
 
 
@@ -139,21 +129,15 @@ export namespace ITunes {
       /**
        * the class of the new element. Keyword 'new' is optional in AppleScript
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * the location at which to insert the element
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
       /**
        * the initial values for the properties of the element
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -166,9 +150,7 @@ export namespace ITunes {
       /**
        * the new location for the playlist(s)
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -185,9 +167,7 @@ export namespace ITunes {
       /**
        * the location of the added file(s)
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
     }
 
 
@@ -226,15 +206,11 @@ export namespace ITunes {
       /**
        * the search text
        */
-      for: {
-        [k: string]: any;
-      };
+      for: string;
       /**
        * area to search (default is all)
        */
-      only?: {
-        [k: string]: any;
-      };
+      only?: any;
     }
 
 

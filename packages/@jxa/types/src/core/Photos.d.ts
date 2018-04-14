@@ -13,9 +13,7 @@ export namespace Photos {
       /**
        * The class of objects to be counted.
        */
-      each?: {
-        [k: string]: any;
-      };
+      each?: any;
     }
 
 
@@ -31,9 +29,7 @@ export namespace Photos {
       /**
        * The album to import into.
        */
-      into?: {
-        [k: string]: any;
-      };
+      into?: any;
       /**
        * Skip duplicate checking and import everything, defaults to false.
        */
@@ -50,9 +46,7 @@ export namespace Photos {
       /**
        * The destination of the export.
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * Export the original files if true, otherwise export rendered jpgs. defaults to false.
        */
@@ -70,21 +64,15 @@ export namespace Photos {
       /**
        * The class of the new object, allowed values are album or folder
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * The name of the new object.
        */
-      named?: {
-        [k: string]: any;
-      };
+      named?: string;
       /**
        * The parent folder for the new object.
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
     }
 
 
@@ -98,9 +86,7 @@ export namespace Photos {
       /**
        * The album to add to.
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
     /**
@@ -113,9 +99,7 @@ export namespace Photos {
       /**
        * The media items to show.
        */
-      using: {
-        [k: string]: any;
-      };
+      using: any;
     }
 
 

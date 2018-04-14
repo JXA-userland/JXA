@@ -21,9 +21,7 @@ export namespace SystemEvents {
       /**
        * The new location for the disk item(s).
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
     }
 
 
@@ -65,9 +63,7 @@ export namespace SystemEvents {
       /**
        * when sent to a "process" object, the { x, y } location at which to click, in global coordinates
        */
-      at?: {
-        [k: string]: any;
-      };
+      at?: any;
     }
 
     /**
@@ -80,9 +76,7 @@ export namespace SystemEvents {
       /**
        * modifiers with which the key codes are to be entered
        */
-      using?: {
-        [k: string]: any;
-      };
+      using?: any;
     }
 
     /**
@@ -95,9 +89,7 @@ export namespace SystemEvents {
       /**
        * modifiers with which the keystrokes are to be entered
        */
-      using?: {
-        [k: string]: any;
-      };
+      using?: any;
     }
 
 
@@ -112,9 +104,7 @@ export namespace SystemEvents {
       /**
        * a file containing the script to attach
        */
-      using: {
-        [k: string]: any;
-      };
+      using: string;
     }
 
 
@@ -131,9 +121,7 @@ export namespace SystemEvents {
       /**
        * the folder action message to process
        */
-      folderActionCode: {
-        [k: string]: any;
-      };
+      folderActionCode: any;
       /**
        * a list of items for the folder action message to process
        */
@@ -141,9 +129,7 @@ export namespace SystemEvents {
       /**
        * the new window size for the folder action message to process
        */
-      withWindowSize?: {
-        [k: string]: any;
-      };
+      withWindowSize?: any;
     }
 
 
@@ -157,9 +143,7 @@ export namespace SystemEvents {
       /**
        * ...or the name of the action to edit
        */
-      usingActionName?: {
-        [k: string]: any;
-      };
+      usingActionName?: string;
       /**
        * the index number of the action to edit...
        */
@@ -180,9 +164,7 @@ export namespace SystemEvents {
       /**
        * ...or the name of the action to remove
        */
-      usingActionName?: {
-        [k: string]: any;
-      };
+      usingActionName?: string;
       /**
        * the index number of the action to remove...
        */

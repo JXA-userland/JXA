@@ -13,15 +13,11 @@ export namespace Finder {
       /**
        * the application file to open the object with
        */
-      using?: {
-        [k: string]: any;
-      };
+      using?: any;
       /**
        * the initial values for the properties, to be included with the open command sent to the application that opens the direct object
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -34,9 +30,7 @@ export namespace Finder {
       /**
        * optional properties to be included with the print command sent to the application that prints the direct object
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
 
@@ -52,9 +46,7 @@ export namespace Finder {
       /**
        * the class of the elements to be counted
        */
-      each: {
-        [k: string]: any;
-      };
+      each: any;
     }
 
     /**
@@ -67,9 +59,7 @@ export namespace Finder {
       /**
        * the data type for which the size is calculated
        */
-      as?: {
-        [k: string]: any;
-      };
+      as?: any;
     }
 
 
@@ -83,9 +73,7 @@ export namespace Finder {
       /**
        * the new location for the object(s)
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * Specifies whether or not to replace items in the destination that have the same name as items being duplicated
        */
@@ -111,27 +99,19 @@ export namespace Finder {
       /**
        * the class of the new element
        */
-      new: {
-        [k: string]: any;
-      };
+      new: any;
       /**
        * the location at which to insert the element
        */
-      at: {
-        [k: string]: any;
-      };
+      at: any;
       /**
        * when creating an alias file, the original item to create an alias to or when creating a file viewer window, the target of the window
        */
-      to?: {
-        [k: string]: any;
-      };
+      to?: any;
       /**
        * the initial values for the properties of the element
        */
-      withProperties?: {
-        [k: string]: any;
-      };
+      withProperties?: any;
     }
 
     /**
@@ -144,9 +124,7 @@ export namespace Finder {
       /**
        * the new location for the object(s)
        */
-      to: {
-        [k: string]: any;
-      };
+      to: any;
       /**
        * Specifies whether or not to replace items in the destination that have the same name as items being moved
        */
@@ -154,9 +132,7 @@ export namespace Finder {
       /**
        * Gives a list (in local window coordinates) of positions for the destination items
        */
-      positionedAt?: {
-        [k: string]: any;
-      };
+      positionedAt?: any;
       /**
        * Specifies whether or not to autoroute items (default is false). Only applies when moving to the system folder.
        */
@@ -176,9 +152,7 @@ export namespace Finder {
       /**
        * the property to sort the items by (name, index, date, etc.)
        */
-      by: {
-        [k: string]: any;
-      };
+      by: any;
     }
 
     /**
@@ -191,9 +165,7 @@ export namespace Finder {
       /**
        * the order in which to clean up the objects (name, index, date, etc.)
        */
-      by?: {
-        [k: string]: any;
-      };
+      by?: any;
     }
 
 
