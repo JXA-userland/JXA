@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "dependencies": {
+    "lerna": "^2.10.1",
+    "make-dir": "^1.2.0"
+  },
+  "name": "JXA",
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspace": [
+    "packages/@jxa/*"
+  ]
+}

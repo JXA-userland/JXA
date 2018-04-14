@@ -1,0 +1,62 @@
+{
+  "name": "sdef-to-dts",
+  "version": "1.0.0",
+  "description": "Scripting definition files (sdefs) to TypeScript(d.ts)",
+  "keywords": [
+    "applescript",
+    "dts",
+    "jxa",
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://github.com/JXA-userland/JXA/tree/master/packages/@jxa/sdef-to-dts/",
+  "bugs": {
+    "url": "https://github.com/JXA-userland/JXA/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/sdef-to-dts.js",
+  "types": "lib/sdef-to-dts.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JXA-userland/JXA.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "updateSnapshot": "cross-env UPDATE_SNAPSHOT=1 mocha \"test/**/*.ts\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "tsc -p . --watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^9.6.5",
+    "cross-env": "^5.1.4",
+    "mocha": "^5.1.0",
+    "prettier": "^1.12.0",
+    "ts-node": "^5.0.1",
+    "ts-node-test-register": "^2.0.0",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "@rgrove/parse-xml": "^1.1.1",
+    "@types/camelcase": "^4.1.0",
+    "camelcase": "^5.0.0",
+    "json-schema-to-typescript": "^5.4.0"
+  }
+}

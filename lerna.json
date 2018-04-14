@@ -1,0 +1,8 @@
+{
+  "lerna": "2.10.1",
+  "packages": [
+    "packages/*",
+    "packages/@jxa/*"
+  ],
+  "version": "0.0.0"
+}
