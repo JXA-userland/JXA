@@ -8,7 +8,7 @@ const fixturesDir = path.join(__dirname, "fixtures");
 describe("Snapshot testing", () => {
     fs.readdirSync(fixturesDir)
         .map(caseName => {
-            const normalizedTestName = camelCase(caseName);
+            const normalizedTestName = camelCase(caseName, {pascalCase: true});
             it(`Test ${normalizedTestName}`, async function () {
                 const fixtureDir = path.join(fixturesDir, caseName);
                 const actualFilePath = path.join(fixtureDir, "input.sdef");

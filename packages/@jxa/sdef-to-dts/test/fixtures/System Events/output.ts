@@ -1,5 +1,5 @@
 
-export namespace systemEvents {
+export namespace SystemEvents {
     // Records
 
     // Function options
@@ -190,7 +190,7 @@ export namespace systemEvents {
     }
 
 }
-export interface systemEvents{
+export interface SystemEvents{
     // Functions
 
      /**
@@ -255,7 +255,7 @@ export interface systemEvents{
       * @param option
       * @return undefined
       */
-     move(directParameter: {}, option?: systemEvents.MoveOptionalParameter): void
+     move(directParameter: {}, option?: SystemEvents.MoveOptionalParameter): void
 
      /**
       * Open disk item(s) with the appropriate application.
@@ -277,7 +277,7 @@ export interface systemEvents{
       * @param option
       * 
       */
-     restart(option?: systemEvents.RestartOptionalParameter): void
+     restart(option?: SystemEvents.RestartOptionalParameter): void
 
      /**
       * Shut Down the computer
@@ -285,7 +285,7 @@ export interface systemEvents{
       * @param option
       * 
       */
-     shutDown(option?: systemEvents.ShutDownOptionalParameter): void
+     shutDown(option?: SystemEvents.ShutDownOptionalParameter): void
 
      /**
       * Put the computer to sleep
@@ -300,7 +300,7 @@ export interface systemEvents{
       * @param option
       * @return undefined
       */
-     click(directParameter?: any, option?: systemEvents.ClickOptionalParameter): void
+     click(directParameter?: any, option?: SystemEvents.ClickOptionalParameter): void
 
      /**
       * cause the target process to behave as if key codes were entered
@@ -308,7 +308,7 @@ export interface systemEvents{
       * @param option
       * 
       */
-     keyCode(directParameter: {}, option?: systemEvents.KeyCodeOptionalParameter): void
+     keyCode(directParameter: {}, option?: SystemEvents.KeyCodeOptionalParameter): void
 
      /**
       * cause the target process to behave as if keystrokes were entered
@@ -316,7 +316,7 @@ export interface systemEvents{
       * @param option
       * 
       */
-     keystroke(directParameter: string, option?: systemEvents.KeystrokeOptionalParameter): void
+     keystroke(directParameter: string, option?: SystemEvents.KeystrokeOptionalParameter): void
 
      /**
       * cause the target process to behave as if the action were applied to its UI element
@@ -338,7 +338,7 @@ export interface systemEvents{
       * @param option
       * @return undefined
       */
-     attachActionTo(directParameter: any, option?: systemEvents.AttachActionToOptionalParameter): any
+     attachActionTo(directParameter: any, option?: SystemEvents.AttachActionToOptionalParameter): any
 
      /**
       * List the actions attached to a folder
@@ -374,7 +374,7 @@ export interface systemEvents{
       * @param option
       * 
       */
-     doFolderAction(directParameter: any, option?: systemEvents.DoFolderActionOptionalParameter): void
+     doFolderAction(directParameter: any, option?: SystemEvents.DoFolderActionOptionalParameter): void
 
      /**
       * Execute an OSA script.
@@ -389,7 +389,7 @@ export interface systemEvents{
       * @param option
       * @return undefined
       */
-     editActionOf(directParameter: any, option?: systemEvents.EditActionOfOptionalParameter): any
+     editActionOf(directParameter: any, option?: SystemEvents.EditActionOfOptionalParameter): any
 
      /**
       * cause the target process to behave as if the UI element were incremented
@@ -425,5 +425,5 @@ export interface systemEvents{
       * @param option
       * @return undefined
       */
-     removeActionFrom(directParameter: any, option?: systemEvents.RemoveActionFromOptionalParameter): any
+     removeActionFrom(directParameter: any, option?: SystemEvents.RemoveActionFromOptionalParameter): any
 }
