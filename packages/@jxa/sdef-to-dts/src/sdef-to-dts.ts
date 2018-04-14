@@ -22,13 +22,13 @@ const pascalCase = (text: string) => {
     return camelCased;
 };
 
-export interface Node {
+interface Node {
     type: string;
 
     [index: string]: any;
 }
 
-export interface RootNode extends Node {
+interface RootNode extends Node {
     attributes: any;
     children: {
         type: string,
@@ -37,22 +37,22 @@ export interface RootNode extends Node {
     }[];
 }
 
-export const isCommand = (node: Node): node is Command => {
+const isCommand = (node: Node): node is Command => {
     return node.name === "command";
 };
-export const isRecord = (node: Node): node is Record => {
+const isRecord = (node: Node): node is Record => {
     return node.name === "record-type";
 };
 
-export interface Command extends RootNode {
+interface Command extends RootNode {
     name: "command";
 }
 
-export interface Record extends RootNode {
+interface Record extends RootNode {
     name: "record";
 }
 
-export const convertType = (type: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
+const convertType = (type: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
     switch (type) {
         case "text":
             return "string";
@@ -72,7 +72,7 @@ export const convertType = (type: string, definedJSONSchemaList: JSONSchema[]): 
     return isTypeDefinedAsRecord ? otherType : "any";
 };
 
-export const createOptionalParameter = (name: string, parameters: Node[]): Promise<string | null> => {
+const createOptionalParameter = (name: string, parameters: Node[]): Promise<string | null> => {
     if (parameters.length === 0) {
         return Promise.resolve(null);
     }
@@ -105,7 +105,7 @@ export const createOptionalParameter = (name: string, parameters: Node[]): Promi
 };
 
 
-export const recordToJSONSchema = (command: Record): JSONSchema => {
+const recordToJSONSchema = (command: Record): JSONSchema => {
     // https://www.npmjs.com/package/json-schema-to-typescript
     const pascalCaseName = pascalCase(command.attributes.name);
     const description = command.attributes.description;
@@ -141,10 +141,7 @@ export const recordToJSONSchema = (command: Record): JSONSchema => {
     }
 };
 
-export const recordToDeclare = async (name: string, record: Record): Promise<string> => {
-    return compile(recordToJSONSchema(record), name)
-};
-export const commandToDeclare = async (command: Command, recordSchema: JSONSchema[]): Promise<string> => {
+const commandToDeclare = async (command: Command, recordSchema: JSONSchema[]): Promise<string> => {
     // https://www.npmjs.com/package/json-schema-to-typescript
     const name = camelCase(command.attributes.name);
     const pascalCaseName = camelCaseLib(command.attributes.name, { pascalCase: true });
