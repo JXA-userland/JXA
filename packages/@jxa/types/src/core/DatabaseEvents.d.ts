@@ -162,7 +162,7 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     close(directParameter: any, option?: DatabaseEvents.CloseOptionalParameter): void
+     close(directParameter: any, option?: DatabaseEvents.CloseOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -170,14 +170,14 @@ export interface DatabaseEvents {
       * @param option
       * @return undefined
       */
-     count(directParameter: any, option?: DatabaseEvents.CountOptionalParameter): number
+     count(directParameter: any, option?: DatabaseEvents.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object for the command
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -185,21 +185,21 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: DatabaseEvents.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: DatabaseEvents.DuplicateOptionalParameter): void;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object for the command
       * @return undefined
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Get the data for an object.
       * @param directParameter the object for the command
       * @return undefined
       */
-     get(directParameter: any, ): any
+     get(directParameter: any, ): any;
 
      /**
       * Make a new object.
@@ -207,7 +207,7 @@ export interface DatabaseEvents {
       * @param option
       * @return undefined
       */
-     make(option?: DatabaseEvents.MakeOptionalParameter): any
+     make(option?: DatabaseEvents.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -215,14 +215,14 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     move(directParameter: any, option?: DatabaseEvents.MoveOptionalParameter): void
+     move(directParameter: any, option?: DatabaseEvents.MoveOptionalParameter): void;
 
      /**
       * Open an object.
       * @param directParameter The file(s) to be opened.
       * @return undefined
       */
-     open(directParameter: any, ): any
+     open(directParameter: any, ): any;
 
      /**
       * Print an object.
@@ -230,7 +230,7 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     print(directParameter: any, option?: DatabaseEvents.PrintOptionalParameter): void
+     print(directParameter: any, option?: DatabaseEvents.PrintOptionalParameter): void;
 
      /**
       * Quit an application.
@@ -238,7 +238,7 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     quit(option?: DatabaseEvents.QuitOptionalParameter): void
+     quit(option?: DatabaseEvents.QuitOptionalParameter): void;
 
      /**
       * Save an object.
@@ -246,7 +246,7 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     save(directParameter: any, option?: DatabaseEvents.SaveOptionalParameter): void
+     save(directParameter: any, option?: DatabaseEvents.SaveOptionalParameter): void;
 
      /**
       * Set an object's data.
@@ -254,5 +254,5 @@ export interface DatabaseEvents {
       * @param option
       * 
       */
-     set(directParameter: any, option?: DatabaseEvents.SetOptionalParameter): void
+     set(directParameter: any, option?: DatabaseEvents.SetOptionalParameter): void;
 }

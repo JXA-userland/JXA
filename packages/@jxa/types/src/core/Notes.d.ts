@@ -13,5 +13,5 @@ export interface Notes {
       * @param directParameter The URL to be opened.
       * 
       */
-     openNoteLocation(directParameter: {}, ): void
+     openNoteLocation(directParameter: {}, ): void;
 }

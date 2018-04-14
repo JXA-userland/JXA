@@ -194,7 +194,7 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     close(directParameter: any, option?: ScriptEditor.CloseOptionalParameter): void
+     close(directParameter: any, option?: ScriptEditor.CloseOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -202,14 +202,14 @@ export interface ScriptEditor {
       * @param option
       * @return undefined
       */
-     count(directParameter: any, option?: ScriptEditor.CountOptionalParameter): number
+     count(directParameter: any, option?: ScriptEditor.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object for the command
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -217,21 +217,21 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: ScriptEditor.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: ScriptEditor.DuplicateOptionalParameter): void;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object for the command
       * @return undefined
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Get the data for an object.
       * @param directParameter the object for the command
       * @return undefined
       */
-     get(directParameter: any, ): any
+     get(directParameter: any, ): any;
 
      /**
       * Make a new object.
@@ -239,7 +239,7 @@ export interface ScriptEditor {
       * @param option
       * @return undefined
       */
-     make(option?: ScriptEditor.MakeOptionalParameter): any
+     make(option?: ScriptEditor.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -247,14 +247,14 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     move(directParameter: any, option?: ScriptEditor.MoveOptionalParameter): void
+     move(directParameter: any, option?: ScriptEditor.MoveOptionalParameter): void;
 
      /**
       * Open an object.
       * @param directParameter The file(s) to be opened.
       * @return undefined
       */
-     open(directParameter: any, ): any
+     open(directParameter: any, ): any;
 
      /**
       * Print an object.
@@ -262,7 +262,7 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     print(directParameter: any, option?: ScriptEditor.PrintOptionalParameter): void
+     print(directParameter: any, option?: ScriptEditor.PrintOptionalParameter): void;
 
      /**
       * Quit an application.
@@ -270,7 +270,7 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     quit(option?: ScriptEditor.QuitOptionalParameter): void
+     quit(option?: ScriptEditor.QuitOptionalParameter): void;
 
      /**
       * Save an object.
@@ -278,7 +278,7 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     save(directParameter: any, option?: ScriptEditor.SaveOptionalParameter): void
+     save(directParameter: any, option?: ScriptEditor.SaveOptionalParameter): void;
 
      /**
       * Set an object's data.
@@ -286,28 +286,28 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     set(directParameter: any, option?: ScriptEditor.SetOptionalParameter): void
+     set(directParameter: any, option?: ScriptEditor.SetOptionalParameter): void;
 
      /**
       * Check the syntax of a document.
       * @param directParameter the object for the command
       * 
       */
-     checkSyntax(directParameter: any, ): void
+     checkSyntax(directParameter: any, ): void;
 
      /**
       * Compile the script of a document.
       * @param directParameter the object for the command
       * @return undefined
       */
-     compile(directParameter: any, ): boolean
+     compile(directParameter: any, ): boolean;
 
      /**
       * Execute the document.
       * @param directParameter the object for the command
       * @return undefined
       */
-     execute(directParameter: any, ): any
+     execute(directParameter: any, ): any;
 
      /**
       * Save an object.
@@ -315,5 +315,5 @@ export interface ScriptEditor {
       * @param option
       * 
       */
-     save(directParameter: any, option?: ScriptEditor.SaveOptionalParameter1): void
+     save(directParameter: any, option?: ScriptEditor.SaveOptionalParameter1): void;
 }

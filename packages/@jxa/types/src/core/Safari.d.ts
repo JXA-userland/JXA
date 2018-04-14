@@ -76,7 +76,7 @@ export interface Safari {
       * @param option
       * 
       */
-     addReadingListItem(directParameter: string, option?: Safari.AddReadingListItemOptionalParameter): void
+     addReadingListItem(directParameter: string, option?: Safari.AddReadingListItemOptionalParameter): void;
 
      /**
       * Applies a string of JavaScript code to a document.
@@ -84,7 +84,7 @@ export interface Safari {
       * @param option
       * @return undefined
       */
-     doJavaScript(directParameter: string, option?: Safari.DoJavaScriptOptionalParameter): any
+     doJavaScript(directParameter: string, option?: Safari.DoJavaScriptOptionalParameter): any;
 
      /**
       * Emails the contents of a tab.
@@ -92,7 +92,7 @@ export interface Safari {
       * @param option
       * 
       */
-     emailContents(option?: Safari.EmailContentsOptionalParameter): void
+     emailContents(option?: Safari.EmailContentsOptionalParameter): void;
 
      /**
       * Searches the web using Safari's current search provider.
@@ -100,26 +100,26 @@ export interface Safari {
       * @param option
       * 
       */
-     searchTheWeb(option?: Safari.SearchTheWebOptionalParameter): void
+     searchTheWeb(option?: Safari.SearchTheWebOptionalParameter): void;
 
      /**
       * Shows Safari's bookmarks.
 
       * 
       */
-     showBookmarks(): void
+     showBookmarks(): void;
 
      /**
       * Show Safari Extensions preferences.
       * @param directParameter The identifier of the extension to select.
       * 
       */
-     showExtensionsPreferences(directParameter: string, ): void
+     showExtensionsPreferences(directParameter: string, ): void;
 
      /**
       * Dispatch a message to a Safari Extension.
       * @param directParameter A dictionary describing the message
       * 
       */
-     dispatchMessageToExtension(directParameter: any, ): void
+     dispatchMessageToExtension(directParameter: any, ): void;
 }

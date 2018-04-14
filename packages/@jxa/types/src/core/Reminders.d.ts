@@ -14,12 +14,12 @@ export interface Reminders {
       * @param directParameter the Reminders URL
       * 
       */
-     getURL(directParameter: string, ): void
+     getURL(directParameter: string, ): void;
 
      /**
       * Show an object in the UI
       * @param directParameter The object to be shown
       * @return The object shown.
       */
-     show(directParameter: {}, ): void
+     show(directParameter: {}, ): void;
 }

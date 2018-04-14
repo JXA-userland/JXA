@@ -180,56 +180,56 @@ export interface SystemEvents {
 
       * 
       */
-     abortTransaction(): void
+     abortTransaction(): void;
 
      /**
       * Begin a bounded update session with one or more files.
 
       * @return undefined
       */
-     beginTransaction(): number
+     beginTransaction(): number;
 
      /**
       * Apply the results of a bounded update session with one or more files.
 
       * 
       */
-     endTransaction(): void
+     endTransaction(): void;
 
      /**
       * connect a configuration or service
       * @param directParameter a configuration or service
       * @return undefined
       */
-     connect(directParameter: {}, ): any
+     connect(directParameter: {}, ): any;
 
      /**
       * disconnect a configuration or service
       * @param directParameter a configuration or service
       * @return undefined
       */
-     disconnect(directParameter: {}, ): any
+     disconnect(directParameter: {}, ): any;
 
      /**
       * start the screen saver
       * @param directParameter the object for the command
       * 
       */
-     start(directParameter: {}, ): void
+     start(directParameter: {}, ): void;
 
      /**
       * stop the screen saver
       * @param directParameter the object for the command
       * 
       */
-     stop(directParameter: {}, ): void
+     stop(directParameter: {}, ): void;
 
      /**
       * Delete disk item(s).
       * @param directParameter The disk item(s) to be deleted.
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Move disk item(s) to a new location.
@@ -237,21 +237,21 @@ export interface SystemEvents {
       * @param option
       * @return undefined
       */
-     move(directParameter: {}, option?: SystemEvents.MoveOptionalParameter): void
+     move(directParameter: {}, option?: SystemEvents.MoveOptionalParameter): void;
 
      /**
       * Open disk item(s) with the appropriate application.
       * @param directParameter The disk item(s) to be opened.
       * @return undefined
       */
-     open(directParameter: {}, ): any
+     open(directParameter: {}, ): any;
 
      /**
       * Log out the current user
 
       * 
       */
-     logOut(): void
+     logOut(): void;
 
      /**
       * Restart the computer
@@ -259,7 +259,7 @@ export interface SystemEvents {
       * @param option
       * 
       */
-     restart(option?: SystemEvents.RestartOptionalParameter): void
+     restart(option?: SystemEvents.RestartOptionalParameter): void;
 
      /**
       * Shut Down the computer
@@ -267,14 +267,14 @@ export interface SystemEvents {
       * @param option
       * 
       */
-     shutDown(option?: SystemEvents.ShutDownOptionalParameter): void
+     shutDown(option?: SystemEvents.ShutDownOptionalParameter): void;
 
      /**
       * Put the computer to sleep
 
       * 
       */
-     sleep(): void
+     sleep(): void;
 
      /**
       * cause the target process to behave as if the UI element were clicked
@@ -282,7 +282,7 @@ export interface SystemEvents {
       * @param option
       * @return undefined
       */
-     click(directParameter?: any, option?: SystemEvents.ClickOptionalParameter): void
+     click(directParameter?: any, option?: SystemEvents.ClickOptionalParameter): void;
 
      /**
       * cause the target process to behave as if key codes were entered
@@ -290,7 +290,7 @@ export interface SystemEvents {
       * @param option
       * 
       */
-     keyCode(directParameter: {}, option?: SystemEvents.KeyCodeOptionalParameter): void
+     keyCode(directParameter: {}, option?: SystemEvents.KeyCodeOptionalParameter): void;
 
      /**
       * cause the target process to behave as if keystrokes were entered
@@ -298,21 +298,21 @@ export interface SystemEvents {
       * @param option
       * 
       */
-     keystroke(directParameter: string, option?: SystemEvents.KeystrokeOptionalParameter): void
+     keystroke(directParameter: string, option?: SystemEvents.KeystrokeOptionalParameter): void;
 
      /**
       * cause the target process to behave as if the action were applied to its UI element
       * @param directParameter The action to be performed.
       * @return undefined
       */
-     perform(directParameter: any, ): any
+     perform(directParameter: any, ): any;
 
      /**
       * set the selected property of the UI element
       * @param directParameter The UI element to be selected.
       * @return undefined
       */
-     select(directParameter: any, ): any
+     select(directParameter: any, ): any;
 
      /**
       * Attach an action to a folder
@@ -320,35 +320,35 @@ export interface SystemEvents {
       * @param option
       * @return undefined
       */
-     attachActionTo(directParameter: any, option?: SystemEvents.AttachActionToOptionalParameter): any
+     attachActionTo(directParameter: any, option?: SystemEvents.AttachActionToOptionalParameter): any;
 
      /**
       * List the actions attached to a folder
       * @param directParameter the object for the command
       * @return undefined
       */
-     attachedScripts(directParameter: any, ): void
+     attachedScripts(directParameter: any, ): void;
 
      /**
       * cause the target process to behave as if the UI element were cancelled
       * @param directParameter the object for the command
       * @return undefined
       */
-     cancel(directParameter: any, ): any
+     cancel(directParameter: any, ): any;
 
      /**
       * cause the target process to behave as if the UI element were confirmed
       * @param directParameter the object for the command
       * @return undefined
       */
-     confirm(directParameter: any, ): any
+     confirm(directParameter: any, ): any;
 
      /**
       * cause the target process to behave as if the UI element were decremented
       * @param directParameter the object for the command
       * @return undefined
       */
-     decrement(directParameter: any, ): any
+     decrement(directParameter: any, ): any;
 
      /**
       * Send a folder action code to a folder action script
@@ -356,14 +356,14 @@ export interface SystemEvents {
       * @param option
       * 
       */
-     doFolderAction(directParameter: any, option?: SystemEvents.DoFolderActionOptionalParameter): void
+     doFolderAction(directParameter: any, option?: SystemEvents.DoFolderActionOptionalParameter): void;
 
      /**
       * Execute an OSA script.
       * @param directParameter the object for the command
       * @return undefined
       */
-     doScript(directParameter: {}, ): any
+     doScript(directParameter: {}, ): any;
 
      /**
       * Edit an action of a folder
@@ -371,35 +371,35 @@ export interface SystemEvents {
       * @param option
       * @return undefined
       */
-     editActionOf(directParameter: any, option?: SystemEvents.EditActionOfOptionalParameter): any
+     editActionOf(directParameter: any, option?: SystemEvents.EditActionOfOptionalParameter): any;
 
      /**
       * cause the target process to behave as if the UI element were incremented
       * @param directParameter the object for the command
       * @return undefined
       */
-     increment(directParameter: any, ): any
+     increment(directParameter: any, ): any;
 
      /**
       * cause the target process to behave as if keys were held down
       * @param directParameter the object for the command
       * 
       */
-     keyDown(directParameter: any, ): void
+     keyDown(directParameter: any, ): void;
 
      /**
       * cause the target process to behave as if keys were released
       * @param directParameter the object for the command
       * 
       */
-     keyUp(directParameter: any, ): void
+     keyUp(directParameter: any, ): void;
 
      /**
       * cause the target process to behave as if the UI element were picked
       * @param directParameter the object for the command
       * @return undefined
       */
-     pick(directParameter: any, ): any
+     pick(directParameter: any, ): any;
 
      /**
       * Remove a folder action from a folder
@@ -407,5 +407,5 @@ export interface SystemEvents {
       * @param option
       * @return undefined
       */
-     removeActionFrom(directParameter: any, option?: SystemEvents.RemoveActionFromOptionalParameter): any
+     removeActionFrom(directParameter: any, option?: SystemEvents.RemoveActionFromOptionalParameter): any;
 }

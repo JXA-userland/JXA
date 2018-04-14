@@ -76,7 +76,7 @@ export interface SpeechRecognitionServer {
       * @param option
       * @return the recognized phrase
       */
-     listenFor(directParameter: {}, option?: SpeechRecognitionServer.ListenForOptionalParameter): string
+     listenFor(directParameter: {}, option?: SpeechRecognitionServer.ListenForOptionalParameter): string;
 
      /**
       * Listen for spoken phrases. Call stop listening when done.
@@ -84,12 +84,12 @@ export interface SpeechRecognitionServer {
       * @param option
       * @return the recognized phrase
       */
-     listenContinuouslyFor(directParameter: {}, option?: SpeechRecognitionServer.ListenContinuouslyForOptionalParameter): string
+     listenContinuouslyFor(directParameter: {}, option?: SpeechRecognitionServer.ListenContinuouslyForOptionalParameter): string;
 
      /**
       * Stop listening when listening continuously
       * @param directParameter the unqiue identifier string for the recognizer to stop
       * 
       */
-     stopListeningForIdentifier(directParameter: string, ): void
+     stopListeningForIdentifier(directParameter: string, ): void;
 }

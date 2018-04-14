@@ -274,7 +274,7 @@ export interface Keynote {
       * @param option
       * 
       */
-     export(directParameter: any, option?: Keynote.ExportOptionalParameter): void
+     export(directParameter: any, option?: Keynote.ExportOptionalParameter): void;
 
      /**
       * Copy an object.
@@ -282,7 +282,7 @@ export interface Keynote {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: Keynote.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: Keynote.DuplicateOptionalParameter): void;
 
      /**
       * Sets the value of the specified object(s).
@@ -290,14 +290,14 @@ export interface Keynote {
       * @param option
       * 
       */
-     set(directParameter: any, option?: Keynote.SetOptionalParameter): void
+     set(directParameter: any, option?: Keynote.SetOptionalParameter): void;
 
      /**
       * Delete an object.
       * @param directParameter undefined
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Create a new object.
@@ -305,21 +305,21 @@ export interface Keynote {
       * @param option
       * @return The new object.
       */
-     make(option?: Keynote.MakeOptionalParameter): any
+     make(option?: Keynote.MakeOptionalParameter): any;
 
      /**
       * Clear the contents of a specified range of cells, including formatting and style.
       * @param directParameter undefined
       * 
       */
-     clear(directParameter: any, ): void
+     clear(directParameter: any, ): void;
 
      /**
       * Merge a specified range of cells.
       * @param directParameter undefined
       * 
       */
-     merge(directParameter: any, ): void
+     merge(directParameter: any, ): void;
 
      /**
       * Sort the rows of the table.
@@ -327,14 +327,14 @@ export interface Keynote {
       * @param option
       * 
       */
-     sort(directParameter: any, option?: Keynote.SortOptionalParameter): void
+     sort(directParameter: any, option?: Keynote.SortOptionalParameter): void;
 
      /**
       * Unmerge all merged cells in a specified range.
       * @param directParameter undefined
       * 
       */
-     unmerge(directParameter: any, ): void
+     unmerge(directParameter: any, ): void;
 
      /**
       * Add a chart to a slide
@@ -342,7 +342,7 @@ export interface Keynote {
       * @param option
       * 
       */
-     addChart(directParameter: any, option?: Keynote.AddChartOptionalParameter): void
+     addChart(directParameter: any, option?: Keynote.AddChartOptionalParameter): void;
 
      /**
       * Start playing the presentation.
@@ -350,7 +350,7 @@ export interface Keynote {
       * @param option
       * 
       */
-     start(directParameter: any, option?: Keynote.StartOptionalParameter): void
+     start(directParameter: any, option?: Keynote.StartOptionalParameter): void;
 
      /**
       * Make a series of slides from a list of files.
@@ -358,96 +358,96 @@ export interface Keynote {
       * @param option
       * 
       */
-     makeImageSlides(directParameter: any, option?: Keynote.MakeImageSlidesOptionalParameter): void
+     makeImageSlides(directParameter: any, option?: Keynote.MakeImageSlidesOptionalParameter): void;
 
      /**
       * Stop the presentation.
       * @param directParameter undefined
       * 
       */
-     stop(directParameter: any, ): void
+     stop(directParameter: any, ): void;
 
      /**
       * Advance one build or slide.
 
       * 
       */
-     showNext(): void
+     showNext(): void;
 
      /**
       * Go to the previous slide.
 
       * 
       */
-     showPrevious(): void
+     showPrevious(): void;
 
      /**
       * Show the slide switcher in play mode
       * @param directParameter undefined
       * 
       */
-     showSlideSwitcher(directParameter: any, ): void
+     showSlideSwitcher(directParameter: any, ): void;
 
      /**
       * Hide the slide switcher in play mode
       * @param directParameter undefined
       * 
       */
-     hideSlideSwitcher(directParameter: any, ): void
+     hideSlideSwitcher(directParameter: any, ): void;
 
      /**
       * Move the slide switcher forward one slide
       * @param directParameter undefined
       * 
       */
-     moveSlideSwitcherForward(directParameter: any, ): void
+     moveSlideSwitcherForward(directParameter: any, ): void;
 
      /**
       * Move the slide switcher backward one slide
       * @param directParameter undefined
       * 
       */
-     moveSlideSwitcherBackward(directParameter: any, ): void
+     moveSlideSwitcherBackward(directParameter: any, ): void;
 
      /**
       * Hide the slide switcher without changing slides
       * @param directParameter undefined
       * 
       */
-     cancelSlideSwitcher(directParameter: any, ): void
+     cancelSlideSwitcher(directParameter: any, ): void;
 
      /**
       * Hide the slide switcher, going to the slide it has selected
       * @param directParameter undefined
       * 
       */
-     acceptSlideSwitcher(directParameter: any, ): void
+     acceptSlideSwitcher(directParameter: any, ): void;
 
      /**
       * 
 
       * 
       */
-     startSlideshow(): void
-
-     /**
-      * 
-      * @param directParameter the object for the command
-      * 
-      */
-     startFrom(directParameter: any, ): void
-
-     /**
-      * 
-
-      * 
-      */
-     stopSlideshow(): void
+     startSlideshow(): void;
 
      /**
       * 
       * @param directParameter the object for the command
       * 
       */
-     show(directParameter: any, ): void
+     startFrom(directParameter: any, ): void;
+
+     /**
+      * 
+
+      * 
+      */
+     stopSlideshow(): void;
+
+     /**
+      * 
+      * @param directParameter the object for the command
+      * 
+      */
+     show(directParameter: any, ): void;
 }

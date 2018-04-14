@@ -148,7 +148,7 @@ export interface Mail {
       * @param directParameter The object(s) to delete.
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy an object.
@@ -156,7 +156,7 @@ export interface Mail {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: Mail.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: Mail.DuplicateOptionalParameter): void;
 
      /**
       * Move an object to a new location.
@@ -164,14 +164,14 @@ export interface Mail {
       * @param option
       * 
       */
-     move(directParameter: any, option?: Mail.MoveOptionalParameter): void
+     move(directParameter: any, option?: Mail.MoveOptionalParameter): void;
 
      /**
       * Does nothing at all (deprecated)
       * @param directParameter the message to bounce
       * 
       */
-     bounce(directParameter: any, ): void
+     bounce(directParameter: any, ): void;
 
      /**
       * Triggers a check for email.
@@ -179,21 +179,21 @@ export interface Mail {
       * @param option
       * 
       */
-     checkForNewMail(option?: Mail.CheckForNewMailOptionalParameter): void
+     checkForNewMail(option?: Mail.CheckForNewMailOptionalParameter): void;
 
      /**
       * Command to get the full name out of a fully specified email address. E.g. Calling this with "John Doe <jdoe@example.com>" as the direct object would return "John Doe"
       * @param directParameter fully formatted email address
       * @return the full name
       */
-     extractNameFrom(directParameter: string, ): string
+     extractNameFrom(directParameter: string, ): string;
 
      /**
       * Command to get just the email address of a fully specified email address. E.g. Calling this with "John Doe <jdoe@example.com>" as the direct object would return "jdoe@example.com"
       * @param directParameter fully formatted email address
       * @return the email address
       */
-     extractAddressFrom(directParameter: string, ): string
+     extractAddressFrom(directParameter: string, ): string;
 
      /**
       * Creates a forwarded message.
@@ -201,14 +201,14 @@ export interface Mail {
       * @param option
       * @return the message to be forwarded
       */
-     forward(directParameter: any, option?: Mail.ForwardOptionalParameter): any
+     forward(directParameter: any, option?: Mail.ForwardOptionalParameter): any;
 
      /**
       * Opens a mailto URL.
       * @param directParameter the mailto URL
       * 
       */
-     getURL(directParameter: string, ): void
+     getURL(directParameter: string, ): void;
 
      /**
       * Imports a mailbox created by Mail.
@@ -216,14 +216,14 @@ export interface Mail {
       * @param option
       * 
       */
-     importMailMailbox(option?: Mail.ImportMailMailboxOptionalParameter): void
+     importMailMailbox(option?: Mail.ImportMailMailboxOptionalParameter): void;
 
      /**
       * Opens a mailto URL.
       * @param directParameter the mailto URL
       * 
       */
-     mailto(directParameter: string, ): void
+     mailto(directParameter: string, ): void;
 
      /**
       * Script handler invoked by rules and menus that execute AppleScripts. The direct parameter of this handler is a list of messages being acted upon.
@@ -231,7 +231,7 @@ export interface Mail {
       * @param option
       * 
       */
-     performMailActionWithMessages(directParameter: {}, option?: Mail.PerformMailActionWithMessagesOptionalParameter): void
+     performMailActionWithMessages(directParameter: {}, option?: Mail.PerformMailActionWithMessagesOptionalParameter): void;
 
      /**
       * Creates a redirected message.
@@ -239,7 +239,7 @@ export interface Mail {
       * @param option
       * @return the redirected message
       */
-     redirect(directParameter: any, option?: Mail.RedirectOptionalParameter): any
+     redirect(directParameter: any, option?: Mail.RedirectOptionalParameter): any;
 
      /**
       * Creates a reply message.
@@ -247,14 +247,14 @@ export interface Mail {
       * @param option
       * @return the reply message
       */
-     reply(directParameter: any, option?: Mail.ReplyOptionalParameter): any
+     reply(directParameter: any, option?: Mail.ReplyOptionalParameter): any;
 
      /**
       * Sends a message.
       * @param directParameter the message to send
       * @return true if sending was successful, false if not
       */
-     send(directParameter: any, ): boolean
+     send(directParameter: any, ): boolean;
 
      /**
       * Command to trigger synchronizing of an IMAP account with the server.
@@ -262,5 +262,5 @@ export interface Mail {
       * @param option
       * 
       */
-     synchronize(option?: Mail.SynchronizeOptionalParameter): void
+     synchronize(option?: Mail.SynchronizeOptionalParameter): void;
 }

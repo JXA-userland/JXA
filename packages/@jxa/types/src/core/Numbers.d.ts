@@ -130,14 +130,14 @@ export interface Numbers {
       * @param option
       * 
       */
-     set(directParameter: any, option?: Numbers.SetOptionalParameter): void
+     set(directParameter: any, option?: Numbers.SetOptionalParameter): void;
 
      /**
       * Delete an object.
       * @param directParameter undefined
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Create a new object.
@@ -145,21 +145,21 @@ export interface Numbers {
       * @param option
       * @return The new object.
       */
-     make(option?: Numbers.MakeOptionalParameter): any
+     make(option?: Numbers.MakeOptionalParameter): any;
 
      /**
       * Clear the contents of a specified range of cells, including formatting and style.
       * @param directParameter undefined
       * 
       */
-     clear(directParameter: any, ): void
+     clear(directParameter: any, ): void;
 
      /**
       * Merge a specified range of cells.
       * @param directParameter undefined
       * 
       */
-     merge(directParameter: any, ): void
+     merge(directParameter: any, ): void;
 
      /**
       * Sort the rows of the table.
@@ -167,21 +167,21 @@ export interface Numbers {
       * @param option
       * 
       */
-     sort(directParameter: any, option?: Numbers.SortOptionalParameter): void
+     sort(directParameter: any, option?: Numbers.SortOptionalParameter): void;
 
      /**
       * Unmerge all merged cells in a specified range.
       * @param directParameter undefined
       * 
       */
-     unmerge(directParameter: any, ): void
+     unmerge(directParameter: any, ): void;
 
      /**
       * Transpose the rows and columns of the table.
       * @param directParameter undefined
       * 
       */
-     transpose(directParameter: any, ): void
+     transpose(directParameter: any, ): void;
 
      /**
       * Export a document to another file
@@ -189,40 +189,40 @@ export interface Numbers {
       * @param option
       * 
       */
-     export(directParameter: any, option?: Numbers.ExportOptionalParameter): void
+     export(directParameter: any, option?: Numbers.ExportOptionalParameter): void;
 
      /**
       * Add a column to the table after a specified range of cells.
       * @param directParameter undefined
       * @return A reference to the new column
       */
-     addColumnAfter(directParameter: any, ): any
+     addColumnAfter(directParameter: any, ): any;
 
      /**
       * Add a column to the table before a specified range of cells.
       * @param directParameter undefined
       * @return A reference to the new column
       */
-     addColumnBefore(directParameter: any, ): any
+     addColumnBefore(directParameter: any, ): any;
 
      /**
       * Add a row to the table below a specified range of cells.
       * @param directParameter undefined
       * @return A reference to the new row
       */
-     addRowAbove(directParameter: any, ): any
+     addRowAbove(directParameter: any, ): any;
 
      /**
       * Add a row to the table below a specified range of cells.
       * @param directParameter undefined
       * @return A reference to the new row
       */
-     addRowBelow(directParameter: any, ): any
+     addRowBelow(directParameter: any, ): any;
 
      /**
       * Remove specified rows or columns from a table.
       * @param directParameter undefined
       * 
       */
-     remove(directParameter: any, ): void
+     remove(directParameter: any, ): void;
 }

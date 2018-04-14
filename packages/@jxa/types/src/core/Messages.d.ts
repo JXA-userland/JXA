@@ -187,7 +187,7 @@ export interface Messages {
       * @param directParameter The file(s) to be opened.
       * 
       */
-     open(directParameter: {}, ): void
+     open(directParameter: {}, ): void;
 
      /**
       * Close a document.
@@ -195,7 +195,7 @@ export interface Messages {
       * @param option
       * 
       */
-     close(directParameter: any, option?: Messages.CloseOptionalParameter): void
+     close(directParameter: any, option?: Messages.CloseOptionalParameter): void;
 
      /**
       * Save a document.
@@ -203,7 +203,7 @@ export interface Messages {
       * @param option
       * 
       */
-     save(directParameter: any, option?: Messages.SaveOptionalParameter): void
+     save(directParameter: any, option?: Messages.SaveOptionalParameter): void;
 
      /**
       * Set an object's data.
@@ -211,14 +211,14 @@ export interface Messages {
       * @param option
       * 
       */
-     set(directParameter: any, option?: Messages.SetOptionalParameter): void
+     set(directParameter: any, option?: Messages.SetOptionalParameter): void;
 
      /**
       * Print an object.
       * @param directParameter The file(s) or document(s) to be printed.
       * 
       */
-     print(directParameter: any, ): void
+     print(directParameter: any, ): void;
 
      /**
       * Quit the application.
@@ -226,7 +226,7 @@ export interface Messages {
       * @param option
       * 
       */
-     quit(option?: Messages.QuitOptionalParameter): void
+     quit(option?: Messages.QuitOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -234,14 +234,14 @@ export interface Messages {
       * @param option
       * @return the number of elements
       */
-     count(directParameter: any, option?: Messages.CountOptionalParameter): number
+     count(directParameter: any, option?: Messages.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object to delete
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -249,21 +249,21 @@ export interface Messages {
       * @param option
       * @return to the duplicated object(s)
       */
-     duplicate(directParameter: any, option?: Messages.DuplicateOptionalParameter): any
+     duplicate(directParameter: any, option?: Messages.DuplicateOptionalParameter): any;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object in question
       * @return true if it exists, false if not
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Get the data for an object.
       * @param directParameter undefined
       * @return undefined
       */
-     get(directParameter: any, ): any
+     get(directParameter: any, ): any;
 
      /**
       * Make a new object.
@@ -271,7 +271,7 @@ export interface Messages {
       * @param option
       * @return to the new object
       */
-     make(option?: Messages.MakeOptionalParameter): any
+     make(option?: Messages.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -279,7 +279,7 @@ export interface Messages {
       * @param option
       * @return to the moved object(s)
       */
-     move(directParameter: any, option?: Messages.MoveOptionalParameter): any
+     move(directParameter: any, option?: Messages.MoveOptionalParameter): any;
 
      /**
       * Invites a buddy to join an existing chat.
@@ -287,21 +287,21 @@ export interface Messages {
       * @param option
       * 
       */
-     invite(directParameter: {}, option?: Messages.InviteOptionalParameter): void
+     invite(directParameter: {}, option?: Messages.InviteOptionalParameter): void;
 
      /**
       * Log in to the specified service, or all services if none is specified. If the account password is not in the keychain the user will be prompted to enter one.
       * @param directParameter undefined
       * 
       */
-     logIn(directParameter?: {}, ): void
+     logIn(directParameter?: {}, ): void;
 
      /**
       * Logs out of a service, or all services if none is specified.
       * @param directParameter undefined
       * 
       */
-     logOut(directParameter?: {}, ): void
+     logOut(directParameter?: {}, ): void;
 
      /**
       * Sends a message or file to a buddy or to a chat.
@@ -309,14 +309,14 @@ export interface Messages {
       * @param option
       * 
       */
-     send(directParameter: {}, option?: Messages.SendOptionalParameter): void
+     send(directParameter: {}, option?: Messages.SendOptionalParameter): void;
 
      /**
       * Stores the currently set buddy picture into your recent pictures.
 
       * 
       */
-     storeRecentPicture(): void
+     storeRecentPicture(): void;
 
      /**
       * displays a dialog in Messages to start a new chat with the specified buddy
@@ -324,40 +324,40 @@ export interface Messages {
       * @param option
       * 
       */
-     showChatChooser(option?: Messages.ShowChatChooserOptionalParameter): void
+     showChatChooser(option?: Messages.ShowChatChooserOptionalParameter): void;
 
      /**
       * Takes a snapshot of a video chat and saves it to a desktop.
       * @param directParameter undefined
       * 
       */
-     takeSnapshot(directParameter: {}, ): void
+     takeSnapshot(directParameter: {}, ): void;
 
      /**
       * Accepts an incoming text, audio, or video chat invitation, or file transfer
       * @param directParameter undefined
       * 
       */
-     accept(directParameter: {}, ): void
+     accept(directParameter: {}, ): void;
 
      /**
       * Declines an incoming text, audio, or video chat invitation, or file transfer
       * @param directParameter undefined
       * 
       */
-     decline(directParameter: {}, ): void
+     decline(directParameter: {}, ): void;
 
      /**
       * Sends a recording request to all participants of an audio or video chat. Recording will not start until all participants have agreed to allow recording.
       * @param directParameter undefined
       * 
       */
-     requestRecording(directParameter: {}, ): void
+     requestRecording(directParameter: {}, ): void;
 
      /**
       * Ends recording of an audio or video chat.
       * @param directParameter undefined
       * 
       */
-     stopRecording(directParameter: {}, ): void
+     stopRecording(directParameter: {}, ): void;
 }

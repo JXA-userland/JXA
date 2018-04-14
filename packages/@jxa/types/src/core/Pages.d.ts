@@ -183,14 +183,14 @@ export interface Pages {
       * @param option
       * 
       */
-     set(directParameter: any, option?: Pages.SetOptionalParameter): void
+     set(directParameter: any, option?: Pages.SetOptionalParameter): void;
 
      /**
       * Delete an object.
       * @param directParameter undefined
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Create a new object.
@@ -198,21 +198,21 @@ export interface Pages {
       * @param option
       * @return The new object.
       */
-     make(option?: Pages.MakeOptionalParameter): any
+     make(option?: Pages.MakeOptionalParameter): any;
 
      /**
       * Clear the contents of a specified range of cells, including formatting and style.
       * @param directParameter undefined
       * 
       */
-     clear(directParameter: any, ): void
+     clear(directParameter: any, ): void;
 
      /**
       * Merge a specified range of cells.
       * @param directParameter undefined
       * 
       */
-     merge(directParameter: any, ): void
+     merge(directParameter: any, ): void;
 
      /**
       * Sort the rows of the table.
@@ -220,14 +220,14 @@ export interface Pages {
       * @param option
       * 
       */
-     sort(directParameter: any, option?: Pages.SortOptionalParameter): void
+     sort(directParameter: any, option?: Pages.SortOptionalParameter): void;
 
      /**
       * Unmerge all merged cells in a specified range.
       * @param directParameter undefined
       * 
       */
-     unmerge(directParameter: any, ): void
+     unmerge(directParameter: any, ): void;
 
      /**
       * Create a new object.
@@ -235,7 +235,7 @@ export interface Pages {
       * @param option
       * @return The new object.
       */
-     make(option?: Pages.MakeOptionalParameter1): any
+     make(option?: Pages.MakeOptionalParameter1): any;
 
      /**
       * Export a document to another file
@@ -243,5 +243,5 @@ export interface Pages {
       * @param option
       * 
       */
-     export(directParameter: any, option?: Pages.ExportOptionalParameter): void
+     export(directParameter: any, option?: Pages.ExportOptionalParameter): void;
 }

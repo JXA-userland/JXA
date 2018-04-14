@@ -81,14 +81,14 @@ export interface Calendar {
       * @param option
       * 
       */
-     createCalendar(option?: Calendar.CreateCalendarOptionalParameter): void
+     createCalendar(option?: Calendar.CreateCalendarOptionalParameter): void;
 
      /**
       * Tell the application to reload all calendar files contents
 
       * 
       */
-     reloadCalendars(): void
+     reloadCalendars(): void;
 
      /**
       * Show calendar on the given view
@@ -96,7 +96,7 @@ export interface Calendar {
       * @param option
       * 
       */
-     switchView(option?: Calendar.SwitchViewOptionalParameter): void
+     switchView(option?: Calendar.SwitchViewOptionalParameter): void;
 
      /**
       * Show calendar on the given date
@@ -104,21 +104,21 @@ export interface Calendar {
       * @param option
       * 
       */
-     viewCalendar(option?: Calendar.ViewCalendarOptionalParameter): void
+     viewCalendar(option?: Calendar.ViewCalendarOptionalParameter): void;
 
      /**
       * Subscribe to a remote calendar through a webcal or http URL
       * @param directParameter the iCal URL
       * 
       */
-     getURL(directParameter: string, ): void
+     getURL(directParameter: string, ): void;
 
      /**
       * Show the event or to-do in the calendar window
       * @param directParameter the item
       * 
       */
-     show(directParameter: any, ): void
+     show(directParameter: any, ): void;
 
      /**
       * undefined
@@ -126,12 +126,12 @@ export interface Calendar {
       * @param option
       * @return The new object.
       */
-     make(option?: Calendar.MakeOptionalParameter): any
+     make(option?: Calendar.MakeOptionalParameter): any;
 
      /**
       * undefined
 
       * 
       */
-     save(): void
+     save(): void;
 }

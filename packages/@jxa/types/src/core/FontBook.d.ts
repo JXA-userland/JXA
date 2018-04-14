@@ -205,14 +205,14 @@ export interface FontBook {
       * @param directParameter list of objects to open
       * 
       */
-     open(directParameter: any, ): void
+     open(directParameter: any, ): void;
 
      /**
       * Print an object.
       * @param directParameter list of objects to print
       * 
       */
-     print(directParameter: any, ): void
+     print(directParameter: any, ): void;
 
      /**
       * Quit an application.
@@ -220,7 +220,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     quit(option?: FontBook.QuitOptionalParameter): void
+     quit(option?: FontBook.QuitOptionalParameter): void;
 
      /**
       * Close an object.
@@ -228,7 +228,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     close(directParameter: any, option?: FontBook.CloseOptionalParameter): void
+     close(directParameter: any, option?: FontBook.CloseOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -236,14 +236,14 @@ export interface FontBook {
       * @param option
       * @return the number of elements
       */
-     count(directParameter: any, option?: FontBook.CountOptionalParameter): number
+     count(directParameter: any, option?: FontBook.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object to delete
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -251,21 +251,21 @@ export interface FontBook {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: FontBook.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: FontBook.DuplicateOptionalParameter): void;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object in question
       * @return true if it exists, false if not
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Get the data for an object.
       * @param directParameter undefined
       * @return undefined
       */
-     get(directParameter: any, ): any
+     get(directParameter: any, ): any;
 
      /**
       * Make a new object.
@@ -273,7 +273,7 @@ export interface FontBook {
       * @param option
       * @return to the new object
       */
-     make(option?: FontBook.MakeOptionalParameter): any
+     make(option?: FontBook.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -281,7 +281,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     move(directParameter: any, option?: FontBook.MoveOptionalParameter): void
+     move(directParameter: any, option?: FontBook.MoveOptionalParameter): void;
 
      /**
       * Save an object.
@@ -289,7 +289,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     save(directParameter: any, option?: FontBook.SaveOptionalParameter): void
+     save(directParameter: any, option?: FontBook.SaveOptionalParameter): void;
 
      /**
       * Set an object's data.
@@ -297,7 +297,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     set(directParameter: any, option?: FontBook.SetOptionalParameter): void
+     set(directParameter: any, option?: FontBook.SetOptionalParameter): void;
 
      /**
       * Add the given object to the container.
@@ -305,7 +305,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     add(directParameter: any, option?: FontBook.AddOptionalParameter): void
+     add(directParameter: any, option?: FontBook.AddOptionalParameter): void;
 
      /**
       * Remove the given object from the container.
@@ -313,7 +313,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     remove(directParameter: any, option?: FontBook.RemoveOptionalParameter): void
+     remove(directParameter: any, option?: FontBook.RemoveOptionalParameter): void;
 
      /**
       * Export the given objects to the specified location.
@@ -321,7 +321,7 @@ export interface FontBook {
       * @param option
       * 
       */
-     export(directParameter: any, option?: FontBook.ExportOptionalParameter): void
+     export(directParameter: any, option?: FontBook.ExportOptionalParameter): void;
 
      /**
       * Validate the given font file.
@@ -329,5 +329,5 @@ export interface FontBook {
       * @param option
       * @return undefined
       */
-     validateFontFile(directParameter: any, option?: FontBook.ValidateFontFileOptionalParameter): any
+     validateFontFile(directParameter: any, option?: FontBook.ValidateFontFileOptionalParameter): any;
 }

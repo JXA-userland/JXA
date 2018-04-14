@@ -211,7 +211,7 @@ export interface Terminal {
       * @param directParameter The file(s) to be opened.
       * 
       */
-     open(directParameter: {}, ): void
+     open(directParameter: {}, ): void;
 
      /**
       * Close a document.
@@ -219,7 +219,7 @@ export interface Terminal {
       * @param option
       * 
       */
-     close(directParameter: any, option?: Terminal.CloseOptionalParameter): void
+     close(directParameter: any, option?: Terminal.CloseOptionalParameter): void;
 
      /**
       * Save a document.
@@ -227,7 +227,7 @@ export interface Terminal {
       * @param option
       * 
       */
-     save(directParameter: any, option?: Terminal.SaveOptionalParameter): void
+     save(directParameter: any, option?: Terminal.SaveOptionalParameter): void;
 
      /**
       * Print a document.
@@ -235,7 +235,7 @@ export interface Terminal {
       * @param option
       * 
       */
-     print(directParameter: {}, option?: Terminal.PrintOptionalParameter): void
+     print(directParameter: {}, option?: Terminal.PrintOptionalParameter): void;
 
      /**
       * Quit the application.
@@ -243,7 +243,7 @@ export interface Terminal {
       * @param option
       * 
       */
-     quit(option?: Terminal.QuitOptionalParameter): void
+     quit(option?: Terminal.QuitOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -251,14 +251,14 @@ export interface Terminal {
       * @param option
       * @return the number of elements
       */
-     count(directParameter: any, option?: Terminal.CountOptionalParameter): number
+     count(directParameter: any, option?: Terminal.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object to delete
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -266,14 +266,14 @@ export interface Terminal {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: Terminal.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: Terminal.DuplicateOptionalParameter): void;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object in question
       * @return true if it exists, false if not
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Make a new object.
@@ -281,7 +281,7 @@ export interface Terminal {
       * @param option
       * @return to the new object
       */
-     make(option?: Terminal.MakeOptionalParameter): any
+     make(option?: Terminal.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -289,7 +289,7 @@ export interface Terminal {
       * @param option
       * 
       */
-     move(directParameter: any, option?: Terminal.MoveOptionalParameter): void
+     move(directParameter: any, option?: Terminal.MoveOptionalParameter): void;
 
      /**
       * Runs a UNIX shell script or command.
@@ -297,12 +297,12 @@ export interface Terminal {
       * @param option
       * @return The tab the command was executed in.
       */
-     doScript(directParameter?: string, option?: Terminal.DoScriptOptionalParameter): any
+     doScript(directParameter?: string, option?: Terminal.DoScriptOptionalParameter): any;
 
      /**
       * Open a command an ssh, telnet, or x-man-page URL.
       * @param directParameter The URL to open.
       * 
       */
-     getURL(directParameter: string, ): void
+     getURL(directParameter: string, ): void;
 }

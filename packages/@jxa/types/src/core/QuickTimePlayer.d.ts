@@ -83,42 +83,42 @@ export interface QuickTimePlayer {
       * @param directParameter the URL
       * 
       */
-     openURL(directParameter: string, ): void
+     openURL(directParameter: string, ): void;
 
      /**
       * Play the movie.
       * @param directParameter the movie to play
       * 
       */
-     play(directParameter: any, ): void
+     play(directParameter: any, ): void;
 
      /**
       * Start the movie recording.
       * @param directParameter the recording to start
       * 
       */
-     start(directParameter: any, ): void
+     start(directParameter: any, ): void;
 
      /**
       * Pause the recording.
       * @param directParameter the recording to pause
       * 
       */
-     pause(directParameter: any, ): void
+     pause(directParameter: any, ): void;
 
      /**
       * Resume the recording.
       * @param directParameter the recording to resume
       * 
       */
-     resume(directParameter: any, ): void
+     resume(directParameter: any, ): void;
 
      /**
       * Stop the movie or recording.
       * @param directParameter the movie or recording to stop
       * 
       */
-     stop(directParameter: any, ): void
+     stop(directParameter: any, ): void;
 
      /**
       * Step the movie backward the specified number of steps (default is 1).
@@ -126,7 +126,7 @@ export interface QuickTimePlayer {
       * @param option
       * 
       */
-     stepBackward(directParameter: any, option?: QuickTimePlayer.StepBackwardOptionalParameter): void
+     stepBackward(directParameter: any, option?: QuickTimePlayer.StepBackwardOptionalParameter): void;
 
      /**
       * Step the movie forward the specified number of steps (default is 1).
@@ -134,7 +134,7 @@ export interface QuickTimePlayer {
       * @param option
       * 
       */
-     stepForward(directParameter: any, option?: QuickTimePlayer.StepForwardOptionalParameter): void
+     stepForward(directParameter: any, option?: QuickTimePlayer.StepForwardOptionalParameter): void;
 
      /**
       * Trim the movie.
@@ -142,35 +142,35 @@ export interface QuickTimePlayer {
       * @param option
       * 
       */
-     trim(directParameter: any, option?: QuickTimePlayer.TrimOptionalParameter): void
+     trim(directParameter: any, option?: QuickTimePlayer.TrimOptionalParameter): void;
 
      /**
       * Present the document full screen.
       * @param directParameter the document to present
       * 
       */
-     present(directParameter: any, ): void
+     present(directParameter: any, ): void;
 
      /**
       * Create a new movie recording document.
 
       * @return The new movie recording document.
       */
-     newMovieRecording(): void
+     newMovieRecording(): void;
 
      /**
       * Create a new audio recording document.
 
       * @return The new audio recording document.
       */
-     newAudioRecording(): void
+     newAudioRecording(): void;
 
      /**
       * Create a new screen recording document.
 
       * @return The new screen recording document.
       */
-     newScreenRecording(): void
+     newScreenRecording(): void;
 
      /**
       * Export a movie to another file
@@ -178,12 +178,12 @@ export interface QuickTimePlayer {
       * @param option
       * 
       */
-     export(directParameter: any, option?: QuickTimePlayer.ExportOptionalParameter): void
+     export(directParameter: any, option?: QuickTimePlayer.ExportOptionalParameter): void;
 
      /**
       * Show the document's Remote HUD
       * @param directParameter undefined
       * 
       */
-     showRemoteHud(directParameter: any, ): void
+     showRemoteHud(directParameter: any, ): void;
 }

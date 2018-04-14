@@ -117,7 +117,7 @@ export interface Contacts {
       * @param option
       * @return The new object.
       */
-     make(option?: Contacts.MakeOptionalParameter): any
+     make(option?: Contacts.MakeOptionalParameter): any;
 
      /**
       * Add a child object.
@@ -125,7 +125,7 @@ export interface Contacts {
       * @param option
       * @return undefined
       */
-     add(directParameter: any, option?: Contacts.AddOptionalParameter): any
+     add(directParameter: any, option?: Contacts.AddOptionalParameter): any;
 
      /**
       * Remove a child object.
@@ -133,21 +133,21 @@ export interface Contacts {
       * @param option
       * @return undefined
       */
-     remove(directParameter: any, option?: Contacts.RemoveOptionalParameter): any
+     remove(directParameter: any, option?: Contacts.RemoveOptionalParameter): any;
 
      /**
       * Save all Address Book changes. Also see the unsaved property for the application class.
 
       * @return undefined
       */
-     save(): any
+     save(): any;
 
      /**
       * RollOver - Which property this roll over is associated with (Properties can be one of maiden name, phone, email, url, birth date, custom date, related name, aim, icq, jabber, msn, yahoo, address.)
 
       * @return undefined
       */
-     actionProperty(): string
+     actionProperty(): string;
 
      /**
       * RollOver - Returns the title that will be placed in the menu for this roll over
@@ -155,7 +155,7 @@ export interface Contacts {
       * @param option
       * @return undefined
       */
-     actionTitle(option?: Contacts.ActionTitleOptionalParameter): string
+     actionTitle(option?: Contacts.ActionTitleOptionalParameter): string;
 
      /**
       * RollOver - Performs the action on the given person and value
@@ -163,7 +163,7 @@ export interface Contacts {
       * @param option
       * @return undefined
       */
-     performAction(option?: Contacts.PerformActionOptionalParameter): boolean
+     performAction(option?: Contacts.PerformActionOptionalParameter): boolean;
 
      /**
       * RollOver - Determines if the rollover action should be enabled for the given person and value
@@ -171,5 +171,5 @@ export interface Contacts {
       * @param option
       * @return undefined
       */
-     shouldEnableAction(option?: Contacts.ShouldEnableActionOptionalParameter): boolean
+     shouldEnableAction(option?: Contacts.ShouldEnableActionOptionalParameter): boolean;
 }

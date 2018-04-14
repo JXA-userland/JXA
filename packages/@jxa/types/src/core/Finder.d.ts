@@ -214,7 +214,7 @@ export interface Finder {
       * @param option
       * 
       */
-     open(directParameter: any, option?: Finder.OpenOptionalParameter): void
+     open(directParameter: any, option?: Finder.OpenOptionalParameter): void;
 
      /**
       * Print the specified object(s)
@@ -222,28 +222,28 @@ export interface Finder {
       * @param option
       * 
       */
-     print(directParameter: any, option?: Finder.PrintOptionalParameter): void
+     print(directParameter: any, option?: Finder.PrintOptionalParameter): void;
 
      /**
       * Quit the Finder
 
       * 
       */
-     quit(): void
+     quit(): void;
 
      /**
       * Activate the specified window (or the Finder)
       * @param directParameter the window to activate (if not specified, activates the Finder)
       * 
       */
-     activate(directParameter?: any, ): void
+     activate(directParameter?: any, ): void;
 
      /**
       * Close an object
       * @param directParameter the object to close
       * 
       */
-     close(directParameter: any, ): void
+     close(directParameter: any, ): void;
 
      /**
       * Return the number of elements of a particular class within an object
@@ -251,7 +251,7 @@ export interface Finder {
       * @param option
       * @return the number of elements
       */
-     count(directParameter: any, option?: Finder.CountOptionalParameter): number
+     count(directParameter: any, option?: Finder.CountOptionalParameter): number;
 
      /**
       * Return the size in bytes of an object
@@ -259,14 +259,14 @@ export interface Finder {
       * @param option
       * @return the size of the object in bytes
       */
-     dataSize(directParameter: any, option?: Finder.DataSizeOptionalParameter): number
+     dataSize(directParameter: any, option?: Finder.DataSizeOptionalParameter): number;
 
      /**
       * Move an item from its container to the trash
       * @param directParameter the item to delete
       * @return to the item that was just deleted
       */
-     delete(directParameter: any, ): any
+     delete(directParameter: any, ): any;
 
      /**
       * Duplicate one or more object(s)
@@ -274,14 +274,14 @@ export interface Finder {
       * @param option
       * @return to the duplicated object(s)
       */
-     duplicate(directParameter: any, option?: Finder.DuplicateOptionalParameter): any
+     duplicate(directParameter: any, option?: Finder.DuplicateOptionalParameter): any;
 
      /**
       * Verify if an object exists
       * @param directParameter the object in question
       * @return true if it exists, false if not
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Make a new element
@@ -289,7 +289,7 @@ export interface Finder {
       * @param option
       * @return to the new object(s)
       */
-     make(option?: Finder.MakeOptionalParameter): any
+     make(option?: Finder.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location
@@ -297,28 +297,28 @@ export interface Finder {
       * @param option
       * @return to the object(s) after they have been moved
       */
-     move(directParameter: any, option?: Finder.MoveOptionalParameter): any
+     move(directParameter: any, option?: Finder.MoveOptionalParameter): any;
 
      /**
       * Select the specified object(s)
       * @param directParameter the object to select
       * 
       */
-     select(directParameter: any, ): void
+     select(directParameter: any, ): void;
 
      /**
       * Private event to open a virtual location
       * @param directParameter the location to open
       * 
       */
-     openVirtualLocation(directParameter: string, ): void
+     openVirtualLocation(directParameter: string, ): void;
 
      /**
       * (NOT AVAILABLE YET) Copy the selected items to the clipboard (the Finder must be the front application)
 
       * 
       */
-     copy(): void
+     copy(): void;
 
      /**
       * Return the specified object(s) in a sorted list
@@ -326,7 +326,7 @@ export interface Finder {
       * @param option
       * @return the sorted items in their new order
       */
-     sort(directParameter: any, option?: Finder.SortOptionalParameter): any
+     sort(directParameter: any, option?: Finder.SortOptionalParameter): any;
 
      /**
       * Arrange items in window nicely (only applies to open windows in icon view that are not kept arranged)
@@ -334,14 +334,14 @@ export interface Finder {
       * @param option
       * 
       */
-     cleanUp(directParameter: any, option?: Finder.CleanUpOptionalParameter): void
+     cleanUp(directParameter: any, option?: Finder.CleanUpOptionalParameter): void;
 
      /**
       * Eject the specified disk(s)
       * @param directParameter the disk(s) to eject
       * 
       */
-     eject(directParameter?: any, ): void
+     eject(directParameter?: any, ): void;
 
      /**
       * Empty the trash
@@ -349,21 +349,21 @@ export interface Finder {
       * @param option
       * 
       */
-     empty(directParameter?: any, option?: Finder.EmptyOptionalParameter): void
+     empty(directParameter?: any, option?: Finder.EmptyOptionalParameter): void;
 
      /**
       * (NOT AVAILABLE) Erase the specified disk(s)
       * @param directParameter the items to erase
       * 
       */
-     erase(directParameter: any, ): void
+     erase(directParameter: any, ): void;
 
      /**
       * Bring the specified object(s) into view
       * @param directParameter the object to be made visible
       * 
       */
-     reveal(directParameter: any, ): void
+     reveal(directParameter: any, ): void;
 
      /**
       * Update the display of the specified object(s) to match their on-disk representation
@@ -371,26 +371,26 @@ export interface Finder {
       * @param option
       * 
       */
-     update(directParameter: any, option?: Finder.UpdateOptionalParameter): void
+     update(directParameter: any, option?: Finder.UpdateOptionalParameter): void;
 
      /**
       * Restart the computer
 
       * 
       */
-     restart(): void
+     restart(): void;
 
      /**
       * Shut Down the computer
 
       * 
       */
-     shutDown(): void
+     shutDown(): void;
 
      /**
       * Put the computer to sleep
 
       * 
       */
-     sleep(): void
+     sleep(): void;
 }

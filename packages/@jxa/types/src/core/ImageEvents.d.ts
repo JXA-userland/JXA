@@ -177,7 +177,7 @@ export interface ImageEvents {
       * @param directParameter The disk item(s) to be deleted.
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Move disk item(s) to a new location.
@@ -185,14 +185,14 @@ export interface ImageEvents {
       * @param option
       * @return undefined
       */
-     move(directParameter: {}, option?: ImageEvents.MoveOptionalParameter): void
+     move(directParameter: {}, option?: ImageEvents.MoveOptionalParameter): void;
 
      /**
       * Open disk item(s) with the appropriate application.
       * @param directParameter The disk item(s) to be opened.
       * @return undefined
       */
-     open(directParameter: {}, ): any
+     open(directParameter: {}, ): any;
 
      /**
       * Close an image
@@ -200,7 +200,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     close(directParameter: any, option?: ImageEvents.CloseOptionalParameter): void
+     close(directParameter: any, option?: ImageEvents.CloseOptionalParameter): void;
 
      /**
       * Crop an image
@@ -208,7 +208,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     crop(directParameter: any, option?: ImageEvents.CropOptionalParameter): void
+     crop(directParameter: any, option?: ImageEvents.CropOptionalParameter): void;
 
      /**
       * Embed an image with an ICC profile
@@ -216,7 +216,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     embed(directParameter: any, option?: ImageEvents.EmbedOptionalParameter): void
+     embed(directParameter: any, option?: ImageEvents.EmbedOptionalParameter): void;
 
      /**
       * Flip an image
@@ -224,7 +224,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     flip(directParameter: any, option?: ImageEvents.FlipOptionalParameter): void
+     flip(directParameter: any, option?: ImageEvents.FlipOptionalParameter): void;
 
      /**
       * Match an image
@@ -232,7 +232,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     match(directParameter: any, option?: ImageEvents.MatchOptionalParameter): void
+     match(directParameter: any, option?: ImageEvents.MatchOptionalParameter): void;
 
      /**
       * Pad an image
@@ -240,7 +240,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     pad(directParameter: any, option?: ImageEvents.PadOptionalParameter): void
+     pad(directParameter: any, option?: ImageEvents.PadOptionalParameter): void;
 
      /**
       * Rotate an image
@@ -248,7 +248,7 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     rotate(directParameter: any, option?: ImageEvents.RotateOptionalParameter): void
+     rotate(directParameter: any, option?: ImageEvents.RotateOptionalParameter): void;
 
      /**
       * Save an image to a file in one of various formats
@@ -256,7 +256,7 @@ export interface ImageEvents {
       * @param option
       * @return undefined
       */
-     save(directParameter: any, option?: ImageEvents.SaveOptionalParameter): any
+     save(directParameter: any, option?: ImageEvents.SaveOptionalParameter): any;
 
      /**
       * Scale an image
@@ -264,12 +264,12 @@ export interface ImageEvents {
       * @param option
       * 
       */
-     scale(directParameter: any, option?: ImageEvents.ScaleOptionalParameter): void
+     scale(directParameter: any, option?: ImageEvents.ScaleOptionalParameter): void;
 
      /**
       * Remove any embedded ICC profiles from an image
       * @param directParameter the object for the command
       * 
       */
-     unembed(directParameter: any, ): void
+     unembed(directParameter: any, ): void;
 }

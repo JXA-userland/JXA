@@ -162,7 +162,7 @@ export interface TextEdit {
       * @param option
       * 
       */
-     close(directParameter: any, option?: TextEdit.CloseOptionalParameter): void
+     close(directParameter: any, option?: TextEdit.CloseOptionalParameter): void;
 
      /**
       * Return the number of elements of a particular class within an object.
@@ -170,14 +170,14 @@ export interface TextEdit {
       * @param option
       * @return undefined
       */
-     count(directParameter: any, option?: TextEdit.CountOptionalParameter): number
+     count(directParameter: any, option?: TextEdit.CountOptionalParameter): number;
 
      /**
       * Delete an object.
       * @param directParameter the object for the command
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Copy object(s) and put the copies at a new location.
@@ -185,21 +185,21 @@ export interface TextEdit {
       * @param option
       * 
       */
-     duplicate(directParameter: any, option?: TextEdit.DuplicateOptionalParameter): void
+     duplicate(directParameter: any, option?: TextEdit.DuplicateOptionalParameter): void;
 
      /**
       * Verify if an object exists.
       * @param directParameter the object for the command
       * @return undefined
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Get the data for an object.
       * @param directParameter the object for the command
       * @return undefined
       */
-     get(directParameter: any, ): any
+     get(directParameter: any, ): any;
 
      /**
       * Make a new object.
@@ -207,7 +207,7 @@ export interface TextEdit {
       * @param option
       * @return undefined
       */
-     make(option?: TextEdit.MakeOptionalParameter): any
+     make(option?: TextEdit.MakeOptionalParameter): any;
 
      /**
       * Move object(s) to a new location.
@@ -215,14 +215,14 @@ export interface TextEdit {
       * @param option
       * 
       */
-     move(directParameter: any, option?: TextEdit.MoveOptionalParameter): void
+     move(directParameter: any, option?: TextEdit.MoveOptionalParameter): void;
 
      /**
       * Open an object.
       * @param directParameter The file(s) to be opened.
       * @return undefined
       */
-     open(directParameter: any, ): any
+     open(directParameter: any, ): any;
 
      /**
       * Print an object.
@@ -230,7 +230,7 @@ export interface TextEdit {
       * @param option
       * 
       */
-     print(directParameter: any, option?: TextEdit.PrintOptionalParameter): void
+     print(directParameter: any, option?: TextEdit.PrintOptionalParameter): void;
 
      /**
       * Quit an application.
@@ -238,7 +238,7 @@ export interface TextEdit {
       * @param option
       * 
       */
-     quit(option?: TextEdit.QuitOptionalParameter): void
+     quit(option?: TextEdit.QuitOptionalParameter): void;
 
      /**
       * Save an object.
@@ -246,7 +246,7 @@ export interface TextEdit {
       * @param option
       * 
       */
-     save(directParameter: any, option?: TextEdit.SaveOptionalParameter): void
+     save(directParameter: any, option?: TextEdit.SaveOptionalParameter): void;
 
      /**
       * Set an object's data.
@@ -254,5 +254,5 @@ export interface TextEdit {
       * @param option
       * 
       */
-     set(directParameter: any, option?: TextEdit.SetOptionalParameter): void
+     set(directParameter: any, option?: TextEdit.SetOptionalParameter): void;
 }

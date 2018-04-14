@@ -230,14 +230,14 @@ export interface ITunes {
       * @param option
       * 
       */
-     print(directParameter?: any, option?: ITunes.PrintOptionalParameter): void
+     print(directParameter?: any, option?: ITunes.PrintOptionalParameter): void;
 
      /**
       * Close an object
       * @param directParameter the object to close
       * 
       */
-     close(directParameter: any, ): void
+     close(directParameter: any, ): void;
 
      /**
       * Return the number of elements of a particular class within an object
@@ -245,14 +245,14 @@ export interface ITunes {
       * @param option
       * @return the number of elements
       */
-     count(directParameter: any, option?: ITunes.CountOptionalParameter): number
+     count(directParameter: any, option?: ITunes.CountOptionalParameter): number;
 
      /**
       * Delete an element from an object
       * @param directParameter the element to delete
       * 
       */
-     delete(directParameter: any, ): void
+     delete(directParameter: any, ): void;
 
      /**
       * Duplicate one or more object(s)
@@ -260,14 +260,14 @@ export interface ITunes {
       * @param option
       * @return to the duplicated object(s)
       */
-     duplicate(directParameter: any, option?: ITunes.DuplicateOptionalParameter): any
+     duplicate(directParameter: any, option?: ITunes.DuplicateOptionalParameter): any;
 
      /**
       * Verify if an object exists
       * @param directParameter the object in question
       * @return true if it exists, false if not
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Make a new element
@@ -275,7 +275,7 @@ export interface ITunes {
       * @param option
       * @return to the new object(s)
       */
-     make(option?: ITunes.MakeOptionalParameter): any
+     make(option?: ITunes.MakeOptionalParameter): any;
 
      /**
       * Move playlist(s) to a new location
@@ -283,35 +283,35 @@ export interface ITunes {
       * @param option
       * 
       */
-     move(directParameter: any, option?: ITunes.MoveOptionalParameter): void
+     move(directParameter: any, option?: ITunes.MoveOptionalParameter): void;
 
      /**
       * Open the specified object(s)
       * @param directParameter list of objects to open
       * 
       */
-     open(directParameter: any, ): void
+     open(directParameter: any, ): void;
 
      /**
       * Run iTunes
 
       * 
       */
-     run(): void
+     run(): void;
 
      /**
       * Quit iTunes
 
       * 
       */
-     quit(): void
+     quit(): void;
 
      /**
       * Save the specified object(s)
       * @param directParameter the object(s) to save
       * 
       */
-     save(directParameter: any, ): void
+     save(directParameter: any, ): void;
 
      /**
       * add one or more files to a playlist
@@ -319,56 +319,56 @@ export interface ITunes {
       * @param option
       * @return reference to added track(s)
       */
-     add(directParameter: {}, option?: ITunes.AddOptionalParameter): any
+     add(directParameter: {}, option?: ITunes.AddOptionalParameter): any;
 
      /**
       * reposition to beginning of current track or go to previous track if already at start of current track
 
       * 
       */
-     backTrack(): void
+     backTrack(): void;
 
      /**
       * convert one or more files or tracks
       * @param directParameter the file(s)/tracks(s) to convert
       * @return reference to converted track(s)
       */
-     convert(directParameter: {}, ): any
+     convert(directParameter: {}, ): any;
 
      /**
       * download a cloud track or playlist, or a podcast episode
       * @param directParameter the shared track, URL track or playlist to download
       * 
       */
-     download(directParameter: any, ): void
+     download(directParameter: any, ): void;
 
      /**
       * eject the specified iPod
       * @param directParameter the iPod to eject
       * 
       */
-     eject(directParameter?: any, ): void
+     eject(directParameter?: any, ): void;
 
      /**
       * skip forward in a playing track
 
       * 
       */
-     fastForward(): void
+     fastForward(): void;
 
      /**
       * advance to the next track in the current playlist
 
       * 
       */
-     nextTrack(): void
+     nextTrack(): void;
 
      /**
       * pause playback
 
       * 
       */
-     pause(): void
+     pause(): void;
 
      /**
       * play the current track or the specified track or file.
@@ -376,49 +376,49 @@ export interface ITunes {
       * @param option
       * 
       */
-     play(directParameter?: any, option?: ITunes.PlayOptionalParameter): void
+     play(directParameter?: any, option?: ITunes.PlayOptionalParameter): void;
 
      /**
       * toggle the playing/paused state of the current track
 
       * 
       */
-     playpause(): void
+     playpause(): void;
 
      /**
       * return to the previous track in the current playlist
 
       * 
       */
-     previousTrack(): void
+     previousTrack(): void;
 
      /**
       * update file track information from the current information in the track’s file
       * @param directParameter the file track to update
       * 
       */
-     refresh(directParameter: any, ): void
+     refresh(directParameter: any, ): void;
 
      /**
       * disable fast forward/rewind and resume playback, if playing.
 
       * 
       */
-     resume(): void
+     resume(): void;
 
      /**
       * reveal and select a track or playlist
       * @param directParameter the item to reveal
       * 
       */
-     reveal(directParameter: any, ): void
+     reveal(directParameter: any, ): void;
 
      /**
       * skip backwards in a playing track
 
       * 
       */
-     rewind(): void
+     rewind(): void;
 
      /**
       * search a playlist for tracks matching the search string. Identical to entering search text in the Search field in iTunes.
@@ -426,54 +426,54 @@ export interface ITunes {
       * @param option
       * @return reference to found track(s)
       */
-     search(directParameter: any, option?: ITunes.SearchOptionalParameter): any
+     search(directParameter: any, option?: ITunes.SearchOptionalParameter): any;
 
      /**
       * select the specified object(s)
       * @param directParameter the object(s) to select
       * 
       */
-     select(directParameter: any, ): void
+     select(directParameter: any, ): void;
 
      /**
       * stop playback
 
       * 
       */
-     stop(): void
+     stop(): void;
 
      /**
       * subscribe to a podcast feed
       * @param directParameter the URL of the feed to subscribe to
       * 
       */
-     subscribe(directParameter: string, ): void
+     subscribe(directParameter: string, ): void;
 
      /**
       * update the specified iPod
       * @param directParameter the iPod to update
       * 
       */
-     update(directParameter?: any, ): void
+     update(directParameter?: any, ): void;
 
      /**
       * update all subscribed podcast feeds
 
       * 
       */
-     updateAllPodcasts(): void
+     updateAllPodcasts(): void;
 
      /**
       * update podcast feed
 
       * 
       */
-     updatePodcast(): void
+     updatePodcast(): void;
 
      /**
       * Opens a Music Store or audio stream URL
       * @param directParameter the URL to open
       * 
       */
-     openLocation(directParameter?: string, ): void
+     openLocation(directParameter?: string, ): void;
 }

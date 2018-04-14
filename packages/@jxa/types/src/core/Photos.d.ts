@@ -118,28 +118,28 @@ export interface Photos {
       * @param option
       * @return The count.
       */
-     count(directParameter: any, option?: Photos.CountOptionalParameter): number
+     count(directParameter: any, option?: Photos.CountOptionalParameter): number;
 
      /**
       * Verify that an object exists.
       * @param directParameter The object(s) to check.
       * @return Did the object(s) exist?
       */
-     exists(directParameter: any, ): boolean
+     exists(directParameter: any, ): boolean;
 
      /**
       * Open a photo library
       * @param directParameter The photo library to be opened.
       * 
       */
-     open(directParameter: {}, ): void
+     open(directParameter: {}, ): void;
 
      /**
       * Quit the application.
 
       * 
       */
-     quit(): void
+     quit(): void;
 
      /**
       * Import files into the library
@@ -147,7 +147,7 @@ export interface Photos {
       * @param option
       * @return The imported media items in an array
       */
-     import(directParameter: {}, option?: Photos.ImportOptionalParameter): void
+     import(directParameter: {}, option?: Photos.ImportOptionalParameter): void;
 
      /**
       * Export media items to the specified location as files
@@ -155,14 +155,14 @@ export interface Photos {
       * @param option
       * 
       */
-     export(directParameter: {}, option?: Photos.ExportOptionalParameter): void
+     export(directParameter: {}, option?: Photos.ExportOptionalParameter): void;
 
      /**
       * Duplicate an object. Only media items can be duplicated
       * @param directParameter The media item to duplicate
       * @return The duplicated media item
       */
-     duplicate(directParameter: {}, ): any
+     duplicate(directParameter: {}, ): any;
 
      /**
       * Create a new object. Only new albums and folders can be created.
@@ -170,14 +170,14 @@ export interface Photos {
       * @param option
       * @return The new object.
       */
-     make(option?: Photos.MakeOptionalParameter): void
+     make(option?: Photos.MakeOptionalParameter): void;
 
      /**
       * Delete an object. Only albums and folders can be deleted.
       * @param directParameter The album or folder to delete.
       * 
       */
-     delete(directParameter: {}, ): void
+     delete(directParameter: {}, ): void;
 
      /**
       * Add media items to an album.
@@ -185,7 +185,7 @@ export interface Photos {
       * @param option
       * 
       */
-     add(directParameter: {}, option?: Photos.AddOptionalParameter): void
+     add(directParameter: {}, option?: Photos.AddOptionalParameter): void;
 
      /**
       * Display an ad-hoc slide show from a list of media items, an album, a folder, or a moment
@@ -193,47 +193,47 @@ export interface Photos {
       * @param option
       * 
       */
-     startSlideshow(option?: Photos.StartSlideshowOptionalParameter): void
+     startSlideshow(option?: Photos.StartSlideshowOptionalParameter): void;
 
      /**
       * End the currently-playing slideshow.
 
       * 
       */
-     stopSlideshow(): void
+     stopSlideshow(): void;
 
      /**
       * Skip to next slide in currently-playing slideshow.
 
       * 
       */
-     nextSlide(): void
+     nextSlide(): void;
 
      /**
       * Skip to previous slide in currently-playing slideshow.
 
       * 
       */
-     previousSlide(): void
+     previousSlide(): void;
 
      /**
       * Pause the currently-playing slideshow.
 
       * 
       */
-     pauseSlideshow(): void
+     pauseSlideshow(): void;
 
      /**
       * Resume the currently-playing slideshow.
 
       * 
       */
-     resumeSlideshow(): void
+     resumeSlideshow(): void;
 
      /**
       * Show the image at path in the application, used to show spotlight search results
       * @param directParameter The full path to the image
       * 
       */
-     spotlight(directParameter: {}, ): void
+     spotlight(directParameter: {}, ): void;
 }

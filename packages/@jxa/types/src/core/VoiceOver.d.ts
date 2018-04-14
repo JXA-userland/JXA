@@ -62,14 +62,14 @@ export interface VoiceOver {
       * @param directParameter The English name of the VoiceOver command to perform
       * 
       */
-     performCommand(directParameter: string, ): void
+     performCommand(directParameter: string, ): void;
 
      /**
       * Takes a screenshot of the VO cursor and returns the path to the file
       * @param directParameter the vo cursor object to grab
       * @return the path to the screenshot
       */
-     grabScreenshot(directParameter: any, ): string
+     grabScreenshot(directParameter: any, ): string;
 
      /**
       * undefined
@@ -77,42 +77,42 @@ export interface VoiceOver {
       * @param option
       * 
       */
-     click(directParameter?: {}, option?: VoiceOver.ClickOptionalParameter): void
+     click(directParameter?: {}, option?: VoiceOver.ClickOptionalParameter): void;
 
      /**
       * undefined
 
       * 
       */
-     quit(): void
-
-     /**
-      * undefined
-      * @param directParameter The mouse cursor object
-      * 
-      */
-     press(directParameter: any, ): void
+     quit(): void;
 
      /**
       * undefined
       * @param directParameter The mouse cursor object
       * 
       */
-     release(directParameter: any, ): void
+     press(directParameter: any, ): void;
+
+     /**
+      * undefined
+      * @param directParameter The mouse cursor object
+      * 
+      */
+     release(directParameter: any, ): void;
 
      /**
       * undefined
       * @param directParameter The vo cursor object
       * 
       */
-     performAction(directParameter: any, ): void
+     performAction(directParameter: any, ): void;
 
      /**
       * undefined
       * @param directParameter The vo cursor object
       * 
       */
-     select(directParameter: any, ): void
+     select(directParameter: any, ): void;
 
      /**
       * Move the vo cursor to a new location.
@@ -120,7 +120,7 @@ export interface VoiceOver {
       * @param option
       * 
       */
-     move(directParameter?: {}, option?: VoiceOver.MoveOptionalParameter): void
+     move(directParameter?: {}, option?: VoiceOver.MoveOptionalParameter): void;
 
      /**
       * Output
@@ -128,33 +128,33 @@ export interface VoiceOver {
       * @param option
       * 
       */
-     output(directParameter?: {}, option?: VoiceOver.OutputOptionalParameter): void
+     output(directParameter?: {}, option?: VoiceOver.OutputOptionalParameter): void;
 
      /**
       * undefined
       * @param directParameter the item to open
       * 
       */
-     open(directParameter: {}, ): void
+     open(directParameter: {}, ): void;
 
      /**
       * Closes open menus
 
       * 
       */
-     closeMenu(): void
+     closeMenu(): void;
 
      /**
       * Save last phrase
       * @param directParameter The last phrase object
       * 
       */
-     save(directParameter: any, ): void
+     save(directParameter: any, ): void;
 
      /**
       * Copy last phrase to pasteboard
       * @param directParameter The last phrase object
       * 
       */
-     copyToPasteboard(directParameter: any, ): void
+     copyToPasteboard(directParameter: any, ): void;
 }
