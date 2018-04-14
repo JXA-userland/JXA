@@ -14,13 +14,13 @@ export namespace StandardAdditions {
       /**
        * name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)
        */
-      buttonReturned: {
+      buttonReturned?: {
         [k: string]: any;
       };
       /**
        * Did the alert time out? (present only if ‘giving up after’ was supplied)
        */
-      gaveUp: boolean;
+      gaveUp?: boolean;
     }
 
     /**
@@ -36,19 +36,19 @@ export namespace StandardAdditions {
       /**
        * name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
        */
-      buttonReturned: {
+      buttonReturned?: {
         [k: string]: any;
       };
       /**
        * text entered (present only if ‘default answer’ was supplied)
        */
-      textReturned: {
+      textReturned?: {
         [k: string]: any;
       };
       /**
        * Did the dialog time out? (present only if ‘giving up after’ was supplied)
        */
-      gaveUp: boolean;
+      gaveUp?: boolean;
     }
 
     /**
@@ -64,123 +64,123 @@ export namespace StandardAdditions {
       /**
        * the name of the item
        */
-      name: {
+      name?: {
         [k: string]: any;
       };
       /**
        * the user-visible name of the item
        */
-      displayedName: {
+      displayedName?: {
         [k: string]: any;
       };
       /**
        * the short name (CFBundleName) of the item (if the item is an application)
        */
-      shortName: {
+      shortName?: {
         [k: string]: any;
       };
       /**
        * the name extension of the item (such as “txt”)
        */
-      nameExtension: {
+      nameExtension?: {
         [k: string]: any;
       };
       /**
        * the item’s bundle identifier (if the item is a package)
        */
-      bundleIdentifier: {
+      bundleIdentifier?: {
         [k: string]: any;
       };
       /**
        * the item’s type identifier
        */
-      typeIdentifier: {
+      typeIdentifier?: {
         [k: string]: any;
       };
       /**
        * the kind of the item
        */
-      kind: {
+      kind?: {
         [k: string]: any;
       };
       /**
        * the application that normally opens this kind of item
        */
-      defaultApplication: {
+      defaultApplication?: {
         [k: string]: any;
       };
       /**
        * the date the item was created
        */
-      creationDate: {
+      creationDate?: {
         [k: string]: any;
       };
       /**
        * the date the item was last modified
        */
-      modificationDate: {
+      modificationDate?: {
         [k: string]: any;
       };
       /**
        * the file type of the item
        */
-      fileType: {
+      fileType?: {
         [k: string]: any;
       };
       /**
        * the creator type of the item
        */
-      fileCreator: {
+      fileCreator?: {
         [k: string]: any;
       };
       /**
        * the item’s short version string (from the Finder’s ‘Get Info’ box)
        */
-      shortVersion: {
+      shortVersion?: {
         [k: string]: any;
       };
       /**
        * the item’s long version string (from the Finder’s ‘Get Info’ box)
        */
-      longVersion: {
+      longVersion?: {
         [k: string]: any;
       };
       /**
        * the size of the item in bytes
        */
-      size: number;
+      size?: number;
       /**
        * Is the item an alias file?
        */
-      alias: boolean;
+      alias?: boolean;
       /**
        * Is the item a folder?
        */
-      folder: boolean;
+      folder?: boolean;
       /**
        * Is the item a package (a folder treated as a file?)
        */
-      packageFolder: boolean;
+      packageFolder?: boolean;
       /**
        * Is the item’s name extension hidden from the user?
        */
-      extensionHidden: boolean;
+      extensionHidden?: boolean;
       /**
        * Is the item visible?
        */
-      visible: boolean;
+      visible?: boolean;
       /**
        * Is the item locked?
        */
-      locked: boolean;
+      locked?: boolean;
       /**
        * Is the item currently in use?
        */
-      busyStatus: boolean;
+      busyStatus?: boolean;
       /**
        * the coordinates of the folder’s window (if the item is a folder)
        */
-      folderWindow: {
+      folderWindow?: {
         [k: string]: any;
       };
     }
@@ -198,19 +198,19 @@ export namespace StandardAdditions {
       /**
        * the sound output volume
        */
-      outputVolume: number;
+      outputVolume?: number;
       /**
        * the sound input volume
        */
-      inputVolume: number;
+      inputVolume?: number;
       /**
        * the alert volume (as a percentage of the output volume)
        */
-      alertVolume: number;
+      alertVolume?: number;
       /**
        * Is the sound output muted?
        */
-      outputMuted: boolean;
+      outputMuted?: boolean;
     }
 
     /**
@@ -226,93 +226,93 @@ export namespace StandardAdditions {
       /**
        * the AppleScript version
        */
-      appleScriptVersion: {
+      appleScriptVersion?: {
         [k: string]: any;
       };
       /**
        * the AppleScript Studio version
        */
-      appleScriptStudioVersion: {
+      appleScriptStudioVersion?: {
         [k: string]: any;
       };
       /**
        * the system version
        */
-      systemVersion: {
+      systemVersion?: {
         [k: string]: any;
       };
       /**
        * the current user’s short name
        */
-      shortUserName: {
+      shortUserName?: {
         [k: string]: any;
       };
       /**
        * the current user’s long name
        */
-      longUserName: {
+      longUserName?: {
         [k: string]: any;
       };
       /**
        * the current user’s ID
        */
-      userID: number;
+      userID?: number;
       /**
        * the current user’s locale
        */
-      userLocale: {
+      userLocale?: {
         [k: string]: any;
       };
       /**
        * the current user’s home directory
        */
-      homeDirectory: {
+      homeDirectory?: {
         [k: string]: any;
       };
       /**
        * the boot volume
        */
-      bootVolume: {
+      bootVolume?: {
         [k: string]: any;
       };
       /**
        * the computer name
        */
-      computerName: {
+      computerName?: {
         [k: string]: any;
       };
       /**
        * the host name
        */
-      hostName: {
+      hostName?: {
         [k: string]: any;
       };
       /**
        * the IPv4 address
        */
-      IPv4Address: {
+      IPv4Address?: {
         [k: string]: any;
       };
       /**
        * the primary Ethernet address
        */
-      primaryEthernetAddress: {
+      primaryEthernetAddress?: {
         [k: string]: any;
       };
       /**
        * the CPU type
        */
-      CPUType: {
+      CPUType?: {
         [k: string]: any;
       };
       /**
        * the clock speed of the CPU in MHz
        */
-      CPUSpeed: number;
+      CPUSpeed?: number;
       /**
        * the amount of physical RAM in MB
        */
-      physicalMemory: number;
+      physicalMemory?: number;
     }
 
     // Function options

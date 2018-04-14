@@ -55,6 +55,22 @@ interface Record extends RootNode {
     name: "record";
 }
 
+
+const convertJSONSchemaType = (type: string): string => {
+    switch (type) {
+        case "text":
+            return "string";
+        case "number":
+        case "integer":
+            return "integer";
+        case "boolean":
+            return "boolean";
+        case "Any":
+        case "type class":
+            return "any";
+    }
+    return "any";
+};
 const convertType = (type: string, namespace: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
     switch (type) {
         case "text":
@@ -65,6 +81,7 @@ const convertType = (type: string, namespace: string, definedJSONSchemaList: JSO
         case "boolean":
             return "boolean";
         case "Any":
+        case "type class":
             return "any";
     }
     const otherType = pascalCase(type);
@@ -83,7 +100,7 @@ const createOptionalParameter = (name: string, parameters: Node[]): Promise<stri
         return {
             name: camelCase(param.attributes.name),
             description: param.attributes.description,
-            type: param.attributes.type
+            type: convertJSONSchemaType(param.attributes.type)
         }
     });
     const properties: { [index: string]: any } = {};
@@ -94,7 +111,7 @@ const createOptionalParameter = (name: string, parameters: Node[]): Promise<stri
         }
     });
     const required = parameters.filter(param => {
-        return param.attributes.optional === "yes"
+        return param.attributes.optional !== "yes"
     }).map(param => {
         return camelCase(param.attributes.name);
     });
@@ -130,7 +147,7 @@ const recordToJSONSchema = (command: Record): JSONSchema => {
         }
     });
     const required = propertiesList.filter(param => {
-        return param.attributes.optional === "yes"
+        return param.attributes.optional !== "yes"
     }).map(param => {
         return camelCase(param.attributes.name);
     });
@@ -172,7 +189,7 @@ const commandToDeclare = async (namespace: string, command: Command, recordSchem
     });
     let optionalParameterTypeName = `${pascalCaseName}OptionalParameter`;
     const optionalParameterTypeNameCount = optionalMap.get(optionalParameterTypeName) || 0;
-    if(optionalParameterTypeNameCount > 0){
+    if (optionalParameterTypeNameCount > 0) {
         optionalParameterTypeName += String(optionalParameterTypeNameCount);
     }
     optionalMap.set(optionalParameterTypeName, optionalParameterTypeNameCount + 1);
@@ -232,7 +249,7 @@ export const transform = async (namespace: string, sdefContent: string) => {
     }));
     const optionalBindingMap = new Map<string, number>();
     const functionDefinitions = await Promise.all(commands.map(command => {
-        return commandToDeclare(namespace, command, recordSchema,optionalBindingMap);
+        return commandToDeclare(namespace, command, recordSchema, optionalBindingMap);
     }));
     const functionDefinitionHeaders = functionDefinitions.map(def => def.header);
     const functionDefinitionBodies = functionDefinitions.map(def => def.body);
