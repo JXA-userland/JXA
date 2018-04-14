@@ -3,16 +3,17 @@ import * as assert from "assert";
 import * as path from "path";
 import { transform } from "../src/sdef-to-dts";
 
+const camelCase = require('camelcase');
 const fixturesDir = path.join(__dirname, "fixtures");
 describe("Snapshot testing", () => {
     fs.readdirSync(fixturesDir)
         .map(caseName => {
-            const normalizedTestName = caseName.replace(/-/g, " ");
+            const normalizedTestName = camelCase(caseName);
             it(`Test ${normalizedTestName}`, async function () {
                 const fixtureDir = path.join(fixturesDir, caseName);
                 const actualFilePath = path.join(fixtureDir, "input.sdef");
                 const actualContent = fs.readFileSync(actualFilePath, "utf-8");
-                const actual = await transform(actualContent);
+                const actual = await transform(normalizedTestName, actualContent);
                 const expectedFilePath = path.join(fixtureDir, "output.ts");
                 if (process.env.UPDATE_SNAPSHOT) {
                     fs.writeFileSync(expectedFilePath, actual);

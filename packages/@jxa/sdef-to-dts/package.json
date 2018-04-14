@@ -57,6 +57,9 @@
     "@rgrove/parse-xml": "^1.1.1",
     "@types/camelcase": "^4.1.0",
     "camelcase": "^5.0.0",
+    "indent-string": "^3.2.0",
+    "is-keyword": "^1.2.2",
+    "is-var-name": "^2.0.0",
     "json-schema-to-typescript": "^5.4.0"
   }
 }

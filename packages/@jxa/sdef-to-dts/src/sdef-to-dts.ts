@@ -1,5 +1,8 @@
 const parseXml = require('@rgrove/parse-xml');
 const camelCaseLib = require('camelcase');
+const isVarName = require("is-var-name");
+const indentString = require('indent-string');
+
 import { compile, JSONSchema } from 'json-schema-to-typescript'
 
 const camelCase = (text: string) => {
@@ -52,7 +55,7 @@ interface Record extends RootNode {
     name: "record";
 }
 
-const convertType = (type: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
+const convertType = (type: string, namespace: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
     switch (type) {
         case "text":
             return "string";
@@ -69,7 +72,7 @@ const convertType = (type: string, definedJSONSchemaList: JSONSchema[]): "number
     const isTypeDefinedAsRecord = definedJSONSchemaList.some((schema) => {
         return schema.title === otherType;
     });
-    return isTypeDefinedAsRecord ? otherType : "any";
+    return isTypeDefinedAsRecord ? `${namespace}.${otherType}` : "any";
 };
 
 const createOptionalParameter = (name: string, parameters: Node[]): Promise<string | null> => {
@@ -141,7 +144,10 @@ const recordToJSONSchema = (command: Record): JSONSchema => {
     }
 };
 
-const commandToDeclare = async (command: Command, recordSchema: JSONSchema[]): Promise<string> => {
+const commandToDeclare = async (namespace: string, command: Command, recordSchema: JSONSchema[]): Promise<{
+    header: string;
+    body: string;
+}> => {
     // https://www.npmjs.com/package/json-schema-to-typescript
     const name = camelCase(command.attributes.name);
     const pascalCaseName = camelCaseLib(command.attributes.name, { pascalCase: true });
@@ -155,18 +161,19 @@ const commandToDeclare = async (command: Command, recordSchema: JSONSchema[]): P
         if (param.attributes.type === undefined) {
             return `${camelCase(param.name)}${optionalMark}: {}`
         }
-        const argType = convertType(param.attributes.type, recordSchema);
+        const argType = convertType(param.attributes.type, namespace, recordSchema);
         return `${camelCase(param.name)}${optionalMark}: ${argType}`;
     });
     const directParametersDocs = directParameters.map(param => {
-        return ` * @param ${camelCase(param.name)} ${param.attributes.description}`
+        return `  * @param ${camelCase(param.name)} ${param.attributes.description}`
     });
     const parameters = command.children.filter(node => {
         return node.type === "element" && node.name === "parameter" && typeof node.attributes === "object";
     });
     const optionalParameterTypeName = `${pascalCaseName}OptionalParameter`;
     const optionalParameterType = await createOptionalParameter(optionalParameterTypeName, parameters);
-    const optionalParameters = optionalParameterType ? `option?: ${optionalParameterTypeName}` : "";
+    const optionalParameters = optionalParameterType ? `option?: ${namespace}.${optionalParameterTypeName}` : "";
+    const optionalParameterDoc = optionalParameterType ? `* @param option` : "";
     const result = command.children.filter(node => {
         return node.type === "element" && node.name === "result";
     });
@@ -175,35 +182,28 @@ const commandToDeclare = async (command: Command, recordSchema: JSONSchema[]): P
         if (result.length === 0 || !result[0].attributes.type) {
             return "void";
         }
-        const returnType = convertType(result[0].attributes.type, recordSchema);
-        return returnType;
+        return convertType(result[0].attributes.type, namespace, recordSchema);
     };
     const returnType = createReturnType(result);
-    if (name === "delete") {
-        return `
-${optionalParameterType ? optionalParameterType : ""}
-/**
- * ${description}
-${directParametersDocs.join("\n")}${resultDescription
-            ? resultDescription :
-            ""
+    return {
+        header: optionalParameterType ? optionalParameterType : "",
+        body: `
+ /**
+  * ${description}
+${directParametersDocs.join("\n")}${
+            optionalParameterDoc ? "\n  " + optionalParameterDoc : ""
             }
- */
-declare function _${name}(${directParametersArgs.join(", ")}${optionalParameters.length > 0 ? ", " : ""}${optionalParameters}): ${returnType}
-export { _${name} as ${name} };
-`
+  * ${resultDescription}
+  */
+ ${name}(${directParametersArgs.join(", ")}${directParametersArgs.length > 0 ? ", " : ""}${optionalParameters}): ${returnType}`
+
     }
-    return `
-${optionalParameterType ? optionalParameterType : ""}
-/**
- * ${description}
-${directParametersDocs.join("\n")}
- * ${resultDescription}
- */
-export declare function ${name}(${directParametersArgs.join(", ")}${directParametersArgs.length > 0 ? ", " : ""}${optionalParameters}): ${returnType}`
 };
 
-export const transform = async (sdefContent: string) => {
+export const transform = async (namespace: string, sdefContent: string) => {
+    if (!isVarName(namespace)) {
+        throw new Error(`${namespace} can not to be used for namespace, because it includes invalid string.`);
+    }
     const JSON = parseXml(sdefContent);
     const dictionary: RootNode = JSON.children[0];
     const suites = dictionary.children.filter(node => node.name === "suite");
@@ -226,12 +226,20 @@ export const transform = async (sdefContent: string) => {
         return compile(schema, schema.title!)
     }));
     const functionDefinitions = await Promise.all(commands.map(command => {
-        return commandToDeclare(command, recordSchema);
+        return commandToDeclare(namespace, command, recordSchema);
     }));
+    const functionDefinitionHeaders = functionDefinitions.map(def => def.header);
+    const functionDefinitionBodies = functionDefinitions.map(def => def.body);
     return `
-// Records
-${recordDefinitions.join("\n")}
-// Functions
-${functionDefinitions.join("\n")}
+export namespace ${namespace} {
+    // Records
+${indentString(recordDefinitions.join("\n"), 4)}
+    // Function options
+${indentString(functionDefinitionHeaders.join("\n"), 4)}
+}
+export interface ${namespace}{
+    // Functions
+${indentString(functionDefinitionBodies.join("\n"), 4)}
+}
 `;
 };

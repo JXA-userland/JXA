@@ -278,6 +278,10 @@ hosted-git-info@^2.1.4:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.0.tgz#23235b29ab230c576aab0d4f13fc046b0b038222"
 
+indent-string@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-3.2.0.tgz#4a5fd6d27cc332f37e5419a504dbb837105c9289"
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
@@ -299,9 +303,17 @@ is-builtin-module@^1.0.0:
   dependencies:
     builtin-modules "^1.0.0"
 
+is-keyword@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/is-keyword/-/is-keyword-1.2.2.tgz#c26955ee664b9799895c9c732ee5572249d9c4f9"
+
 is-promise@^2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+
+is-var-name@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-var-name/-/is-var-name-2.0.0.tgz#28cad24d1e4021640bc54668b2de84a9f9b0d776"
 
 is-windows@^1.0.0:
   version "1.0.2"
