@@ -30,7 +30,7 @@
     "url": "https://github.com/JXA-userland/JXA.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc -p test/"
   },
   "dependencies": {
     "@jxa/types": "^0.1.0"

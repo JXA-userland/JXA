@@ -1,3 +1,4 @@
+
 var Finder = Application("Finder");
 var win = Finder.windows; // ウィンドウを全て取得する
 var n = win.length; // ウィンドウの総数を取得する
