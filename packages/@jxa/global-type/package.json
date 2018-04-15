@@ -1,6 +1,6 @@
 {
   "name": "@jxa/global-type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JXA typing for global",
   "keywords": [
     "JXA",
@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@jxa/types": "^0.1.0"
+    "@jxa/types": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^9.6.5",
