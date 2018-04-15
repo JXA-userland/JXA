@@ -83,6 +83,7 @@ declare namespace Application {
     export interface _QuickTimePlayer extends QuickTimePlayer{}
     export interface _Reminders extends Reminders{}
     export interface _Safari extends Safari{}
+    export interface _TextEdit extends TextEdit{}
     export interface _ScriptEditor extends ScriptEditor{}
     export interface _SpeechRecognitionServer extends SpeechRecognitionServer{}
     export interface _SystemEvents extends SystemEvents{}
