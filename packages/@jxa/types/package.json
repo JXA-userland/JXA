@@ -30,6 +30,9 @@
     "type": "git",
     "url": "https://github.com/JXA-userland/JXA.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc -p .",
     "prepublish": "npm run --if-present build",
