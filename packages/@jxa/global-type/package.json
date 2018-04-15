@@ -20,7 +20,8 @@
     "lib/",
     "src/"
   ],
-  "main": "lib/global-type.js",
+  "main": "lib/global-type.d.ts",
+  "types": "lib/global-type.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
