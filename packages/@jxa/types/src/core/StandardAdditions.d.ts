@@ -16,7 +16,7 @@ export namespace StandardAdditions {
    /**
     * the POSIX (slash)-style path of a file or alias object
     */
-   POSIXPath: string;
+   POSIXPath(): string;
  }
 
  /**
@@ -32,31 +32,31 @@ export namespace StandardAdditions {
    /**
     * property that allows getting and setting of multiple properties
     */
-   properties: any;
+   properties(): any;
    /**
     * a name given to this URL, usually the name of the page it refers to
     */
-   name: string;
+   name(): string;
    /**
     * the access scheme
     */
-   scheme: any;
+   scheme(): any;
    /**
     * the host specified by this URL
     */
-   host: any;
+   host(): any;
    /**
     * the location of the target on the host
     */
-   path: string;
+   path(): string;
    /**
     * the user name by which to access this URL
     */
-   userName: string;
+   userName(): string;
    /**
     * the password by which to access this URL
     */
-   password: string;
+   password(): string;
  }
 
  /**
@@ -72,19 +72,19 @@ export namespace StandardAdditions {
    /**
     * property that allows getting and setting of multiple properties
     */
-   properties: any;
+   properties(): any;
    /**
     * the Domain Name System form of the address (e.g. apple.com)
     */
-   DNSForm: string;
+   DNSForm(): string;
    /**
     * the dotted-decimal form of the address (e.g. 17.255.1.1)
     */
-   dottedDecimalForm: string;
+   dottedDecimalForm(): string;
    /**
     * the port number of the requested TCP/IP service
     */
-   port: number;
+   port(): number;
  }
 
  /**
@@ -100,19 +100,19 @@ export namespace StandardAdditions {
    /**
     * property that allows getting and setting of multiple properties
     */
-   properties: any;
+   properties(): any;
    /**
     * the name of the web page
     */
-   name: string;
+   name(): string;
    /**
     * the universal resource locator for this page
     */
-   URL: any;
+   URL(): any;
    /**
     * the text encoding method used for this page
     */
-   textEncoding: string;
+   textEncoding(): string;
  }
     
     // CLass Extension
@@ -131,11 +131,11 @@ export namespace StandardAdditions {
    /**
     * name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)
     */
-   buttonReturned: string;
+   buttonReturned(): string;
    /**
     * Did the alert time out? (present only if ‘giving up after’ was supplied)
     */
-   gaveUp: boolean;
+   gaveUp(): boolean;
  }
 
  /**
@@ -151,15 +151,15 @@ export namespace StandardAdditions {
    /**
     * name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
     */
-   buttonReturned: string;
+   buttonReturned(): string;
    /**
     * text entered (present only if ‘default answer’ was supplied)
     */
-   textReturned: string;
+   textReturned(): string;
    /**
     * Did the dialog time out? (present only if ‘giving up after’ was supplied)
     */
-   gaveUp: boolean;
+   gaveUp(): boolean;
  }
 
  /**
@@ -175,95 +175,95 @@ export namespace StandardAdditions {
    /**
     * the name of the item
     */
-   name: string;
+   name(): string;
    /**
     * the user-visible name of the item
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * the short name (CFBundleName) of the item (if the item is an application)
     */
-   shortName: string;
+   shortName(): string;
    /**
     * the name extension of the item (such as “txt”)
     */
-   nameExtension: string;
+   nameExtension(): string;
    /**
     * the item’s bundle identifier (if the item is a package)
     */
-   bundleIdentifier: string;
+   bundleIdentifier(): string;
    /**
     * the item’s type identifier
     */
-   typeIdentifier: string;
+   typeIdentifier(): string;
    /**
     * the kind of the item
     */
-   kind: string;
+   kind(): string;
    /**
     * the application that normally opens this kind of item
     */
-   defaultApplication: any;
+   defaultApplication(): any;
    /**
     * the date the item was created
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the date the item was last modified
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the file type of the item
     */
-   fileType: string;
+   fileType(): string;
    /**
     * the creator type of the item
     */
-   fileCreator: string;
+   fileCreator(): string;
    /**
     * the item’s short version string (from the Finder’s ‘Get Info’ box)
     */
-   shortVersion: string;
+   shortVersion(): string;
    /**
     * the item’s long version string (from the Finder’s ‘Get Info’ box)
     */
-   longVersion: string;
+   longVersion(): string;
    /**
     * the size of the item in bytes
     */
-   size: number;
+   size(): number;
    /**
     * Is the item an alias file?
     */
-   alias: boolean;
+   alias(): boolean;
    /**
     * Is the item a folder?
     */
-   folder: boolean;
+   folder(): boolean;
    /**
     * Is the item a package (a folder treated as a file?)
     */
-   packageFolder: boolean;
+   packageFolder(): boolean;
    /**
     * Is the item’s name extension hidden from the user?
     */
-   extensionHidden: boolean;
+   extensionHidden(): boolean;
    /**
     * Is the item visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Is the item locked?
     */
-   locked: boolean;
+   locked(): boolean;
    /**
     * Is the item currently in use?
     */
-   busyStatus: boolean;
+   busyStatus(): boolean;
    /**
     * the coordinates of the folder’s window (if the item is a folder)
     */
-   folderWindow: any;
+   folderWindow(): any;
  }
 
  /**
@@ -279,19 +279,19 @@ export namespace StandardAdditions {
    /**
     * the sound output volume
     */
-   outputVolume: number;
+   outputVolume(): number;
    /**
     * the sound input volume
     */
-   inputVolume: number;
+   inputVolume(): number;
    /**
     * the alert volume (as a percentage of the output volume)
     */
-   alertVolume: number;
+   alertVolume(): number;
    /**
     * Is the sound output muted?
     */
-   outputMuted: boolean;
+   outputMuted(): boolean;
  }
 
  /**
@@ -307,67 +307,67 @@ export namespace StandardAdditions {
    /**
     * the AppleScript version
     */
-   appleScriptVersion: string;
+   appleScriptVersion(): string;
    /**
     * the AppleScript Studio version
     */
-   appleScriptStudioVersion: string;
+   appleScriptStudioVersion(): string;
    /**
     * the system version
     */
-   systemVersion: string;
+   systemVersion(): string;
    /**
     * the current user’s short name
     */
-   shortUserName: string;
+   shortUserName(): string;
    /**
     * the current user’s long name
     */
-   longUserName: string;
+   longUserName(): string;
    /**
     * the current user’s ID
     */
-   userID: number;
+   userID(): number;
    /**
     * the current user’s locale
     */
-   userLocale: string;
+   userLocale(): string;
    /**
     * the current user’s home directory
     */
-   homeDirectory: any;
+   homeDirectory(): any;
    /**
     * the boot volume
     */
-   bootVolume: string;
+   bootVolume(): string;
    /**
     * the computer name
     */
-   computerName: string;
+   computerName(): string;
    /**
     * the host name
     */
-   hostName: string;
+   hostName(): string;
    /**
     * the IPv4 address
     */
-   IPv4Address: string;
+   IPv4Address(): string;
    /**
     * the primary Ethernet address
     */
-   primaryEthernetAddress: string;
+   primaryEthernetAddress(): string;
    /**
     * the CPU type
     */
-   CPUType: string;
+   CPUType(): string;
    /**
     * the clock speed of the CPU in MHz
     */
-   CPUSpeed: number;
+   CPUSpeed(): number;
    /**
     * the amount of physical RAM in MB
     */
-   physicalMemory: number;
+   physicalMemory(): number;
  }
 
     // Function options

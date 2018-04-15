@@ -16,19 +16,19 @@ export namespace SystemEvents {
    /**
     * user's full name
     */
-   fullName: string;
+   fullName(): string;
    /**
     * path to user's home directory
     */
-   homeDirectory: any;
+   homeDirectory(): any;
    /**
     * user's short name
     */
-   name: string;
+   name(): string;
    /**
     * path to user's picture. Can be set for current user only!
     */
-   picturePath: any;
+   picturePath(): any;
  }
 
  /**
@@ -44,47 +44,47 @@ export namespace SystemEvents {
    /**
     * the overall look of buttons, menus and windows
     */
-   appearance: any;
+   appearance(): any;
    /**
     * Is font smoothing on?
     */
-   fontSmoothing: boolean;
+   fontSmoothing(): boolean;
    /**
     * the font size at or below which font smoothing is turned off
     */
-   fontSmoothingLimit: number;
+   fontSmoothingLimit(): number;
    /**
     * the method used for smoothing fonts
     */
-   fontSmoothingStyle: any;
+   fontSmoothingStyle(): any;
    /**
     * color used for hightlighting selected text and lists
     */
-   highlightColor: any;
+   highlightColor(): any;
    /**
     * the number of recent applications to track
     */
-   recentApplicationsLimit: number;
+   recentApplicationsLimit(): number;
    /**
     * the number of recent documents to track
     */
-   recentDocumentsLimit: number;
+   recentDocumentsLimit(): number;
    /**
     * the number of recent servers to track
     */
-   recentServersLimit: number;
+   recentServersLimit(): number;
    /**
     * the action performed by clicking the scroll bar
     */
-   scrollBarAction: any;
+   scrollBarAction(): any;
    /**
     * Is smooth scrolling used?
     */
-   smoothScrolling: boolean;
+   smoothScrolling(): boolean;
    /**
     * use dark menu bar and dock
     */
-   darkMode: boolean;
+   darkMode(): boolean;
  }
 
  /**
@@ -100,31 +100,31 @@ export namespace SystemEvents {
    /**
     * the blank CD insertion preference
     */
-   blankCD: any;
+   blankCD(): any;
    /**
     * the blank DVD insertion preference
     */
-   blankDVD: any;
+   blankDVD(): any;
    /**
     * the blank BD insertion preference
     */
-   blankBD: any;
+   blankBD(): any;
    /**
     * the music CD insertion preference
     */
-   musicCD: any;
+   musicCD(): any;
    /**
     * the picture CD insertion preference
     */
-   pictureCD: any;
+   pictureCD(): any;
    /**
     * the video DVD insertion preference
     */
-   videoDVD: any;
+   videoDVD(): any;
    /**
     * the video BD insertion preference
     */
-   videoBD: any;
+   videoBD(): any;
  }
 
  /**
@@ -140,15 +140,15 @@ export namespace SystemEvents {
    /**
     * application to launch or activate on the insertion of media
     */
-   customApplication: any;
+   customApplication(): any;
    /**
     * AppleScript to launch or activate on the insertion of media
     */
-   customScript: any;
+   customScript(): any;
    /**
     * action to perform on media insertion
     */
-   insertionAction: any;
+   insertionAction(): any;
  }
 
  /**
@@ -164,39 +164,39 @@ export namespace SystemEvents {
    /**
     * name of the desktop
     */
-   name: string;
+   name(): string;
    /**
     * unique identifier of the desktop
     */
-   id: number;
+   id(): number;
    /**
     * number of seconds to wait between changing the desktop picture
     */
-   changeInterval: any;
+   changeInterval(): any;
    /**
     * name of display on which this desktop appears
     */
-   displayName: string;
+   displayName(): string;
    /**
     * path to file used as desktop picture
     */
-   picture: any;
+   picture(): any;
    /**
     * never, using interval, using login, after sleep
     */
-   pictureRotation: number;
+   pictureRotation(): number;
    /**
     * path to folder containing pictures for changing desktop background
     */
-   picturesFolder: any;
+   picturesFolder(): any;
    /**
     * turn on for random ordering of changing desktop pictures
     */
-   randomOrder: boolean;
+   randomOrder(): boolean;
    /**
     * indicates whether the menu bar is translucent
     */
-   translucentMenuBar: boolean;
+   translucentMenuBar(): boolean;
  }
 
  /**
@@ -212,31 +212,31 @@ export namespace SystemEvents {
    /**
     * is the animation of opening applications on or off?
     */
-   animate: boolean;
+   animate(): boolean;
    /**
     * is autohiding the dock on or off?
     */
-   autohide: boolean;
+   autohide(): boolean;
    /**
     * size/height of the items (between 0.0 (minimum) and 1.0 (maximum))
     */
-   dockSize: any;
+   dockSize(): any;
    /**
     * is magnification on or off?
     */
-   magnification: boolean;
+   magnification(): boolean;
    /**
     * maximum magnification size when magnification is on (between 0.0 (minimum) and 1.0 (maximum))
     */
-   magnificationSize: any;
+   magnificationSize(): any;
    /**
     * minimization effect
     */
-   minimizeEffect: any;
+   minimizeEffect(): any;
    /**
     * location on screen
     */
-   screenEdge: any;
+   screenEdge(): any;
  }
 
  /**
@@ -252,19 +252,19 @@ export namespace SystemEvents {
    /**
     * Is the Login Item hidden when launched?
     */
-   hidden: boolean;
+   hidden(): boolean;
    /**
     * the file type of the Login Item
     */
-   kind: string;
+   kind(): string;
    /**
     * the name of the Login Item
     */
-   name: string;
+   name(): string;
    /**
     * the file system path to the Login Item
     */
-   path: string;
+   path(): string;
  }
 
  /**
@@ -280,19 +280,19 @@ export namespace SystemEvents {
    /**
     * the name used to authenticate
     */
-   accountName: string;
+   accountName(): string;
    /**
     * Is the configuration connected?
     */
-   connected: boolean;
+   connected(): boolean;
    /**
     * the unique identifier for the configuration
     */
-   id: string;
+   id(): string;
    /**
     * the name of the configuration
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -308,35 +308,35 @@ export namespace SystemEvents {
    /**
     * configure the interface speed, duplex, and mtu automatically?
     */
-   automatic: boolean;
+   automatic(): boolean;
    /**
     * the duplex setting half | full | full with flow control
     */
-   duplex: string;
+   duplex(): string;
    /**
     * the unique identifier for the interface
     */
-   id: string;
+   id(): string;
    /**
     * the type of interface
     */
-   kind: string;
+   kind(): string;
    /**
     * the MAC address for the interface
     */
-   MACAddress: string;
+   MACAddress(): string;
    /**
     * the packet size
     */
-   mtu: number;
+   mtu(): number;
    /**
     * the name of the interface
     */
-   name: string;
+   name(): string;
    /**
     * ethernet speed 10 | 100 | 1000
     */
-   speed: number;
+   speed(): number;
  }
 
  /**
@@ -352,11 +352,11 @@ export namespace SystemEvents {
    /**
     * the unique identifier for the location
     */
-   id: string;
+   id(): string;
    /**
     * the name of the location
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -372,7 +372,7 @@ export namespace SystemEvents {
    /**
     * the current location
     */
-   currentLocation: any;
+   currentLocation(): any;
  }
 
  /**
@@ -388,27 +388,27 @@ export namespace SystemEvents {
    /**
     * Is the service active?
     */
-   active: boolean;
+   active(): boolean;
    /**
     * the currently selected configuration
     */
-   currentConfiguration: any;
+   currentConfiguration(): any;
    /**
     * the unique identifier for the service
     */
-   id: string;
+   id(): string;
    /**
     * the interface the service is built on
     */
-   interface: any;
+   interface(): any;
    /**
     * the type of service
     */
-   kind: number;
+   kind(): number;
    /**
     * the name of the service
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -424,19 +424,19 @@ export namespace SystemEvents {
    /**
     * name of the screen saver module as displayed to the user
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * name of the screen saver module to be displayed
     */
-   name: string;
+   name(): string;
    /**
     * path to the screen saver module
     */
-   path: any;
+   path(): any;
    /**
     * effect to use when displaying picture-based screen savers (slideshow, collage, or mosaic)
     */
-   pictureDisplayStyle: string;
+   pictureDisplayStyle(): string;
  }
 
  /**
@@ -452,19 +452,19 @@ export namespace SystemEvents {
    /**
     * number of seconds of idle time before the screen saver starts; zero for never
     */
-   delayInterval: number;
+   delayInterval(): number;
    /**
     * should the screen saver be shown only on the main screen?
     */
-   mainScreenOnly: boolean;
+   mainScreenOnly(): boolean;
    /**
     * is the screen saver running?
     */
-   running: boolean;
+   running(): boolean;
    /**
     * should a clock appear over the screen saver?
     */
-   showClock: boolean;
+   showClock(): boolean;
  }
 
  /**
@@ -502,27 +502,27 @@ export namespace SystemEvents {
    /**
     * Is automatic login allowed?
     */
-   automaticLogin: boolean;
+   automaticLogin(): boolean;
    /**
     * Will the computer log out when inactive?
     */
-   logOutWhenInactive: boolean;
+   logOutWhenInactive(): boolean;
    /**
     * The interval of inactivity after which the computer will log out
     */
-   logOutWhenInactiveInterval: number;
+   logOutWhenInactiveInterval(): number;
    /**
     * Is a password required to unlock secure preferences?
     */
-   requirePasswordToUnlock: boolean;
+   requirePasswordToUnlock(): boolean;
    /**
     * Is a password required to wake the computer from sleep or screen saver?
     */
-   requirePasswordToWake: boolean;
+   requirePasswordToWake(): boolean;
    /**
     * Is secure virtual memory being used?
     */
-   secureVirtualMemory: boolean;
+   secureVirtualMemory(): boolean;
  }
 
  /**
@@ -538,39 +538,39 @@ export namespace SystemEvents {
    /**
     * the OSType identifying the application that created the alias
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * the application that will launch if the alias is opened
     */
-   defaultApplication: any;
+   defaultApplication(): any;
    /**
     * the OSType identifying the type of data contained in the alias
     */
-   fileType: any;
+   fileType(): any;
    /**
     * The kind of alias, as shown in Finder
     */
-   kind: string;
+   kind(): string;
    /**
     * the version of the product (visible at the top of the "Get Info" window)
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the short version of the application bundle referenced by the alias
     */
-   shortVersion: string;
+   shortVersion(): string;
    /**
     * Is the alias a stationery pad?
     */
-   stationery: boolean;
+   stationery(): boolean;
    /**
     * The type identifier of the alias
     */
-   typeIdentifier: string;
+   typeIdentifier(): string;
    /**
     * the version of the application bundle referenced by the alias (visible at the bottom of the "Get Info" window)
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -586,47 +586,47 @@ export namespace SystemEvents {
    /**
     * The Apple Menu Items folder
     */
-   appleMenuFolder: any;
+   appleMenuFolder(): any;
    /**
     * The Control Panels folder
     */
-   controlPanelsFolder: any;
+   controlPanelsFolder(): any;
    /**
     * The Control Strip Modules folder
     */
-   controlStripModulesFolder: any;
+   controlStripModulesFolder(): any;
    /**
     * The Classic Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The Extensions folder
     */
-   extensionsFolder: any;
+   extensionsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * The Launcher Items folder
     */
-   launcherItemsFolder: any;
+   launcherItemsFolder(): any;
    /**
     * The Classic Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The Shutdown Items folder
     */
-   shutdownFolder: any;
+   shutdownFolder(): any;
    /**
     * The StartupItems folder
     */
-   startupItemsFolder: any;
+   startupItemsFolder(): any;
    /**
     * The System folder
     */
-   systemFolder: any;
+   systemFolder(): any;
  }
 
  /**
@@ -642,39 +642,39 @@ export namespace SystemEvents {
    /**
     * the total number of bytes (free or used) on the disk
     */
-   capacity: number;
+   capacity(): number;
    /**
     * Can the media be ejected (floppies, CD's, and so on)?
     */
-   ejectable: boolean;
+   ejectable(): boolean;
    /**
     * the file system format of this disk
     */
-   format: any;
+   format(): any;
    /**
     * the number of free bytes left on the disk
     */
-   freeSpace: number;
+   freeSpace(): number;
    /**
     * Ignore permissions on this disk?
     */
-   ignorePrivileges: boolean;
+   ignorePrivileges(): boolean;
    /**
     * Is the media a local volume (as opposed to a file server)?
     */
-   localVolume: boolean;
+   localVolume(): boolean;
    /**
     * the server on which the disk resides, AFP volumes only
     */
-   server: any;
+   server(): any;
    /**
     * Is this disk the boot disk?
     */
-   startup: boolean;
+   startup(): boolean;
    /**
     * the zone in which the disk's server resides, AFP volumes only
     */
-   zone: any;
+   zone(): any;
  }
 
  /**
@@ -690,67 +690,67 @@ export namespace SystemEvents {
    /**
     * Is the disk item busy?
     */
-   busyStatus: boolean;
+   busyStatus(): boolean;
    /**
     * the folder or disk which has this disk item as an element
     */
-   container: any;
+   container(): any;
    /**
     * the date on which the disk item was created
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the name of the disk item as displayed in the User Interface
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * the unique ID of the disk item
     */
-   id: string;
+   id(): string;
    /**
     * the date on which the disk item was last modified
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the name of the disk item
     */
-   name: string;
+   name(): string;
    /**
     * the extension portion of the name
     */
-   nameExtension: string;
+   nameExtension(): string;
    /**
     * Is the disk item a package?
     */
-   packageFolder: boolean;
+   packageFolder(): boolean;
    /**
     * the file system path of the disk item
     */
-   path: string;
+   path(): string;
    /**
     * the actual space used by the disk item on disk
     */
-   physicalSize: number;
+   physicalSize(): number;
    /**
     * the POSIX file system path of the disk item
     */
-   POSIXPath: string;
+   POSIXPath(): string;
    /**
     * the logical size of the disk item
     */
-   size: number;
+   size(): number;
    /**
     * the URL of the disk item
     */
-   URL: string;
+   URL(): string;
    /**
     * Is the disk item visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * the volume on which the disk item resides
     */
-   volume: string;
+   volume(): string;
  }
 
  /**
@@ -766,63 +766,63 @@ export namespace SystemEvents {
    /**
     * The Application Support folder
     */
-   applicationSupportFolder: any;
+   applicationSupportFolder(): any;
    /**
     * The Applications folder
     */
-   applicationsFolder: any;
+   applicationsFolder(): any;
    /**
     * The Desktop Pictures folder
     */
-   desktopPicturesFolder: any;
+   desktopPicturesFolder(): any;
    /**
     * The Folder Action Scripts folder
     */
-   folderActionScriptsFolder: any;
+   folderActionScriptsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * the unique identifier of the domain
     */
-   id: string;
+   id(): string;
    /**
     * The Library folder
     */
-   libraryFolder: any;
+   libraryFolder(): any;
    /**
     * the name of the domain
     */
-   name: string;
+   name(): string;
    /**
     * The Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The Scripting Additions folder
     */
-   scriptingAdditionsFolder: any;
+   scriptingAdditionsFolder(): any;
    /**
     * The Scripts folder
     */
-   scriptsFolder: any;
+   scriptsFolder(): any;
    /**
     * The Shared Documents folder
     */
-   sharedDocumentsFolder: any;
+   sharedDocumentsFolder(): any;
    /**
     * The Speakable Items folder
     */
-   speakableItemsFolder: any;
+   speakableItemsFolder(): any;
    /**
     * The Utilities folder
     */
-   utilitiesFolder: any;
+   utilitiesFolder(): any;
    /**
     * The Automator Workflows folder
     */
-   workflowsFolder: any;
+   workflowsFolder(): any;
  }
 
  /**
@@ -838,39 +838,39 @@ export namespace SystemEvents {
    /**
     * the OSType identifying the application that created the file
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * the application that will launch if the file is opened
     */
-   defaultApplication: any;
+   defaultApplication(): any;
    /**
     * the OSType identifying the type of data contained in the file
     */
-   fileType: any;
+   fileType(): any;
    /**
     * The kind of file, as shown in Finder
     */
-   kind: string;
+   kind(): string;
    /**
     * the version of the product (visible at the top of the "Get Info" window)
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the short version of the file
     */
-   shortVersion: string;
+   shortVersion(): string;
    /**
     * Is the file a stationery pad?
     */
-   stationery: boolean;
+   stationery(): boolean;
    /**
     * The type identifier of the file
     */
-   typeIdentifier: string;
+   typeIdentifier(): string;
    /**
     * the version of the file (visible at the bottom of the "Get Info" window)
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -941,47 +941,47 @@ export namespace SystemEvents {
    /**
     * The user's Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The user's Documents folder
     */
-   documentsFolder: any;
+   documentsFolder(): any;
    /**
     * The user's Downloads folder
     */
-   downloadsFolder: any;
+   downloadsFolder(): any;
    /**
     * The user's Favorites folder
     */
-   favoritesFolder: any;
+   favoritesFolder(): any;
    /**
     * The user's Home folder
     */
-   homeFolder: any;
+   homeFolder(): any;
    /**
     * The user's Movies folder
     */
-   moviesFolder: any;
+   moviesFolder(): any;
    /**
     * The user's Music folder
     */
-   musicFolder: any;
+   musicFolder(): any;
    /**
     * The user's Pictures folder
     */
-   picturesFolder: any;
+   picturesFolder(): any;
    /**
     * The user's Public folder
     */
-   publicFolder: any;
+   publicFolder(): any;
    /**
     * The user's Sites folder
     */
-   sitesFolder: any;
+   sitesFolder(): any;
    /**
     * The Temporary Items folder
     */
-   temporaryItemsFolder: any;
+   temporaryItemsFolder(): any;
  }
 
  /**
@@ -997,19 +997,19 @@ export namespace SystemEvents {
    /**
     * the bounding rectangle of the movie file
     */
-   bounds: any;
+   bounds(): any;
    /**
     * the dimensions the movie has when it is not scaled
     */
-   naturalDimensions: any;
+   naturalDimensions(): any;
    /**
     * the preview duration of the movie file
     */
-   previewDuration: number;
+   previewDuration(): number;
    /**
     * the preview time of the movie file
     */
-   previewTime: number;
+   previewTime(): number;
  }
 
  /**
@@ -1036,11 +1036,11 @@ export namespace SystemEvents {
    /**
     * what the action does
     */
-   description: string;
+   description(): string;
    /**
     * the name of the action
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -1056,7 +1056,7 @@ export namespace SystemEvents {
    /**
     * a reference to the application file from which this process was launched
     */
-   applicationFile: any;
+   applicationFile(): any;
  }
 
  /**
@@ -1072,15 +1072,15 @@ export namespace SystemEvents {
    /**
     * the name of the attribute
     */
-   name: string;
+   name(): string;
    /**
     * Can the attribute be set?
     */
-   settable: boolean;
+   settable(): boolean;
    /**
     * the current value of the attribute
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -1173,7 +1173,7 @@ export namespace SystemEvents {
    /**
     * a reference to the desk accessory file from which this process was launched
     */
-   deskAccessoryFile: any;
+   deskAccessoryFile(): any;
  }
 
  /**
@@ -1343,79 +1343,79 @@ export namespace SystemEvents {
    /**
     * Is the process high-level event aware (accepts open application, open document, print document, and quit)?
     */
-   acceptsHighLevelEvents: boolean;
+   acceptsHighLevelEvents(): boolean;
    /**
     * Does the process accept remote events?
     */
-   acceptsRemoteEvents: boolean;
+   acceptsRemoteEvents(): boolean;
    /**
     * the architecture in which the process is running
     */
-   architecture: string;
+   architecture(): string;
    /**
     * Does the process run exclusively in the background?
     */
-   backgroundOnly: boolean;
+   backgroundOnly(): boolean;
    /**
     * the bundle identifier of the process' application file
     */
-   bundleIdentifier: string;
+   bundleIdentifier(): string;
    /**
     * Is the process running in the Classic environment?
     */
-   classic: boolean;
+   classic(): boolean;
    /**
     * the OSType of the creator of the process (the signature)
     */
-   creatorType: string;
+   creatorType(): string;
    /**
     * the name of the file from which the process was launched, as displayed in the User Interface
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * the file from which the process was launched
     */
-   file: any;
+   file(): any;
    /**
     * the OSType of the file type of the process
     */
-   fileType: string;
+   fileType(): string;
    /**
     * Is the process the frontmost process
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * Does the process have a scripting terminology, i.e., can it be scripted?
     */
-   hasScriptingTerminology: boolean;
+   hasScriptingTerminology(): boolean;
    /**
     * The unique identifier of the process
     */
-   id: number;
+   id(): number;
    /**
     * the name of the process
     */
-   name: string;
+   name(): string;
    /**
     * the number of bytes currently used in the process' partition
     */
-   partitionSpaceUsed: number;
+   partitionSpaceUsed(): number;
    /**
     * the short name of the file from which the process was launched
     */
-   shortName: any;
+   shortName(): any;
    /**
     * the size of the partition with which the process was launched
     */
-   totalPartitionSize: number;
+   totalPartitionSize(): number;
    /**
     * The Unix process identifier of a process running in the native environment, or -1 for a process running in the Classic environment
     */
-   unixId: number;
+   unixId(): number;
    /**
     * Is the process' layer visible?
     */
-   visible: any;
+   visible(): any;
  }
 
  /**
@@ -1618,79 +1618,79 @@ export namespace SystemEvents {
    /**
     * a more complete description of the UI element and its capabilities
     */
-   accessibilityDescription: any;
+   accessibilityDescription(): any;
    /**
     * the class of the UI Element, which identifies it function
     */
-   class: any;
+   class(): any;
    /**
     * the accessibility description, if available; otherwise, the role description
     */
-   description: any;
+   description(): any;
    /**
     * Is the UI element enabled? ( Does it accept clicks? )
     */
-   enabled: any;
+   enabled(): any;
    /**
     * a list of every UI element contained in this UI element and its child UI elements, to the limits of the tree
     */
-   entireContents: any;
+   entireContents(): any;
    /**
     * Is the focus on this UI element?
     */
-   focused: any;
+   focused(): any;
    /**
     * an elaborate description of the UI element and its capabilities
     */
-   help: any;
+   help(): any;
    /**
     * the maximum value that the UI element can take on
     */
-   maximumValue: any;
+   maximumValue(): any;
    /**
     * the minimum value that the UI element can take on
     */
-   minimumValue: any;
+   minimumValue(): any;
    /**
     * the name of the UI Element, which identifies it within its container
     */
-   name: string;
+   name(): string;
    /**
     * the orientation of the UI element
     */
-   orientation: any;
+   orientation(): any;
    /**
     * the position of the UI element
     */
-   position: any;
+   position(): any;
    /**
     * an encoded description of the UI element and its capabilities
     */
-   role: string;
+   role(): string;
    /**
     * a more complete description of the UI element's role
     */
-   roleDescription: string;
+   roleDescription(): string;
    /**
     * Is the UI element selected?
     */
-   selected: any;
+   selected(): any;
    /**
     * the size of the UI element
     */
-   size: any;
+   size(): any;
    /**
     * an encoded description of the UI element and its capabilities
     */
-   subrole: any;
+   subrole(): any;
    /**
     * the title of the UI element as it appears on the screen
     */
-   title: string;
+   title(): string;
    /**
     * the current value of the UI element
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -1739,19 +1739,19 @@ export namespace SystemEvents {
    /**
     * the kind of data stored in the property list item: boolean/data/date/list/number/record/string
     */
-   kind: any;
+   kind(): any;
    /**
     * the name of the property list item ( if any )
     */
-   name: string;
+   name(): string;
    /**
     * the text representation of the property list data
     */
-   text: string;
+   text(): string;
    /**
     * the value of the property list item
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -1767,15 +1767,15 @@ export namespace SystemEvents {
    /**
     * the full text of the annotation
     */
-   fullText: string;
+   fullText(): string;
    /**
     * the unique identifier of the annotation
     */
-   id: string;
+   id(): string;
    /**
     * the name of the annotation
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -1791,63 +1791,63 @@ export namespace SystemEvents {
    /**
     * will the movie automatically start playing? (saved with QuickTime file)
     */
-   autoPlay: boolean;
+   autoPlay(): boolean;
    /**
     * will the movie automatically start presenting? (saved with QuickTime file)
     */
-   autoPresent: boolean;
+   autoPresent(): boolean;
    /**
     * will the player automatically quit when done playing? (saved with QuickTime file)
     */
-   autoQuitWhenDone: boolean;
+   autoQuitWhenDone(): boolean;
    /**
     * the creation time of the QuickTime file
     */
-   creationTime: any;
+   creationTime(): any;
    /**
     * the size of the QuickTime file data
     */
-   dataSize: number;
+   dataSize(): number;
    /**
     * the duration of the QuickTime file, in terms of the time scale
     */
-   duration: number;
+   duration(): number;
    /**
     * the internet location to open when clicking on the movie (overrides track hrefs)
     */
-   href: string;
+   href(): string;
    /**
     * keep playing the movie in a loop?
     */
-   looping: boolean;
+   looping(): boolean;
    /**
     * the modification time of the QuickTime file
     */
-   modificationTime: any;
+   modificationTime(): any;
    /**
     * the preferred rate of the QuickTime file
     */
-   preferredRate: number;
+   preferredRate(): number;
    /**
     * the preferred volume of the QuickTime file
     */
-   preferredVolume: number;
+   preferredVolume(): number;
    /**
     * mode in which the movie will be presented
     */
-   presentationMode: any;
+   presentationMode(): any;
    /**
     * size at which the movie will be presented
     */
-   presentationSize: any;
+   presentationSize(): any;
    /**
     * is this a stored streaming movie?
     */
-   storedStream: boolean;
+   storedStream(): boolean;
    /**
     * the time scale of the QuickTime file
     */
-   timeScale: number;
+   timeScale(): number;
  }
 
  /**
@@ -1874,87 +1874,87 @@ export namespace SystemEvents {
    /**
     * the number of channels in the audio
     */
-   audioChannelCount: number;
+   audioChannelCount(): number;
    /**
     * can the track be heard?
     */
-   audioCharacteristic: boolean;
+   audioCharacteristic(): boolean;
    /**
     * the sample rate of the audio in kHz
     */
-   audioSampleRate: any;
+   audioSampleRate(): any;
    /**
     * the size of uncompressed audio samples in bits
     */
-   audioSampleSize: number;
+   audioSampleSize(): number;
    /**
     * the creation time of the track
     */
-   creationTime: any;
+   creationTime(): any;
    /**
     * the data format
     */
-   dataFormat: string;
+   dataFormat(): string;
    /**
     * the data rate (bytes/sec) of the track
     */
-   dataRate: number;
+   dataRate(): number;
    /**
     * the size of the track data
     */
-   dataSize: number;
+   dataSize(): number;
    /**
     * the current dimensions of the track
     */
-   dimensions: any;
+   dimensions(): any;
    /**
     * the duration of the track, in terms of the time scale
     */
-   duration: number;
+   duration(): number;
    /**
     * should this track be used when the movie is playing?
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * is the track high quality?
     */
-   highQuality: boolean;
+   highQuality(): boolean;
    /**
     * the internet location to open when clicking on the track
     */
-   href: string;
+   href(): string;
    /**
     * the name of the media in the track, in the current language (e.g., 'Sound', 'Video', 'Text', ...)
     */
-   kind: string;
+   kind(): string;
    /**
     * the modification time of the track
     */
-   modificationTime: any;
+   modificationTime(): any;
    /**
     * the name of the track
     */
-   name: string;
+   name(): string;
    /**
     * the time delay before this track starts playing
     */
-   startTime: number;
+   startTime(): number;
    /**
     * the type of media in the track (e.g., 'soun', 'vide', 'text', ...)
     */
-   type: string;
+   type(): string;
    /**
     * deprecated: use "type" instead ( included only to resolve a terminology conflict, script text will be updated upon compilation )
     */
-   typeClass: string;
+   typeClass(): string;
    /**
     * the color depth of the video
     */
-   videoDepth: number;
+   videoDepth(): number;
    /**
     * can the track be seen?
     */
-   visualCharacteristic: boolean;
+   visualCharacteristic(): boolean;
  }
 
  /**
@@ -1970,11 +1970,11 @@ export namespace SystemEvents {
    /**
     * the name of the XML attribute
     */
-   name: string;
+   name(): string;
    /**
     * the value of the XML attribute
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -1990,15 +1990,15 @@ export namespace SystemEvents {
    /**
     * the unique identifier of the XML data
     */
-   id: string;
+   id(): string;
    /**
     * the name of the XML data
     */
-   name: string;
+   name(): string;
    /**
     * the text representation of the XML data
     */
-   text: string;
+   text(): string;
  }
 
  /**
@@ -2014,15 +2014,15 @@ export namespace SystemEvents {
    /**
     * the unique identifier of the XML element
     */
-   id: string;
+   id(): string;
    /**
     * the name of the XML element
     */
-   name: string;
+   name(): string;
    /**
     * the value of the XML element
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -2046,43 +2046,43 @@ export namespace SystemEvents {
    /**
     * the number of copies of a document to be printed
     */
-   copies: number;
+   copies(): number;
    /**
     * Should printed copies be collated?
     */
-   collating: boolean;
+   collating(): boolean;
    /**
     * the first page of the document to be printed
     */
-   startingPage: number;
+   startingPage(): number;
    /**
     * the last page of the document to be printed
     */
-   endingPage: number;
+   endingPage(): number;
    /**
     * number of logical pages laid across a physical page
     */
-   pagesAcross: number;
+   pagesAcross(): number;
    /**
     * number of logical pages laid out down a physical page
     */
-   pagesDown: number;
+   pagesDown(): number;
    /**
     * the time at which the desktop printer should print the document
     */
-   requestedPrintTime: any;
+   requestedPrintTime(): any;
    /**
     * how errors are handled
     */
-   errorHandling: any;
+   errorHandling(): any;
    /**
     * for fax number
     */
-   faxNumber: string;
+   faxNumber(): string;
    /**
     * for target printer
     */
-   targetPrinter: string;
+   targetPrinter(): string;
  }
 
  /**
@@ -2098,31 +2098,31 @@ export namespace SystemEvents {
    /**
     * The name of the class
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the class
     */
-   id: string;
+   id(): string;
    /**
     * The description of the class
     */
-   description: string;
+   description(): string;
    /**
     * Is the class hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
    /**
     * The plural name of the class
     */
-   pluralName: string;
+   pluralName(): string;
    /**
     * The name of the suite to which this class belongs
     */
-   suiteName: string;
+   suiteName(): string;
    /**
     * The class from which this class inherits
     */
-   superclass: any;
+   superclass(): any;
  }
 
  /**
@@ -2138,31 +2138,31 @@ export namespace SystemEvents {
    /**
     * The name of the command
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the command
     */
-   id: string;
+   id(): string;
    /**
     * The description of the command
     */
-   description: string;
+   description(): string;
    /**
     * The direct parameter of the command
     */
-   directParameter: any;
+   directParameter(): any;
    /**
     * Is the command hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
    /**
     * The object or data returned by this command
     */
-   scriptingResult: any;
+   scriptingResult(): any;
    /**
     * The name of the suite to which this command belongs
     */
-   suiteName: string;
+   suiteName(): string;
  }
 
  /**
@@ -2200,15 +2200,15 @@ export namespace SystemEvents {
    /**
     * The name of the enumeration
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the enumeration
     */
-   id: string;
+   id(): string;
    /**
     * Is the enumeration hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
  }
 
  /**
@@ -2224,19 +2224,19 @@ export namespace SystemEvents {
    /**
     * The name of the enumerator
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the enumerator
     */
-   id: string;
+   id(): string;
    /**
     * The description of the enumerator
     */
-   description: string;
+   description(): string;
    /**
     * Is the enumerator hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
  }
 
  /**
@@ -2252,27 +2252,27 @@ export namespace SystemEvents {
    /**
     * The name of the parameter
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the parameter
     */
-   id: string;
+   id(): string;
    /**
     * The description of the parameter
     */
-   description: string;
+   description(): string;
    /**
     * Is the parameter hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
    /**
     * The kind of object or data specified by this parameter
     */
-   kind: string;
+   kind(): string;
    /**
     * Is the parameter optional?
     */
-   optional: boolean;
+   optional(): boolean;
  }
 
  /**
@@ -2288,35 +2288,35 @@ export namespace SystemEvents {
    /**
     * The name of the property
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the property
     */
-   id: string;
+   id(): string;
    /**
     * The type of access to this property
     */
-   access: any;
+   access(): any;
    /**
     * The description of the property
     */
-   description: string;
+   description(): string;
    /**
     * Is the property's value an enumerator?
     */
-   enumerated: boolean;
+   enumerated(): boolean;
    /**
     * Is the property hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
    /**
     * The kind of object or data returned by this property
     */
-   kind: string;
+   kind(): string;
    /**
     * Is the property's value a list?
     */
-   listed: boolean;
+   listed(): boolean;
  }
 
  /**
@@ -2332,19 +2332,19 @@ export namespace SystemEvents {
    /**
     * The description of the property
     */
-   description: string;
+   description(): string;
    /**
     * Is the scripting result's value an enumerator?
     */
-   enumerated: boolean;
+   enumerated(): boolean;
    /**
     * The kind of object or data returned by this property
     */
-   kind: string;
+   kind(): string;
    /**
     * Is the scripting result's value a list?
     */
-   listed: boolean;
+   listed(): boolean;
  }
 
  /**
@@ -2360,19 +2360,19 @@ export namespace SystemEvents {
    /**
     * The name of the suite
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the suite
     */
-   id: string;
+   id(): string;
    /**
     * The description of the suite
     */
-   description: string;
+   description(): string;
    /**
     * Is the suite hidden?
     */
-   hidden: boolean;
+   hidden(): boolean;
  }
     
     // CLass Extension
@@ -2389,11 +2389,11 @@ export namespace SystemEvents {
    /**
     * the time in seconds the application will idle before quitting; if set to zero, idle time will not cause the application to quit
     */
-   quitDelay: number;
+   quitDelay(): number;
    /**
     * Is the Script menu installed in the menu bar?
     */
-   scriptMenuEnabled: boolean;
+   scriptMenuEnabled(): boolean;
  }
 
  /**
@@ -2409,7 +2409,7 @@ export namespace SystemEvents {
    /**
     * the currently logged in user
     */
-   currentUser: any;
+   currentUser(): any;
  }
 
  /**
@@ -2425,7 +2425,7 @@ export namespace SystemEvents {
    /**
     * a collection of appearance preferences
     */
-   appearancePreferences: any;
+   appearancePreferences(): any;
  }
 
  /**
@@ -2441,7 +2441,7 @@ export namespace SystemEvents {
    /**
     * the preferences for the current user when a CD or DVD is inserted
     */
-   CDAndDvdPreferences: any;
+   CDAndDvdPreferences(): any;
  }
 
  /**
@@ -2457,7 +2457,7 @@ export namespace SystemEvents {
    /**
     * the primary desktop
     */
-   currentDesktop: any;
+   currentDesktop(): any;
  }
 
  /**
@@ -2473,7 +2473,7 @@ export namespace SystemEvents {
    /**
     * the preferences for the current user's dock
     */
-   dockPreferences: any;
+   dockPreferences(): any;
  }
 
  /**
@@ -2500,7 +2500,7 @@ export namespace SystemEvents {
    /**
     * the preferences for the current user's network
     */
-   networkPreferences: any;
+   networkPreferences(): any;
  }
 
  /**
@@ -2516,11 +2516,11 @@ export namespace SystemEvents {
    /**
     * the currently selected screen saver
     */
-   currentScreenSaver: any;
+   currentScreenSaver(): any;
    /**
     * the preferences common to all screen savers
     */
-   screenSaverPreferences: any;
+   screenSaverPreferences(): any;
  }
 
  /**
@@ -2547,7 +2547,7 @@ export namespace SystemEvents {
    /**
     * a collection of security preferences
     */
-   securityPreferences: any;
+   securityPreferences(): any;
  }
 
  /**
@@ -2563,127 +2563,127 @@ export namespace SystemEvents {
    /**
     * The Application Support folder
     */
-   applicationSupportFolder: any;
+   applicationSupportFolder(): any;
    /**
     * The user's Applications folder
     */
-   applicationsFolder: any;
+   applicationsFolder(): any;
    /**
     * the collection of folders belonging to the Classic System
     */
-   classicDomain: any;
+   classicDomain(): any;
    /**
     * The user's Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The Desktop Pictures folder
     */
-   desktopPicturesFolder: any;
+   desktopPicturesFolder(): any;
    /**
     * The user's Documents folder
     */
-   documentsFolder: any;
+   documentsFolder(): any;
    /**
     * The user's Downloads folder
     */
-   downloadsFolder: any;
+   downloadsFolder(): any;
    /**
     * The user's Favorites folder
     */
-   favoritesFolder: any;
+   favoritesFolder(): any;
    /**
     * The user's Folder Action Scripts folder
     */
-   folderActionScriptsFolder: any;
+   folderActionScriptsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * The Home folder of the currently logged in user
     */
-   homeFolder: any;
+   homeFolder(): any;
    /**
     * The Library folder
     */
-   libraryFolder: any;
+   libraryFolder(): any;
    /**
     * the collection of folders residing on the Local machine
     */
-   localDomain: any;
+   localDomain(): any;
    /**
     * The user's Movies folder
     */
-   moviesFolder: any;
+   moviesFolder(): any;
    /**
     * The user's Music folder
     */
-   musicFolder: any;
+   musicFolder(): any;
    /**
     * the collection of folders residing on the Network
     */
-   networkDomain: any;
+   networkDomain(): any;
    /**
     * The user's Pictures folder
     */
-   picturesFolder: any;
+   picturesFolder(): any;
    /**
     * The user's Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The user's Public folder
     */
-   publicFolder: any;
+   publicFolder(): any;
    /**
     * The Scripting Additions folder
     */
-   scriptingAdditionsFolder: any;
+   scriptingAdditionsFolder(): any;
    /**
     * The user's Scripts folder
     */
-   scriptsFolder: any;
+   scriptsFolder(): any;
    /**
     * The Shared Documents folder
     */
-   sharedDocumentsFolder: any;
+   sharedDocumentsFolder(): any;
    /**
     * The user's Sites folder
     */
-   sitesFolder: any;
+   sitesFolder(): any;
    /**
     * The Speakable Items folder
     */
-   speakableItemsFolder: any;
+   speakableItemsFolder(): any;
    /**
     * the disk from which Mac OS X was loaded
     */
-   startupDisk: any;
+   startupDisk(): any;
    /**
     * the collection of folders belonging to the System
     */
-   systemDomain: any;
+   systemDomain(): any;
    /**
     * The Temporary Items folder
     */
-   temporaryItemsFolder: any;
+   temporaryItemsFolder(): any;
    /**
     * The user's Trash folder
     */
-   trash: any;
+   trash(): any;
    /**
     * the collection of folders belonging to the User
     */
-   userDomain: any;
+   userDomain(): any;
    /**
     * The Utilities folder
     */
-   utilitiesFolder: any;
+   utilitiesFolder(): any;
    /**
     * The Automator Workflows folder
     */
-   workflowsFolder: any;
+   workflowsFolder(): any;
  }
 
  /**
@@ -2710,7 +2710,7 @@ export namespace SystemEvents {
    /**
     * Are UI element events currently being processed?
     */
-   UIElementsEnabled: boolean;
+   UIElementsEnabled(): boolean;
  }
 
  /**
@@ -2726,79 +2726,79 @@ export namespace SystemEvents {
    /**
     * a more complete description of the window and its capabilities
     */
-   accessibilityDescription: any;
+   accessibilityDescription(): any;
    /**
     * the class of the window, which identifies its function
     */
-   class: any;
+   class(): any;
    /**
     * the accessibility description, if available; otherwise, the role description
     */
-   description: any;
+   description(): any;
    /**
     * Is the window enabled? ( Does it accept clicks? )
     */
-   enabled: any;
+   enabled(): any;
    /**
     * a list of every UI element contained in this window and its child UI elements, to the limits of the tree
     */
-   entireContents: any;
+   entireContents(): any;
    /**
     * Is the focus on this window?
     */
-   focused: any;
+   focused(): any;
    /**
     * an elaborate description of the window and its capabilities
     */
-   help: any;
+   help(): any;
    /**
     * the maximum value that the UI element can take on
     */
-   maximumValue: any;
+   maximumValue(): any;
    /**
     * the minimum value that the UI element can take on
     */
-   minimumValue: any;
+   minimumValue(): any;
    /**
     * the name of the window, which identifies it within its container
     */
-   name: string;
+   name(): string;
    /**
     * the orientation of the window
     */
-   orientation: any;
+   orientation(): any;
    /**
     * the position of the window
     */
-   position: any;
+   position(): any;
    /**
     * an encoded description of the window and its capabilities
     */
-   role: string;
+   role(): string;
    /**
     * a more complete description of the window's role
     */
-   roleDescription: string;
+   roleDescription(): string;
    /**
     * Is the window selected?
     */
-   selected: any;
+   selected(): any;
    /**
     * the size of the window
     */
-   size: any;
+   size(): any;
    /**
     * an encoded description of the window and its capabilities
     */
-   subrole: any;
+   subrole(): any;
    /**
     * the title of the window as it appears on the screen
     */
-   title: string;
+   title(): string;
    /**
     * the current value of the window
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -2866,7 +2866,7 @@ export namespace SystemEvents {
    /**
     * The scripting definition of the System Events application
     */
-   scriptingDefinition: any;
+   scriptingDefinition(): any;
  }
     
     // Records

@@ -16,39 +16,39 @@ export namespace Contacts {
    /**
     * City part of the address.
     */
-   city: any;
+   city(): any;
    /**
     * properly formatted string for this address.
     */
-   formattedAddress: any;
+   formattedAddress(): any;
    /**
     * Street part of the address, multiple lines separated by carriage returns.
     */
-   street: any;
+   street(): any;
    /**
     * unique identifier for this address.
     */
-   id: any;
+   id(): any;
    /**
     * Zip or postal code of the address.
     */
-   zip: any;
+   zip(): any;
    /**
     * Country part of the address.
     */
-   country: any;
+   country(): any;
    /**
     * Label.
     */
-   label: any;
+   label(): any;
    /**
     * Country code part of the address (should be a two character iso country code).
     */
-   countryCode: any;
+   countryCode(): any;
    /**
     * State, Province, or Region part of the address.
     */
-   state: any;
+   state(): any;
  }
 
  /**
@@ -75,15 +75,15 @@ export namespace Contacts {
    /**
     * Label is the label associated with value like "work", "home", etc.
     */
-   label: any;
+   label(): any;
    /**
     * Value.
     */
-   value: any;
+   value(): any;
    /**
     * unique identifier for this entry, this is persistent, and stays with the record.
     */
-   id: any;
+   id(): any;
  }
 
  /**
@@ -121,19 +121,19 @@ export namespace Contacts {
    /**
     * when the contact was last modified.
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * when the contact was created.
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * unique and persistent identifier for this record.
     */
-   id: any;
+   id(): any;
    /**
     * Is the entry selected?
     */
-   selected: boolean;
+   selected(): boolean;
  }
 
  /**
@@ -149,7 +149,7 @@ export namespace Contacts {
    /**
     * The name of this group.
     */
-   name: any;
+   name(): any;
  }
 
  /**
@@ -176,15 +176,15 @@ export namespace Contacts {
    /**
     * The service name of this instant message address.
     */
-   serviceName: any;
+   serviceName(): any;
    /**
     * The service type of this instant message address.
     */
-   serviceType: any;
+   serviceType(): any;
    /**
     * The user name of this instant message address.
     */
-   userName: any;
+   userName(): any;
  }
 
  /**
@@ -222,83 +222,83 @@ export namespace Contacts {
    /**
     * The Nickname of this person.
     */
-   nickname: any;
+   nickname(): any;
    /**
     * Organization that employs this person.
     */
-   organization: any;
+   organization(): any;
    /**
     * The Maiden name of this person.
     */
-   maidenName: any;
+   maidenName(): any;
    /**
     * The Suffix of this person.
     */
-   suffix: any;
+   suffix(): any;
    /**
     * Person information in vCard format, this always returns a card in version 3.0 format.
     */
-   vcard: any;
+   vcard(): any;
    /**
     * The home page of this person.
     */
-   homePage: any;
+   homePage(): any;
    /**
     * The birth date of this person.
     */
-   birthDate: any;
+   birthDate(): any;
    /**
     * The phonetic version of the Last name of this person.
     */
-   phoneticLastName: any;
+   phoneticLastName(): any;
    /**
     * The title of this person.
     */
-   title: any;
+   title(): any;
    /**
     * The Phonetic version of the Middle name of this person.
     */
-   phoneticMiddleName: any;
+   phoneticMiddleName(): any;
    /**
     * Department that this person works for.
     */
-   department: any;
+   department(): any;
    /**
     * Image for person.
     */
-   image: any;
+   image(): any;
    /**
     * First/Last name of the person, uses the name display order preference setting in Address Book.
     */
-   name: any;
+   name(): any;
    /**
     * Notes for this person.
     */
-   note: any;
+   note(): any;
    /**
     * Is the current record a company or a person.
     */
-   company: boolean;
+   company(): boolean;
    /**
     * The Middle name of this person.
     */
-   middleName: any;
+   middleName(): any;
    /**
     * The phonetic version of the First name of this person.
     */
-   phoneticFirstName: any;
+   phoneticFirstName(): any;
    /**
     * The job title of this person.
     */
-   jobTitle: any;
+   jobTitle(): any;
    /**
     * The Last name of this person.
     */
-   lastName: any;
+   lastName(): any;
    /**
     * The First name of this person.
     */
-   firstName: any;
+   firstName(): any;
  }
 
  /**
@@ -336,23 +336,23 @@ export namespace Contacts {
    /**
     * The persistent unique identifier for this profile.
     */
-   id: any;
+   id(): any;
    /**
     * The service name of this social profile.
     */
-   serviceName: any;
+   serviceName(): any;
    /**
     * The username used with this social profile.
     */
-   userName: any;
+   userName(): any;
    /**
     * A service-specific identifier used with this social profile.
     */
-   userIdentifier: any;
+   userIdentifier(): any;
    /**
     * The URL of this social profile.
     */
-   url: any;
+   url(): any;
  }
 
  /**
@@ -388,19 +388,19 @@ export namespace Contacts {
    /**
     * Returns my Address Book card.
     */
-   myCard: any;
+   myCard(): any;
    /**
     * Does Address Book have any unsaved changes?
     */
-   unsaved: boolean;
+   unsaved(): boolean;
    /**
     * Currently selected entries
     */
-   selection: any;
+   selection(): any;
    /**
     * Returns the default country code for addresses.
     */
-   defaultCountryCode: any;
+   defaultCountryCode(): any;
  }
     
     // Records

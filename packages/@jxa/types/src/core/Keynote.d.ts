@@ -16,7 +16,7 @@ export namespace Keynote {
    /**
     * The name of the master slide
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -32,39 +32,39 @@ export namespace Keynote {
    /**
     * The master slide this slide is based upon
     */
-   baseSlide: any;
+   baseSlide(): any;
    /**
     * Is the default body text displayed?
     */
-   bodyShowing: boolean;
+   bodyShowing(): boolean;
    /**
     * Is the slide skipped?
     */
-   skipped: boolean;
+   skipped(): boolean;
    /**
     * index of the slide in the document
     */
-   slideNumber: number;
+   slideNumber(): number;
    /**
     * Is the default slide title displayed?
     */
-   titleShowing: boolean;
+   titleShowing(): boolean;
    /**
     * The default body container of the slide
     */
-   defaultBodyItem: any;
+   defaultBodyItem(): any;
    /**
     * The default title container of the slide
     */
-   defaultTitleItem: any;
+   defaultTitleItem(): any;
    /**
     * The presenter notes for the slide
     */
-   presenterNotes: any;
+   presenterNotes(): any;
    /**
     * The transition settings to apply to the slide.
     */
-   transitionProperties: any;
+   transitionProperties(): any;
  }
 
  /**
@@ -80,8 +80,8 @@ export namespace Keynote {
    /**
     * The identifier used by the application.
     */
-   id: string;
-   name: string;
+   id(): string;
+   name(): string;
  }
 
  /**
@@ -97,15 +97,15 @@ export namespace Keynote {
    /**
     * The color of the font. Expressed as an RGB value consisting of a list of three color values from 0 to 65535. ex: Blue = {0, 0, 65535}.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font. Can be the PostScript name, such as: “TimesNewRomanPS-ItalicMT”, or display name: “Times New Roman Italic”. TIP: Use the Font Book application get the information about a typeface.
     */
-   font: string;
+   font(): string;
    /**
     * The size of the font.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -165,23 +165,23 @@ export namespace Keynote {
    /**
     * The height of the iWork item.
     */
-   height: number;
+   height(): number;
    /**
     * Whether the object is locked.
     */
-   locked: boolean;
+   locked(): boolean;
    /**
     * The iWork container containing this iWork item.
     */
-   parent: any;
+   parent(): any;
    /**
     * The horizontal and vertical coordinates of the top left point of the iWork item.
     */
-   position: any;
+   position(): any;
    /**
     * The width of the iWork item.
     */
-   width: number;
+   width(): number;
  }
 
  /**
@@ -197,15 +197,15 @@ export namespace Keynote {
    /**
     * The name of the audio file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The volume setting for the audio clip, from 0 (none) to 100 (full volume).
     */
-   clipVolume: number;
+   clipVolume(): number;
    /**
     * If or how the audio clip repeats.
     */
-   repetitionMethod: any;
+   repetitionMethod(): any;
  }
 
  /**
@@ -221,27 +221,27 @@ export namespace Keynote {
    /**
     * The background, if any, for the shape.
     */
-   backgroundFillType: any;
+   backgroundFillType(): any;
    /**
     * The text contained within the shape.
     */
-   objectText: any;
+   objectText(): any;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
  }
 
  /**
@@ -268,31 +268,31 @@ export namespace Keynote {
    /**
     * Text associated with the image, read aloud by VoiceOver.
     */
-   description: string;
+   description(): string;
    /**
     * The image file.
     */
-   file: any;
+   file(): any;
    /**
     * The name of the image file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -308,23 +308,23 @@ export namespace Keynote {
    /**
     * The height of the iWork item.
     */
-   height: number;
+   height(): number;
    /**
     * The iWork container containing this iWork item.
     */
-   parent: any;
+   parent(): any;
    /**
     * The horizontal and vertical coordinates of the top left point of the iWork item.
     */
-   position: any;
+   position(): any;
    /**
     * The width of the iWork item.
     */
-   width: number;
+   width(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -340,23 +340,23 @@ export namespace Keynote {
    /**
     * A list of two numbers indicating the horizontal and vertical position of the line ending point.
     */
-   endPoint: any;
+   endPoint(): any;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
    /**
     * A list of two numbers indicating the horizontal and vertical position of the line starting point.
     */
-   startPoint: any;
+   startPoint(): any;
  }
 
  /**
@@ -372,31 +372,31 @@ export namespace Keynote {
    /**
     * The name of the movie file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The volume setting for the movie, from 0 (none) to 100 (full volume).
     */
-   movieVolume: number;
+   movieVolume(): number;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * If or how the movie repeats.
     */
-   repetitionMethod: any;
+   repetitionMethod(): any;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -412,35 +412,35 @@ export namespace Keynote {
    /**
     * The item's name.
     */
-   name: string;
+   name(): string;
    /**
     * The range describing every cell in the table.
     */
-   cellRange: any;
+   cellRange(): any;
    /**
     * The cells currently selected in the table.
     */
-   selectionRange: any;
+   selectionRange(): any;
    /**
     * The number of rows in the table.
     */
-   rowCount: number;
+   rowCount(): number;
    /**
     * The number of columns in the table.
     */
-   columnCount: number;
+   columnCount(): number;
    /**
     * The number of header rows in the table.
     */
-   headerRowCount: number;
+   headerRowCount(): number;
    /**
     * The number of header columns in the table.
     */
-   headerColumnCount: number;
+   headerColumnCount(): number;
    /**
     * The number of footer rows in the table.
     */
-   footerRowCount: number;
+   footerRowCount(): number;
  }
 
  /**
@@ -456,27 +456,27 @@ export namespace Keynote {
    /**
     * The background, if any, for the text item.
     */
-   backgroundFillType: any;
+   backgroundFillType(): any;
    /**
     * The text contained within the text item.
     */
-   objectText: any;
+   objectText(): any;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -492,39 +492,39 @@ export namespace Keynote {
    /**
     * The font of the range's cells.
     */
-   fontName: string;
+   fontName(): string;
    /**
     * The font size of the range's cells.
     */
-   fontSize: any;
+   fontSize(): any;
    /**
     * The format of the range's cells.
     */
-   format: any;
+   format(): any;
    /**
     * The horizontal alignment of content in the range's cells.
     */
-   alignment: any;
+   alignment(): any;
    /**
     * The range's coordinates.
     */
-   name: string;
+   name(): string;
    /**
     * The text color of the range's cells.
     */
-   textColor: any;
+   textColor(): any;
    /**
     * Whether text should wrap in the range's cells.
     */
-   textWrap: boolean;
+   textWrap(): boolean;
    /**
     * The background color of the range's cells.
     */
-   backgroundColor: any;
+   backgroundColor(): any;
    /**
     * The vertical alignment of content in the range's cells.
     */
-   verticalAlignment: any;
+   verticalAlignment(): any;
  }
 
  /**
@@ -540,23 +540,23 @@ export namespace Keynote {
    /**
     * The cell's column.
     */
-   column: any;
+   column(): any;
    /**
     * The cell's row.
     */
-   row: any;
+   row(): any;
    /**
     * The actual value in the cell, or missing value if the cell is empty.
     */
-   value: any;
+   value(): any;
    /**
     * The formatted value in the cell, or missing value if the cell is empty.
     */
-   formattedValue: string;
+   formattedValue(): string;
    /**
     * The formula in the cell, as text, e.g. =SUM(40+2). If the cell does not contain a formula, returns missing value. To set the value of a cell to a formula as text, use the value property.
     */
-   formula: string;
+   formula(): string;
  }
 
  /**
@@ -572,11 +572,11 @@ export namespace Keynote {
    /**
     * The row's index in the table (e.g., the second row has address 2).
     */
-   address: number;
+   address(): number;
    /**
     * The height of the row.
     */
-   height: any;
+   height(): any;
  }
 
  /**
@@ -592,11 +592,11 @@ export namespace Keynote {
    /**
     * The column's index in the table (e.g., the second column has address 2).
     */
-   address: number;
+   address(): number;
    /**
     * The width of the column.
     */
-   width: any;
+   width(): any;
  }
     
     // CLass Extension
@@ -624,43 +624,43 @@ export namespace Keynote {
    /**
     * Document ID.
     */
-   id: string;
+   id(): string;
    /**
     * Are the slide numbers displayed?
     */
-   slideNumbersShowing: boolean;
+   slideNumbersShowing(): boolean;
    /**
     * The theme assigned to the document.
     */
-   documentTheme: any;
+   documentTheme(): any;
    /**
     * Make the slideshow play repeatedly.
     */
-   autoLoop: boolean;
+   autoLoop(): boolean;
    /**
     * Automatically play the presentation when opening the file.
     */
-   autoPlay: boolean;
+   autoPlay(): boolean;
    /**
     * Restart the slideshow if it's inactive for the specified time
     */
-   autoRestart: boolean;
+   autoRestart(): boolean;
    /**
     * Restart the slideshow if it's inactive for the specified time
     */
-   maximumIdleDuration: number;
+   maximumIdleDuration(): number;
    /**
     * The currently selected slide, or the slide that would display if the presentation was started.
     */
-   currentSlide: any;
+   currentSlide(): any;
    /**
     * The height of the document (in points). Standard slide height = 768. Wide slide height = 1080.
     */
-   height: number;
+   height(): number;
    /**
     * The width of the document (in points). Standard slide width = 1024. Wide slide width = 1920.
     */
-   width: number;
+   width(): number;
  }
 
  /**
@@ -676,12 +676,12 @@ export namespace Keynote {
    /**
     * Are any slideshows playing
     */
-   playing: boolean;
+   playing(): boolean;
    /**
     * Is the slide selector visible?
     */
-   slideSwitcherVisible: boolean;
-   frozen: boolean;
+   slideSwitcherVisible(): boolean;
+   frozen(): boolean;
  }
 
  /**
@@ -711,55 +711,55 @@ export namespace Keynote {
    /**
     * compressed image quality, ranging from 0.0 (maximum compression, lowest quality) to 1.0 (lossless compression, highest quality). This option only pertains to JPEG format images.
     */
-   compressionFactor: any;
+   compressionFactor(): any;
    /**
     * format for resulting images.
     */
-   imageFormat: any;
+   imageFormat(): any;
    /**
     * format for exported movie.
     */
-   movieFormat: any;
+   movieFormat(): any;
    /**
     * choose whether to include notes, etc.
     */
-   exportStyle: any;
+   exportStyle(): any;
    /**
     * print each stage of builds
     */
-   allStages: boolean;
+   allStages(): boolean;
    /**
     * include skipped slides
     */
-   skippedSlides: boolean;
+   skippedSlides(): boolean;
    /**
     * add borders around slides
     */
-   borders: boolean;
+   borders(): boolean;
    /**
     * include slide numbers
     */
-   slideNumbers: boolean;
+   slideNumbers(): boolean;
    /**
     * include date
     */
-   date: boolean;
+   date(): boolean;
    /**
     * export in raw KPF
     */
-   rawKPF: boolean;
+   rawKPF(): boolean;
    /**
     * password
     */
-   password: string;
+   password(): string;
    /**
     * password hint
     */
-   passwordHint: string;
+   passwordHint(): string;
    /**
     * quality of images in PDF document
     */
-   PDFImageQuality: any;
+   PDFImageQuality(): any;
  }
 
  /**
@@ -775,19 +775,19 @@ export namespace Keynote {
    /**
     * Should the transition begin automatically? A value of false indicates to transition on click.
     */
-   automaticTransition: boolean;
+   automaticTransition(): boolean;
    /**
     * The number of seconds to wait until beginning the transition.
     */
-   transitionDelay: any;
+   transitionDelay(): any;
    /**
     * The number of seconds allocated for the transition to occur.
     */
-   transitionDuration: any;
+   transitionDuration(): any;
    /**
     * The transition effect to apply between the current and following slides.
     */
-   transitionEffect: any;
+   transitionEffect(): any;
  }
 
     // Function options

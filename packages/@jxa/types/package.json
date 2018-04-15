@@ -20,8 +20,8 @@
     "lib/",
     "src/"
   ],
-  "main": "lib/types.js",
-  "types": "lib/types.d.ts",
+  "main": "src/index.d.ts",
+  "types": "src/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -36,7 +36,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc -p .",
     "prepublish": "npm run --if-present build",
-    "test": "mocha \"test/**/*.ts\"",
+    "test": "npm run build",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "watch": "tsc -p . --watch",
     "dts:update": "node tools/sdef-to-dts.js"

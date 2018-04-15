@@ -16,11 +16,11 @@ export namespace QuickTimePlayer {
    /**
     * The name of the device.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the device.
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -36,11 +36,11 @@ export namespace QuickTimePlayer {
    /**
     * The name of the device.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the device.
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -56,11 +56,11 @@ export namespace QuickTimePlayer {
    /**
     * The name of the preset.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the preset.
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -76,11 +76,11 @@ export namespace QuickTimePlayer {
    /**
     * The name of the preset.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the preset.
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -96,11 +96,11 @@ export namespace QuickTimePlayer {
    /**
     * The name of the preset.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the preset.
     */
-   id: string;
+   id(): string;
  }
     
     // CLass Extension
@@ -130,67 +130,67 @@ export namespace QuickTimePlayer {
    /**
     * The volume of the movie from 0 to 1, where 1 is 100%.
     */
-   audioVolume: any;
+   audioVolume(): any;
    /**
     * The current time of the movie in seconds.
     */
-   currentTime: any;
+   currentTime(): any;
    /**
     * The data rate of the movie in bytes per second.
     */
-   dataRate: number;
+   dataRate(): number;
    /**
     * The data size of the movie in bytes.
     */
-   dataSize: number;
+   dataSize(): number;
    /**
     * The duration of the movie in seconds.
     */
-   duration: any;
+   duration(): any;
    /**
     * Is the movie playing in a loop?
     */
-   looping: boolean;
+   looping(): boolean;
    /**
     * Is the movie muted?
     */
-   muted: boolean;
+   muted(): boolean;
    /**
     * The natural dimensions of the movie.
     */
-   naturalDimensions: any;
+   naturalDimensions(): any;
    /**
     * Is the movie playing?
     */
-   playing: boolean;
+   playing(): boolean;
    /**
     * The current rate of the movie.
     */
-   rate: any;
+   rate(): any;
    /**
     * Is the movie presented in full screen?
     */
-   presenting: boolean;
+   presenting(): boolean;
    /**
     * The currently previewing audio device.
     */
-   currentMicrophone: any;
+   currentMicrophone(): any;
    /**
     * The currently previewing video device.
     */
-   currentCamera: any;
+   currentCamera(): any;
    /**
     * The current audio compression preset.
     */
-   currentAudioCompression: any;
+   currentAudioCompression(): any;
    /**
     * The current movie compression preset.
     */
-   currentMovieCompression: any;
+   currentMovieCompression(): any;
    /**
     * The current screen compression preset.
     */
-   currentScreenCompression: any;
+   currentScreenCompression(): any;
  }
     
     // Records

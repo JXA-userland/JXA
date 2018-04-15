@@ -16,15 +16,15 @@ export namespace Photos {
    /**
     * The name of the application.
     */
-   name: string;
+   name(): string;
    /**
     * Is this the active application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The version number of the application.
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -40,47 +40,47 @@ export namespace Photos {
    /**
     * A list of keywords to associate with a media item
     */
-   keywords: any;
+   keywords(): any;
    /**
     * The name (title) of the media item.
     */
-   name: string;
+   name(): string;
    /**
     * A description of the media item.
     */
-   description: string;
+   description(): string;
    /**
     * Whether the media item has been favorited.
     */
-   favorite: boolean;
+   favorite(): boolean;
    /**
     * The date of the media item
     */
-   date: any;
+   date(): any;
    /**
     * The unique ID of the media item
     */
-   id: string;
+   id(): string;
    /**
     * The height of the media item in pixels.
     */
-   height: number;
+   height(): number;
    /**
     * The width of the media item in pixels.
     */
-   width: number;
+   width(): number;
    /**
     * The name of the file on disk.
     */
-   filename: string;
+   filename(): string;
    /**
     * The GPS altitude in meters.
     */
-   altitude: any;
+   altitude(): any;
    /**
     * The GPS latitude and longitude, in an ordered list of 2 numbers. Latitude in range -90.0 to 90.0, longitude in range -180.0 to 180.0.
     */
-   location: any;
+   location(): any;
  }
 
  /**
@@ -96,15 +96,15 @@ export namespace Photos {
    /**
     * The unique ID of this container.
     */
-   id: string;
+   id(): string;
    /**
     * The name of this container.
     */
-   name: string;
+   name(): string;
    /**
     * This container's parent folder, if any.
     */
-   parent: any;
+   parent(): any;
  }
 
  /**
@@ -142,11 +142,11 @@ export namespace Photos {
    /**
     * The unique ID of the Moment.
     */
-   id: string;
+   id(): string;
    /**
     * The name of the Moment.
     */
-   name: string;
+   name(): string;
  }
     
     // CLass Extension
@@ -163,23 +163,23 @@ export namespace Photos {
    /**
     * The currently selected media items in the application
     */
-   selection: any;
+   selection(): any;
    /**
     * Favorited media items album.
     */
-   favoritesAlbum: any;
+   favoritesAlbum(): any;
    /**
     * Last import album.
     */
-   lastImportAlbum: any;
+   lastImportAlbum(): any;
    /**
     * Returns true if a slideshow is currently running.
     */
-   slideshowRunning: boolean;
+   slideshowRunning(): boolean;
    /**
     * The set of recently deleted media items
     */
-   recentlyDeletedAlbum: any;
+   recentlyDeletedAlbum(): any;
  }
     
     // Records

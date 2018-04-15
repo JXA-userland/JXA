@@ -16,39 +16,39 @@ export namespace iTunes {
    /**
     * is the device currently being played to?
     */
-   active: boolean;
+   active(): boolean;
    /**
     * is the device currently available?
     */
-   available: boolean;
+   available(): boolean;
    /**
     * the kind of the device
     */
-   kind: any;
+   kind(): any;
    /**
     * the network (MAC) address of the device
     */
-   networkAddress: string;
+   networkAddress(): string;
    /**
     * is the device password- or passcode-protected?
     */
-   protected: boolean;
+   protected(): boolean;
    /**
     * is the device currently selected?
     */
-   selected: boolean;
+   selected(): boolean;
    /**
     * does the device support audio playback?
     */
-   supportsAudio: boolean;
+   supportsAudio(): boolean;
    /**
     * does the device support video playback?
     */
-   supportsVideo: boolean;
+   supportsVideo(): boolean;
    /**
     * the output volume for the device (0 = minimum, 100 = maximum)
     */
-   soundVolume: number;
+   soundVolume(): number;
  }
 
  /**
@@ -64,107 +64,107 @@ export namespace iTunes {
    /**
     * is AirPlay currently enabled?
     */
-   airPlayEnabled: boolean;
+   airPlayEnabled(): boolean;
    /**
     * is a track currently being converted?
     */
-   converting: boolean;
+   converting(): boolean;
    /**
     * the currently selected AirPlay device(s)
     */
-   currentAirPlayDevices: any;
+   currentAirPlayDevices(): any;
    /**
     * the currently selected encoder (MP3, AIFF, WAV, etc.)
     */
-   currentEncoder: any;
+   currentEncoder(): any;
    /**
     * the currently selected equalizer preset
     */
-   currentEQPreset: any;
+   currentEQPreset(): any;
    /**
     * the playlist containing the currently targeted track
     */
-   currentPlaylist: any;
+   currentPlaylist(): any;
    /**
     * the name of the current song in the playing stream (provided by streaming server)
     */
-   currentStreamTitle: string;
+   currentStreamTitle(): string;
    /**
     * the URL of the playing stream or streaming web site (provided by streaming server)
     */
-   currentStreamURL: string;
+   currentStreamURL(): string;
    /**
     * the current targeted track
     */
-   currentTrack: any;
+   currentTrack(): any;
    /**
     * the currently selected visual plug-in
     */
-   currentVisual: any;
+   currentVisual(): any;
    /**
     * is the equalizer enabled?
     */
-   EQEnabled: boolean;
+   EQEnabled(): boolean;
    /**
     * true if all AppleScript track indices should be independent of the play order of the owning playlist.
     */
-   fixedIndexing: boolean;
+   fixedIndexing(): boolean;
    /**
     * is iTunes the frontmost application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * are visuals displayed using the entire screen?
     */
-   fullScreen: boolean;
+   fullScreen(): boolean;
    /**
     * the name of the application
     */
-   name: string;
+   name(): string;
    /**
     * has the sound output been muted?
     */
-   mute: boolean;
+   mute(): boolean;
    /**
     * the player’s position within the currently playing track in seconds.
     */
-   playerPosition: any;
+   playerPosition(): any;
    /**
     * is iTunes stopped, paused, or playing?
     */
-   playerState: any;
+   playerState(): any;
    /**
     * the selection visible to the user
     */
-   selection: any;
+   selection(): any;
    /**
     * are songs played in random order?
     */
-   shuffleEnabled: boolean;
+   shuffleEnabled(): boolean;
    /**
     * the playback shuffle mode
     */
-   shuffleMode: any;
+   shuffleMode(): any;
    /**
     * the playback repeat mode
     */
-   songRepeat: any;
+   songRepeat(): any;
    /**
     * the sound output volume (0 = minimum, 100 = maximum)
     */
-   soundVolume: number;
+   soundVolume(): number;
    /**
     * the version of iTunes
     */
-   version: string;
+   version(): string;
    /**
     * are visuals currently being displayed?
     */
-   visualsEnabled: boolean;
+   visualsEnabled(): boolean;
    /**
     * the size of the displayed visual
     */
-   visualSize: any;
+   visualSize(): any;
  }
 
  /**
@@ -180,27 +180,27 @@ export namespace iTunes {
    /**
     * data for this artwork, in the form of a picture
     */
-   data: any;
+   data(): any;
    /**
     * description of artwork as a string
     */
-   description: string;
+   description(): string;
    /**
     * was this artwork downloaded by iTunes?
     */
-   downloaded: boolean;
+   downloaded(): boolean;
    /**
     * the data format for this piece of artwork
     */
-   format: any;
+   format(): any;
    /**
     * kind or purpose of this piece of artwork
     */
-   kind: number;
+   kind(): number;
    /**
     * data for this artwork, in original format
     */
-   rawData: any;
+   rawData(): any;
  }
 
  /**
@@ -216,31 +216,31 @@ export namespace iTunes {
    /**
     * the artist of the CD
     */
-   artist: string;
+   artist(): string;
    /**
     * is this CD a compilation album?
     */
-   compilation: boolean;
+   compilation(): boolean;
    /**
     * the composer of the CD
     */
-   composer: string;
+   composer(): string;
    /**
     * the total number of discs in this CD’s album
     */
-   discCount: number;
+   discCount(): number;
    /**
     * the index of this CD disc in the source album
     */
-   discNumber: number;
+   discNumber(): number;
    /**
     * the genre of the CD
     */
-   genre: string;
+   genre(): string;
    /**
     * the year the album was recorded/released
     */
-   year: number;
+   year(): number;
  }
 
  /**
@@ -256,7 +256,7 @@ export namespace iTunes {
    /**
     * the location of the file represented by this track
     */
-   location: any;
+   location(): any;
  }
 
  /**
@@ -272,11 +272,11 @@ export namespace iTunes {
    /**
     * the selected songs
     */
-   selection: any;
+   selection(): any;
    /**
     * the playlist currently displayed in the window
     */
-   view: any;
+   view(): any;
  }
 
  /**
@@ -292,7 +292,7 @@ export namespace iTunes {
    /**
     * the data format created by the encoder
     */
-   format: string;
+   format(): string;
  }
 
  /**
@@ -308,55 +308,55 @@ export namespace iTunes {
    /**
     * the equalizer 32 Hz band level (-12.0 dB to +12.0 dB)
     */
-   band1: any;
+   band1(): any;
    /**
     * the equalizer 64 Hz band level (-12.0 dB to +12.0 dB)
     */
-   band2: any;
+   band2(): any;
    /**
     * the equalizer 125 Hz band level (-12.0 dB to +12.0 dB)
     */
-   band3: any;
+   band3(): any;
    /**
     * the equalizer 250 Hz band level (-12.0 dB to +12.0 dB)
     */
-   band4: any;
+   band4(): any;
    /**
     * the equalizer 500 Hz band level (-12.0 dB to +12.0 dB)
     */
-   band5: any;
+   band5(): any;
    /**
     * the equalizer 1 kHz band level (-12.0 dB to +12.0 dB)
     */
-   band6: any;
+   band6(): any;
    /**
     * the equalizer 2 kHz band level (-12.0 dB to +12.0 dB)
     */
-   band7: any;
+   band7(): any;
    /**
     * the equalizer 4 kHz band level (-12.0 dB to +12.0 dB)
     */
-   band8: any;
+   band8(): any;
    /**
     * the equalizer 8 kHz band level (-12.0 dB to +12.0 dB)
     */
-   band9: any;
+   band9(): any;
    /**
     * the equalizer 16 kHz band level (-12.0 dB to +12.0 dB)
     */
-   band10: any;
+   band10(): any;
    /**
     * can this preset be modified?
     */
-   modifiable: boolean;
+   modifiable(): boolean;
    /**
     * the equalizer preamp level (-12.0 dB to +12.0 dB)
     */
-   preamp: any;
+   preamp(): any;
    /**
     * should tracks which refer to this preset be updated when the preset is renamed or deleted?
     */
-   updateTracks: boolean;
+   updateTracks(): boolean;
  }
 
  /**
@@ -383,7 +383,7 @@ export namespace iTunes {
    /**
     * the location of the file represented by this track
     */
-   location: any;
+   location(): any;
  }
 
  /**
@@ -410,31 +410,31 @@ export namespace iTunes {
    /**
     * the class of the item
     */
-   class: any;
+   class(): any;
    /**
     * the container of the item
     */
-   container: any;
+   container(): any;
    /**
     * the id of the item
     */
-   id: number;
+   id(): number;
    /**
     * The index of the item in internal application order.
     */
-   index: number;
+   index(): number;
    /**
     * the name of the item
     */
-   name: string;
+   name(): string;
    /**
     * the id of the item as a hexadecimal string. This id does not change over time.
     */
-   persistentID: string;
+   persistentID(): string;
    /**
     * every property of the item
     */
-   properties: any;
+   properties(): any;
  }
 
  /**
@@ -472,51 +472,51 @@ export namespace iTunes {
    /**
     * the description of the playlist
     */
-   description: string;
+   description(): string;
    /**
     * is this playlist disliked?
     */
-   disliked: boolean;
+   disliked(): boolean;
    /**
     * the total length of all songs (in seconds)
     */
-   duration: number;
+   duration(): number;
    /**
     * the name of the playlist
     */
-   name: string;
+   name(): string;
    /**
     * is this playlist loved?
     */
-   loved: boolean;
+   loved(): boolean;
    /**
     * folder which contains this playlist (if any)
     */
-   parent: any;
+   parent(): any;
    /**
     * play the songs in this playlist in random order? (obsolete; always false)
     */
-   shuffle: boolean;
+   shuffle(): boolean;
    /**
     * the total size of all songs (in bytes)
     */
-   size: number;
+   size(): number;
    /**
     * playback repeat mode (obsolete; always off)
     */
-   songRepeat: any;
+   songRepeat(): any;
    /**
     * special playlist kind
     */
-   specialKind: any;
+   specialKind(): any;
    /**
     * the length of all songs in MM:SS format
     */
-   time: string;
+   time(): string;
    /**
     * is this playlist visible in the Source list?
     */
-   visible: boolean;
+   visible(): boolean;
  }
 
  /**
@@ -532,11 +532,11 @@ export namespace iTunes {
    /**
     * the selected songs
     */
-   selection: any;
+   selection(): any;
    /**
     * the playlist displayed in the window
     */
-   view: any;
+   view(): any;
  }
 
  /**
@@ -574,12 +574,12 @@ export namespace iTunes {
    /**
     * the total size of the source if it has a fixed size
     */
-   capacity: any;
+   capacity(): any;
    /**
     * the free space on the source if it has a fixed size
     */
-   freeSpace: any;
-   kind: any;
+   freeSpace(): any;
+   kind(): any;
  }
 
  /**
@@ -606,284 +606,284 @@ export namespace iTunes {
    /**
     * the album name of the track
     */
-   album: string;
+   album(): string;
    /**
     * the album artist of the track
     */
-   albumArtist: string;
+   albumArtist(): string;
    /**
     * is the album for this track disliked?
     */
-   albumDisliked: boolean;
+   albumDisliked(): boolean;
    /**
     * is the album for this track loved?
     */
-   albumLoved: boolean;
+   albumLoved(): boolean;
    /**
     * the rating of the album for this track (0 to 100)
     */
-   albumRating: number;
+   albumRating(): number;
    /**
     * the rating kind of the album rating for this track
     */
-   albumRatingKind: any;
+   albumRatingKind(): any;
    /**
     * the artist/source of the track
     */
-   artist: string;
+   artist(): string;
    /**
     * the bit rate of the track (in kbps)
     */
-   bitRate: number;
+   bitRate(): number;
    /**
     * the bookmark time of the track in seconds
     */
-   bookmark: any;
+   bookmark(): any;
    /**
     * is the playback position for this track remembered?
     */
-   bookmarkable: boolean;
+   bookmarkable(): boolean;
    /**
     * the tempo of this track in beats per minute
     */
-   bpm: number;
+   bpm(): number;
    /**
     * the category of the track
     */
-   category: string;
+   category(): string;
    /**
     * the iCloud status of the track
     */
-   cloudStatus: any;
+   cloudStatus(): any;
    /**
     * freeform notes about the track
     */
-   comment: string;
+   comment(): string;
    /**
     * is this track from a compilation album?
     */
-   compilation: boolean;
+   compilation(): boolean;
    /**
     * the composer of the track
     */
-   composer: string;
+   composer(): string;
    /**
     * the common, unique ID for this track. If two tracks in different playlists have the same database ID, they are sharing the same data.
     */
-   databaseID: number;
+   databaseID(): number;
    /**
     * the date the track was added to the playlist
     */
-   dateAdded: any;
+   dateAdded(): any;
    /**
     * the description of the track
     */
-   description: string;
+   description(): string;
    /**
     * the total number of discs in the source album
     */
-   discCount: number;
+   discCount(): number;
    /**
     * the index of the disc containing this track on the source album
     */
-   discNumber: number;
+   discNumber(): number;
    /**
     * is this track disliked?
     */
-   disliked: boolean;
+   disliked(): boolean;
    /**
     * the Apple ID of the person who downloaded this track
     */
-   downloaderAppleID: string;
+   downloaderAppleID(): string;
    /**
     * the name of the person who downloaded this track
     */
-   downloaderName: string;
+   downloaderName(): string;
    /**
     * the length of the track in seconds
     */
-   duration: any;
+   duration(): any;
    /**
     * is this track checked for playback?
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * the episode ID of the track
     */
-   episodeID: string;
+   episodeID(): string;
    /**
     * the episode number of the track
     */
-   episodeNumber: number;
+   episodeNumber(): number;
    /**
     * the name of the EQ preset of the track
     */
-   EQ: string;
+   EQ(): string;
    /**
     * the stop time of the track in seconds
     */
-   finish: any;
+   finish(): any;
    /**
     * is this track from a gapless album?
     */
-   gapless: boolean;
+   gapless(): boolean;
    /**
     * the music/audio genre (category) of the track
     */
-   genre: string;
+   genre(): string;
    /**
     * the grouping (piece) of the track. Generally used to denote movements within a classical work.
     */
-   grouping: string;
+   grouping(): string;
    /**
     * a text description of the track
     */
-   kind: string;
-   longDescription: string;
+   kind(): string;
+   longDescription(): string;
    /**
     * is this track loved?
     */
-   loved: boolean;
+   loved(): boolean;
    /**
     * the lyrics of the track
     */
-   lyrics: string;
+   lyrics(): string;
    /**
     * the media kind of the track
     */
-   mediaKind: any;
+   mediaKind(): any;
    /**
     * the modification date of the content of this track
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the movement name of the track
     */
-   movement: string;
+   movement(): string;
    /**
     * the total number of movements in the work
     */
-   movementCount: number;
+   movementCount(): number;
    /**
     * the index of the movement in the work
     */
-   movementNumber: number;
+   movementNumber(): number;
    /**
     * number of times this track has been played
     */
-   playedCount: number;
+   playedCount(): number;
    /**
     * the date and time this track was last played
     */
-   playedDate: any;
+   playedDate(): any;
    /**
     * the Apple ID of the person who purchased this track
     */
-   purchaserAppleID: string;
+   purchaserAppleID(): string;
    /**
     * the name of the person who purchased this track
     */
-   purchaserName: string;
+   purchaserName(): string;
    /**
     * the rating of this track (0 to 100)
     */
-   rating: number;
+   rating(): number;
    /**
     * the rating kind of this track
     */
-   ratingKind: any;
+   ratingKind(): any;
    /**
     * the release date of this track
     */
-   releaseDate: any;
+   releaseDate(): any;
    /**
     * the sample rate of the track (in Hz)
     */
-   sampleRate: number;
+   sampleRate(): number;
    /**
     * the season number of the track
     */
-   seasonNumber: number;
+   seasonNumber(): number;
    /**
     * is this track included when shuffling?
     */
-   shufflable: boolean;
+   shufflable(): boolean;
    /**
     * number of times this track has been skipped
     */
-   skippedCount: number;
+   skippedCount(): number;
    /**
     * the date and time this track was last skipped
     */
-   skippedDate: any;
+   skippedDate(): any;
    /**
     * the show name of the track
     */
-   show: string;
+   show(): string;
    /**
     * override string to use for the track when sorting by album
     */
-   sortAlbum: string;
+   sortAlbum(): string;
    /**
     * override string to use for the track when sorting by artist
     */
-   sortArtist: string;
+   sortArtist(): string;
    /**
     * override string to use for the track when sorting by album artist
     */
-   sortAlbumArtist: string;
+   sortAlbumArtist(): string;
    /**
     * override string to use for the track when sorting by name
     */
-   sortName: string;
+   sortName(): string;
    /**
     * override string to use for the track when sorting by composer
     */
-   sortComposer: string;
+   sortComposer(): string;
    /**
     * override string to use for the track when sorting by show name
     */
-   sortShow: string;
+   sortShow(): string;
    /**
     * the size of the track (in bytes)
     */
-   size: any;
+   size(): any;
    /**
     * the start time of the track in seconds
     */
-   start: any;
+   start(): any;
    /**
     * the length of the track in MM:SS format
     */
-   time: string;
+   time(): string;
    /**
     * the total number of tracks on the source album
     */
-   trackCount: number;
+   trackCount(): number;
    /**
     * the index of the track on the source album
     */
-   trackNumber: number;
+   trackNumber(): number;
    /**
     * is this track unplayed?
     */
-   unplayed: boolean;
+   unplayed(): boolean;
    /**
     * kind of video track
     */
-   videoKind: any;
+   videoKind(): any;
    /**
     * relative volume adjustment of the track (-100% to 100%)
     */
-   volumeAdjustment: number;
+   volumeAdjustment(): number;
    /**
     * the work name of the track
     */
-   work: string;
+   work(): string;
    /**
     * the year the track was recorded/released
     */
-   year: number;
+   year(): number;
  }
 
  /**
@@ -899,7 +899,7 @@ export namespace iTunes {
    /**
     * the URL for this track
     */
-   address: string;
+   address(): string;
  }
 
  /**
@@ -915,15 +915,15 @@ export namespace iTunes {
    /**
     * is this playlist shared?
     */
-   shared: boolean;
+   shared(): boolean;
    /**
     * is this a Smart Playlist?
     */
-   smart: boolean;
+   smart(): boolean;
    /**
     * is this a Genius Playlist?
     */
-   genius: boolean;
+   genius(): boolean;
  }
 
  /**
@@ -961,43 +961,43 @@ export namespace iTunes {
    /**
     * the boundary rectangle for the window
     */
-   bounds: any;
+   bounds(): any;
    /**
     * does the window have a close button?
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * does the window have a collapse button?
     */
-   collapseable: boolean;
+   collapseable(): boolean;
    /**
     * is the window collapsed?
     */
-   collapsed: boolean;
+   collapsed(): boolean;
    /**
     * is the window full screen?
     */
-   fullScreen: boolean;
+   fullScreen(): boolean;
    /**
     * the upper left position of the window
     */
-   position: any;
+   position(): any;
    /**
     * is the window resizable?
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * is the window visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * is the window zoomable?
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * is the window zoomed?
     */
-   zoomed: boolean;
+   zoomed(): boolean;
  }
     
     // CLass Extension
@@ -1013,47 +1013,47 @@ export namespace iTunes {
    /**
     * the number of copies of a document to be printed
     */
-   copies: number;
+   copies(): number;
    /**
     * Should printed copies be collated?
     */
-   collating: boolean;
+   collating(): boolean;
    /**
     * the first page of the document to be printed
     */
-   startingPage: number;
+   startingPage(): number;
    /**
     * the last page of the document to be printed
     */
-   endingPage: number;
+   endingPage(): number;
    /**
     * number of logical pages laid across a physical page
     */
-   pagesAcross: number;
+   pagesAcross(): number;
    /**
     * number of logical pages laid out down a physical page
     */
-   pagesDown: number;
+   pagesDown(): number;
    /**
     * how errors are handled
     */
-   errorHandling: any;
+   errorHandling(): any;
    /**
     * the time at which the desktop printer should print the document
     */
-   requestedPrintTime: any;
+   requestedPrintTime(): any;
    /**
     * printer specific options
     */
-   printerFeatures: any;
+   printerFeatures(): any;
    /**
     * for fax number
     */
-   faxNumber: string;
+   faxNumber(): string;
    /**
     * for target printer
     */
-   targetPrinter: string;
+   targetPrinter(): string;
  }
 
     // Function options

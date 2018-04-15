@@ -16,59 +16,59 @@ export namespace Finder {
    /**
     * (NOT AVAILABLE YET) the Finder’s clipboard window
     */
-   clipboard: any;
+   clipboard(): any;
    /**
     * the Finder’s name
     */
-   name: string;
+   name(): string;
    /**
     * Is the Finder’s layer visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Is the Finder the frontmost process?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * the selection in the frontmost Finder window
     */
-   selection: any;
+   selection(): any;
    /**
     * the container in which a new folder would appear if “New Folder” was selected
     */
-   insertionLocation: any;
+   insertionLocation(): any;
    /**
     * the version of the System software running on this computer
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the version of the Finder
     */
-   version: string;
+   version(): string;
    /**
     * the startup disk
     */
-   startupDisk: any;
+   startupDisk(): any;
    /**
     * the desktop
     */
-   desktop: any;
+   desktop(): any;
    /**
     * the trash
     */
-   trash: any;
+   trash(): any;
    /**
     * the home directory
     */
-   home: any;
+   home(): any;
    /**
     * the computer location (as in Go > Computer)
     */
-   computerContainer: any;
+   computerContainer(): any;
    /**
     * Various preferences that apply to the Finder as a whole
     */
-   finderPreferences: any;
+   finderPreferences(): any;
  }
 
  /**
@@ -84,110 +84,110 @@ export namespace Finder {
    /**
     * the name of the item
     */
-   name: string;
+   name(): string;
    /**
     * the user-visible name of the item
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * the name extension of the item (such as “txt”)
     */
-   nameExtension: string;
+   nameExtension(): string;
    /**
     * Is the item's extension hidden from the user?
     */
-   extensionHidden: boolean;
+   extensionHidden(): boolean;
    /**
     * the index in the front-to-back ordering within its container
     */
-   index: number;
+   index(): number;
    /**
     * the container of the item
     */
-   container: any;
+   container(): any;
    /**
     * the disk on which the item is stored
     */
-   disk: any;
+   disk(): any;
    /**
     * the position of the item within its parent window (can only be set for an item in a window viewed as icons or buttons)
     */
-   position: any;
+   position(): any;
    /**
     * the position of the item on the desktop
     */
-   desktopPosition: any;
+   desktopPosition(): any;
    /**
     * the bounding rectangle of the item (can only be set for an item in a window viewed as icons or buttons)
     */
-   bounds: any;
+   bounds(): any;
    /**
     * the label of the item
     */
-   labelIndex: number;
+   labelIndex(): number;
    /**
     * Is the file locked?
     */
-   locked: boolean;
+   locked(): boolean;
    /**
     * the kind of the item
     */
-   kind: string;
+   kind(): string;
    /**
     * a description of the item
     */
-   description: string;
+   description(): string;
    /**
     * the comment of the item, displayed in the “Get Info” window
     */
-   comment: string;
+   comment(): string;
    /**
     * the logical size of the item
     */
-   size: any;
+   size(): any;
    /**
     * the actual space used by the item on disk
     */
-   physicalSize: any;
+   physicalSize(): any;
    /**
     * the date on which the item was created
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the date on which the item was last modified
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the icon bitmap of the item
     */
-   icon: any;
+   icon(): any;
    /**
     * the URL of the item
     */
-   URL: string;
+   URL(): string;
    /**
     * the user that owns the container
     */
-   owner: string;
+   owner(): string;
    /**
     * the user or group that has special access to the container
     */
-   group: string;
-   ownerPrivileges: any;
-   groupPrivileges: any;
-   everyonesPrivileges: any;
+   group(): string;
+   ownerPrivileges(): any;
+   groupPrivileges(): any;
+   everyonesPrivileges(): any;
    /**
     * the information window for the item
     */
-   informationWindow: any;
+   informationWindow(): any;
    /**
     * every property of an item
     */
-   properties: any;
+   properties(): any;
    /**
     * the class of the item
     */
-   class: any;
+   class(): any;
  }
 
  /**
@@ -203,23 +203,23 @@ export namespace Finder {
    /**
     * the entire contents of the container, including the contents of its children
     */
-   entireContents: any;
+   entireContents(): any;
    /**
     * (NOT AVAILABLE YET) Is the container capable of being expanded as an outline?
     */
-   expandable: boolean;
+   expandable(): boolean;
    /**
     * (NOT AVAILABLE YET) Is the container opened as an outline? (can only be set for containers viewed as lists)
     */
-   expanded: boolean;
+   expanded(): boolean;
    /**
     * (NOT AVAILABLE YET) Are the container and all of its children opened as outlines? (can only be set for containers viewed as lists)
     */
-   completelyExpanded: boolean;
+   completelyExpanded(): boolean;
    /**
     * the container window for this folder
     */
-   containerWindow: any;
+   containerWindow(): any;
  }
 
  /**
@@ -246,39 +246,39 @@ export namespace Finder {
    /**
     * the unique id for this disk (unchanged while disk remains connected and Finder remains running)
     */
-   id: number;
+   id(): number;
    /**
     * the total number of bytes (free or used) on the disk
     */
-   capacity: any;
+   capacity(): any;
    /**
     * the number of free bytes left on the disk
     */
-   freeSpace: any;
+   freeSpace(): any;
    /**
     * Can the media be ejected (floppies, CDs, and so on)?
     */
-   ejectable: boolean;
+   ejectable(): boolean;
    /**
     * Is the media a local volume (as opposed to a file server)?
     */
-   localVolume: boolean;
+   localVolume(): boolean;
    /**
     * Is this disk the boot disk?
     */
-   startup: boolean;
+   startup(): boolean;
    /**
     * the filesystem format of this disk
     */
-   format: any;
+   format(): any;
    /**
     * Does this disk do file system journaling?
     */
-   journalingEnabled: boolean;
+   journalingEnabled(): boolean;
    /**
     * Ignore permissions on this disk?
     */
-   ignorePrivileges: boolean;
+   ignorePrivileges(): boolean;
  }
 
  /**
@@ -316,7 +316,7 @@ export namespace Finder {
    /**
     * Display a dialog when emptying the trash?
     */
-   warnsBeforeEmptying: boolean;
+   warnsBeforeEmptying(): boolean;
  }
 
  /**
@@ -332,23 +332,23 @@ export namespace Finder {
    /**
     * the OSType identifying the type of data contained in the item
     */
-   fileType: any;
+   fileType(): any;
    /**
     * the OSType identifying the application that created the item
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * Is the file a stationery pad?
     */
-   stationery: boolean;
+   stationery(): boolean;
    /**
     * the version of the product (visible at the top of the “Get Info” window)
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the version of the file (visible at the bottom of the “Get Info” window)
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -364,7 +364,7 @@ export namespace Finder {
    /**
     * the original item pointed to by the alias
     */
-   originalItem: any;
+   originalItem(): any;
  }
 
  /**
@@ -380,31 +380,31 @@ export namespace Finder {
    /**
     * the bundle identifier or creator type of the application
     */
-   id: string;
+   id(): string;
    /**
     * (AVAILABLE IN 10.1 TO 10.4) the memory size with which the developer recommends the application be launched
     */
-   suggestedSize: number;
+   suggestedSize(): number;
    /**
     * (AVAILABLE IN 10.1 TO 10.4) the smallest memory size with which the application can be launched
     */
-   minimumSize: number;
+   minimumSize(): number;
    /**
     * (AVAILABLE IN 10.1 TO 10.4) the memory size with which the application will be launched
     */
-   preferredSize: number;
+   preferredSize(): number;
    /**
     * Is the application high-level event aware? (OBSOLETE: always returns true)
     */
-   acceptsHighLevelEvents: boolean;
+   acceptsHighLevelEvents(): boolean;
    /**
     * Does the process have a scripting terminology, i.e., can it be scripted?
     */
-   hasScriptingTerminology: boolean;
+   hasScriptingTerminology(): boolean;
    /**
     * (AVAILABLE IN 10.1 TO 10.4) Should the application launch in the Classic environment?
     */
-   opensInClassic: boolean;
+   opensInClassic(): boolean;
  }
 
  /**
@@ -431,7 +431,7 @@ export namespace Finder {
    /**
     * the internet location
     */
-   location: string;
+   location(): string;
  }
 
  /**
@@ -447,7 +447,7 @@ export namespace Finder {
    /**
     * (NOT AVAILABLE YET) the clipping window for this clipping
     */
-   clippingWindow: any;
+   clippingWindow(): any;
  }
 
  /**
@@ -474,63 +474,63 @@ export namespace Finder {
    /**
     * the unique id for this window
     */
-   id: any;
+   id(): any;
    /**
     * the upper left position of the window
     */
-   position: any;
+   position(): any;
    /**
     * the boundary rectangle for the window
     */
-   bounds: any;
+   bounds(): any;
    /**
     * Does the window have a title bar?
     */
-   titled: boolean;
+   titled(): boolean;
    /**
     * the name of the window
     */
-   name: string;
+   name(): string;
    /**
     * the number of the window in the front-to-back layer ordering
     */
-   index: number;
+   index(): number;
    /**
     * Does the window have a close box?
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * Does the window have a title bar?
     */
-   floating: boolean;
+   floating(): boolean;
    /**
     * Is the window modal?
     */
-   modal: boolean;
+   modal(): boolean;
    /**
     * Is the window resizable?
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * Is the window zoomable?
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * Is the window zoomed?
     */
-   zoomed: boolean;
+   zoomed(): boolean;
    /**
     * Is the window visible (always true for open Finder windows)?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Is the window collapsed
     */
-   collapsed: boolean;
+   collapsed(): boolean;
    /**
     * every property of a window
     */
-   properties: any;
+   properties(): any;
  }
 
  /**
@@ -546,35 +546,35 @@ export namespace Finder {
    /**
     * the container at which this file viewer is targeted
     */
-   target: any;
+   target(): any;
    /**
     * the current view for the container window
     */
-   currentView: any;
+   currentView(): any;
    /**
     * the icon view options for the container window
     */
-   iconViewOptions: any;
+   iconViewOptions(): any;
    /**
     * the list view options for the container window
     */
-   listViewOptions: any;
+   listViewOptions(): any;
    /**
     * the column view options for the container window
     */
-   columnViewOptions: any;
+   columnViewOptions(): any;
    /**
     * Is the window's toolbar visible?
     */
-   toolbarVisible: boolean;
+   toolbarVisible(): boolean;
    /**
     * Is the window's status bar visible?
     */
-   statusbarVisible: boolean;
+   statusbarVisible(): boolean;
    /**
     * the width of the sidebar for the container window
     */
-   sidebarWidth: number;
+   sidebarWidth(): number;
  }
 
  /**
@@ -601,11 +601,11 @@ export namespace Finder {
    /**
     * the item from which this window was opened
     */
-   item: any;
+   item(): any;
    /**
     * the current panel in the information window
     */
-   currentPanel: any;
+   currentPanel(): any;
  }
 
  /**
@@ -621,7 +621,7 @@ export namespace Finder {
    /**
     * The current panel in the Finder preferences window
     */
-   currentPanel: any;
+   currentPanel(): any;
  }
 
  /**
@@ -648,47 +648,47 @@ export namespace Finder {
    /**
     * the name of the process
     */
-   name: string;
+   name(): string;
    /**
     * Is the process' layer visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Is the process the frontmost process?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * the file from which the process was launched
     */
-   file: any;
+   file(): any;
    /**
     * the OSType of the file type of the process
     */
-   fileType: any;
+   fileType(): any;
    /**
     * the OSType of the creator of the process (the signature)
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * Is the process high-level event aware (accepts open application, open document, print document, and quit)?
     */
-   acceptsHighLevelEvents: boolean;
+   acceptsHighLevelEvents(): boolean;
    /**
     * Does the process accept remote events?
     */
-   acceptsRemoteEvents: boolean;
+   acceptsRemoteEvents(): boolean;
    /**
     * Does the process have a scripting terminology, i.e., can it be scripted?
     */
-   hasScriptingTerminology: boolean;
+   hasScriptingTerminology(): boolean;
    /**
     * the size of the partition with which the process was launched
     */
-   totalPartitionSize: number;
+   totalPartitionSize(): number;
    /**
     * the number of bytes currently used in the process' partition
     */
-   partitionSpaceUsed: number;
+   partitionSpaceUsed(): number;
  }
 
  /**
@@ -704,7 +704,7 @@ export namespace Finder {
    /**
     * the application file from which this process was launched
     */
-   applicationFile: any;
+   applicationFile(): any;
  }
 
  /**
@@ -720,7 +720,7 @@ export namespace Finder {
    /**
     * the desk accessory file from which this process was launched
     */
-   deskAccessoryFile: any;
+   deskAccessoryFile(): any;
  }
 
  /**
@@ -736,63 +736,63 @@ export namespace Finder {
    /**
     * the window that would open if Finder preferences was opened
     */
-   window: any;
+   window(): any;
    /**
     * the default icon view options
     */
-   iconViewOptions: any;
+   iconViewOptions(): any;
    /**
     * the default list view options
     */
-   listViewOptions: any;
+   listViewOptions(): any;
    /**
     * the column view options for all windows
     */
-   columnViewOptions: any;
+   columnViewOptions(): any;
    /**
     * Spring open folders after the specified delay?
     */
-   foldersSpringOpen: boolean;
+   foldersSpringOpen(): boolean;
    /**
     * the delay before springing open a container in seconds (from 0.167 to 1.169)
     */
-   delayBeforeSpringing: any;
+   delayBeforeSpringing(): any;
    /**
     * Hard disks appear on the desktop?
     */
-   desktopShowsHardDisks: boolean;
+   desktopShowsHardDisks(): boolean;
    /**
     * External hard disks appear on the desktop?
     */
-   desktopShowsExternalHardDisks: boolean;
+   desktopShowsExternalHardDisks(): boolean;
    /**
     * CDs, DVDs, and iPods appear on the desktop?
     */
-   desktopShowsRemovableMedia: boolean;
+   desktopShowsRemovableMedia(): boolean;
    /**
     * Connected servers appear on the desktop?
     */
-   desktopShowsConnectedServers: boolean;
+   desktopShowsConnectedServers(): boolean;
    /**
     * target location for a newly-opened Finder window
     */
-   newWindowTarget: any;
+   newWindowTarget(): any;
    /**
     * Folders open into new windows?
     */
-   foldersOpenInNewWindows: boolean;
+   foldersOpenInNewWindows(): boolean;
    /**
     * Folders open into new tabs?
     */
-   foldersOpenInNewTabs: boolean;
+   foldersOpenInNewTabs(): boolean;
    /**
     * Open new windows in column view?
     */
-   newWindowsOpenInColumnView: boolean;
+   newWindowsOpenInColumnView(): boolean;
    /**
     * Show name extensions, even for items whose “extension hidden” is true?
     */
-   allNameExtensionsShowing: boolean;
+   allNameExtensionsShowing(): boolean;
  }
 
  /**
@@ -808,15 +808,15 @@ export namespace Finder {
    /**
     * the name associated with the label
     */
-   name: string;
+   name(): string;
    /**
     * the index in the front-to-back ordering within its container
     */
-   index: number;
+   index(): number;
    /**
     * the color associated with the label
     */
-   color: any;
+   color(): any;
  }
 
  /**
@@ -832,43 +832,43 @@ export namespace Finder {
    /**
     * the large black-and-white icon and the mask for large icons
     */
-   largeMonochromeIconAndMask: any;
+   largeMonochromeIconAndMask(): any;
    /**
     * the large 8-bit mask for large 32-bit icons
     */
-   large8BitMask: any;
+   large8BitMask(): any;
    /**
     * the large 32-bit color icon
     */
-   large32BitIcon: any;
+   large32BitIcon(): any;
    /**
     * the large 8-bit color icon
     */
-   large8BitIcon: any;
+   large8BitIcon(): any;
    /**
     * the large 4-bit color icon
     */
-   large4BitIcon: any;
+   large4BitIcon(): any;
    /**
     * the small black-and-white icon and the mask for small icons
     */
-   smallMonochromeIconAndMask: any;
+   smallMonochromeIconAndMask(): any;
    /**
     * the small 8-bit mask for small 32-bit icons
     */
-   small8BitMask: any;
+   small8BitMask(): any;
    /**
     * the small 32-bit color icon
     */
-   small32BitIcon: any;
+   small32BitIcon(): any;
    /**
     * the small 8-bit color icon
     */
-   small8BitIcon: any;
+   small8BitIcon(): any;
    /**
     * the small 4-bit color icon
     */
-   small4BitIcon: any;
+   small4BitIcon(): any;
  }
 
  /**
@@ -884,35 +884,35 @@ export namespace Finder {
    /**
     * the property by which to keep icons arranged
     */
-   arrangement: any;
+   arrangement(): any;
    /**
     * the size of icons displayed in the icon view
     */
-   iconSize: number;
+   iconSize(): number;
    /**
     * additional info about an item displayed in icon view
     */
-   showsItemInfo: boolean;
+   showsItemInfo(): boolean;
    /**
     * displays a preview of the item in icon view
     */
-   showsIconPreview: boolean;
+   showsIconPreview(): boolean;
    /**
     * the size of the text displayed in the icon view
     */
-   textSize: number;
+   textSize(): number;
    /**
     * the location of the label in reference to the icon
     */
-   labelPosition: any;
+   labelPosition(): any;
    /**
     * the background picture of the icon view
     */
-   backgroundPicture: any;
+   backgroundPicture(): any;
    /**
     * the background color of the icon view
     */
-   backgroundColor: any;
+   backgroundColor(): any;
  }
 
  /**
@@ -928,23 +928,23 @@ export namespace Finder {
    /**
     * the size of the text displayed in the column view
     */
-   textSize: number;
+   textSize(): number;
    /**
     * displays an icon next to the label in column view
     */
-   showsIcon: boolean;
+   showsIcon(): boolean;
    /**
     * displays a preview of the item in column view
     */
-   showsIconPreview: boolean;
+   showsIconPreview(): boolean;
    /**
     * displays the preview column in column view
     */
-   showsPreviewColumn: boolean;
+   showsPreviewColumn(): boolean;
    /**
     * discloses the preview pane of the preview column in column view
     */
-   disclosesPreviewPane: boolean;
+   disclosesPreviewPane(): boolean;
  }
 
  /**
@@ -960,27 +960,27 @@ export namespace Finder {
    /**
     * Are folder sizes calculated and displayed in the window?
     */
-   calculatesFolderSizes: boolean;
+   calculatesFolderSizes(): boolean;
    /**
     * displays a preview of the item in list view
     */
-   showsIconPreview: boolean;
+   showsIconPreview(): boolean;
    /**
     * the size of icons displayed in the list view
     */
-   iconSize: any;
+   iconSize(): any;
    /**
     * the size of the text displayed in the list view
     */
-   textSize: number;
+   textSize(): number;
    /**
     * the column that the list view is sorted on
     */
-   sortColumn: any;
+   sortColumn(): any;
    /**
     * Are relative dates (e.g., today, yesterday) shown in the list view?
     */
-   usesRelativeDates: boolean;
+   usesRelativeDates(): boolean;
  }
 
  /**
@@ -996,31 +996,31 @@ export namespace Finder {
    /**
     * the index in the front-to-back ordering within its container
     */
-   index: number;
+   index(): number;
    /**
     * the column name
     */
-   name: any;
+   name(): any;
    /**
     * The direction in which the window is sorted
     */
-   sortDirection: any;
+   sortDirection(): any;
    /**
     * the width of this column
     */
-   width: number;
+   width(): number;
    /**
     * the minimum allowed width of this column
     */
-   minimumWidth: number;
+   minimumWidth(): number;
    /**
     * the maximum allowed width of this column
     */
-   maximumWidth: number;
+   maximumWidth(): number;
    /**
     * is this column visible
     */
-   visible: boolean;
+   visible(): boolean;
  }
 
  /**
@@ -1048,7 +1048,7 @@ export namespace Finder {
    /**
     * the desktop picture of the main monitor
     */
-   desktopPicture: any;
+   desktopPicture(): any;
  }
     
     // Records

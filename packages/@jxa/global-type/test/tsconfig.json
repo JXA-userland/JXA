@@ -1,6 +1,7 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
+        "outDir": "../out/",
         "noImplicitAny": true,
         /* Additional Checks */
         "noUnusedLocals": false,
@@ -12,7 +13,7 @@
         "noFallthroughCasesInSwitch": false
     },
     "include": [
-        "../src/global.d.ts",
+        "../src/*",
         "**/*"
     ]
 }

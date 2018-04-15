@@ -16,27 +16,27 @@ export namespace Calendar {
    /**
     * This is the calendar title.
     */
-   name: string;
+   name(): string;
    /**
     * This is the calendar title.
     */
-   title: string;
+   title(): string;
    /**
     * The calendar color.
     */
-   color: any;
+   color(): any;
    /**
     * An unique calendar key
     */
-   uid: string;
+   uid(): string;
    /**
     * This is the calendar title.
     */
-   writable: boolean;
+   writable(): boolean;
    /**
     * This is the calendar description.
     */
-   description: string;
+   description(): string;
  }
 
  /**
@@ -52,11 +52,11 @@ export namespace Calendar {
    /**
     * The interval in minutes between the event and the alarm: (positive for alarm that trigger after the event date or negative for alarms that trigger before).
     */
-   triggerInterval: number;
+   triggerInterval(): number;
    /**
     * An absolute alarm date.
     */
-   triggerDate: any;
+   triggerDate(): any;
  }
 
  /**
@@ -72,11 +72,11 @@ export namespace Calendar {
    /**
     * The interval in minutes between the event and the alarm: (positive for alarm that trigger after the event date or negative for alarms that trigger before).
     */
-   triggerInterval: number;
+   triggerInterval(): number;
    /**
     * An absolute alarm date.
     */
-   triggerDate: any;
+   triggerDate(): any;
  }
 
  /**
@@ -92,19 +92,19 @@ export namespace Calendar {
    /**
     * The interval in minutes between the event and the alarm: (positive for alarm that trigger after the event date or negative for alarms that trigger before).
     */
-   triggerInterval: number;
+   triggerInterval(): number;
    /**
     * An absolute alarm date.
     */
-   triggerDate: any;
+   triggerDate(): any;
    /**
     * The system sound name to be used for the alarm
     */
-   soundName: string;
+   soundName(): string;
    /**
     * The (POSIX) path to the sound file to be used for the alarm
     */
-   soundFile: string;
+   soundFile(): string;
  }
 
  /**
@@ -120,15 +120,15 @@ export namespace Calendar {
    /**
     * The interval in minutes between the event and the alarm: (positive for alarm that trigger after the event date or negative for alarms that trigger before).
     */
-   triggerInterval: number;
+   triggerInterval(): number;
    /**
     * An absolute alarm date.
     */
-   triggerDate: any;
+   triggerDate(): any;
    /**
     * The (POSIX) path to be opened by the alarm
     */
-   filepath: string;
+   filepath(): string;
  }
 
  /**
@@ -144,15 +144,15 @@ export namespace Calendar {
    /**
     * The first and last name of the attendee.
     */
-   displayName: string;
+   displayName(): string;
    /**
     * e-mail of the attendee.
     */
-   email: string;
+   email(): string;
    /**
     * The invitation status for the attendee.
     */
-   participationStatus: any;
+   participationStatus(): any;
  }
 
  /**
@@ -168,55 +168,55 @@ export namespace Calendar {
    /**
     * The events notes.
     */
-   description: string;
+   description(): string;
    /**
     * The event start date.
     */
-   startDate: any;
+   startDate(): any;
    /**
     * The event end date.
     */
-   endDate: any;
+   endDate(): any;
    /**
     * True if the event is an all-day event
     */
-   alldayEvent: boolean;
+   alldayEvent(): boolean;
    /**
     * The iCalendar (RFC 2445) string describing the event recurrence, if defined
     */
-   recurrence: string;
+   recurrence(): string;
    /**
     * The event version.
     */
-   sequence: number;
+   sequence(): number;
    /**
     * The event modification date.
     */
-   stampDate: any;
+   stampDate(): any;
    /**
     * The exception dates.
     */
-   excludedDates: any;
+   excludedDates(): any;
    /**
     * The event status.
     */
-   status: any;
+   status(): any;
    /**
     * This is the event summary.
     */
-   summary: string;
+   summary(): string;
    /**
     * This is the event location.
     */
-   location: string;
+   location(): string;
    /**
     * An unique todo key.
     */
-   uid: string;
+   uid(): string;
    /**
     * The URL associated to the event.
     */
-   url: string;
+   url(): string;
  }
     
     // CLass Extension
@@ -233,11 +233,11 @@ export namespace Calendar {
    /**
     * Obsolete
     */
-   progression: any;
+   progression(): any;
    /**
     * Obsolete
     */
-   allowCancel: boolean;
+   allowCancel(): boolean;
  }
     
     // Records

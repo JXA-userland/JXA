@@ -16,11 +16,11 @@ export namespace Reminders {
    /**
     * the name of the account
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the account
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -36,15 +36,15 @@ export namespace Reminders {
    /**
     * the name of the list
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the list
     */
-   id: string;
+   id(): string;
    /**
     * the container of the list
     */
-   container: any;
+   container(): any;
  }
 
  /**
@@ -60,47 +60,47 @@ export namespace Reminders {
    /**
     * the name of the reminder
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the reminder
     */
-   id: string;
+   id(): string;
    /**
     * the notes attached to the reminder
     */
-   body: string;
+   body(): string;
    /**
     * Is the reminder completed?
     */
-   completed: boolean;
+   completed(): boolean;
    /**
     * the completion date of the reminder
     */
-   completionDate: any;
+   completionDate(): any;
    /**
     * the container of the reminder
     */
-   container: any;
+   container(): any;
    /**
     * the creation date of the reminder
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the due date of the reminder
     */
-   dueDate: any;
+   dueDate(): any;
    /**
     * the modification date of the reminder
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the remind date of the reminder
     */
-   remindMeDate: any;
+   remindMeDate(): any;
    /**
     * the priority of the reminder
     */
-   priority: number;
+   priority(): number;
  }
     
     // CLass Extension
@@ -117,11 +117,11 @@ export namespace Reminders {
    /**
     * the account currently active in the Reminders application
     */
-   defaultAccount: any;
+   defaultAccount(): any;
    /**
     * the list currently active in the Reminders application
     */
-   defaultList: any;
+   defaultList(): any;
  }
     
     // Records

@@ -16,15 +16,15 @@ export namespace Mail {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -40,7 +40,7 @@ export namespace Mail {
    /**
     * The file for the attachment
     */
-   fileName: any;
+   fileName(): any;
  }
 
  /**
@@ -56,15 +56,15 @@ export namespace Mail {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -80,15 +80,15 @@ export namespace Mail {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -104,15 +104,15 @@ export namespace Mail {
    /**
     * The color of the character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -128,15 +128,15 @@ export namespace Mail {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -152,31 +152,31 @@ export namespace Mail {
    /**
     * The sender of the message
     */
-   sender: string;
+   sender(): string;
    /**
     * The subject of the message
     */
-   subject: string;
+   subject(): string;
    /**
     * Controls whether the message window is shown on the screen. The default is false
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * The signature of the message
     */
-   messageSignature: any;
+   messageSignature(): any;
    /**
     * The unique identifier of the message
     */
-   id: number;
+   id(): number;
    /**
     * Does nothing at all (deprecated)
     */
-   htmlContent: string;
+   htmlContent(): string;
    /**
     * Does nothing at all (deprecated)
     */
-   vcardPath: any;
+   vcardPath(): any;
  }
 
  /**
@@ -192,27 +192,27 @@ export namespace Mail {
    /**
     * Does nothing at all (deprecated)
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * Does nothing at all (deprecated)
     */
-   name: string;
+   name(): string;
    /**
     * Does nothing at all (deprecated)
     */
-   port: number;
+   port(): number;
    /**
     * Does nothing at all (deprecated)
     */
-   scope: any;
+   scope(): any;
    /**
     * Does nothing at all (deprecated)
     */
-   searchBase: string;
+   searchBase(): string;
    /**
     * Does nothing at all (deprecated)
     */
-   hostName: string;
+   hostName(): string;
  }
 
  /**
@@ -228,7 +228,7 @@ export namespace Mail {
    /**
     * DEPRECATED - DO NOT USE
     */
-   OLDComposeMessage: any;
+   OLDComposeMessage(): any;
  }
 
  /**
@@ -244,63 +244,63 @@ export namespace Mail {
    /**
     * The top level Drafts mailbox
     */
-   draftsMailbox: any;
+   draftsMailbox(): any;
    /**
     * The top level In mailbox
     */
-   inbox: any;
+   inbox(): any;
    /**
     * The top level Junk mailbox
     */
-   junkMailbox: any;
+   junkMailbox(): any;
    /**
     * The top level Out mailbox
     */
-   outbox: any;
+   outbox(): any;
    /**
     * The top level Sent mailbox
     */
-   sentMailbox: any;
+   sentMailbox(): any;
    /**
     * The top level Trash mailbox
     */
-   trashMailbox: any;
+   trashMailbox(): any;
    /**
     * The column that is currently sorted in the viewer
     */
-   sortColumn: any;
+   sortColumn(): any;
    /**
     * Whether the viewer is sorted ascending or not
     */
-   sortedAscending: boolean;
+   sortedAscending(): boolean;
    /**
     * Controls whether the list of mailboxes is visible or not
     */
-   mailboxListVisible: boolean;
+   mailboxListVisible(): boolean;
    /**
     * Controls whether the preview pane of the message viewer window is visible or not
     */
-   previewPaneIsVisible: boolean;
+   previewPaneIsVisible(): boolean;
    /**
     * List of columns that are visible. The subject column and the message status column will always be visible
     */
-   visibleColumns: any;
+   visibleColumns(): any;
    /**
     * The unique identifier of the message viewer
     */
-   id: number;
+   id(): number;
    /**
     * List of messages currently being displayed in the viewer
     */
-   visibleMessages: any;
+   visibleMessages(): any;
    /**
     * List of messages currently selected
     */
-   selectedMessages: any;
+   selectedMessages(): any;
    /**
     * List of mailboxes currently selected in the list of mailboxes
     */
-   selectedMailboxes: any;
+   selectedMailboxes(): any;
  }
 
  /**
@@ -316,11 +316,11 @@ export namespace Mail {
    /**
     * Contents of email signature. If there is a version with fonts and/or styles, that will be returned over the plain text version
     */
-   content: string;
+   content(): string;
    /**
     * Name of the signature
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -336,87 +336,87 @@ export namespace Mail {
    /**
     * The unique identifier of the message.
     */
-   id: number;
+   id(): number;
    /**
     * All the headers of the message
     */
-   allHeaders: string;
+   allHeaders(): string;
    /**
     * The background color of the message
     */
-   backgroundColor: any;
+   backgroundColor(): any;
    /**
     * The mailbox in which this message is filed
     */
-   mailbox: any;
+   mailbox(): any;
    /**
     * Contents of an email message
     */
-   content: any;
+   content(): any;
    /**
     * The date a message was received
     */
-   dateReceived: any;
+   dateReceived(): any;
    /**
     * The date a message was sent
     */
-   dateSent: any;
+   dateSent(): any;
    /**
     * Indicates whether the message is deleted or not
     */
-   deletedStatus: boolean;
+   deletedStatus(): boolean;
    /**
     * Indicates whether the message is flagged or not
     */
-   flaggedStatus: boolean;
+   flaggedStatus(): boolean;
    /**
     * The flag on the message, or -1 if the message is not flagged
     */
-   flagIndex: number;
+   flagIndex(): number;
    /**
     * Indicates whether the message has been marked junk or evaluated to be junk by the junk mail filter.
     */
-   junkMailStatus: boolean;
+   junkMailStatus(): boolean;
    /**
     * Indicates whether the message is read or not
     */
-   readStatus: boolean;
+   readStatus(): boolean;
    /**
     * The unique message ID string
     */
-   messageId: string;
+   messageId(): string;
    /**
     * Raw source of the message
     */
-   source: string;
+   source(): string;
    /**
     * The address that replies should be sent to
     */
-   replyTo: string;
+   replyTo(): string;
    /**
     * The size (in bytes) of a message
     */
-   messageSize: number;
+   messageSize(): number;
    /**
     * The sender of the message
     */
-   sender: string;
+   sender(): string;
    /**
     * The subject of the message
     */
-   subject: string;
+   subject(): string;
    /**
     * Indicates whether the message was forwarded or not
     */
-   wasForwarded: boolean;
+   wasForwarded(): boolean;
    /**
     * Indicates whether the message was redirected or not
     */
-   wasRedirected: boolean;
+   wasRedirected(): boolean;
    /**
     * Indicates whether the message was replied to or not
     */
-   wasRepliedTo: boolean;
+   wasRepliedTo(): boolean;
  }
 
  /**
@@ -432,91 +432,91 @@ export namespace Mail {
    /**
     * The delivery account used when sending mail from this account
     */
-   deliveryAccount: any;
+   deliveryAccount(): any;
    /**
     * The name of an account
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the account
     */
-   id: string;
+   id(): string;
    /**
     * Password for this account. Can be set, but not read via scripting
     */
-   password: string;
+   password(): string;
    /**
     * Preferred authentication scheme for account
     */
-   authentication: any;
+   authentication(): any;
    /**
     * The type of an account
     */
-   accountType: any;
+   accountType(): any;
    /**
     * The list of email addresses configured for an account
     */
-   emailAddresses: any;
+   emailAddresses(): any;
    /**
     * The users full name configured for an account
     */
-   fullName: string;
+   fullName(): string;
    /**
     * Number of days before junk messages are deleted (0 = delete on quit, -1 = never delete)
     */
-   emptyJunkMessagesFrequency: number;
+   emptyJunkMessagesFrequency(): number;
    /**
     * Does nothing at all (deprecated)
     */
-   emptySentMessagesFrequency: number;
+   emptySentMessagesFrequency(): number;
    /**
     * Number of days before messages in the trash are permanently deleted (0 = delete on quit, -1 = never delete)
     */
-   emptyTrashFrequency: number;
+   emptyTrashFrequency(): number;
    /**
     * Indicates whether the messages in the junk messages mailboxes will be deleted on quit
     */
-   emptyJunkMessagesOnQuit: boolean;
+   emptyJunkMessagesOnQuit(): boolean;
    /**
     * Does nothing at all (deprecated)
     */
-   emptySentMessagesOnQuit: boolean;
+   emptySentMessagesOnQuit(): boolean;
    /**
     * Indicates whether the messages in deleted messages mailboxes will be permanently deleted on quit
     */
-   emptyTrashOnQuit: boolean;
+   emptyTrashOnQuit(): boolean;
    /**
     * Indicates whether the account is enabled or not
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * The user name used to connect to an account
     */
-   userName: string;
+   userName(): string;
    /**
     * The directory where the account stores things on disk
     */
-   accountDirectory: any;
+   accountDirectory(): any;
    /**
     * The port used to connect to an account
     */
-   port: number;
+   port(): number;
    /**
     * The host name used to connect to an account
     */
-   serverName: string;
+   serverName(): string;
    /**
     * Does nothing at all (deprecated)
     */
-   includeWhenGettingNewMail: boolean;
+   includeWhenGettingNewMail(): boolean;
    /**
     * Indicates whether messages that are deleted will be moved to the trash mailbox
     */
-   moveDeletedMessagesToTrash: boolean;
+   moveDeletedMessagesToTrash(): boolean;
    /**
     * Indicates whether SSL is enabled for this receiving account
     */
-   usesSsl: boolean;
+   usesSsl(): boolean;
  }
 
  /**
@@ -532,27 +532,27 @@ export namespace Mail {
    /**
     * Indicates whether an IMAP mailbox is automatically compacted when you quit Mail or switch to another mailbox
     */
-   compactMailboxesWhenClosing: boolean;
+   compactMailboxesWhenClosing(): boolean;
    /**
     * Message caching setting for this account
     */
-   messageCaching: any;
+   messageCaching(): any;
    /**
     * Indicates whether drafts will be stored on the IMAP server
     */
-   storeDraftsOnServer: boolean;
+   storeDraftsOnServer(): boolean;
    /**
     * Indicates whether junk mail will be stored on the IMAP server
     */
-   storeJunkMailOnServer: boolean;
+   storeJunkMailOnServer(): boolean;
    /**
     * Indicates whether sent messages will be stored on the IMAP server
     */
-   storeSentMessagesOnServer: boolean;
+   storeSentMessagesOnServer(): boolean;
    /**
     * Indicates whether deleted messages will be stored on the IMAP server
     */
-   storeDeletedMessagesOnServer: boolean;
+   storeDeletedMessagesOnServer(): boolean;
  }
 
  /**
@@ -579,19 +579,19 @@ export namespace Mail {
    /**
     * If message size (in bytes) is over this amount, Mail will prompt you asking whether you want to download the message (-1 = do not prompt)
     */
-   bigMessageWarningSize: number;
+   bigMessageWarningSize(): number;
    /**
     * Number of days before messages that have been downloaded will be deleted from the server (0 = delete immediately after downloading)
     */
-   delayedMessageDeletionInterval: number;
+   delayedMessageDeletionInterval(): number;
    /**
     * Indicates whether POP account deletes messages on the server after downloading
     */
-   deleteMailOnServer: boolean;
+   deleteMailOnServer(): boolean;
    /**
     * Indicates whether messages will be deleted from the server when moved from your POP inbox
     */
-   deleteMessagesWhenMovedFromInbox: boolean;
+   deleteMessagesWhenMovedFromInbox(): boolean;
  }
 
  /**
@@ -607,39 +607,39 @@ export namespace Mail {
    /**
     * The name of an account
     */
-   name: string;
+   name(): string;
    /**
     * Password for this account. Can be set, but not read via scripting
     */
-   password: string;
+   password(): string;
    /**
     * The type of an account
     */
-   accountType: any;
+   accountType(): any;
    /**
     * Preferred authentication scheme for account
     */
-   authentication: any;
+   authentication(): any;
    /**
     * Indicates whether the account is enabled or not
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * The user name used to connect to an account
     */
-   userName: string;
+   userName(): string;
    /**
     * The port used to connect to an account
     */
-   port: number;
+   port(): number;
    /**
     * The host name used to connect to an account
     */
-   serverName: string;
+   serverName(): string;
    /**
     * Indicates whether SSL is enabled for this receiving account
     */
-   usesSsl: boolean;
+   usesSsl(): boolean;
  }
 
  /**
@@ -655,13 +655,13 @@ export namespace Mail {
    /**
     * The name of a mailbox
     */
-   name: string;
+   name(): string;
    /**
     * The number of unread messages in the mailbox
     */
-   unreadCount: number;
-   account: any;
-   container: any;
+   unreadCount(): number;
+   account(): any;
+   container(): any;
  }
 
  /**
@@ -677,83 +677,83 @@ export namespace Mail {
    /**
     * If rule matches, apply this color
     */
-   colorMessage: any;
+   colorMessage(): any;
    /**
     * If rule matches, delete message
     */
-   deleteMessage: boolean;
+   deleteMessage(): boolean;
    /**
     * If rule matches, prepend this text to the forwarded message. Set to empty string to include no prepended text
     */
-   forwardText: string;
+   forwardText(): string;
    /**
     * If rule matches, forward message to this address, or multiple addresses, separated by commas. Set to empty string to disable this action
     */
-   forwardMessage: string;
+   forwardMessage(): string;
    /**
     * If rule matches, mark message as flagged
     */
-   markFlagged: boolean;
+   markFlagged(): boolean;
    /**
     * If rule matches, mark message with the specified flag. Set to -1 to disable this action
     */
-   markFlagIndex: number;
+   markFlagIndex(): number;
    /**
     * If rule matches, mark message as read
     */
-   markRead: boolean;
+   markRead(): boolean;
    /**
     * If rule matches, play this sound (specify name of sound or path to sound)
     */
-   playSound: string;
+   playSound(): string;
    /**
     * If rule matches, redirect message to this address or multiple addresses, separate by commas. Set to empty string to disable this action
     */
-   redirectMessage: string;
+   redirectMessage(): string;
    /**
     * If rule matches, reply to message and prepend with this text. Set to empty string to disable this action
     */
-   replyText: string;
+   replyText(): string;
    /**
     * If rule matches, run this compiled AppleScript file. Set to empty string to disable this action
     */
-   runScript: any;
+   runScript(): any;
    /**
     * Indicates whether all conditions must be met for rule to execute
     */
-   allConditionsMustBeMet: boolean;
+   allConditionsMustBeMet(): boolean;
    /**
     * If rule matches, copy to this mailbox
     */
-   copyMessage: any;
+   copyMessage(): any;
    /**
     * If rule matches, move to this mailbox
     */
-   moveMessage: any;
+   moveMessage(): any;
    /**
     * Indicates whether the color will be used to highlight the text or background of a message in the message list
     */
-   highlightTextUsingColor: boolean;
+   highlightTextUsingColor(): boolean;
    /**
     * Indicates whether the rule is enabled
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * Name of rule
     */
-   name: string;
+   name(): string;
    /**
     * Indicates whether the rule has a copy action
     */
-   shouldCopyMessage: boolean;
+   shouldCopyMessage(): boolean;
    /**
     * Indicates whether the rule has a move action
     */
-   shouldMoveMessage: boolean;
+   shouldMoveMessage(): boolean;
    /**
     * If rule matches, stop rule evaluation for this message
     */
-   stopEvaluatingRules: boolean;
+   stopEvaluatingRules(): boolean;
  }
 
  /**
@@ -769,19 +769,19 @@ export namespace Mail {
    /**
     * Rule expression field
     */
-   expression: string;
+   expression(): string;
    /**
     * Rule header key
     */
-   header: string;
+   header(): string;
    /**
     * Rule qualifier
     */
-   qualifier: any;
+   qualifier(): any;
    /**
     * Rule type
     */
-   ruleType: any;
+   ruleType(): any;
  }
 
  /**
@@ -797,11 +797,11 @@ export namespace Mail {
    /**
     * The recipients email address
     */
-   address: string;
+   address(): string;
    /**
     * The name used for display
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -861,11 +861,11 @@ export namespace Mail {
    /**
     * Contents of the header
     */
-   content: string;
+   content(): string;
    /**
     * Name of the header value
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -881,23 +881,23 @@ export namespace Mail {
    /**
     * Name of the attachment
     */
-   name: string;
+   name(): string;
    /**
     * MIME type of the attachment E.g. text/plain.
     */
-   MIMEType: string;
+   MIMEType(): string;
    /**
     * Approximate size in bytes.
     */
-   fileSize: number;
+   fileSize(): number;
    /**
     * Indicates whether the attachment has been downloaded.
     */
-   downloaded: boolean;
+   downloaded(): boolean;
    /**
     * The unique identifier of the attachment.
     */
-   id: string;
+   id(): string;
  }
     
     // CLass Extension
@@ -914,180 +914,180 @@ export namespace Mail {
    /**
     * Indicates whether you will be included in the Bcc: field of messages which you are composing
     */
-   alwaysBccMyself: boolean;
+   alwaysBccMyself(): boolean;
    /**
     * Indicates whether you will be included in the Cc: field of messages which you are composing
     */
-   alwaysCcMyself: boolean;
+   alwaysCcMyself(): boolean;
    /**
     * List of messages that the user has selected
     */
-   selection: any;
+   selection(): any;
    /**
     * The build number of the application
     */
-   applicationVersion: string;
+   applicationVersion(): string;
    /**
     * The interval (in minutes) between automatic fetches of new mail, -1 means to use an automatically determined interval
     */
-   fetchInterval: number;
+   fetchInterval(): number;
    /**
     * Number of background activities currently running in Mail, according to the Activity window
     */
-   backgroundActivityCount: number;
+   backgroundActivityCount(): number;
    /**
     * Indicates whether user can choose a signature directly in a new compose window
     */
-   chooseSignatureWhenComposing: boolean;
+   chooseSignatureWhenComposing(): boolean;
    /**
     * Indicates whether quoted text should be colored
     */
-   colorQuotedText: boolean;
+   colorQuotedText(): boolean;
    /**
     * Default format for messages being composed or message replies
     */
-   defaultMessageFormat: any;
+   defaultMessageFormat(): any;
    /**
     * Indicates whether images and attachments in HTML messages should be downloaded and displayed
     */
-   downloadHtmlAttachments: boolean;
+   downloadHtmlAttachments(): boolean;
    /**
     * The top level Drafts mailbox
     */
-   draftsMailbox: any;
+   draftsMailbox(): any;
    /**
     * Indicates whether group addresses will be expanded when entered into the address fields of a new compose message
     */
-   expandGroupAddresses: boolean;
+   expandGroupAddresses(): boolean;
    /**
     * Font for plain text messages, only used if 'use fixed width font' is set to true
     */
-   fixedWidthFont: string;
+   fixedWidthFont(): string;
    /**
     * Font size for plain text messages, only used if 'use fixed width font' is set to true
     */
-   fixedWidthFontSize: any;
+   fixedWidthFontSize(): any;
    /**
     * Returns the same thing as application version (deprecated)
     */
-   frameworkVersion: string;
+   frameworkVersion(): string;
    /**
     * This always returns default, and setting it doesn't do anything (deprecated)
     */
-   headerDetail: any;
+   headerDetail(): any;
    /**
     * The top level In mailbox
     */
-   inbox: any;
+   inbox(): any;
    /**
     * Indicates whether all of the original message will be quoted or only the text you have selected (if any)
     */
-   includeAllOriginalMessageText: boolean;
+   includeAllOriginalMessageText(): boolean;
    /**
     * Indicates whether the text of the original message will be included in replies
     */
-   quoteOriginalMessage: boolean;
+   quoteOriginalMessage(): boolean;
    /**
     * Indicates whether spelling will be checked automatically in messages being composed
     */
-   checkSpellingWhileTyping: boolean;
+   checkSpellingWhileTyping(): boolean;
    /**
     * The top level Junk mailbox
     */
-   junkMailbox: any;
+   junkMailbox(): any;
    /**
     * Color for quoted text with one level of indentation
     */
-   levelOneQuotingColor: any;
+   levelOneQuotingColor(): any;
    /**
     * Color for quoted text with two levels of indentation
     */
-   levelTwoQuotingColor: any;
+   levelTwoQuotingColor(): any;
    /**
     * Color for quoted text with three levels of indentation
     */
-   levelThreeQuotingColor: any;
+   levelThreeQuotingColor(): any;
    /**
     * Font for messages (proportional font)
     */
-   messageFont: string;
+   messageFont(): string;
    /**
     * Font size for messages (proportional font)
     */
-   messageFontSize: any;
+   messageFontSize(): any;
    /**
     * Font for message list
     */
-   messageListFont: string;
+   messageListFont(): string;
    /**
     * Font size for message list
     */
-   messageListFontSize: any;
+   messageListFontSize(): any;
    /**
     * Name of new mail sound or 'None' if no sound is selected
     */
-   newMailSound: string;
+   newMailSound(): string;
    /**
     * The top level Out mailbox
     */
-   outbox: any;
+   outbox(): any;
    /**
     * Indicates whether sounds will be played for various things such as when a messages is sent or if no mail is found when manually checking for new mail or if there is a fetch error
     */
-   shouldPlayOtherMailSounds: boolean;
+   shouldPlayOtherMailSounds(): boolean;
    /**
     * Indicates whether replies will be in the same text format as the message to which you are replying
     */
-   sameReplyFormat: boolean;
+   sameReplyFormat(): boolean;
    /**
     * Name of current selected signature (or 'randomly', 'sequentially', or 'none')
     */
-   selectedSignature: string;
+   selectedSignature(): string;
    /**
     * The top level Sent mailbox
     */
-   sentMailbox: any;
+   sentMailbox(): any;
    /**
     * Indicates whether mail will automatically be fetched at a specific interval
     */
-   fetchesAutomatically: boolean;
+   fetchesAutomatically(): boolean;
    /**
     * Indicates whether messages in conversations should be highlighted in the Mail viewer window when not grouped
     */
-   highlightSelectedConversation: boolean;
+   highlightSelectedConversation(): boolean;
    /**
     * The top level Trash mailbox
     */
-   trashMailbox: any;
+   trashMailbox(): any;
    /**
     * This always returns true, and setting it doesn't do anything (deprecated)
     */
-   useAddressCompletion: boolean;
+   useAddressCompletion(): boolean;
    /**
     * Should fixed-width font be used for plain text messages?
     */
-   useFixedWidthFont: boolean;
+   useFixedWidthFont(): boolean;
    /**
     * The user's primary email address
     */
-   primaryEmail: string;
+   primaryEmail(): string;
    /**
     * Indicates whether to log socket activity for the specified hosts
     */
-   hostsToLogActivityOn: any;
+   hostsToLogActivityOn(): any;
    /**
     * Indicates whether to log socket activity for the specified ports
     */
-   portsToLogActivityOn: any;
+   portsToLogActivityOn(): any;
    /**
     * Indicates whether all socket activity will be logged
     */
-   logAllSocketActivity: boolean;
-   memoryStatistics: any;
+   logAllSocketActivity(): boolean;
+   memoryStatistics(): any;
    /**
     * Ignored - Mail always uses the Keychain to store passwords
     */
-   useKeychain: boolean;
+   useKeychain(): boolean;
  }
     
     // Records

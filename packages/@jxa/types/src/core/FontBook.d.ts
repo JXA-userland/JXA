@@ -16,11 +16,11 @@ export namespace FontBook {
    /**
     * The class of the object.
     */
-   class: any;
+   class(): any;
    /**
     * All of the object's properties.
     */
-   properties: any;
+   properties(): any;
  }
 
  /**
@@ -36,15 +36,15 @@ export namespace FontBook {
    /**
     * The name of the application.
     */
-   name: string;
+   name(): string;
    /**
     * Is this the frontmost (active) application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The version of the application.
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -71,15 +71,15 @@ export namespace FontBook {
    /**
     * The document's path.
     */
-   path: string;
+   path(): string;
    /**
     * Has the document been modified since the last save?
     */
-   modified: boolean;
+   modified(): boolean;
    /**
     * The document's name.
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -95,59 +95,59 @@ export namespace FontBook {
    /**
     * The full title of the window.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the window.
     */
-   id: number;
+   id(): number;
    /**
     * The bounding rectangle of the window.
     */
-   bounds: any;
+   bounds(): any;
    /**
     * Whether the window has a close box.
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * Whether the window has a title bar.
     */
-   titled: boolean;
+   titled(): boolean;
    /**
     * The index of the window in the back-to-front window ordering.
     */
-   index: number;
+   index(): number;
    /**
     * Whether the window floats.
     */
-   floating: boolean;
+   floating(): boolean;
    /**
     * Whether the window can be miniaturized.
     */
-   miniaturizable: boolean;
+   miniaturizable(): boolean;
    /**
     * Whether the window is currently miniaturized.
     */
-   miniaturized: boolean;
+   miniaturized(): boolean;
    /**
     * Whether the window is the application's current modal window.
     */
-   modal: boolean;
+   modal(): boolean;
    /**
     * Whether the window can be resized.
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * Whether the window is currently visible.
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Whether the window can be zoomed.
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * Whether the window is currently zoomed.
     */
-   zoomed: boolean;
+   zoomed(): boolean;
  }
 
  /**
@@ -163,27 +163,27 @@ export namespace FontBook {
    /**
     * The name of the family
     */
-   name: string;
+   name(): string;
    /**
     * Synonym for displayed name
     */
-   displayName: string;
+   displayName(): string;
    /**
     * Font family display name
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * A font family
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * Whether the family contains duplicated faces
     */
-   duplicated: boolean;
+   duplicated(): boolean;
    /**
     * Font files for the family
     */
-   files: any;
+   files(): any;
  }
 
  /**
@@ -199,59 +199,59 @@ export namespace FontBook {
    /**
     * The name of the family
     */
-   name: string;
+   name(): string;
    /**
     * Synonym for displayed name
     */
-   displayName: string;
+   displayName(): string;
    /**
     * Typeface display name
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * Font family
     */
-   fontFamily: any;
+   fontFamily(): any;
    /**
     * Font family name
     */
-   familyName: string;
+   familyName(): string;
    /**
     * Style name
     */
-   styleName: string;
+   styleName(): string;
    /**
     * PostScript font name
     */
-   postScriptName: string;
+   postScriptName(): string;
    /**
     * The unique identifier of the typeface
     */
-   ID: string;
+   ID(): string;
    /**
     * A font family
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * Whether the typeface is duplicated or not duplicated faces
     */
-   duplicated: boolean;
+   duplicated(): boolean;
    /**
     * Font format
     */
-   fontType: string;
+   fontType(): string;
    /**
     * Copyright
     */
-   copyright: string;
+   copyright(): string;
    /**
     * Font container
     */
-   fontContainer: any;
+   fontContainer(): any;
    /**
     * Font files for the face
     */
-   files: any;
+   files(): any;
  }
 
  /**
@@ -267,23 +267,23 @@ export namespace FontBook {
    /**
     * The name of the container
     */
-   name: string;
+   name(): string;
    /**
     * The path to the main container
     */
-   path: string;
+   path(): string;
    /**
     * Files for the container
     */
-   files: any;
+   files(): any;
    /**
     * Font Domain for the container
     */
-   domain: any;
+   domain(): any;
    /**
     * The unique identifier of the container
     */
-   ID: string;
+   ID(): string;
  }
 
  /**
@@ -299,19 +299,19 @@ export namespace FontBook {
    /**
     * The name of the collection
     */
-   name: string;
+   name(): string;
    /**
     * Synonym for displayed name
     */
-   displayName: string;
+   displayName(): string;
    /**
     * Display name of the domain
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * Whether the collection is enabled or disabled.
     */
-   enabled: boolean;
+   enabled(): boolean;
  }
 
  /**
@@ -349,7 +349,7 @@ export namespace FontBook {
    /**
     * The unique identifier of the domain
     */
-   ID: string;
+   ID(): string;
  }
 
  /**
@@ -377,27 +377,27 @@ export namespace FontBook {
    /**
     * Whether validating fonts before installing or not.
     */
-   validateFontsBeforeInstalling: boolean;
+   validateFontsBeforeInstalling(): boolean;
    /**
     * Where to install fonts.
     */
-   installationTarget: any;
+   installationTarget(): any;
    /**
     * The All Fonts library.
     */
-   fontsLibrary: any;
+   fontsLibrary(): any;
    /**
     * current selection.
     */
-   selection: any;
+   selection(): any;
    /**
     * selected font families.
     */
-   selectedFontFamilies: any;
+   selectedFontFamilies(): any;
    /**
     * selected collections.
     */
-   selectedCollections: any;
+   selectedCollections(): any;
  }
 
  /**
@@ -413,7 +413,7 @@ export namespace FontBook {
    /**
     * additional info about the typeface
     */
-   typefaceAdditionalInfo: any;
+   typefaceAdditionalInfo(): any;
  }
 
  /**
@@ -429,7 +429,7 @@ export namespace FontBook {
    /**
     * Whether the collection is enabled or disabled.
     */
-   enabled: boolean;
+   enabled(): boolean;
  }
     
     // Records

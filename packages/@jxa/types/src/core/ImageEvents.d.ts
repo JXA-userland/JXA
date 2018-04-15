@@ -16,39 +16,39 @@ export namespace ImageEvents {
    /**
     * the OSType identifying the application that created the alias
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * the application that will launch if the alias is opened
     */
-   defaultApplication: any;
+   defaultApplication(): any;
    /**
     * the OSType identifying the type of data contained in the alias
     */
-   fileType: any;
+   fileType(): any;
    /**
     * The kind of alias, as shown in Finder
     */
-   kind: string;
+   kind(): string;
    /**
     * the version of the product (visible at the top of the "Get Info" window)
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the short version of the application bundle referenced by the alias
     */
-   shortVersion: string;
+   shortVersion(): string;
    /**
     * Is the alias a stationery pad?
     */
-   stationery: boolean;
+   stationery(): boolean;
    /**
     * The type identifier of the alias
     */
-   typeIdentifier: string;
+   typeIdentifier(): string;
    /**
     * the version of the application bundle referenced by the alias (visible at the bottom of the "Get Info" window)
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -64,47 +64,47 @@ export namespace ImageEvents {
    /**
     * The Apple Menu Items folder
     */
-   appleMenuFolder: any;
+   appleMenuFolder(): any;
    /**
     * The Control Panels folder
     */
-   controlPanelsFolder: any;
+   controlPanelsFolder(): any;
    /**
     * The Control Strip Modules folder
     */
-   controlStripModulesFolder: any;
+   controlStripModulesFolder(): any;
    /**
     * The Classic Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The Extensions folder
     */
-   extensionsFolder: any;
+   extensionsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * The Launcher Items folder
     */
-   launcherItemsFolder: any;
+   launcherItemsFolder(): any;
    /**
     * The Classic Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The Shutdown Items folder
     */
-   shutdownFolder: any;
+   shutdownFolder(): any;
    /**
     * The StartupItems folder
     */
-   startupItemsFolder: any;
+   startupItemsFolder(): any;
    /**
     * The System folder
     */
-   systemFolder: any;
+   systemFolder(): any;
  }
 
  /**
@@ -120,39 +120,39 @@ export namespace ImageEvents {
    /**
     * the total number of bytes (free or used) on the disk
     */
-   capacity: number;
+   capacity(): number;
    /**
     * Can the media be ejected (floppies, CD's, and so on)?
     */
-   ejectable: boolean;
+   ejectable(): boolean;
    /**
     * the file system format of this disk
     */
-   format: any;
+   format(): any;
    /**
     * the number of free bytes left on the disk
     */
-   freeSpace: number;
+   freeSpace(): number;
    /**
     * Ignore permissions on this disk?
     */
-   ignorePrivileges: boolean;
+   ignorePrivileges(): boolean;
    /**
     * Is the media a local volume (as opposed to a file server)?
     */
-   localVolume: boolean;
+   localVolume(): boolean;
    /**
     * the server on which the disk resides, AFP volumes only
     */
-   server: any;
+   server(): any;
    /**
     * Is this disk the boot disk?
     */
-   startup: boolean;
+   startup(): boolean;
    /**
     * the zone in which the disk's server resides, AFP volumes only
     */
-   zone: any;
+   zone(): any;
  }
 
  /**
@@ -168,67 +168,67 @@ export namespace ImageEvents {
    /**
     * Is the disk item busy?
     */
-   busyStatus: boolean;
+   busyStatus(): boolean;
    /**
     * the folder or disk which has this disk item as an element
     */
-   container: any;
+   container(): any;
    /**
     * the date on which the disk item was created
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the name of the disk item as displayed in the User Interface
     */
-   displayedName: string;
+   displayedName(): string;
    /**
     * the unique ID of the disk item
     */
-   id: string;
+   id(): string;
    /**
     * the date on which the disk item was last modified
     */
-   modificationDate: any;
+   modificationDate(): any;
    /**
     * the name of the disk item
     */
-   name: string;
+   name(): string;
    /**
     * the extension portion of the name
     */
-   nameExtension: string;
+   nameExtension(): string;
    /**
     * Is the disk item a package?
     */
-   packageFolder: boolean;
+   packageFolder(): boolean;
    /**
     * the file system path of the disk item
     */
-   path: string;
+   path(): string;
    /**
     * the actual space used by the disk item on disk
     */
-   physicalSize: number;
+   physicalSize(): number;
    /**
     * the POSIX file system path of the disk item
     */
-   POSIXPath: string;
+   POSIXPath(): string;
    /**
     * the logical size of the disk item
     */
-   size: number;
+   size(): number;
    /**
     * the URL of the disk item
     */
-   URL: string;
+   URL(): string;
    /**
     * Is the disk item visible?
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * the volume on which the disk item resides
     */
-   volume: string;
+   volume(): string;
  }
 
  /**
@@ -244,63 +244,63 @@ export namespace ImageEvents {
    /**
     * The Application Support folder
     */
-   applicationSupportFolder: any;
+   applicationSupportFolder(): any;
    /**
     * The Applications folder
     */
-   applicationsFolder: any;
+   applicationsFolder(): any;
    /**
     * The Desktop Pictures folder
     */
-   desktopPicturesFolder: any;
+   desktopPicturesFolder(): any;
    /**
     * The Folder Action Scripts folder
     */
-   folderActionScriptsFolder: any;
+   folderActionScriptsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * the unique identifier of the domain
     */
-   id: string;
+   id(): string;
    /**
     * The Library folder
     */
-   libraryFolder: any;
+   libraryFolder(): any;
    /**
     * the name of the domain
     */
-   name: string;
+   name(): string;
    /**
     * The Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The Scripting Additions folder
     */
-   scriptingAdditionsFolder: any;
+   scriptingAdditionsFolder(): any;
    /**
     * The Scripts folder
     */
-   scriptsFolder: any;
+   scriptsFolder(): any;
    /**
     * The Shared Documents folder
     */
-   sharedDocumentsFolder: any;
+   sharedDocumentsFolder(): any;
    /**
     * The Speakable Items folder
     */
-   speakableItemsFolder: any;
+   speakableItemsFolder(): any;
    /**
     * The Utilities folder
     */
-   utilitiesFolder: any;
+   utilitiesFolder(): any;
    /**
     * The Automator Workflows folder
     */
-   workflowsFolder: any;
+   workflowsFolder(): any;
  }
 
  /**
@@ -316,39 +316,39 @@ export namespace ImageEvents {
    /**
     * the OSType identifying the application that created the file
     */
-   creatorType: any;
+   creatorType(): any;
    /**
     * the application that will launch if the file is opened
     */
-   defaultApplication: any;
+   defaultApplication(): any;
    /**
     * the OSType identifying the type of data contained in the file
     */
-   fileType: any;
+   fileType(): any;
    /**
     * The kind of file, as shown in Finder
     */
-   kind: string;
+   kind(): string;
    /**
     * the version of the product (visible at the top of the "Get Info" window)
     */
-   productVersion: string;
+   productVersion(): string;
    /**
     * the short version of the file
     */
-   shortVersion: string;
+   shortVersion(): string;
    /**
     * Is the file a stationery pad?
     */
-   stationery: boolean;
+   stationery(): boolean;
    /**
     * The type identifier of the file
     */
-   typeIdentifier: string;
+   typeIdentifier(): string;
    /**
     * the version of the file (visible at the bottom of the "Get Info" window)
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -419,47 +419,47 @@ export namespace ImageEvents {
    /**
     * The user's Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The user's Documents folder
     */
-   documentsFolder: any;
+   documentsFolder(): any;
    /**
     * The user's Downloads folder
     */
-   downloadsFolder: any;
+   downloadsFolder(): any;
    /**
     * The user's Favorites folder
     */
-   favoritesFolder: any;
+   favoritesFolder(): any;
    /**
     * The user's Home folder
     */
-   homeFolder: any;
+   homeFolder(): any;
    /**
     * The user's Movies folder
     */
-   moviesFolder: any;
+   moviesFolder(): any;
    /**
     * The user's Music folder
     */
-   musicFolder: any;
+   musicFolder(): any;
    /**
     * The user's Pictures folder
     */
-   picturesFolder: any;
+   picturesFolder(): any;
    /**
     * The user's Public folder
     */
-   publicFolder: any;
+   publicFolder(): any;
    /**
     * The user's Sites folder
     */
-   sitesFolder: any;
+   sitesFolder(): any;
    /**
     * The Temporary Items folder
     */
-   temporaryItemsFolder: any;
+   temporaryItemsFolder(): any;
  }
 
  /**
@@ -475,15 +475,15 @@ export namespace ImageEvents {
    /**
     * the number of the display
     */
-   displayNumber: number;
+   displayNumber(): number;
    /**
     * the profile for the display
     */
-   displayProfile: any;
+   displayProfile(): any;
    /**
     * the name of the display
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -499,39 +499,39 @@ export namespace ImageEvents {
    /**
     * bit depth of the image's color representation
     */
-   bitDepth: any;
+   bitDepth(): any;
    /**
     * color space of the image's color representation
     */
-   colorSpace: any;
+   colorSpace(): any;
    /**
     * the width and height of the image, respectively, in pixels
     */
-   dimensions: any;
+   dimensions(): any;
    /**
     * the profile, if any, embedded in the image
     */
-   embeddedProfile: any;
+   embeddedProfile(): any;
    /**
     * file type of the image's file
     */
-   fileType: any;
+   fileType(): any;
    /**
     * the file that contains the image
     */
-   imageFile: any;
+   imageFile(): any;
    /**
     * the folder or disk that encloses the file that contains the image
     */
-   location: any;
+   location(): any;
    /**
     * the name of the image
     */
-   name: string;
+   name(): string;
    /**
     * the horizontal and vertical pixel density of the image, respectively, in dots per inch
     */
-   resolution: any;
+   resolution(): any;
  }
 
  /**
@@ -547,15 +547,15 @@ export namespace ImageEvents {
    /**
     * the description of the tag's function
     */
-   description: string;
+   description(): string;
    /**
     * the name of the tag
     */
-   name: string;
+   name(): string;
    /**
     * the current setting of the tag
     */
-   value: any;
+   value(): any;
  }
 
  /**
@@ -571,63 +571,63 @@ export namespace ImageEvents {
    /**
     * the color space of the profile
     */
-   colorSpace: any;
+   colorSpace(): any;
    /**
     * the connection space of the profile
     */
-   connectionSpace: any;
+   connectionSpace(): any;
    /**
     * the creation date of the profile
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the creator type of the profile
     */
-   creator: string;
+   creator(): string;
    /**
     * the device class of the profile
     */
-   deviceClass: any;
+   deviceClass(): any;
    /**
     * the device manufacturer of the profile
     */
-   deviceManufacturer: string;
+   deviceManufacturer(): string;
    /**
     * the device model of the profile
     */
-   deviceModel: number;
+   deviceModel(): number;
    /**
     * the file location of the profile
     */
-   location: any;
+   location(): any;
    /**
     * the description text of the profile
     */
-   name: string;
+   name(): string;
    /**
     * the intended platform of the profile
     */
-   platform: string;
+   platform(): string;
    /**
     * the preferred CMM of the profile
     */
-   preferredCMM: string;
+   preferredCMM(): string;
    /**
     * the quality of the profile
     */
-   quality: any;
+   quality(): any;
    /**
     * the rendering intent of the profile
     */
-   renderingIntent: any;
+   renderingIntent(): any;
    /**
     * the size of the profile in bytes
     */
-   size: number;
+   size(): number;
    /**
     * the version number of the profile
     */
-   version: string;
+   version(): string;
  }
     
     // CLass Extension
@@ -644,127 +644,127 @@ export namespace ImageEvents {
    /**
     * The Application Support folder
     */
-   applicationSupportFolder: any;
+   applicationSupportFolder(): any;
    /**
     * The user's Applications folder
     */
-   applicationsFolder: any;
+   applicationsFolder(): any;
    /**
     * the collection of folders belonging to the Classic System
     */
-   classicDomain: any;
+   classicDomain(): any;
    /**
     * The user's Desktop folder
     */
-   desktopFolder: any;
+   desktopFolder(): any;
    /**
     * The Desktop Pictures folder
     */
-   desktopPicturesFolder: any;
+   desktopPicturesFolder(): any;
    /**
     * The user's Documents folder
     */
-   documentsFolder: any;
+   documentsFolder(): any;
    /**
     * The user's Downloads folder
     */
-   downloadsFolder: any;
+   downloadsFolder(): any;
    /**
     * The user's Favorites folder
     */
-   favoritesFolder: any;
+   favoritesFolder(): any;
    /**
     * The user's Folder Action Scripts folder
     */
-   folderActionScriptsFolder: any;
+   folderActionScriptsFolder(): any;
    /**
     * The Fonts folder
     */
-   fontsFolder: any;
+   fontsFolder(): any;
    /**
     * The Home folder of the currently logged in user
     */
-   homeFolder: any;
+   homeFolder(): any;
    /**
     * The Library folder
     */
-   libraryFolder: any;
+   libraryFolder(): any;
    /**
     * the collection of folders residing on the Local machine
     */
-   localDomain: any;
+   localDomain(): any;
    /**
     * The user's Movies folder
     */
-   moviesFolder: any;
+   moviesFolder(): any;
    /**
     * The user's Music folder
     */
-   musicFolder: any;
+   musicFolder(): any;
    /**
     * the collection of folders residing on the Network
     */
-   networkDomain: any;
+   networkDomain(): any;
    /**
     * The user's Pictures folder
     */
-   picturesFolder: any;
+   picturesFolder(): any;
    /**
     * The user's Preferences folder
     */
-   preferencesFolder: any;
+   preferencesFolder(): any;
    /**
     * The user's Public folder
     */
-   publicFolder: any;
+   publicFolder(): any;
    /**
     * The Scripting Additions folder
     */
-   scriptingAdditionsFolder: any;
+   scriptingAdditionsFolder(): any;
    /**
     * The user's Scripts folder
     */
-   scriptsFolder: any;
+   scriptsFolder(): any;
    /**
     * The Shared Documents folder
     */
-   sharedDocumentsFolder: any;
+   sharedDocumentsFolder(): any;
    /**
     * The user's Sites folder
     */
-   sitesFolder: any;
+   sitesFolder(): any;
    /**
     * The Speakable Items folder
     */
-   speakableItemsFolder: any;
+   speakableItemsFolder(): any;
    /**
     * the disk from which Mac OS X was loaded
     */
-   startupDisk: any;
+   startupDisk(): any;
    /**
     * the collection of folders belonging to the System
     */
-   systemDomain: any;
+   systemDomain(): any;
    /**
     * The Temporary Items folder
     */
-   temporaryItemsFolder: any;
+   temporaryItemsFolder(): any;
    /**
     * The user's Trash folder
     */
-   trash: any;
+   trash(): any;
    /**
     * the collection of folders belonging to the User
     */
-   userDomain: any;
+   userDomain(): any;
    /**
     * The Utilities folder
     */
-   utilitiesFolder: any;
+   utilitiesFolder(): any;
    /**
     * The Automator Workflows folder
     */
-   workflowsFolder: any;
+   workflowsFolder(): any;
  }
 
  /**
@@ -780,63 +780,63 @@ export namespace ImageEvents {
    /**
     * the default CMYK profile
     */
-   defaultCMYKProfile: any;
+   defaultCMYKProfile(): any;
    /**
     * the default CMYK profile location
     */
-   defaultCMYKProfileLocation: any;
+   defaultCMYKProfileLocation(): any;
    /**
     * the default Gray profile
     */
-   defaultGrayProfile: any;
+   defaultGrayProfile(): any;
    /**
     * the default Gray profile location
     */
-   defaultGrayProfileLocation: any;
+   defaultGrayProfileLocation(): any;
    /**
     * the default Lab profile
     */
-   defaultLabProfile: any;
+   defaultLabProfile(): any;
    /**
     * the default Lab profile location
     */
-   defaultLabProfileLocation: any;
+   defaultLabProfileLocation(): any;
    /**
     * the default RGB profile
     */
-   defaultRGBProfile: any;
+   defaultRGBProfile(): any;
    /**
     * the default RGB profile location
     */
-   defaultRGBProfileLocation: any;
+   defaultRGBProfileLocation(): any;
    /**
     * the default XYZ profile
     */
-   defaultXYZProfile: any;
+   defaultXYZProfile(): any;
    /**
     * the default XYZ profile location
     */
-   defaultXYZProfileLocation: any;
+   defaultXYZProfileLocation(): any;
    /**
     * specifies preferred Color Management Module to use, or "automatic"
     */
-   preferredCMM: string;
+   preferredCMM(): string;
    /**
     * the ColorSync profile folder
     */
-   profileFolder: any;
+   profileFolder(): any;
    /**
     * the time in seconds the application will idle before quitting; if set to zero, idle time will not cause the application to quit
     */
-   quitDelay: number;
+   quitDelay(): number;
    /**
     * the default system profile
     */
-   systemProfile: any;
+   systemProfile(): any;
    /**
     * the default system profile location
     */
-   systemProfileLocation: any;
+   systemProfileLocation(): any;
  }
     
     // Records

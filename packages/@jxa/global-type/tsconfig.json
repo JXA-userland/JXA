@@ -8,7 +8,6 @@
     "target": "es5",
     "sourceMap": true,
     "declaration": true,
-    "noEmit": true,
     "jsx": "preserve",
     "lib": [
       "es2017",

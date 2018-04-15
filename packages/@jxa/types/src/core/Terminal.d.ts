@@ -16,15 +16,15 @@ export namespace Terminal {
    /**
     * The name of the application.
     */
-   name: string;
+   name(): string;
    /**
     * Is this the frontmost (active) application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The version of the application.
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -40,67 +40,67 @@ export namespace Terminal {
    /**
     * The full title of the window.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the window.
     */
-   id: number;
+   id(): number;
    /**
     * The index of the window, ordered front to back.
     */
-   index: number;
+   index(): number;
    /**
     * The bounding rectangle of the window.
     */
-   bounds: any;
+   bounds(): any;
    /**
     * Whether the window has a close box.
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * Whether the window can be minimized.
     */
-   miniaturizable: boolean;
+   miniaturizable(): boolean;
    /**
     * Whether the window is currently minimized.
     */
-   miniaturized: boolean;
+   miniaturized(): boolean;
    /**
     * Whether the window can be resized.
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * Whether the window is currently visible.
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Whether the window can be zoomed.
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * Whether the window is currently zoomed.
     */
-   zoomed: boolean;
+   zoomed(): boolean;
    /**
     * Whether the window is currently the frontmost Terminal window.
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The position of the window, relative to the upper left corner of the screen.
     */
-   position: any;
+   position(): any;
    /**
     * The position of the window, relative to the lower left corner of the screen.
     */
-   origin: any;
+   origin(): any;
    /**
     * The width and height of the window
     */
-   size: any;
+   size(): any;
    /**
     * The bounding rectangle, relative to the lower left corner of the screen.
     */
-   frame: any;
+   frame(): any;
  }
 
  /**
@@ -116,75 +116,75 @@ export namespace Terminal {
    /**
     * The unique identifier of the settings set.
     */
-   id: number;
+   id(): number;
    /**
     * The name of the settings set.
     */
-   name: string;
+   name(): string;
    /**
     * The number of rows displayed in the tab.
     */
-   numberOfRows: number;
+   numberOfRows(): number;
    /**
     * The number of columns displayed in the tab.
     */
-   numberOfColumns: number;
+   numberOfColumns(): number;
    /**
     * The cursor color for the tab.
     */
-   cursorColor: any;
+   cursorColor(): any;
    /**
     * The background color for the tab.
     */
-   backgroundColor: any;
+   backgroundColor(): any;
    /**
     * The normal text color for the tab.
     */
-   normalTextColor: any;
+   normalTextColor(): any;
    /**
     * The bold text color for the tab.
     */
-   boldTextColor: any;
+   boldTextColor(): any;
    /**
     * The name of the font used to display the tab’s contents.
     */
-   fontName: string;
+   fontName(): string;
    /**
     * The size of the font used to display the tab’s contents.
     */
-   fontSize: number;
+   fontSize(): number;
    /**
     * Whether the font used to display the tab’s contents is antialiased.
     */
-   fontAntialiasing: boolean;
+   fontAntialiasing(): boolean;
    /**
     * The processes which will be ignored when checking whether a tab can be closed without showing a prompt.
     */
-   cleanCommands: any;
+   cleanCommands(): any;
    /**
     * Whether the title contains the device name.
     */
-   titleDisplaysDeviceName: boolean;
+   titleDisplaysDeviceName(): boolean;
    /**
     * Whether the title contains the shell path.
     */
-   titleDisplaysShellPath: boolean;
+   titleDisplaysShellPath(): boolean;
    /**
     * Whether the title contains the tab’s size, in rows and columns.
     */
-   titleDisplaysWindowSize: boolean;
+   titleDisplaysWindowSize(): boolean;
    /**
     * Whether the title contains the settings name.
     */
-   titleDisplaysSettingsName: boolean;
+   titleDisplaysSettingsName(): boolean;
    /**
     * Whether the title contains a custom title.
     */
-   titleDisplaysCustomTitle: boolean;
+   titleDisplaysCustomTitle(): boolean;
    /**
     * The tab’s custom title.
     */
-   customTitle: string;
+   customTitle(): string;
  }
 
  /**
@@ -200,95 +200,95 @@ export namespace Terminal {
    /**
     * The number of rows displayed in the tab.
     */
-   numberOfRows: number;
+   numberOfRows(): number;
    /**
     * The number of columns displayed in the tab.
     */
-   numberOfColumns: number;
+   numberOfColumns(): number;
    /**
     * The currently visible contents of the tab.
     */
-   contents: string;
+   contents(): string;
    /**
     * The contents of the entire scrolling buffer of the tab.
     */
-   history: string;
+   history(): string;
    /**
     * Whether the tab is busy running a process.
     */
-   busy: boolean;
+   busy(): boolean;
    /**
     * The processes currently running in the tab.
     */
-   processes: any;
+   processes(): any;
    /**
     * Whether the tab is selected.
     */
-   selected: boolean;
+   selected(): boolean;
    /**
     * Whether the title contains a custom title.
     */
-   titleDisplaysCustomTitle: boolean;
+   titleDisplaysCustomTitle(): boolean;
    /**
     * The tab’s custom title.
     */
-   customTitle: string;
+   customTitle(): string;
    /**
     * The tab’s TTY device.
     */
-   tty: string;
+   tty(): string;
    /**
     * The set of settings which control the tab’s behavior and appearance.
     */
-   currentSettings: any;
+   currentSettings(): any;
    /**
     * The cursor color for the tab.
     */
-   cursorColor: any;
+   cursorColor(): any;
    /**
     * The background color for the tab.
     */
-   backgroundColor: any;
+   backgroundColor(): any;
    /**
     * The normal text color for the tab.
     */
-   normalTextColor: any;
+   normalTextColor(): any;
    /**
     * The bold text color for the tab.
     */
-   boldTextColor: any;
+   boldTextColor(): any;
    /**
     * The processes which will be ignored when checking whether a tab can be closed without showing a prompt.
     */
-   cleanCommands: any;
+   cleanCommands(): any;
    /**
     * Whether the title contains the device name.
     */
-   titleDisplaysDeviceName: boolean;
+   titleDisplaysDeviceName(): boolean;
    /**
     * Whether the title contains the shell path.
     */
-   titleDisplaysShellPath: boolean;
+   titleDisplaysShellPath(): boolean;
    /**
     * Whether the title contains the tab’s size, in rows and columns.
     */
-   titleDisplaysWindowSize: boolean;
+   titleDisplaysWindowSize(): boolean;
    /**
     * Whether the title contains the file name.
     */
-   titleDisplaysFileName: boolean;
+   titleDisplaysFileName(): boolean;
    /**
     * The name of the font used to display the tab’s contents.
     */
-   fontName: string;
+   fontName(): string;
    /**
     * The size of the font used to display the tab’s contents.
     */
-   fontSize: number;
+   fontSize(): number;
    /**
     * Whether the font used to display the tab’s contents is antialiased.
     */
-   fontAntialiasing: boolean;
+   fontAntialiasing(): boolean;
  }
     
     // CLass Extension
@@ -302,11 +302,11 @@ export namespace Terminal {
    /**
     * The settings set used for new windows.
     */
-   defaultSettings: any;
+   defaultSettings(): any;
    /**
     * The settings set used for the window created on application startup.
     */
-   startupSettings: any;
+   startupSettings(): any;
  }
     
     // Records
@@ -320,39 +320,39 @@ export namespace Terminal {
    /**
     * the number of copies of a document to be printed
     */
-   copies: number;
+   copies(): number;
    /**
     * Should printed copies be collated?
     */
-   collating: boolean;
+   collating(): boolean;
    /**
     * the first page of the document to be printed
     */
-   startingPage: number;
+   startingPage(): number;
    /**
     * the last page of the document to be printed
     */
-   endingPage: number;
+   endingPage(): number;
    /**
     * number of logical pages laid across a physical page
     */
-   pagesAcross: number;
+   pagesAcross(): number;
    /**
     * number of logical pages laid out down a physical page
     */
-   pagesDown: number;
+   pagesDown(): number;
    /**
     * how errors are handled
     */
-   errorHandling: any;
+   errorHandling(): any;
    /**
     * for fax number
     */
-   faxNumber: string;
+   faxNumber(): string;
    /**
     * for target printer
     */
-   targetPrinter: string;
+   targetPrinter(): string;
  }
 
     // Function options

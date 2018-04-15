@@ -16,243 +16,243 @@ export namespace DVDPlayer {
    /**
     * The version of the DVD Player
     */
-   version: string;
+   version(): string;
    /**
     * Is the app starting up?
     */
-   appInitializing: boolean;
+   appInitializing(): boolean;
    /**
     * Does user have multiple choices to start playback from?
     */
-   hasMultiplePlaybackChoice: boolean;
+   hasMultiplePlaybackChoice(): boolean;
    /**
     * Turn off interaction with user for last play sheet, etc
     */
-   interactionOverride: boolean;
+   interactionOverride(): boolean;
    /**
     * Turn off display of menu bar when mouse moves to menu bar area in full screen mode
     */
-   viewerFullScreenMenuOverride: boolean;
+   viewerFullScreenMenuOverride(): boolean;
    /**
     * Is there media in the drive?
     */
-   hasMedia: boolean;
+   hasMedia(): boolean;
    /**
     * Is playback currently on a dvd menu?
     */
-   dvdMenuActive: boolean;
+   dvdMenuActive(): boolean;
    /**
     * The current dvd menu
     */
-   activeDvdMenu: any;
+   activeDvdMenu(): any;
    /**
     * The state of playback
     */
-   dvdState: any;
+   dvdState(): any;
    /**
     * The scan rate for fast forwarding and rewinding
     */
-   dvdScanRate: any;
+   dvdScanRate(): any;
    /**
     * To hide or show the controller window
     */
-   controllerVisibility: boolean;
+   controllerVisibility(): boolean;
    /**
     * The position of the controller window in screen coordinates
     */
-   controllerPosition: any;
+   controllerPosition(): any;
    /**
     * The window bounds in screen coordinates
     */
-   controllerBounds: any;
+   controllerBounds(): any;
    /**
     * The screen bounds the window is on
     */
-   controllerScreenBounds: any;
+   controllerScreenBounds(): any;
    /**
     * The controller orientation - (Not supported in 5.0 and greater)
     */
-   controllerOrientation: any;
+   controllerOrientation(): any;
    /**
     * The state of the controller drawer
     */
-   controllerDrawer: any;
+   controllerDrawer(): any;
    /**
     * To hide or show the info window - (Not supported in 5.0 and greater)
     */
-   infoVisibility: boolean;
+   infoVisibility(): boolean;
    /**
     * The position of the info window in screen coordinates - (Not supported in 5.0 and greater)
     */
-   infoPosition: any;
+   infoPosition(): any;
    /**
     * The window bounds in screen coordinates - (Not supported in 5.0 and greater)
     */
-   infoBounds: any;
+   infoBounds(): any;
    /**
     * The screen bounds the window is on - (Not supported in 5.0 and greater)
     */
-   infoScreenBounds: any;
+   infoScreenBounds(): any;
    /**
     * Sets the type of info window being displayed - (Not supported in 5.0 and greater)
     */
-   infoType: any;
+   infoType(): any;
    /**
     * The info text color - (Not supported in 5.0 and greater)
     */
-   infoTextColor: any;
+   infoTextColor(): any;
    /**
     * To hide or show the viewer window
     */
-   viewerVisibility: boolean;
+   viewerVisibility(): boolean;
    /**
     * To set the position of the viewer window in screen coordinates
     */
-   viewerPosition: any;
+   viewerPosition(): any;
    /**
     * The window bounds in screen coordinates
     */
-   viewerBounds: any;
+   viewerBounds(): any;
    /**
     * The screen bounds the window is on
     */
-   viewerScreenBounds: any;
+   viewerScreenBounds(): any;
    /**
     * To set the the viewer size
     */
-   viewerSize: any;
+   viewerSize(): any;
    /**
     * Set to true to enter presentation mode
     */
-   viewerFullScreen: boolean;
+   viewerFullScreen(): boolean;
    /**
     * To turn the audio on or off
     */
-   audioMuted: boolean;
+   audioMuted(): boolean;
    /**
     * The DVD audio volume, 0 is silent, 255 is full on
     */
-   audioVolume: number;
+   audioVolume(): number;
    /**
     * The elapsed time, in seconds, of the current title
     */
-   elapsedTime: number;
+   elapsedTime(): number;
    /**
     * The elapsed time, in seconds and frames, of the current title
     */
-   elapsedExtendedTime: any;
+   elapsedExtendedTime(): any;
    /**
     * The remaining time, in seconds, of the current title
     */
-   remainingTime: number;
+   remainingTime(): number;
    /**
     * The remaining time, in seconds and frames, of the current title
     */
-   remainingExtendedTime: any;
+   remainingExtendedTime(): any;
    /**
     * The length of the title in seconds
     */
-   titleLength: number;
+   titleLength(): number;
    /**
     * The length of the title in seconds and frames
     */
-   titleExtendedLength: any;
+   titleExtendedLength(): any;
    /**
     * The number of angles available at the current time position
     */
-   availableAngles: number;
+   availableAngles(): number;
    /**
     * The number of audio tracks available at the current time position
     */
-   availableAudioTracks: number;
+   availableAudioTracks(): number;
    /**
     * The number of chapters available at the current time position
     */
-   availableChapters: number;
+   availableChapters(): number;
    /**
     * The number of subtitles available at the current time position
     */
-   availableSubtitles: number;
+   availableSubtitles(): number;
    /**
     * The number of titles available at the current time position
     */
-   availableTitles: number;
+   availableTitles(): number;
    /**
     * The current camera angle at the current time position
     */
-   angle: number;
+   angle(): number;
    /**
     * The current audio track at the current time position
     */
-   audioTrack: number;
+   audioTrack(): number;
    /**
     * The current chapter at the current time position
     */
-   chapter: number;
+   chapter(): number;
    /**
     * Are we currently displaying subtitles?
     */
-   displayingSubtitle: boolean;
+   displayingSubtitle(): boolean;
    /**
     * The current subtitle (caption) at the current time position
     */
-   subtitle: number;
+   subtitle(): number;
    /**
     * The current title at the current time position
     */
-   title: number;
+   title(): number;
    /**
     * Turn closed captioning on or off
     */
-   closedCaptioning: boolean;
+   closedCaptioning(): boolean;
    /**
     * The display type for closed captioning
     */
-   closedCaptioningDisplay: any;
+   closedCaptioningDisplay(): any;
    /**
     * Supports extended bookmark functionality
     */
-   extendedBookmarks: boolean;
+   extendedBookmarks(): boolean;
    /**
     * The number of bookmarks available for the current media
     */
-   availableBookmarks: number;
+   availableBookmarks(): number;
    /**
     * The names of the bookmarks for the current media
     */
-   bookmarkList: any;
+   bookmarkList(): any;
    /**
     * Has a default bookmark been set?
     */
-   hasDefaultBookmark: boolean;
+   hasDefaultBookmark(): boolean;
    /**
     * Does the media have a last play bookmark from being previously viewed?
     */
-   hasLastPlayBookmark: any;
+   hasLastPlayBookmark(): any;
    /**
     * Supports extended video clip functionality
     */
-   extendedVideoClips: boolean;
+   extendedVideoClips(): boolean;
    /**
     * The number of video clips available for the current media
     */
-   availableVideoClips: number;
+   availableVideoClips(): number;
    /**
     * The names of the video clips for the current media
     */
-   videoClipList: any;
+   videoClipList(): any;
    /**
     * To turn the loop state for video clips on or off
     */
-   loopVideoClip: boolean;
+   loopVideoClip(): boolean;
    /**
     * Is video clip being played?
     */
-   clipMode: boolean;
+   clipMode(): boolean;
    /**
     * Disable displaying the status message?
     */
-   disableStatusWindow: boolean;
+   disableStatusWindow(): boolean;
  }
     
     // CLass Extension
@@ -266,8 +266,8 @@ export namespace DVDPlayer {
   * DVD Player
   */
  export interface Application {
-   privateMenuPaused: boolean;
-   privateMenuActionTicks: number;
+   privateMenuPaused(): boolean;
+   privateMenuActionTicks(): number;
  }
     
     // Records

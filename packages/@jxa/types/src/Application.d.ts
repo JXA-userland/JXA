@@ -156,6 +156,8 @@ declare namespace Application {
      */
     export function parentOfClass(className: string): string;
 
+    export var windows: ApplicationWindows;
+    
     // https://developer.apple.com/library/content/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW1
     export interface ApplicationWindow {
         [index: string]: any;

@@ -16,31 +16,31 @@ export namespace VoiceOver {
    /**
     * The VoiceOver cursor
     */
-   voCursor: any;
+   voCursor(): any;
    /**
     * The VoiceOver commander
     */
-   commander: any;
+   commander(): any;
    /**
     * The mouse cursor
     */
-   mouseCursor: any;
+   mouseCursor(): any;
    /**
     * The keyboard cursor
     */
-   keyboardCursor: any;
+   keyboardCursor(): any;
    /**
     * The VoiceOver caption panel
     */
-   captionPanel: any;
+   captionPanel(): any;
    /**
     * The VoiceOver braille panel
     */
-   braillePanel: any;
+   braillePanel(): any;
    /**
     * The last phrase VoiceOver output
     */
-   lastPhrase: any;
+   lastPhrase(): any;
  }
 
  /**
@@ -56,15 +56,15 @@ export namespace VoiceOver {
    /**
     * The bounds of the VoiceOver cursor
     */
-   bounds: any;
+   bounds(): any;
    /**
     * The text of the item in the VoiceOver cursor
     */
-   textUnderCursor: string;
+   textUnderCursor(): string;
    /**
     * The magnification factor of the VoiceOver cursor
     */
-   magnification: any;
+   magnification(): any;
  }
 
  /**
@@ -91,19 +91,19 @@ export namespace VoiceOver {
    /**
     * The number of rows
     */
-   rows: number;
+   rows(): number;
    /**
     * The size
     */
-   size: number;
+   size(): number;
    /**
     * The visibility of the panel
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * The location of the panel
     */
-   position: any;
+   position(): any;
  }
 
  /**
@@ -119,15 +119,15 @@ export namespace VoiceOver {
    /**
     * The size
     */
-   size: number;
+   size(): number;
    /**
     * The visibility of the panel
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * The location of the panel
     */
-   position: any;
+   position(): any;
  }
 
  /**
@@ -143,7 +143,7 @@ export namespace VoiceOver {
    /**
     * Position of the mouse
     */
-   position: any;
+   position(): any;
  }
 
  /**
@@ -159,7 +159,7 @@ export namespace VoiceOver {
    /**
     * The text of the last phrase
     */
-   content: string;
+   content(): string;
  }
 
  /**
@@ -175,11 +175,11 @@ export namespace VoiceOver {
    /**
     * The bounds of the keyboard cursor
     */
-   bounds: any;
+   bounds(): any;
    /**
     * The text of the item in the keyboard cursor
     */
-   textUnderCursor: string;
+   textUnderCursor(): string;
  }
     
     // CLass Extension

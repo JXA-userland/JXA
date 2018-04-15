@@ -16,15 +16,15 @@ export namespace Pages {
    /**
     * The color of the font. Expressed as an RGB value consisting of a list of three color values from 0 to 65535. ex: Blue = {0, 0, 65535}.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font. Can be the PostScript name, such as: “TimesNewRomanPS-ItalicMT”, or display name: “Times New Roman Italic”. TIP: Use the Font Book application get the information about a typeface.
     */
-   font: string;
+   font(): string;
    /**
     * The size of the font.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -84,23 +84,23 @@ export namespace Pages {
    /**
     * The height of the iWork item.
     */
-   height: number;
+   height(): number;
    /**
     * Whether the object is locked.
     */
-   locked: boolean;
+   locked(): boolean;
    /**
     * The iWork container containing this iWork item.
     */
-   parent: any;
+   parent(): any;
    /**
     * The horizontal and vertical coordinates of the top left point of the iWork item.
     */
-   position: any;
+   position(): any;
    /**
     * The width of the iWork item.
     */
-   width: number;
+   width(): number;
  }
 
  /**
@@ -116,15 +116,15 @@ export namespace Pages {
    /**
     * The name of the audio file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The volume setting for the audio clip, from 0 (none) to 100 (full volume).
     */
-   clipVolume: number;
+   clipVolume(): number;
    /**
     * If or how the audio clip repeats.
     */
-   repetitionMethod: any;
+   repetitionMethod(): any;
  }
 
  /**
@@ -140,27 +140,27 @@ export namespace Pages {
    /**
     * The background, if any, for the shape.
     */
-   backgroundFillType: any;
+   backgroundFillType(): any;
    /**
     * The text contained within the shape.
     */
-   objectText: any;
+   objectText(): any;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
  }
 
  /**
@@ -187,31 +187,31 @@ export namespace Pages {
    /**
     * Text associated with the image, read aloud by VoiceOver.
     */
-   description: string;
+   description(): string;
    /**
     * The image file.
     */
-   file: any;
+   file(): any;
    /**
     * The name of the image file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -227,23 +227,23 @@ export namespace Pages {
    /**
     * The height of the iWork item.
     */
-   height: number;
+   height(): number;
    /**
     * The iWork container containing this iWork item.
     */
-   parent: any;
+   parent(): any;
    /**
     * The horizontal and vertical coordinates of the top left point of the iWork item.
     */
-   position: any;
+   position(): any;
    /**
     * The width of the iWork item.
     */
-   width: number;
+   width(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -259,23 +259,23 @@ export namespace Pages {
    /**
     * A list of two numbers indicating the horizontal and vertical position of the line ending point.
     */
-   endPoint: any;
+   endPoint(): any;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
    /**
     * A list of two numbers indicating the horizontal and vertical position of the line starting point.
     */
-   startPoint: any;
+   startPoint(): any;
  }
 
  /**
@@ -291,31 +291,31 @@ export namespace Pages {
    /**
     * The name of the movie file.
     */
-   fileName: any;
+   fileName(): any;
    /**
     * The volume setting for the movie, from 0 (none) to 100 (full volume).
     */
-   movieVolume: number;
+   movieVolume(): number;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * If or how the movie repeats.
     */
-   repetitionMethod: any;
+   repetitionMethod(): any;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -331,35 +331,35 @@ export namespace Pages {
    /**
     * The item's name.
     */
-   name: string;
+   name(): string;
    /**
     * The range describing every cell in the table.
     */
-   cellRange: any;
+   cellRange(): any;
    /**
     * The cells currently selected in the table.
     */
-   selectionRange: any;
+   selectionRange(): any;
    /**
     * The number of rows in the table.
     */
-   rowCount: number;
+   rowCount(): number;
    /**
     * The number of columns in the table.
     */
-   columnCount: number;
+   columnCount(): number;
    /**
     * The number of header rows in the table.
     */
-   headerRowCount: number;
+   headerRowCount(): number;
    /**
     * The number of header columns in the table.
     */
-   headerColumnCount: number;
+   headerColumnCount(): number;
    /**
     * The number of footer rows in the table.
     */
-   footerRowCount: number;
+   footerRowCount(): number;
  }
 
  /**
@@ -375,27 +375,27 @@ export namespace Pages {
    /**
     * The background, if any, for the text item.
     */
-   backgroundFillType: any;
+   backgroundFillType(): any;
    /**
     * The text contained within the text item.
     */
-   objectText: any;
+   objectText(): any;
    /**
     * The opacity of the object, in percent.
     */
-   opacity: number;
+   opacity(): number;
    /**
     * Is the iWork item displaying a reflection?
     */
-   reflectionShowing: boolean;
+   reflectionShowing(): boolean;
    /**
     * The percentage of reflection of the iWork item, from 0 (none) to 100 (full).
     */
-   reflectionValue: number;
+   reflectionValue(): number;
    /**
     * The rotation of the iWork item, in degrees from 0 to 359.
     */
-   rotation: number;
+   rotation(): number;
  }
 
  /**
@@ -411,39 +411,39 @@ export namespace Pages {
    /**
     * The font of the range's cells.
     */
-   fontName: string;
+   fontName(): string;
    /**
     * The font size of the range's cells.
     */
-   fontSize: any;
+   fontSize(): any;
    /**
     * The format of the range's cells.
     */
-   format: any;
+   format(): any;
    /**
     * The horizontal alignment of content in the range's cells.
     */
-   alignment: any;
+   alignment(): any;
    /**
     * The range's coordinates.
     */
-   name: string;
+   name(): string;
    /**
     * The text color of the range's cells.
     */
-   textColor: any;
+   textColor(): any;
    /**
     * Whether text should wrap in the range's cells.
     */
-   textWrap: boolean;
+   textWrap(): boolean;
    /**
     * The background color of the range's cells.
     */
-   backgroundColor: any;
+   backgroundColor(): any;
    /**
     * The vertical alignment of content in the range's cells.
     */
-   verticalAlignment: any;
+   verticalAlignment(): any;
  }
 
  /**
@@ -459,23 +459,23 @@ export namespace Pages {
    /**
     * The cell's column.
     */
-   column: any;
+   column(): any;
    /**
     * The cell's row.
     */
-   row: any;
+   row(): any;
    /**
     * The actual value in the cell, or missing value if the cell is empty.
     */
-   value: any;
+   value(): any;
    /**
     * The formatted value in the cell, or missing value if the cell is empty.
     */
-   formattedValue: string;
+   formattedValue(): string;
    /**
     * The formula in the cell, as text, e.g. =SUM(40+2). If the cell does not contain a formula, returns missing value. To set the value of a cell to a formula as text, use the value property.
     */
-   formula: string;
+   formula(): string;
  }
 
  /**
@@ -491,11 +491,11 @@ export namespace Pages {
    /**
     * The row's index in the table (e.g., the second row has address 2).
     */
-   address: number;
+   address(): number;
    /**
     * The height of the row.
     */
-   height: any;
+   height(): any;
  }
 
  /**
@@ -511,11 +511,11 @@ export namespace Pages {
    /**
     * The column's index in the table (e.g., the second column has address 2).
     */
-   address: number;
+   address(): number;
    /**
     * The width of the column.
     */
-   width: any;
+   width(): any;
  }
 
  /**
@@ -531,11 +531,11 @@ export namespace Pages {
    /**
     * The identifier used by the application.
     */
-   id: string;
+   id(): string;
    /**
     * The localized name displayed to the user.
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -551,7 +551,7 @@ export namespace Pages {
    /**
     * The section body text.
     */
-   bodyText: any;
+   bodyText(): any;
  }
 
  /**
@@ -567,7 +567,7 @@ export namespace Pages {
    /**
     * The page body text.
     */
-   bodyText: any;
+   bodyText(): any;
  }
 
  /**
@@ -583,7 +583,7 @@ export namespace Pages {
    /**
     * Its script tag.
     */
-   tag: string;
+   tag(): string;
  }
     
     // CLass Extension
@@ -611,23 +611,23 @@ export namespace Pages {
    /**
     * Document ID.
     */
-   id: string;
+   id(): string;
    /**
     * The template assigned to the document.
     */
-   documentTemplate: any;
+   documentTemplate(): any;
    /**
     * The document body text.
     */
-   bodyText: any;
+   bodyText(): any;
    /**
     * Whether the document has body text.
     */
-   documentBody: boolean;
+   documentBody(): boolean;
    /**
     * Current page of the document.
     */
-   currentPage: any;
+   currentPage(): any;
  }
 
  /**
@@ -663,43 +663,43 @@ export namespace Pages {
    /**
     * EPUB title
     */
-   title: string;
+   title(): string;
    /**
     * EPUB author
     */
-   author: string;
+   author(): string;
    /**
     * EPUB genre
     */
-   genre: string;
+   genre(): string;
    /**
     * EPUB language (Language name or ISO language code)
     */
-   language: string;
+   language(): string;
    /**
     * EPUB publisher
     */
-   publisher: string;
+   publisher(): string;
    /**
     * EPUB first page is cover
     */
-   cover: boolean;
+   cover(): boolean;
    /**
     * EPUB fixed layout
     */
-   fixedLayout: boolean;
+   fixedLayout(): boolean;
    /**
     * password
     */
-   password: string;
+   password(): string;
    /**
     * password hint
     */
-   passwordHint: string;
+   passwordHint(): string;
    /**
     * image quality
     */
-   imageQuality: any;
+   imageQuality(): any;
  }
 
     // Function options

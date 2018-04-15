@@ -16,15 +16,15 @@ export namespace TextEdit {
    /**
     * Is this the frontmost (active) application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The name of the application.
     */
-   name: string;
+   name(): string;
    /**
     * The version of the application.
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -51,15 +51,15 @@ export namespace TextEdit {
    /**
     * Has the document been modified since the last save?
     */
-   modified: boolean;
+   modified(): boolean;
    /**
     * The document's name.
     */
-   name: string;
+   name(): string;
    /**
     * The document's path.
     */
-   path: string;
+   path(): string;
  }
 
  /**
@@ -75,11 +75,11 @@ export namespace TextEdit {
    /**
     * The class of the object.
     */
-   class: any;
+   class(): any;
    /**
     * All of the object's properties.
     */
-   properties: any;
+   properties(): any;
  }
 
  /**
@@ -95,63 +95,63 @@ export namespace TextEdit {
    /**
     * The bounding rectangle of the window.
     */
-   bounds: any;
+   bounds(): any;
    /**
     * Whether the window has a close box.
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * The document whose contents are being displayed in the window.
     */
-   document: any;
+   document(): any;
    /**
     * Whether the window floats.
     */
-   floating: boolean;
+   floating(): boolean;
    /**
     * The unique identifier of the window.
     */
-   id: number;
+   id(): number;
    /**
     * The index of the window, ordered front to back.
     */
-   index: number;
+   index(): number;
    /**
     * Whether the window can be miniaturized.
     */
-   miniaturizable: boolean;
+   miniaturizable(): boolean;
    /**
     * Whether the window is currently miniaturized.
     */
-   miniaturized: boolean;
+   miniaturized(): boolean;
    /**
     * Whether the window is the application's current modal window.
     */
-   modal: boolean;
+   modal(): boolean;
    /**
     * The full title of the window.
     */
-   name: string;
+   name(): string;
    /**
     * Whether the window can be resized.
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * Whether the window has a title bar.
     */
-   titled: boolean;
+   titled(): boolean;
    /**
     * Whether the window is currently visible.
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Whether the window can be zoomed.
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * Whether the window is currently zoomed.
     */
-   zoomed: boolean;
+   zoomed(): boolean;
  }
 
  /**
@@ -167,7 +167,7 @@ export namespace TextEdit {
    /**
     * The path to the file for the attachment
     */
-   fileName: string;
+   fileName(): string;
  }
 
  /**
@@ -183,15 +183,15 @@ export namespace TextEdit {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -207,15 +207,15 @@ export namespace TextEdit {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -231,15 +231,15 @@ export namespace TextEdit {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -255,15 +255,15 @@ export namespace TextEdit {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -279,15 +279,15 @@ export namespace TextEdit {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -300,43 +300,43 @@ export namespace TextEdit {
    /**
     * the number of copies of a document to be printed
     */
-   copies: number;
+   copies(): number;
    /**
     * Should printed copies be collated?
     */
-   collating: boolean;
+   collating(): boolean;
    /**
     * the first page of the document to be printed
     */
-   startingPage: number;
+   startingPage(): number;
    /**
     * the last page of the document to be printed
     */
-   endingPage: number;
+   endingPage(): number;
    /**
     * number of logical pages laid across a physical page
     */
-   pagesAcross: number;
+   pagesAcross(): number;
    /**
     * number of logical pages laid out down a physical page
     */
-   pagesDown: number;
+   pagesDown(): number;
    /**
     * the time at which the desktop printer should print the document
     */
-   requestedPrintTime: any;
+   requestedPrintTime(): any;
    /**
     * how errors are handled
     */
-   errorHandling: any;
+   errorHandling(): any;
    /**
     * for fax number
     */
-   faxNumber: string;
+   faxNumber(): string;
    /**
     * for target printer
     */
-   targetPrinter: string;
+   targetPrinter(): string;
  }
     
     // CLass Extension
@@ -364,7 +364,7 @@ export namespace TextEdit {
    /**
     * The text of the document.
     */
-   text: any;
+   text(): any;
  }
     
     // Records

@@ -16,11 +16,11 @@ export namespace Notes {
    /**
     * the name of the account
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the account
     */
-   id: string;
+   id(): string;
  }
 
  /**
@@ -36,15 +36,15 @@ export namespace Notes {
    /**
     * the name of the folder
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the folder
     */
-   id: string;
+   id(): string;
    /**
     * the container of the folder
     */
-   container: any;
+   container(): any;
  }
 
  /**
@@ -60,27 +60,27 @@ export namespace Notes {
    /**
     * the name of the note (normally the first line of the body)
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the note
     */
-   id: string;
+   id(): string;
    /**
     * the folder of the note
     */
-   container: any;
+   container(): any;
    /**
     * the HTML content of the note
     */
-   body: string;
+   body(): string;
    /**
     * the creation date of the note
     */
-   creationDate: any;
+   creationDate(): any;
    /**
     * the modification date of the note
     */
-   modificationDate: any;
+   modificationDate(): any;
  }
 
  /**
@@ -96,19 +96,19 @@ export namespace Notes {
    /**
     * the name of the attachment
     */
-   name: string;
+   name(): string;
    /**
     * the unique identifier of the attachment
     */
-   id: string;
+   id(): string;
    /**
     * the note containing the attachment
     */
-   container: any;
+   container(): any;
    /**
     * the content-id URL in the note's HTML
     */
-   contentIdentifier: string;
+   contentIdentifier(): string;
  }
     
     // CLass Extension

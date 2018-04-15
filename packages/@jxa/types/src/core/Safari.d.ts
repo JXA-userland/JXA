@@ -16,27 +16,27 @@ export namespace Safari {
    /**
     * The HTML source of the web page currently loaded in the tab.
     */
-   source: string;
+   source(): string;
    /**
     * The current URL of the tab.
     */
-   URL: string;
+   URL(): string;
    /**
     * The index of the tab, ordered left to right.
     */
-   index: number;
+   index(): number;
    /**
     * The text of the web page currently loaded in the tab. Modifications to text aren't reflected on the web page.
     */
-   text: string;
+   text(): string;
    /**
     * Whether the tab is currently visible.
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * The name of the tab.
     */
-   name: string;
+   name(): string;
  }
 
  /**
@@ -69,7 +69,7 @@ export namespace Safari {
    /**
     * The current tab.
     */
-   currentTab: any;
+   currentTab(): any;
  }
 
  /**
@@ -85,15 +85,15 @@ export namespace Safari {
    /**
     * The HTML source of the web page currently loaded in the document.
     */
-   source: string;
+   source(): string;
    /**
     * The current URL of the document.
     */
-   URL: string;
+   URL(): string;
    /**
     * The text of the web page currently loaded in the document. Modifications to text aren't reflected on the web page.
     */
-   text: string;
+   text(): string;
  }
     
     // Records

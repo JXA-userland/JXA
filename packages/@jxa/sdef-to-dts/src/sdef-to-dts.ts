@@ -240,10 +240,13 @@ ${directParametersDocs.join("\n")}${
 const schemaToInterfaces = async (schemas: JSONSchema[]): Promise<string> => {
     const results = await Promise.all(schemas.map(schema => {
         const title = schema.title!;
-        return compile(schema, title).then(schema => {
+        return compile(schema, title).then(definition => {
             // TODO: prevent UIElement -> UiElement
             // https://github.com/bcherny/json-schema-to-typescript/blob/fadb879a5373f20fd9d1f441168494003e825239/src/utils.ts#L56
-            return schema.replace(new RegExp(`interface ${title}`, "i"), `interface ${title}`);
+            return definition
+                .replace(new RegExp(`interface ${title}`, "i"), `interface ${title}`)
+                // Fix property to method: name -> name()
+                .replace(/(\w+):(.*;)/g, "$1():$2");
         });
     }));
     return results.join("\n");

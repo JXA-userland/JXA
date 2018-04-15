@@ -16,11 +16,11 @@ export namespace Messages {
    /**
     * The class of the object.
     */
-   class: any;
+   class(): any;
    /**
     * All of the object's properties.
     */
-   properties: any;
+   properties(): any;
  }
 
  /**
@@ -36,15 +36,15 @@ export namespace Messages {
    /**
     * The name of the application.
     */
-   name: string;
+   name(): string;
    /**
     * Is this the frontmost (active) application?
     */
-   frontmost: boolean;
+   frontmost(): boolean;
    /**
     * The version of the application.
     */
-   version: string;
+   version(): string;
  }
 
  /**
@@ -71,15 +71,15 @@ export namespace Messages {
    /**
     * The document's name.
     */
-   name: string;
+   name(): string;
    /**
     * Has the document been modified since the last save?
     */
-   modified: boolean;
+   modified(): boolean;
    /**
     * The document's location on disk.
     */
-   file: any;
+   file(): any;
  }
 
  /**
@@ -95,51 +95,51 @@ export namespace Messages {
    /**
     * The full title of the window.
     */
-   name: string;
+   name(): string;
    /**
     * The unique identifier of the window.
     */
-   id: number;
+   id(): number;
    /**
     * The index of the window, ordered front to back.
     */
-   index: number;
+   index(): number;
    /**
     * The bounding rectangle of the window.
     */
-   bounds: any;
+   bounds(): any;
    /**
     * Whether the window has a close box.
     */
-   closeable: boolean;
+   closeable(): boolean;
    /**
     * Whether the window can be minimized.
     */
-   minimizable: boolean;
+   minimizable(): boolean;
    /**
     * Whether the window is currently minimized.
     */
-   minimized: boolean;
+   minimized(): boolean;
    /**
     * Whether the window can be resized.
     */
-   resizable: boolean;
+   resizable(): boolean;
    /**
     * Whether the window is currently visible.
     */
-   visible: boolean;
+   visible(): boolean;
    /**
     * Whether the window can be zoomed.
     */
-   zoomable: boolean;
+   zoomable(): boolean;
    /**
     * Whether the window is currently zoomed.
     */
-   zoomed: boolean;
+   zoomed(): boolean;
    /**
     * The document whose contents are being displayed in the window.
     */
-   document: any;
+   document(): any;
  }
 
  /**
@@ -155,15 +155,15 @@ export namespace Messages {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: any;
+   size(): any;
  }
 
  /**
@@ -179,15 +179,15 @@ export namespace Messages {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -203,15 +203,15 @@ export namespace Messages {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -227,15 +227,15 @@ export namespace Messages {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -251,15 +251,15 @@ export namespace Messages {
    /**
     * The color of the first character.
     */
-   color: any;
+   color(): any;
    /**
     * The name of the font of the first character.
     */
-   font: string;
+   font(): string;
    /**
     * The size in points of the first character.
     */
-   size: number;
+   size(): number;
  }
 
  /**
@@ -275,7 +275,7 @@ export namespace Messages {
    /**
     * The path to the file for the attachment
     */
-   file: any;
+   file(): any;
  }
 
  /**
@@ -291,23 +291,23 @@ export namespace Messages {
    /**
     * Time in seconds that I have been idle.
     */
-   idleTime: number;
+   idleTime(): number;
    /**
     * My image as it appears in all services.
     */
-   image: any;
+   image(): any;
    /**
     * My status on all services.
     */
-   status: any;
+   status(): any;
    /**
     * My status message, visible to other people while I am online.
     */
-   statusMessage: string;
+   statusMessage(): string;
    /**
     * The currently active audio or video chat.
     */
-   activeAvChat: any;
+   activeAvChat(): any;
  }
 
  /**
@@ -323,52 +323,52 @@ export namespace Messages {
    /**
     * The buddy's service and handle. For example: AIM:JohnDoe007
     */
-   id: string;
+   id(): string;
    /**
     * The service on which this buddy exists.
     */
-   service: any;
+   service(): any;
    /**
     * The buddy's name as it appears in the buddy list.
     */
-   name: string;
+   name(): string;
    /**
     * The buddy's online account name.
     */
-   handle: string;
+   handle(): string;
    /**
     * The buddy's current status.
     */
-   status: any;
+   status(): any;
    /**
     * The buddy's current status message.
     */
-   statusMessage: string;
+   statusMessage(): string;
    /**
     * The time in seconds the buddy has been idle.
     */
-   idleTime: number;
+   idleTime(): number;
    /**
     * The buddy's messaging capabilities.
     */
-   capabilities: any;
+   capabilities(): any;
    /**
     * The buddy's custom image.
     */
-   image: any;
-   scriptAccountLegacyName: string;
+   image(): any;
+   scriptAccountLegacyName(): string;
    /**
     * The first name from this buddy's Contacts card, if available
     */
-   firstName: string;
+   firstName(): string;
    /**
     * The last name from this buddy's Contacts card, if available
     */
-   lastName: string;
+   lastName(): string;
    /**
     * The full name from this buddy's Contacts card, if available
     */
-   fullName: string;
+   fullName(): string;
  }
 
  /**
@@ -384,35 +384,35 @@ export namespace Messages {
    /**
     * A guid identifier for this service.
     */
-   id: string;
+   id(): string;
    /**
     * The name of this service as defined in Account preferences description field
     */
-   name: string;
+   name(): string;
    /**
     * My image as it appears in all services.
     */
-   image: any;
+   image(): any;
    /**
     * Is the service enabled?
     */
-   enabled: boolean;
+   enabled(): boolean;
    /**
     * The connection status for this account.
     */
-   connectionStatus: any;
+   connectionStatus(): any;
    /**
     * My status on this service.
     */
-   status: any;
+   status(): any;
    /**
     * My status message, visible to other people on this service while I am online.
     */
-   statusMessage: string;
+   statusMessage(): string;
    /**
     * The type of protocol for this service
     */
-   serviceType: any;
+   serviceType(): any;
  }
 
  /**
@@ -428,35 +428,35 @@ export namespace Messages {
    /**
     * A guid identifier for this chat.
     */
-   id: string;
+   id(): string;
    /**
     * The service which is participating in this chat.
     */
-   service: any;
+   service(): any;
    /**
     * Other participants of this chat. This property may be specified at time of creation.
     */
-   participants: any;
+   participants(): any;
    /**
     * Is this chat secure?
     */
-   secure: boolean;
+   secure(): boolean;
    /**
     * Is this an invitation to a chat?
     */
-   invitation: boolean;
+   invitation(): boolean;
    /**
     * Is this chat currently active?
     */
-   active: boolean;
+   active(): boolean;
    /**
     * The date on which this chat started.
     */
-   started: any;
+   started(): any;
    /**
     * The date when this chat was last updated.
     */
-   updated: any;
+   updated(): any;
  }
 
  /**
@@ -472,23 +472,23 @@ export namespace Messages {
    /**
     * The subject of this chat, if available.
     */
-   subject: string;
+   subject(): string;
    /**
     * An invitation message. This may only be specified at the time of creation. This message will be sent to chat participants when the chat is created.
     */
-   invitationMessage: string;
+   invitationMessage(): string;
    /**
     * How you are joined to this chat
     */
-   joinState: any;
+   joinState(): any;
    /**
     * The address or room name of this chat. This property may be specified at time of creation.
     */
-   name: string;
+   name(): string;
    /**
     * The type of this chat.
     */
-   chatType: any;
+   chatType(): any;
  }
 
  /**
@@ -504,11 +504,11 @@ export namespace Messages {
    /**
     * Is the chat muted?
     */
-   muted: boolean;
+   muted(): boolean;
    /**
     * The connection state for this av chat.
     */
-   avConnectionStatus: any;
+   avConnectionStatus(): any;
  }
 
  /**
@@ -521,15 +521,15 @@ export namespace Messages {
    /**
     * Is the chat paused?
     */
-   paused: boolean;
+   paused(): boolean;
    /**
     * Is the chat being displayed in full screen mode?
     */
-   showingFullScreen: boolean;
+   showingFullScreen(): boolean;
    /**
     * Is the local video preview being displayed?
     */
-   showingLocalVideo: boolean;
+   showingLocalVideo(): boolean;
  }
 
  /**
@@ -545,15 +545,15 @@ export namespace Messages {
    /**
     * The guid for this authorization request
     */
-   id: string;
+   id(): string;
    /**
     * The service on which authorization was requested.
     */
-   service: any;
+   service(): any;
    /**
     * The buddy requesting authorization
     */
-   buddy: any;
+   buddy(): any;
  }
 
  /**
@@ -569,47 +569,47 @@ export namespace Messages {
    /**
     * The guid for this file transfer
     */
-   id: string;
+   id(): string;
    /**
     * The name of this file
     */
-   name: string;
+   name(): string;
    /**
     * The local path to this file transfer
     */
-   file: any;
+   file(): any;
    /**
     * The direction in which this file is being sent
     */
-   direction: any;
+   direction(): any;
    /**
     * The service on which this file transfer is taking place
     */
-   service: any;
+   service(): any;
    /**
     * The account participating in this file transfer
     */
-   buddy: any;
+   buddy(): any;
    /**
     * Is this file transfer secure?
     */
-   secure: boolean;
+   secure(): boolean;
    /**
     * The total size in bytes of the completed file transfer
     */
-   fileSize: number;
+   fileSize(): number;
    /**
     * The number of bytes that have been transferred
     */
-   fileProgress: number;
+   fileProgress(): number;
    /**
     * The current status of this file transfer
     */
-   transferStatus: any;
+   transferStatus(): any;
    /**
     * The date that this file transfer started
     */
-   started: any;
+   started(): any;
  }
     
     // CLass Extension
