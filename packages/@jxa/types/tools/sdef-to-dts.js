@@ -7,7 +7,7 @@ const fixturesDir = path.join(__dirname, "sdefs");
 const outputDir = path.join(__dirname, "../src/core");
 const promises = fs.readdirSync(fixturesDir).map(async caseName => {
     const fileName = path.basename(caseName, ".sdef");
-    const normalizedTestName = camelCase(fileName, { pascalCase: true });
+    const normalizedTestName = fileName.replace(/\s/g, "");
     const actualContent = fs.readFileSync(path.join(fixturesDir, caseName), "utf-8");
     console.log("transform " + normalizedTestName);
     const actual = await transform(normalizedTestName, actualContent);

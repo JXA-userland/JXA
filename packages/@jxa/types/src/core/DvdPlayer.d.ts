@@ -1,5 +1,5 @@
 
-export namespace DvdPlayer {
+export namespace DVDPlayer {
     // Records
 
     // Function options
@@ -23,7 +23,7 @@ export namespace DvdPlayer {
 
 
 }
-export interface DvdPlayer {
+export interface DVDPlayer {
     // Functions
 
      /**

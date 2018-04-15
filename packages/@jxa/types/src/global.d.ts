@@ -3,9 +3,7 @@ import * as ApplicationGroup from "./Application";
 declare global {
     const Application: typeof ApplicationGroup & object;
 
-    function Path(
-        name: string
-    ): object;
+    function Path(name: string): object;
 
     /**
      * Pause for a fixed amount of time

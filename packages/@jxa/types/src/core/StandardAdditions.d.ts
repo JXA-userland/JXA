@@ -1,3 +1,4 @@
+
 export namespace StandardAdditions {
     // Records
     /**
@@ -10,16 +11,16 @@ export namespace StandardAdditions {
      * Reply record for the ‘display alert’ command
      */
     export interface AlertReply {
-        /**
-         * name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)
-         */
-        buttonReturned: {
-            [k: string]: any;
-        };
-        /**
-         * Did the alert time out? (present only if ‘giving up after’ was supplied)
-         */
-        gaveUp: boolean;
+      /**
+       * name of button chosen (empty if ‘giving up after’ was supplied and alert timed out)
+       */
+      buttonReturned: {
+        [k: string]: any;
+      };
+      /**
+       * Did the alert time out? (present only if ‘giving up after’ was supplied)
+       */
+      gaveUp: boolean;
     }
 
     /**
@@ -32,22 +33,22 @@ export namespace StandardAdditions {
      * Reply record for the ‘display dialog’ command
      */
     export interface DialogReply {
-        /**
-         * name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
-         */
-        buttonReturned: {
-            [k: string]: any;
-        };
-        /**
-         * text entered (present only if ‘default answer’ was supplied)
-         */
-        textReturned: {
-            [k: string]: any;
-        };
-        /**
-         * Did the dialog time out? (present only if ‘giving up after’ was supplied)
-         */
-        gaveUp: boolean;
+      /**
+       * name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
+       */
+      buttonReturned: {
+        [k: string]: any;
+      };
+      /**
+       * text entered (present only if ‘default answer’ was supplied)
+       */
+      textReturned: {
+        [k: string]: any;
+      };
+      /**
+       * Did the dialog time out? (present only if ‘giving up after’ was supplied)
+       */
+      gaveUp: boolean;
     }
 
     /**
@@ -60,128 +61,128 @@ export namespace StandardAdditions {
      * Reply record for the ‘info for’ command
      */
     export interface FileInformation {
-        /**
-         * the name of the item
-         */
-        name: {
-            [k: string]: any;
-        };
-        /**
-         * the user-visible name of the item
-         */
-        displayedName: {
-            [k: string]: any;
-        };
-        /**
-         * the short name (CFBundleName) of the item (if the item is an application)
-         */
-        shortName: {
-            [k: string]: any;
-        };
-        /**
-         * the name extension of the item (such as “txt”)
-         */
-        nameExtension: {
-            [k: string]: any;
-        };
-        /**
-         * the item’s bundle identifier (if the item is a package)
-         */
-        bundleIdentifier: {
-            [k: string]: any;
-        };
-        /**
-         * the item’s type identifier
-         */
-        typeIdentifier: {
-            [k: string]: any;
-        };
-        /**
-         * the kind of the item
-         */
-        kind: {
-            [k: string]: any;
-        };
-        /**
-         * the application that normally opens this kind of item
-         */
-        defaultApplication: {
-            [k: string]: any;
-        };
-        /**
-         * the date the item was created
-         */
-        creationDate: {
-            [k: string]: any;
-        };
-        /**
-         * the date the item was last modified
-         */
-        modificationDate: {
-            [k: string]: any;
-        };
-        /**
-         * the file type of the item
-         */
-        fileType: {
-            [k: string]: any;
-        };
-        /**
-         * the creator type of the item
-         */
-        fileCreator: {
-            [k: string]: any;
-        };
-        /**
-         * the item’s short version string (from the Finder’s ‘Get Info’ box)
-         */
-        shortVersion: {
-            [k: string]: any;
-        };
-        /**
-         * the item’s long version string (from the Finder’s ‘Get Info’ box)
-         */
-        longVersion: {
-            [k: string]: any;
-        };
-        /**
-         * the size of the item in bytes
-         */
-        size: number;
-        /**
-         * Is the item an alias file?
-         */
-        alias: boolean;
-        /**
-         * Is the item a folder?
-         */
-        folder: boolean;
-        /**
-         * Is the item a package (a folder treated as a file?)
-         */
-        packageFolder: boolean;
-        /**
-         * Is the item’s name extension hidden from the user?
-         */
-        extensionHidden: boolean;
-        /**
-         * Is the item visible?
-         */
-        visible: boolean;
-        /**
-         * Is the item locked?
-         */
-        locked: boolean;
-        /**
-         * Is the item currently in use?
-         */
-        busyStatus: boolean;
-        /**
-         * the coordinates of the folder’s window (if the item is a folder)
-         */
-        folderWindow: {
-            [k: string]: any;
-        };
+      /**
+       * the name of the item
+       */
+      name: {
+        [k: string]: any;
+      };
+      /**
+       * the user-visible name of the item
+       */
+      displayedName: {
+        [k: string]: any;
+      };
+      /**
+       * the short name (CFBundleName) of the item (if the item is an application)
+       */
+      shortName: {
+        [k: string]: any;
+      };
+      /**
+       * the name extension of the item (such as “txt”)
+       */
+      nameExtension: {
+        [k: string]: any;
+      };
+      /**
+       * the item’s bundle identifier (if the item is a package)
+       */
+      bundleIdentifier: {
+        [k: string]: any;
+      };
+      /**
+       * the item’s type identifier
+       */
+      typeIdentifier: {
+        [k: string]: any;
+      };
+      /**
+       * the kind of the item
+       */
+      kind: {
+        [k: string]: any;
+      };
+      /**
+       * the application that normally opens this kind of item
+       */
+      defaultApplication: {
+        [k: string]: any;
+      };
+      /**
+       * the date the item was created
+       */
+      creationDate: {
+        [k: string]: any;
+      };
+      /**
+       * the date the item was last modified
+       */
+      modificationDate: {
+        [k: string]: any;
+      };
+      /**
+       * the file type of the item
+       */
+      fileType: {
+        [k: string]: any;
+      };
+      /**
+       * the creator type of the item
+       */
+      fileCreator: {
+        [k: string]: any;
+      };
+      /**
+       * the item’s short version string (from the Finder’s ‘Get Info’ box)
+       */
+      shortVersion: {
+        [k: string]: any;
+      };
+      /**
+       * the item’s long version string (from the Finder’s ‘Get Info’ box)
+       */
+      longVersion: {
+        [k: string]: any;
+      };
+      /**
+       * the size of the item in bytes
+       */
+      size: number;
+      /**
+       * Is the item an alias file?
+       */
+      alias: boolean;
+      /**
+       * Is the item a folder?
+       */
+      folder: boolean;
+      /**
+       * Is the item a package (a folder treated as a file?)
+       */
+      packageFolder: boolean;
+      /**
+       * Is the item’s name extension hidden from the user?
+       */
+      extensionHidden: boolean;
+      /**
+       * Is the item visible?
+       */
+      visible: boolean;
+      /**
+       * Is the item locked?
+       */
+      locked: boolean;
+      /**
+       * Is the item currently in use?
+       */
+      busyStatus: boolean;
+      /**
+       * the coordinates of the folder’s window (if the item is a folder)
+       */
+      folderWindow: {
+        [k: string]: any;
+      };
     }
 
     /**
@@ -194,22 +195,22 @@ export namespace StandardAdditions {
      * Reply record for the ‘get volume settings’ command
      */
     export interface VolumeSettings {
-        /**
-         * the sound output volume
-         */
-        outputVolume: number;
-        /**
-         * the sound input volume
-         */
-        inputVolume: number;
-        /**
-         * the alert volume (as a percentage of the output volume)
-         */
-        alertVolume: number;
-        /**
-         * Is the sound output muted?
-         */
-        outputMuted: boolean;
+      /**
+       * the sound output volume
+       */
+      outputVolume: number;
+      /**
+       * the sound input volume
+       */
+      inputVolume: number;
+      /**
+       * the alert volume (as a percentage of the output volume)
+       */
+      alertVolume: number;
+      /**
+       * Is the sound output muted?
+       */
+      outputMuted: boolean;
     }
 
     /**
@@ -222,96 +223,96 @@ export namespace StandardAdditions {
      * Reply record for the ‘system info’ command
      */
     export interface SystemInformation {
-        /**
-         * the AppleScript version
-         */
-        appleScriptVersion: {
-            [k: string]: any;
-        };
-        /**
-         * the AppleScript Studio version
-         */
-        appleScriptStudioVersion: {
-            [k: string]: any;
-        };
-        /**
-         * the system version
-         */
-        systemVersion: {
-            [k: string]: any;
-        };
-        /**
-         * the current user’s short name
-         */
-        shortUserName: {
-            [k: string]: any;
-        };
-        /**
-         * the current user’s long name
-         */
-        longUserName: {
-            [k: string]: any;
-        };
-        /**
-         * the current user’s ID
-         */
-        userID: number;
-        /**
-         * the current user’s locale
-         */
-        userLocale: {
-            [k: string]: any;
-        };
-        /**
-         * the current user’s home directory
-         */
-        homeDirectory: {
-            [k: string]: any;
-        };
-        /**
-         * the boot volume
-         */
-        bootVolume: {
-            [k: string]: any;
-        };
-        /**
-         * the computer name
-         */
-        computerName: {
-            [k: string]: any;
-        };
-        /**
-         * the host name
-         */
-        hostName: {
-            [k: string]: any;
-        };
-        /**
-         * the IPv4 address
-         */
-        IPv4Address: {
-            [k: string]: any;
-        };
-        /**
-         * the primary Ethernet address
-         */
-        primaryEthernetAddress: {
-            [k: string]: any;
-        };
-        /**
-         * the CPU type
-         */
-        CPUType: {
-            [k: string]: any;
-        };
-        /**
-         * the clock speed of the CPU in MHz
-         */
-        CPUSpeed: number;
-        /**
-         * the amount of physical RAM in MB
-         */
-        physicalMemory: number;
+      /**
+       * the AppleScript version
+       */
+      appleScriptVersion: {
+        [k: string]: any;
+      };
+      /**
+       * the AppleScript Studio version
+       */
+      appleScriptStudioVersion: {
+        [k: string]: any;
+      };
+      /**
+       * the system version
+       */
+      systemVersion: {
+        [k: string]: any;
+      };
+      /**
+       * the current user’s short name
+       */
+      shortUserName: {
+        [k: string]: any;
+      };
+      /**
+       * the current user’s long name
+       */
+      longUserName: {
+        [k: string]: any;
+      };
+      /**
+       * the current user’s ID
+       */
+      userID: number;
+      /**
+       * the current user’s locale
+       */
+      userLocale: {
+        [k: string]: any;
+      };
+      /**
+       * the current user’s home directory
+       */
+      homeDirectory: {
+        [k: string]: any;
+      };
+      /**
+       * the boot volume
+       */
+      bootVolume: {
+        [k: string]: any;
+      };
+      /**
+       * the computer name
+       */
+      computerName: {
+        [k: string]: any;
+      };
+      /**
+       * the host name
+       */
+      hostName: {
+        [k: string]: any;
+      };
+      /**
+       * the IPv4 address
+       */
+      IPv4Address: {
+        [k: string]: any;
+      };
+      /**
+       * the primary Ethernet address
+       */
+      primaryEthernetAddress: {
+        [k: string]: any;
+      };
+      /**
+       * the CPU type
+       */
+      CPUType: {
+        [k: string]: any;
+      };
+      /**
+       * the clock speed of the CPU in MHz
+       */
+      CPUSpeed: number;
+      /**
+       * the amount of physical RAM in MB
+       */
+      physicalMemory: number;
     }
 
     // Function options
@@ -323,22 +324,22 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseApplicationOptionalParameter {
-        /**
-         * the dialog window title
-         */
-        withTitle?: string;
-        /**
-         * the prompt to be displayed in the dialog box
-         */
-        withPrompt?: string;
-        /**
-         * Allow multiple items to be selected? (default is false)
-         */
-        multipleSelectionsAllowed?: boolean;
-        /**
-         * the desired type of result. May be application (the default) or alias.
-         */
-        as?: any;
+      /**
+       * the dialog window title
+       */
+      withTitle?: string;
+      /**
+       * the prompt to be displayed in the dialog box
+       */
+      withPrompt?: string;
+      /**
+       * Allow multiple items to be selected? (default is false)
+       */
+      multipleSelectionsAllowed?: boolean;
+      /**
+       * the desired type of result. May be application (the default) or alias.
+       */
+      as?: any;
     }
 
     /**
@@ -348,10 +349,10 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseColorOptionalParameter {
-        /**
-         * the default color
-         */
-        defaultColor?: any;
+      /**
+       * the default color
+       */
+      defaultColor?: any;
     }
 
     /**
@@ -361,30 +362,30 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseFileOptionalParameter {
-        /**
-         * the prompt to be displayed in the dialog box
-         */
-        withPrompt?: string;
-        /**
-         * a list of file types or type identifiers. Only files of the specified types will be selectable.
-         */
-        ofType?: any;
-        /**
-         * the default file location
-         */
-        defaultLocation?: any;
-        /**
-         * Show invisible files and folders? (default is false)
-         */
-        invisibles?: boolean;
-        /**
-         * Allow multiple items to be selected? (default is false)
-         */
-        multipleSelectionsAllowed?: boolean;
-        /**
-         * Show the contents of packages? (Packages will be treated as folders. Default is false.)
-         */
-        showingPackageContents?: boolean;
+      /**
+       * the prompt to be displayed in the dialog box
+       */
+      withPrompt?: string;
+      /**
+       * a list of file types or type identifiers. Only files of the specified types will be selectable.
+       */
+      ofType?: any;
+      /**
+       * the default file location
+       */
+      defaultLocation?: any;
+      /**
+       * Show invisible files and folders? (default is false)
+       */
+      invisibles?: boolean;
+      /**
+       * Allow multiple items to be selected? (default is false)
+       */
+      multipleSelectionsAllowed?: boolean;
+      /**
+       * Show the contents of packages? (Packages will be treated as folders. Default is false.)
+       */
+      showingPackageContents?: boolean;
     }
 
     /**
@@ -394,18 +395,18 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseFileNameOptionalParameter {
-        /**
-         * the prompt to be displayed in the dialog box
-         */
-        withPrompt?: string;
-        /**
-         * the default name for the new file
-         */
-        defaultName?: string;
-        /**
-         * the default file location
-         */
-        defaultLocation?: any;
+      /**
+       * the prompt to be displayed in the dialog box
+       */
+      withPrompt?: string;
+      /**
+       * the default name for the new file
+       */
+      defaultName?: string;
+      /**
+       * the default file location
+       */
+      defaultLocation?: any;
     }
 
     /**
@@ -415,26 +416,26 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseFolderOptionalParameter {
-        /**
-         * the prompt to be displayed in the dialog box
-         */
-        withPrompt?: string;
-        /**
-         * the default folder location
-         */
-        defaultLocation?: any;
-        /**
-         * Show invisible files and folders? (default is false)
-         */
-        invisibles?: boolean;
-        /**
-         * Allow multiple items to be selected? (default is false)
-         */
-        multipleSelectionsAllowed?: boolean;
-        /**
-         * Show the contents of packages? (Packages will be treated as folders. Default is false.)
-         */
-        showingPackageContents?: boolean;
+      /**
+       * the prompt to be displayed in the dialog box
+       */
+      withPrompt?: string;
+      /**
+       * the default folder location
+       */
+      defaultLocation?: any;
+      /**
+       * Show invisible files and folders? (default is false)
+       */
+      invisibles?: boolean;
+      /**
+       * Allow multiple items to be selected? (default is false)
+       */
+      multipleSelectionsAllowed?: boolean;
+      /**
+       * Show the contents of packages? (Packages will be treated as folders. Default is false.)
+       */
+      showingPackageContents?: boolean;
     }
 
     /**
@@ -444,34 +445,34 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseFromListOptionalParameter {
-        /**
-         * the dialog window title
-         */
-        withTitle?: string;
-        /**
-         * the prompt to be displayed in the dialog box
-         */
-        withPrompt?: string;
-        /**
-         * a list of items to initially select (an empty list if no selection)
-         */
-        defaultItems?: any;
-        /**
-         * the name of the OK button
-         */
-        OKButtonName?: string;
-        /**
-         * the name of the Cancel button
-         */
-        cancelButtonName?: string;
-        /**
-         * Allow multiple items to be selected?
-         */
-        multipleSelectionsAllowed?: boolean;
-        /**
-         * Can the user make no selection and then choose OK?
-         */
-        emptySelectionAllowed?: boolean;
+      /**
+       * the dialog window title
+       */
+      withTitle?: string;
+      /**
+       * the prompt to be displayed in the dialog box
+       */
+      withPrompt?: string;
+      /**
+       * a list of items to initially select (an empty list if no selection)
+       */
+      defaultItems?: any;
+      /**
+       * the name of the OK button
+       */
+      OKButtonName?: string;
+      /**
+       * the name of the Cancel button
+       */
+      cancelButtonName?: string;
+      /**
+       * Allow multiple items to be selected?
+       */
+      multipleSelectionsAllowed?: boolean;
+      /**
+       * Can the user make no selection and then choose OK?
+       */
+      emptySelectionAllowed?: boolean;
     }
 
     /**
@@ -481,14 +482,14 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseRemoteApplicationOptionalParameter {
-        /**
-         * the dialog window title
-         */
-        withTitle?: string;
-        /**
-         * the prompt to be displayed above the list of applications
-         */
-        withPrompt?: string;
+      /**
+       * the dialog window title
+       */
+      withTitle?: string;
+      /**
+       * the prompt to be displayed above the list of applications
+       */
+      withPrompt?: string;
     }
 
     /**
@@ -498,14 +499,14 @@ export namespace StandardAdditions {
      */
 
     export interface ChooseUrlOptionalParameter {
-        /**
-         * which network services to show
-         */
-        showing?: any;
-        /**
-         * Allow user to type in a URL?
-         */
-        editableURL?: boolean;
+      /**
+       * which network services to show
+       */
+      showing?: any;
+      /**
+       * Allow user to type in a URL?
+       */
+      editableURL?: boolean;
     }
 
 
@@ -516,30 +517,30 @@ export namespace StandardAdditions {
      */
 
     export interface DisplayAlertOptionalParameter {
-        /**
-         * the explanatory message (will be displayed in small system font)
-         */
-        message?: string;
-        /**
-         * the type of alert (default is informational)
-         */
-        as?: any;
-        /**
-         * a list of up to three button names
-         */
-        buttons?: any;
-        /**
-         * the name or number of the default button
-         */
-        defaultButton?: any;
-        /**
-         * the name or number of the cancel button
-         */
-        cancelButton?: any;
-        /**
-         * number of seconds to wait before automatically dismissing the alert
-         */
-        givingUpAfter?: number;
+      /**
+       * the explanatory message (will be displayed in small system font)
+       */
+      message?: string;
+      /**
+       * the type of alert (default is informational)
+       */
+      as?: any;
+      /**
+       * a list of up to three button names
+       */
+      buttons?: any;
+      /**
+       * the name or number of the default button
+       */
+      defaultButton?: any;
+      /**
+       * the name or number of the cancel button
+       */
+      cancelButton?: any;
+      /**
+       * number of seconds to wait before automatically dismissing the alert
+       */
+      givingUpAfter?: number;
     }
 
     /**
@@ -549,38 +550,38 @@ export namespace StandardAdditions {
      */
 
     export interface DisplayDialogOptionalParameter {
-        /**
-         * the default editable text
-         */
-        defaultAnswer?: string;
-        /**
-         * Should editable text be displayed as bullets? (default is false)
-         */
-        hiddenAnswer?: boolean;
-        /**
-         * a list of up to three button names
-         */
-        buttons?: any;
-        /**
-         * the name or number of the default button
-         */
-        defaultButton?: any;
-        /**
-         * the name or number of the cancel button
-         */
-        cancelButton?: any;
-        /**
-         * the dialog window title
-         */
-        withTitle?: string;
-        /**
-         * …or an alias or file reference to a ‘.icns’ file
-         */
-        withIcon?: any;
-        /**
-         * number of seconds to wait before automatically dismissing the dialog
-         */
-        givingUpAfter?: number;
+      /**
+       * the default editable text
+       */
+      defaultAnswer?: string;
+      /**
+       * Should editable text be displayed as bullets? (default is false)
+       */
+      hiddenAnswer?: boolean;
+      /**
+       * a list of up to three button names
+       */
+      buttons?: any;
+      /**
+       * the name or number of the default button
+       */
+      defaultButton?: any;
+      /**
+       * the name or number of the cancel button
+       */
+      cancelButton?: any;
+      /**
+       * the dialog window title
+       */
+      withTitle?: string;
+      /**
+       * …or an alias or file reference to a ‘.icns’ file
+       */
+      withIcon?: any;
+      /**
+       * number of seconds to wait before automatically dismissing the dialog
+       */
+      givingUpAfter?: number;
     }
 
     /**
@@ -590,18 +591,18 @@ export namespace StandardAdditions {
      */
 
     export interface DisplayNotificationOptionalParameter {
-        /**
-         * the title of the notification (default is the name of the calling application).
-         */
-        withTitle?: string;
-        /**
-         * the subtitle of the notification
-         */
-        subtitle?: string;
-        /**
-         * the name of the sound to play
-         */
-        soundName?: string;
+      /**
+       * the title of the notification (default is the name of the calling application).
+       */
+      withTitle?: string;
+      /**
+       * the subtitle of the notification
+       */
+      subtitle?: string;
+      /**
+       * the name of the sound to play
+       */
+      soundName?: string;
     }
 
     /**
@@ -611,42 +612,42 @@ export namespace StandardAdditions {
      */
 
     export interface SayOptionalParameter {
-        /**
-         * the text to display in the feedback window (if different). Ignored unless Speech Recognition is on.
-         */
-        displaying?: string;
-        /**
-         * the voice to speak with. (Default is the system voice.)
-         */
-        using?: string;
-        /**
-         * the rate of speech in words per minute. Average human speech occurs at a rate of 180 to 220 words per minute. (Default depends on the voice used. If “using” is not given, the system speaking rate is the default.)
-         */
-        speakingRate?: number;
-        /**
-         * the base pitch frequency, a real number from 0 to 127. Values correspond to MIDI note values, where 60 is equal to middle C. Typical pitches range from around 30 to 40 for a low-pitched male voice to perhaps 55 to 65 for a high-pitched child’s voice.
-         */
-        pitch?: number;
-        /**
-         * the pitch modulation, a real number from 0 to 127. A value of 0 corresponds to a monotone in which all speech is at the base speech pitch. Given a pitch value of 46, a modulation of 2 means the widest range of pitches would be 44 to 48.
-         */
-        modulation?: number;
-        /**
-         * the volume, a real number from 0 to 1 (default is the system volume).
-         */
-        volume?: number;
-        /**
-         * stop any current speech before starting (default is false). When false, “say” waits for previous speech commands to complete before beginning to speak.
-         */
-        stoppingCurrentSpeech?: boolean;
-        /**
-         * wait for speech to complete before returning (default is true).
-         */
-        waitingUntilCompletion?: boolean;
-        /**
-         * the alias, file reference or path string of an AIFF file (existing or not) to contain the sound output.
-         */
-        savingTo?: any;
+      /**
+       * the text to display in the feedback window (if different). Ignored unless Speech Recognition is on.
+       */
+      displaying?: string;
+      /**
+       * the voice to speak with. (Default is the system voice.)
+       */
+      using?: string;
+      /**
+       * the rate of speech in words per minute. Average human speech occurs at a rate of 180 to 220 words per minute. (Default depends on the voice used. If “using” is not given, the system speaking rate is the default.)
+       */
+      speakingRate?: number;
+      /**
+       * the base pitch frequency, a real number from 0 to 127. Values correspond to MIDI note values, where 60 is equal to middle C. Typical pitches range from around 30 to 40 for a low-pitched male voice to perhaps 55 to 65 for a high-pitched child’s voice.
+       */
+      pitch?: number;
+      /**
+       * the pitch modulation, a real number from 0 to 127. A value of 0 corresponds to a monotone in which all speech is at the base speech pitch. Given a pitch value of 46, a modulation of 2 means the widest range of pitches would be 44 to 48.
+       */
+      modulation?: number;
+      /**
+       * the volume, a real number from 0 to 1 (default is the system volume).
+       */
+      volume?: number;
+      /**
+       * stop any current speech before starting (default is false). When false, “say” waits for previous speech commands to complete before beginning to speak.
+       */
+      stoppingCurrentSpeech?: boolean;
+      /**
+       * wait for speech to complete before returning (default is true).
+       */
+      waitingUntilCompletion?: boolean;
+      /**
+       * the alias, file reference or path string of an AIFF file (existing or not) to contain the sound output.
+       */
+      savingTo?: any;
     }
 
     /**
@@ -656,10 +657,10 @@ export namespace StandardAdditions {
      */
 
     export interface InfoForOptionalParameter {
-        /**
-         * Return the size of the file or folder? (default is true)
-         */
-        size?: boolean;
+      /**
+       * Return the size of the file or folder? (default is true)
+       */
+      size?: boolean;
     }
 
 
@@ -670,10 +671,10 @@ export namespace StandardAdditions {
      */
 
     export interface ListFolderOptionalParameter {
-        /**
-         * List invisible files? (default is true)
-         */
-        invisibles?: boolean;
+      /**
+       * List invisible files? (default is true)
+       */
+      invisibles?: boolean;
     }
 
     /**
@@ -683,22 +684,22 @@ export namespace StandardAdditions {
      */
 
     export interface MountVolumeOptionalParameter {
-        /**
-         * the server on which the volume resides; omit if URL path provided
-         */
-        onServer: string;
-        /**
-         * the AppleTalk zone in which the server resides; omit if URL path provided
-         */
-        inAppleTalkZone?: string;
-        /**
-         * the user name with which to log in to the server; omit for guest access
-         */
-        asUserName?: string;
-        /**
-         * the password for the user name; omit for guest access
-         */
-        withPassword?: string;
+      /**
+       * the server on which the volume resides; omit if URL path provided
+       */
+      onServer: string;
+      /**
+       * the AppleTalk zone in which the server resides; omit if URL path provided
+       */
+      inAppleTalkZone?: string;
+      /**
+       * the user name with which to log in to the server; omit for guest access
+       */
+      asUserName?: string;
+      /**
+       * the password for the user name; omit for guest access
+       */
+      withPassword?: string;
     }
 
     /**
@@ -708,10 +709,10 @@ export namespace StandardAdditions {
      */
 
     export interface PathToOptionalParameter {
-        /**
-         * the type to return: alias or string (default is alias)
-         */
-        as?: any;
+      /**
+       * the type to return: alias or string (default is alias)
+       */
+      as?: any;
     }
 
     /**
@@ -721,18 +722,18 @@ export namespace StandardAdditions {
      */
 
     export interface PathToOptionalParameter1 {
-        /**
-         * where to look for the indicated folder
-         */
-        from?: any;
-        /**
-         * the type to return: alias or string (default is alias)
-         */
-        as?: any;
-        /**
-         * Create the folder if it doesn’t exist? (default is true)
-         */
-        folderCreation?: boolean;
+      /**
+       * where to look for the indicated folder
+       */
+      from?: any;
+      /**
+       * the type to return: alias or string (default is alias)
+       */
+      as?: any;
+      /**
+       * Create the folder if it doesn’t exist? (default is true)
+       */
+      folderCreation?: boolean;
     }
 
     /**
@@ -742,15 +743,16 @@ export namespace StandardAdditions {
      */
 
     export interface PathToResourceOptionalParameter {
-        /**
-         * an alias or file reference to the bundle containing the resource (default is the target application or current script bundle)
-         */
-        inBundle?: any;
-        /**
-         * the name of a subdirectory in the bundle’s “Resources” directory
-         */
-        inDirectory?: string;
+      /**
+       * an alias or file reference to the bundle containing the resource (default is the target application or current script bundle)
+       */
+      inBundle?: any;
+      /**
+       * the name of a subdirectory in the bundle’s “Resources” directory
+       */
+      inDirectory?: string;
     }
+
 
 
     /**
@@ -760,14 +762,14 @@ export namespace StandardAdditions {
      */
 
     export interface LocalizedStringOptionalParameter {
-        /**
-         * the name of the strings file excluding the “.strings” suffix (default is “Localizable”)
-         */
-        fromTable?: string;
-        /**
-         * an alias or file reference to the bundle containing the strings file (default is the current application/script bundle)
-         */
-        inBundle?: any;
+      /**
+       * the name of the strings file excluding the “.strings” suffix (default is “Localizable”)
+       */
+      fromTable?: string;
+      /**
+       * an alias or file reference to the bundle containing the strings file (default is the current application/script bundle)
+       */
+      inBundle?: any;
     }
 
     /**
@@ -777,14 +779,14 @@ export namespace StandardAdditions {
      */
 
     export interface OffsetOptionalParameter {
-        /**
-         * the source text to find the position of
-         */
-        of: string;
-        /**
-         * the target text to search in
-         */
-        in: string;
+      /**
+       * the source text to find the position of
+       */
+      of: string;
+      /**
+       * the target text to search in
+       */
+      in: string;
     }
 
     /**
@@ -794,10 +796,10 @@ export namespace StandardAdditions {
      */
 
     export interface SummarizeOptionalParameter {
-        /**
-         * the number of sentences desired in the summary
-         */
-        in?: number;
+      /**
+       * the number of sentences desired in the summary
+       */
+      in?: number;
     }
 
 
@@ -808,10 +810,10 @@ export namespace StandardAdditions {
      */
 
     export interface TheClipboardOptionalParameter {
-        /**
-         * the type of data desired
-         */
-        as?: any;
+      /**
+       * the type of data desired
+       */
+      as?: any;
     }
 
     /**
@@ -821,10 +823,10 @@ export namespace StandardAdditions {
      */
 
     export interface ClipboardInfoOptionalParameter {
-        /**
-         * restricts to information about only this data type
-         */
-        for?: any;
+      /**
+       * restricts to information about only this data type
+       */
+      for?: any;
     }
 
     /**
@@ -834,10 +836,10 @@ export namespace StandardAdditions {
      */
 
     export interface OpenForAccessOptionalParameter {
-        /**
-         * whether to allow writing to the file.
-         */
-        writePermission?: boolean;
+      /**
+       * whether to allow writing to the file.
+       */
+      writePermission?: boolean;
     }
 
 
@@ -848,38 +850,38 @@ export namespace StandardAdditions {
      */
 
     export interface ReadOptionalParameter {
-        /**
-         * starting from this position; if omitted, start at last position read from
-         */
-        from?: number;
-        /**
-         * the number of bytes to read from current position; if omitted, read until the end of the file…
-         */
-        for?: number;
-        /**
-         * …or stop at this position…
-         */
-        to?: number;
-        /**
-         * …or read up to but not including this character…
-         */
-        before?: string;
-        /**
-         * …or read up to and including this character
-         */
-        until?: string;
-        /**
-         * the value that separates items to read…
-         */
-        usingDelimiter?: string;
-        /**
-         * …or a list of values that separate items to read
-         */
-        usingDelimiters?: any;
-        /**
-         * the form in which to read and return data
-         */
-        as?: any;
+      /**
+       * starting from this position; if omitted, start at last position read from
+       */
+      from?: number;
+      /**
+       * the number of bytes to read from current position; if omitted, read until the end of the file…
+       */
+      for?: number;
+      /**
+       * …or stop at this position…
+       */
+      to?: number;
+      /**
+       * …or read up to but not including this character…
+       */
+      before?: string;
+      /**
+       * …or read up to and including this character
+       */
+      until?: string;
+      /**
+       * the value that separates items to read…
+       */
+      usingDelimiter?: string;
+      /**
+       * …or a list of values that separate items to read
+       */
+      usingDelimiters?: any;
+      /**
+       * the form in which to read and return data
+       */
+      as?: any;
     }
 
     /**
@@ -889,22 +891,22 @@ export namespace StandardAdditions {
      */
 
     export interface WriteOptionalParameter {
-        /**
-         * the file reference number, alias, or file reference of the file to write to
-         */
-        to: any;
-        /**
-         * start writing at this position in the file
-         */
-        startingAt?: number;
-        /**
-         * the number of bytes to write; if not specified, write all the data provided
-         */
-        for?: number;
-        /**
-         * how to write the data: as text, data, list, etc.
-         */
-        as?: any;
+      /**
+       * the file reference number, alias, or file reference of the file to write to
+       */
+      to: any;
+      /**
+       * start writing at this position in the file
+       */
+      startingAt?: number;
+      /**
+       * the number of bytes to write; if not specified, write all the data provided
+       */
+      for?: number;
+      /**
+       * how to write the data: as text, data, list, etc.
+       */
+      as?: any;
     }
 
 
@@ -915,10 +917,10 @@ export namespace StandardAdditions {
      */
 
     export interface SetEofOptionalParameter {
-        /**
-         * the new length of the file, in bytes. Any data beyond this position is lost.
-         */
-        to: number;
+      /**
+       * the new length of the file, in bytes. Any data beyond this position is lost.
+       */
+      to: number;
     }
 
 
@@ -929,14 +931,14 @@ export namespace StandardAdditions {
      */
 
     export interface StoreScriptOptionalParameter {
-        /**
-         * an alias or file reference to the file to store the script object in
-         */
-        in?: any;
-        /**
-         * control display of the Save As dialog
-         */
-        replacing?: any;
+      /**
+       * an alias or file reference to the file to store the script object in
+       */
+      in?: any;
+      /**
+       * control display of the Save As dialog
+       */
+      replacing?: any;
     }
 
     /**
@@ -946,15 +948,16 @@ export namespace StandardAdditions {
      */
 
     export interface RunScriptOptionalParameter {
-        /**
-         * a list of parameters
-         */
-        withParameters?: any;
-        /**
-         * the scripting component to use; default is the current scripting component
-         */
-        in?: string;
+      /**
+       * a list of parameters
+       */
+      withParameters?: any;
+      /**
+       * the scripting component to use; default is the current scripting component
+       */
+      in?: string;
     }
+
 
 
     /**
@@ -964,30 +967,30 @@ export namespace StandardAdditions {
      */
 
     export interface DoShellScriptOptionalParameter {
-        /**
-         * the desired type of result; default is text (UTF-8)
-         */
-        as?: any;
-        /**
-         * execute the command as the administrator
-         */
-        administratorPrivileges?: boolean;
-        /**
-         * use this administrator account to avoid a password dialog (If this parameter is specified, the “password” parameter must also be specified.)
-         */
-        userName?: string;
-        /**
-         * use this administrator password to avoid a password dialog
-         */
-        password?: string;
-        /**
-         * the prompt to be displayed in the password dialog when the name and password are not specified or are incorrect
-         */
-        withPrompt?: string;
-        /**
-         * change all line endings to Mac-style and trim a trailing one (default true)
-         */
-        alteringLineEndings?: boolean;
+      /**
+       * the desired type of result; default is text (UTF-8)
+       */
+      as?: any;
+      /**
+       * execute the command as the administrator
+       */
+      administratorPrivileges?: boolean;
+      /**
+       * use this administrator account to avoid a password dialog (If this parameter is specified, the “password” parameter must also be specified.)
+       */
+      userName?: string;
+      /**
+       * use this administrator password to avoid a password dialog
+       */
+      password?: string;
+      /**
+       * the prompt to be displayed in the password dialog when the name and password are not specified or are incorrect
+       */
+      withPrompt?: string;
+      /**
+       * change all line endings to Mac-style and trim a trailing one (default true)
+       */
+      alteringLineEndings?: boolean;
     }
 
 
@@ -998,18 +1001,18 @@ export namespace StandardAdditions {
      */
 
     export interface RandomNumberOptionalParameter {
-        /**
-         * the lowest number to return (default is 0.0)
-         */
-        from?: number;
-        /**
-         * the highest number to return (default is 1.0)
-         */
-        to?: number;
-        /**
-         * a starting point for a repeatable sequence of random numbers. A value of 0 will use a random seed.
-         */
-        withSeed?: number;
+      /**
+       * the lowest number to return (default is 0.0)
+       */
+      from?: number;
+      /**
+       * the highest number to return (default is 1.0)
+       */
+      to?: number;
+      /**
+       * a starting point for a repeatable sequence of random numbers. A value of 0 will use a random seed.
+       */
+      withSeed?: number;
     }
 
     /**
@@ -1019,10 +1022,10 @@ export namespace StandardAdditions {
      */
 
     export interface RoundOptionalParameter {
-        /**
-         * the rounding direction; if omitted, rounds to nearest. “to nearest” rounds .5 cases to the nearest even integer in order to decrease cumulative errors. To always round .5 away from zero, use “as taught in school.”
-         */
-        rounding?: any;
+      /**
+       * the rounding direction; if omitted, rounds to nearest. “to nearest” rounds .5 cases to the nearest even integer in order to decrease cumulative errors. To always round .5 away from zero, use “as taught in school.”
+       */
+      rounding?: any;
     }
 
     /**
@@ -1032,22 +1035,22 @@ export namespace StandardAdditions {
      */
 
     export interface SetVolumeOptionalParameter {
-        /**
-         * the sound output volume, an integer from 0 to 100
-         */
-        outputVolume?: number;
-        /**
-         * the sound input volume, an integer from 0 to 100
-         */
-        inputVolume?: number;
-        /**
-         * the alert volume, an integer from 0 to 100
-         */
-        alertVolume?: number;
-        /**
-         * Should the sound output be muted?
-         */
-        outputMuted?: boolean;
+      /**
+       * the sound output volume, an integer from 0 to 100
+       */
+      outputVolume?: number;
+      /**
+       * the sound input volume, an integer from 0 to 100
+       */
+      inputVolume?: number;
+      /**
+       * the alert volume, an integer from 0 to 100
+       */
+      alertVolume?: number;
+      /**
+       * Should the sound output be muted?
+       */
+      outputMuted?: boolean;
     }
 
     /**
@@ -1057,11 +1060,14 @@ export namespace StandardAdditions {
      */
 
     export interface SystemAttributeOptionalParameter {
-        /**
-         * test specific bits of response (ignored for environment variables)
-         */
-        has?: number;
+      /**
+       * test specific bits of response (ignored for environment variables)
+       */
+      has?: number;
     }
+
+
+
 
 
     /**
@@ -1071,10 +1077,10 @@ export namespace StandardAdditions {
      */
 
     export interface MovingFolderWindowForOptionalParameter {
-        /**
-         * the previous coordinates of folder window (you can get the new coordinates from the Finder)
-         */
-        from: any;
+      /**
+       * the previous coordinates of folder window (you can get the new coordinates from the Finder)
+       */
+      from: any;
     }
 
     /**
@@ -1084,10 +1090,10 @@ export namespace StandardAdditions {
      */
 
     export interface AddingFolderItemsToOptionalParameter {
-        /**
-         * a list of the items the folder received
-         */
-        afterReceiving: any;
+      /**
+       * a list of the items the folder received
+       */
+      afterReceiving: any;
     }
 
     /**
@@ -1097,10 +1103,10 @@ export namespace StandardAdditions {
      */
 
     export interface RemovingFolderItemsFromOptionalParameter {
-        /**
-         * a list of the items the folder lost. For permanently deleted items, only the names (in strings) are provided.
-         */
-        afterLosing: any;
+      /**
+       * a list of the items the folder lost. For permanently deleted items, only the names (in strings) are provided.
+       */
+      afterLosing: any;
     }
 
     /**
@@ -1110,10 +1116,10 @@ export namespace StandardAdditions {
      */
 
     export interface OpenLocationOptionalParameter {
-        /**
-         * Should error conditions be reported in a dialog?
-         */
-        errorReporting?: boolean;
+      /**
+       * Should error conditions be reported in a dialog?
+       */
+      errorReporting?: boolean;
     }
 
     /**
@@ -1123,514 +1129,509 @@ export namespace StandardAdditions {
      */
 
     export interface HandleCgiRequestOptionalParameter {
-        /**
-         * the data for the GET method or data after the ‘?’ in a POST method
-         */
-        searchingFor?: string;
-        /**
-         * the POST arguments
-         */
-        withPostedData?: string;
-        /**
-         * the MIME content type of POST arguments
-         */
-        ofContentType?: string;
-        /**
-         * either ‘GET’ or ‘POST’
-         */
-        usingAccessMethod?: string;
-        /**
-         * the IP address of the entity making the request
-         */
-        fromAddress?: string;
-        /**
-         * the user name associated with the request
-         */
-        fromUser?: string;
-        /**
-         * the password sent with the request
-         */
-        usingPassword?: string;
-        /**
-         * additional information about the user, usually the email address
-         */
-        withUserInfo?: string;
-        /**
-         * the name of the server application sending this request
-         */
-        fromServer?: string;
-        /**
-         * the IP port number of the server
-         */
-        viaPort?: string;
-        /**
-         * the path to the script executing this CGI, in URL form
-         */
-        executingBy?: string;
-        /**
-         * the URL of the page the client used to link to the CGI
-         */
-        referredBy?: string;
-        /**
-         * the name of the client software
-         */
-        fromBrowser?: string;
-        /**
-         * the path to the file or CGI
-         */
-        usingAction?: string;
-        /**
-         * either PREPROCESSOR, POSTPROCESSOR, CGI, or ACGI
-         */
-        ofActionType?: string;
-        /**
-         * the Internet address of the client
-         */
-        fromClientIPAddress?: string;
-        /**
-         * the full request as sent to the server
-         */
-        withFullRequest?: string;
-        /**
-         * the ID of the connection from the server to the client
-         */
-        withConnectionID?: number;
-        /**
-         * the URL of the root folder of the virtual host
-         */
-        fromVirtualHost?: string;
+      /**
+       * the data for the GET method or data after the ‘?’ in a POST method
+       */
+      searchingFor?: string;
+      /**
+       * the POST arguments
+       */
+      withPostedData?: string;
+      /**
+       * the MIME content type of POST arguments
+       */
+      ofContentType?: string;
+      /**
+       * either ‘GET’ or ‘POST’
+       */
+      usingAccessMethod?: string;
+      /**
+       * the IP address of the entity making the request
+       */
+      fromAddress?: string;
+      /**
+       * the user name associated with the request
+       */
+      fromUser?: string;
+      /**
+       * the password sent with the request
+       */
+      usingPassword?: string;
+      /**
+       * additional information about the user, usually the email address
+       */
+      withUserInfo?: string;
+      /**
+       * the name of the server application sending this request
+       */
+      fromServer?: string;
+      /**
+       * the IP port number of the server
+       */
+      viaPort?: string;
+      /**
+       * the path to the script executing this CGI, in URL form
+       */
+      executingBy?: string;
+      /**
+       * the URL of the page the client used to link to the CGI
+       */
+      referredBy?: string;
+      /**
+       * the name of the client software
+       */
+      fromBrowser?: string;
+      /**
+       * the path to the file or CGI
+       */
+      usingAction?: string;
+      /**
+       * either PREPROCESSOR, POSTPROCESSOR, CGI, or ACGI
+       */
+      ofActionType?: string;
+      /**
+       * the Internet address of the client
+       */
+      fromClientIPAddress?: string;
+      /**
+       * the full request as sent to the server
+       */
+      withFullRequest?: string;
+      /**
+       * the ID of the connection from the server to the client
+       */
+      withConnectionID?: number;
+      /**
+       * the URL of the root folder of the virtual host
+       */
+      fromVirtualHost?: string;
     }
 
 }
-
 export interface StandardAdditions {
     // Functions
 
-    /**
-     * Beep 1 or more times
-     * @param directParameter number of times to beep
-     *
-     */
-    beep(directParameter?: number,): void;
-
-    /**
-     * Choose an application on this machine or the network
-
-     * @param option
-     * @return the chosen application
-     */
-    chooseApplication(option?: StandardAdditions.ChooseApplicationOptionalParameter): any;
-
-    /**
-     * Choose a color
-
-     * @param option
-     * @return the chosen color
-     */
-    chooseColor(option?: StandardAdditions.ChooseColorOptionalParameter): any;
-
-    /**
-     * Choose a file on a disk or server
-
-     * @param option
-     * @return the chosen file
-     */
-    chooseFile(option?: StandardAdditions.ChooseFileOptionalParameter): any;
-
-    /**
-     * Get a new file reference from the user, without creating the file
-
-     * @param option
-     * @return the file the user specified
-     */
-    chooseFileName(option?: StandardAdditions.ChooseFileNameOptionalParameter): any;
-
-    /**
-     * Choose a folder on a disk or server
-
-     * @param option
-     * @return the chosen folder
-     */
-    chooseFolder(option?: StandardAdditions.ChooseFolderOptionalParameter): any;
-
-    /**
-     * Choose one or more items from a list
-     * @param directParameter a list of items to display
-     * @param option
-     * @return the list of selected items
-     */
-    chooseFromList(directParameter: {}, option?: StandardAdditions.ChooseFromListOptionalParameter): void;
-
-    /**
-     * Choose a running application on a remote machine or on this machine
-
-     * @param option
-     * @return the chosen application
-     */
-    chooseRemoteApplication(option?: StandardAdditions.ChooseRemoteApplicationOptionalParameter): any;
-
-    /**
-     * Choose a service on the Internet
-
-     * @param option
-     * @return the chosen URL
-     */
-    chooseURL(option?: StandardAdditions.ChooseUrlOptionalParameter): any;
-
-    /**
-     * Pause for a fixed amount of time
-     * @param directParameter the number of seconds to delay (default is 0)
-     *
-     */
-    delay(directParameter?: number,): void;
-
-    /**
-     * Display an alert
-     * @param directParameter the alert text (will be displayed in emphasized system font)
-     * @param option
-     * @return a record containing the button clicked
-     */
-    displayAlert(directParameter: string, option?: StandardAdditions.DisplayAlertOptionalParameter): StandardAdditions.AlertReply;
-
-    /**
-     * Display a dialog box, optionally requesting user input
-     * @param directParameter the text to display in the dialog box
-     * @param option
-     * @return a record containing the button clicked and text entered (if any)
-     */
-    displayDialog(directParameter: string, option?: StandardAdditions.DisplayDialogOptionalParameter): StandardAdditions.DialogReply;
-
-    /**
-     * Display a notification. At least one of the body text and the title must be specified.
-     * @param directParameter the body text of the notification
-     * @param option
-     *
-     */
-    displayNotification(directParameter?: string, option?: StandardAdditions.DisplayNotificationOptionalParameter): void;
-
-    /**
-     * Speak the given text
-     * @param directParameter the text to speak, which can include intonation characters
-     * @param option
-     *
-     */
-    say(directParameter: string, option?: StandardAdditions.SayOptionalParameter): void;
-
-    /**
-     * Return information for a file or folder
-     * @param directParameter an alias or file reference to the file or folder
-     * @param option
-     * @return a record containing the information for the specified file or folder
-     */
-    infoFor(directParameter: any, option?: StandardAdditions.InfoForOptionalParameter): StandardAdditions.FileInformation;
-
-    /**
-     * Return a list of the currently mounted volumes
-
-     * @return a list of the currently mounted volumes.
-     */
-    listDisks(): void;
-
-    /**
-     * Return the contents of a specified folder
-     * @param directParameter an alias or file reference to the folder
-     * @param option
-     * @return a list of the items in the specified folder
-     */
-    listFolder(directParameter: any, option?: StandardAdditions.ListFolderOptionalParameter): void;
-
-    /**
-     * Mount the specified server volume
-     * @param directParameter the name or URL path (e.g. ‘afp://server/volume/’) of the volume to mount
-     * @param option
-     * @return a specifier for the mounted volume
-     */
-    mountVolume(directParameter: string, option?: StandardAdditions.MountVolumeOptionalParameter): any;
-
-    /**
-     * Return the full path to the specified application or script
-     * @param directParameter the item path to return; e.g., current application, frontmost application, application “AppName”, me, it
-     * @param option
-     * @return the path to the specified item
-     */
-    pathTo(directParameter: {}, option?: StandardAdditions.PathToOptionalParameter): void;
-
-    /**
-     * Return the full path to the specified folder
-     * @param directParameter the folder to return
-     * @param option
-     * @return the path to the specified folder
-     */
-    pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter1): any;
-
-    /**
-     * Return the full path to the specified resource
-     * @param directParameter the name of the requested resource
-     * @param option
-     * @return the path to the resource
-     */
-    pathToResource(directParameter: string, option?: StandardAdditions.PathToResourceOptionalParameter): any;
-
-    /**
-     * Convert a number to a character
-     * @param directParameter the code point of the specified character
-     * @return the character
-     */
-    ASCIICharacter(directParameter: number,): string;
-
-    /**
-     * Convert a character to a number
-     * @param directParameter the character
-     * @return the code point of the specified character
-     */
-    ASCIINumber(directParameter: string,): number;
-
-    /**
-     * Return the localized string for the specified key
-     * @param directParameter the key
-     * @param option
-     * @return the localized string
-     */
-    localizedString(directParameter: string, option?: StandardAdditions.LocalizedStringOptionalParameter): string;
-
-    /**
-     * Find one piece of text inside another
-
-     * @param option
-     * @return the position of the source text in the target, or 0 if not found
-     */
-    offset(option?: StandardAdditions.OffsetOptionalParameter): number;
-
-    /**
-     * Summarize the specified text or text file
-     * @param directParameter the text (or an alias to a text file) to summarize
-     * @param option
-     * @return a summarized version of the text or file
-     */
-    summarize(directParameter: {}, option?: StandardAdditions.SummarizeOptionalParameter): string;
-
-    /**
-     * Place data on an application’s clipboard. Use inside a ‘tell’ block and activate the application first
-     * @param directParameter the data to place on the clipboard
-     *
-     */
-    setTheClipboardTo(directParameter: any,): void;
-
-    /**
-     * Return the contents of an application’s clipboard. Use in a ‘tell’ block after activating the application
-
-     * @param option
-     * @return the data
-     */
-    theClipboard(option?: StandardAdditions.TheClipboardOptionalParameter): any;
-
-    /**
-     * Return information about the clipboard
-
-     * @param option
-     * @return a list of {data type, size} for each type of data on the clipboard
-     */
-    clipboardInfo(option?: StandardAdditions.ClipboardInfoOptionalParameter): void;
-
-    /**
-     * Open a disk file for the read and write commands
-     * @param directParameter the file or alias to open for access. If the file does not exist, a new file is created.
-     * @param option
-     * @return a file reference number; use for ‘read’, ‘write’, and ‘close access’
-     */
-    openForAccess(directParameter: any, option?: StandardAdditions.OpenForAccessOptionalParameter): number;
-
-    /**
-     * Close a file that was opened for access
-     * @param directParameter the file reference number, alias, or file reference of the file to close
-     *
-     */
-    closeAccess(directParameter: any,): void;
-
-    /**
-     * Read data from a file that has been opened for access
-     * @param directParameter the file reference number, alias, or file reference of the file to read
-     * @param option
-     * @return the data read from the file
-     */
-    read(directParameter: any, option?: StandardAdditions.ReadOptionalParameter): any;
-
-    /**
-     * Write data to a file that was opened for access with write permission
-     * @param directParameter the data to write to the file
-     * @param option
-     *
-     */
-    write(directParameter: any, option?: StandardAdditions.WriteOptionalParameter): void;
-
-    /**
-     * Return the length, in bytes, of a file
-     * @param directParameter a file reference number, alias, or file reference of a file
-     * @return the total number of bytes in the file
-     */
-    getEof(directParameter: any,): number;
-
-    /**
-     * Set the length, in bytes, of a file
-     * @param directParameter a file reference number, alias, or file reference of a file
-     * @param option
-     *
-     */
-    setEof(directParameter: any, option?: StandardAdditions.SetEofOptionalParameter): void;
-
-    /**
-     * Return a script object loaded from a specified file
-     * @param directParameter an alias or file reference to the file containing the script object
-     * @return the script object. You can get this object’s properties or call its handlers as if it were a local script object.
-     */
-    loadScript(directParameter: any,): any;
-
-    /**
-     * Store a script object into a file
-     * @param directParameter the script object to store
-     * @param option
-     *
-     */
-    storeScript(directParameter?: any, option?: StandardAdditions.StoreScriptOptionalParameter): void;
-
-    /**
-     * Run a specified script or script file
-     * @param directParameter the script text (or an alias or file reference to a script file) to run
-     * @param option
-     * @return the result of running the script
-     */
-    runScript(directParameter: any, option?: StandardAdditions.RunScriptOptionalParameter): any;
-
-    /**
-     * Return a list of all scripting components (e.g. AppleScript)
-
-     * @return a list of installed scripting components
-     */
-    scriptingComponents(): void;
-
-    /**
-     * Return the current date and time
-
-     * @return the current date and time. Use ‘month of (current date)’, etc. to get individual parts.
-     */
-    currentDate(): any;
-
-    /**
-     * Execute a shell script using the ‘sh’ shell
-     * @param directParameter the shell script to execute.
-     * @param option
-     * @return the command output
-     */
-    doShellScript(directParameter: string, option?: StandardAdditions.DoShellScriptOptionalParameter): string;
-
-    /**
-     * Get the sound output and input volume settings
-
-     * @return a record containing the sound output and input volume settings
-     */
-    getVolumeSettings(): StandardAdditions.VolumeSettings;
-
-    /**
-     * Generate a random number
-     * @param directParameter the upper limit (Default is 1.0. If this parameter is specified, the “from” and “to” parameters will be ignored.)
-     * @param option
-     * @return a number between the “from” and “to” limits, including limit values. If all specified limits are integers, the result is an integer. Otherwise, the result is a real.
-     */
-    randomNumber(directParameter?: number, option?: StandardAdditions.RandomNumberOptionalParameter): number;
-
-    /**
-     * Round number to integer
-     * @param directParameter the number to round
-     * @param option
-     * @return the rounded value
-     */
-    round(directParameter: any, option?: StandardAdditions.RoundOptionalParameter): number;
-
-    /**
-     * Set the sound output and/or input volume
-     * @param directParameter the sound output volume, a real number from 0 to 7 (This parameter is deprecated; if specified, all other parameters will be ignored.)
-     * @param option
-     *
-     */
-    setVolume(directParameter?: number, option?: StandardAdditions.SetVolumeOptionalParameter): void;
-
-    /**
-     * Test attributes of this computer
-     * @param directParameter the attribute to test (either a “Gestalt” value or a shell environment variable).
-     * @param option
-     * @return the result of the query (or a list of all environment variables, if no attribute is provided)
-     */
-    systemAttribute(directParameter?: any, option?: StandardAdditions.SystemAttributeOptionalParameter): any;
-
-    /**
-     * Get information about the system
-
-     * @return a record containing the system information
-     */
-    systemInfo(): StandardAdditions.SystemInformation;
-
-    /**
-     * Return the difference between local time and GMT (Universal Time)
-
-     * @return the difference between current time zone and Universal Time, in seconds
-     */
-    timeToGMT(): number;
-
-    /**
-     * Called after a folder has been opened into a window
-     * @param directParameter the folder that was opened
-     *
-     */
-    openingFolder(directParameter: any,): void;
-
-    /**
-     * Called after a folder window has been closed
-     * @param directParameter the folder that was closed
-     *
-     */
-    closingFolderWindowFor(directParameter: any,): void;
-
-    /**
-     * Called after a folder window has been moved or resized
-     * @param directParameter the folder whose window was moved or resized
-     * @param option
-     *
-     */
-    movingFolderWindowFor(directParameter: any, option?: StandardAdditions.MovingFolderWindowForOptionalParameter): void;
-
-    /**
-     * Called after new items have been added to a folder
-     * @param directParameter Folder receiving the new items
-     * @param option
-     *
-     */
-    addingFolderItemsTo(directParameter: any, option?: StandardAdditions.AddingFolderItemsToOptionalParameter): void;
-
-    /**
-     * Called after items have been removed from a folder
-     * @param directParameter the folder losing the items
-     * @param option
-     *
-     */
-    removingFolderItemsFrom(directParameter: any, option?: StandardAdditions.RemovingFolderItemsFromOptionalParameter): void;
-
-    /**
-     * Opens a URL with the appropriate program
-     * @param directParameter the URL to open
-     * @param option
-     *
-     */
-    openLocation(directParameter?: string, option?: StandardAdditions.OpenLocationOptionalParameter): void;
-
-    /**
-     * Sent to a script to process a Common Gateway Interface request
-     * @param directParameter the path of the URL
-     * @param option
-     * @return An HTML page resulting from the CGI execution
-     */
-    handleCGIRequest(directParameter: string, option?: StandardAdditions.HandleCgiRequestOptionalParameter): any;
+     /**
+      * Beep 1 or more times
+      * @param directParameter number of times to beep
+      * 
+      */
+     beep(directParameter?: number, ): void;
+
+     /**
+      * Choose an application on this machine or the network
+
+      * @param option
+      * @return the chosen application
+      */
+     chooseApplication(option?: StandardAdditions.ChooseApplicationOptionalParameter): any;
+
+     /**
+      * Choose a color
+
+      * @param option
+      * @return the chosen color
+      */
+     chooseColor(option?: StandardAdditions.ChooseColorOptionalParameter): any;
+
+     /**
+      * Choose a file on a disk or server
+
+      * @param option
+      * @return the chosen file
+      */
+     chooseFile(option?: StandardAdditions.ChooseFileOptionalParameter): any;
+
+     /**
+      * Get a new file reference from the user, without creating the file
+
+      * @param option
+      * @return the file the user specified
+      */
+     chooseFileName(option?: StandardAdditions.ChooseFileNameOptionalParameter): any;
+
+     /**
+      * Choose a folder on a disk or server
+
+      * @param option
+      * @return the chosen folder
+      */
+     chooseFolder(option?: StandardAdditions.ChooseFolderOptionalParameter): any;
+
+     /**
+      * Choose one or more items from a list
+      * @param directParameter a list of items to display
+      * @param option
+      * @return the list of selected items
+      */
+     chooseFromList(directParameter: {}, option?: StandardAdditions.ChooseFromListOptionalParameter): void;
+
+     /**
+      * Choose a running application on a remote machine or on this machine
+
+      * @param option
+      * @return the chosen application
+      */
+     chooseRemoteApplication(option?: StandardAdditions.ChooseRemoteApplicationOptionalParameter): any;
+
+     /**
+      * Choose a service on the Internet
+
+      * @param option
+      * @return the chosen URL
+      */
+     chooseURL(option?: StandardAdditions.ChooseUrlOptionalParameter): any;
+
+     /**
+      * Pause for a fixed amount of time
+      * @param directParameter the number of seconds to delay (default is 0)
+      * 
+      */
+     delay(directParameter?: number, ): void;
+
+     /**
+      * Display an alert
+      * @param directParameter the alert text (will be displayed in emphasized system font)
+      * @param option
+      * @return a record containing the button clicked
+      */
+     displayAlert(directParameter: string, option?: StandardAdditions.DisplayAlertOptionalParameter): StandardAdditions.AlertReply;
+
+     /**
+      * Display a dialog box, optionally requesting user input
+      * @param directParameter the text to display in the dialog box
+      * @param option
+      * @return a record containing the button clicked and text entered (if any)
+      */
+     displayDialog(directParameter: string, option?: StandardAdditions.DisplayDialogOptionalParameter): StandardAdditions.DialogReply;
+
+     /**
+      * Display a notification. At least one of the body text and the title must be specified.
+      * @param directParameter the body text of the notification
+      * @param option
+      * 
+      */
+     displayNotification(directParameter?: string, option?: StandardAdditions.DisplayNotificationOptionalParameter): void;
+
+     /**
+      * Speak the given text
+      * @param directParameter the text to speak, which can include intonation characters
+      * @param option
+      * 
+      */
+     say(directParameter: string, option?: StandardAdditions.SayOptionalParameter): void;
+
+     /**
+      * Return information for a file or folder
+      * @param directParameter an alias or file reference to the file or folder
+      * @param option
+      * @return a record containing the information for the specified file or folder
+      */
+     infoFor(directParameter: any, option?: StandardAdditions.InfoForOptionalParameter): StandardAdditions.FileInformation;
+
+     /**
+      * Return a list of the currently mounted volumes
+
+      * @return a list of the currently mounted volumes.
+      */
+     listDisks(): void;
+
+     /**
+      * Return the contents of a specified folder
+      * @param directParameter an alias or file reference to the folder
+      * @param option
+      * @return a list of the items in the specified folder
+      */
+     listFolder(directParameter: any, option?: StandardAdditions.ListFolderOptionalParameter): void;
+
+     /**
+      * Mount the specified server volume
+      * @param directParameter the name or URL path (e.g. ‘afp://server/volume/’) of the volume to mount
+      * @param option
+      * @return a specifier for the mounted volume
+      */
+     mountVolume(directParameter: string, option?: StandardAdditions.MountVolumeOptionalParameter): any;
+
+     /**
+      * Return the full path to the specified application or script
+      * @param directParameter the item path to return; e.g., current application, frontmost application, application “AppName”, me, it
+      * @param option
+      * @return the path to the specified item
+      */
+     pathTo(directParameter: {}, option?: StandardAdditions.PathToOptionalParameter): void;
+
+     /**
+      * Return the full path to the specified folder
+      * @param directParameter the folder to return
+      * @param option
+      * @return the path to the specified folder
+      */
+     pathTo(directParameter: any, option?: StandardAdditions.PathToOptionalParameter1): any;
+
+     /**
+      * Return the full path to the specified resource
+      * @param directParameter the name of the requested resource
+      * @param option
+      * @return the path to the resource
+      */
+     pathToResource(directParameter: string, option?: StandardAdditions.PathToResourceOptionalParameter): any;
+
+     /**
+      * Convert a number to a character
+      * @param directParameter the code point of the specified character
+      * @return the character
+      */
+     ASCIICharacter(directParameter: number, ): string;
+
+     /**
+      * Convert a character to a number
+      * @param directParameter the character
+      * @return the code point of the specified character
+      */
+     ASCIINumber(directParameter: string, ): number;
+
+     /**
+      * Return the localized string for the specified key
+      * @param directParameter the key
+      * @param option
+      * @return the localized string
+      */
+     localizedString(directParameter: string, option?: StandardAdditions.LocalizedStringOptionalParameter): string;
+
+     /**
+      * Find one piece of text inside another
+
+      * @param option
+      * @return the position of the source text in the target, or 0 if not found
+      */
+     offset(option?: StandardAdditions.OffsetOptionalParameter): number;
+
+     /**
+      * Summarize the specified text or text file
+      * @param directParameter the text (or an alias to a text file) to summarize
+      * @param option
+      * @return a summarized version of the text or file
+      */
+     summarize(directParameter: {}, option?: StandardAdditions.SummarizeOptionalParameter): string;
+
+     /**
+      * Place data on an application’s clipboard. Use inside a ‘tell’ block and activate the application first
+      * @param directParameter the data to place on the clipboard
+      * 
+      */
+     setTheClipboardTo(directParameter: any, ): void;
+
+     /**
+      * Return the contents of an application’s clipboard. Use in a ‘tell’ block after activating the application
+
+      * @param option
+      * @return the data
+      */
+     theClipboard(option?: StandardAdditions.TheClipboardOptionalParameter): any;
+
+     /**
+      * Return information about the clipboard
+
+      * @param option
+      * @return a list of {data type, size} for each type of data on the clipboard
+      */
+     clipboardInfo(option?: StandardAdditions.ClipboardInfoOptionalParameter): void;
+
+     /**
+      * Open a disk file for the read and write commands
+      * @param directParameter the file or alias to open for access. If the file does not exist, a new file is created.
+      * @param option
+      * @return a file reference number; use for ‘read’, ‘write’, and ‘close access’
+      */
+     openForAccess(directParameter: any, option?: StandardAdditions.OpenForAccessOptionalParameter): number;
+
+     /**
+      * Close a file that was opened for access
+      * @param directParameter the file reference number, alias, or file reference of the file to close
+      * 
+      */
+     closeAccess(directParameter: any, ): void;
+
+     /**
+      * Read data from a file that has been opened for access
+      * @param directParameter the file reference number, alias, or file reference of the file to read
+      * @param option
+      * @return the data read from the file
+      */
+     read(directParameter: any, option?: StandardAdditions.ReadOptionalParameter): any;
+
+     /**
+      * Write data to a file that was opened for access with write permission
+      * @param directParameter the data to write to the file
+      * @param option
+      * 
+      */
+     write(directParameter: any, option?: StandardAdditions.WriteOptionalParameter): void;
+
+     /**
+      * Return the length, in bytes, of a file
+      * @param directParameter a file reference number, alias, or file reference of a file
+      * @return the total number of bytes in the file
+      */
+     getEof(directParameter: any, ): number;
+
+     /**
+      * Set the length, in bytes, of a file
+      * @param directParameter a file reference number, alias, or file reference of a file
+      * @param option
+      * 
+      */
+     setEof(directParameter: any, option?: StandardAdditions.SetEofOptionalParameter): void;
+
+     /**
+      * Return a script object loaded from a specified file
+      * @param directParameter an alias or file reference to the file containing the script object
+      * @return the script object. You can get this object’s properties or call its handlers as if it were a local script object.
+      */
+     loadScript(directParameter: any, ): any;
+
+     /**
+      * Store a script object into a file
+      * @param directParameter the script object to store
+      * @param option
+      * 
+      */
+     storeScript(directParameter?: any, option?: StandardAdditions.StoreScriptOptionalParameter): void;
+
+     /**
+      * Run a specified script or script file
+      * @param directParameter the script text (or an alias or file reference to a script file) to run
+      * @param option
+      * @return the result of running the script
+      */
+     runScript(directParameter: any, option?: StandardAdditions.RunScriptOptionalParameter): any;
+
+     /**
+      * Return a list of all scripting components (e.g. AppleScript)
+
+      * @return a list of installed scripting components
+      */
+     scriptingComponents(): void;
+
+     /**
+      * Return the current date and time
+
+      * @return the current date and time. Use ‘month of (current date)’, etc. to get individual parts.
+      */
+     currentDate(): any;
+
+     /**
+      * Execute a shell script using the ‘sh’ shell
+      * @param directParameter the shell script to execute.
+      * @param option
+      * @return the command output
+      */
+     doShellScript(directParameter: string, option?: StandardAdditions.DoShellScriptOptionalParameter): string;
+
+     /**
+      * Get the sound output and input volume settings
+
+      * @return a record containing the sound output and input volume settings
+      */
+     getVolumeSettings(): StandardAdditions.VolumeSettings;
+
+     /**
+      * Generate a random number
+      * @param directParameter the upper limit (Default is 1.0. If this parameter is specified, the “from” and “to” parameters will be ignored.)
+      * @param option
+      * @return a number between the “from” and “to” limits, including limit values. If all specified limits are integers, the result is an integer. Otherwise, the result is a real.
+      */
+     randomNumber(directParameter?: number, option?: StandardAdditions.RandomNumberOptionalParameter): number;
+
+     /**
+      * Round number to integer
+      * @param directParameter the number to round
+      * @param option
+      * @return the rounded value
+      */
+     round(directParameter: any, option?: StandardAdditions.RoundOptionalParameter): number;
+
+     /**
+      * Set the sound output and/or input volume
+      * @param directParameter the sound output volume, a real number from 0 to 7 (This parameter is deprecated; if specified, all other parameters will be ignored.)
+      * @param option
+      * 
+      */
+     setVolume(directParameter?: number, option?: StandardAdditions.SetVolumeOptionalParameter): void;
+
+     /**
+      * Test attributes of this computer
+      * @param directParameter the attribute to test (either a “Gestalt” value or a shell environment variable).
+      * @param option
+      * @return the result of the query (or a list of all environment variables, if no attribute is provided)
+      */
+     systemAttribute(directParameter?: any, option?: StandardAdditions.SystemAttributeOptionalParameter): any;
+
+     /**
+      * Get information about the system
+
+      * @return a record containing the system information
+      */
+     systemInfo(): StandardAdditions.SystemInformation;
+
+     /**
+      * Return the difference between local time and GMT (Universal Time)
+
+      * @return the difference between current time zone and Universal Time, in seconds
+      */
+     timeToGMT(): number;
+
+     /**
+      * Called after a folder has been opened into a window
+      * @param directParameter the folder that was opened
+      * 
+      */
+     openingFolder(directParameter: any, ): void;
+
+     /**
+      * Called after a folder window has been closed
+      * @param directParameter the folder that was closed
+      * 
+      */
+     closingFolderWindowFor(directParameter: any, ): void;
+
+     /**
+      * Called after a folder window has been moved or resized
+      * @param directParameter the folder whose window was moved or resized
+      * @param option
+      * 
+      */
+     movingFolderWindowFor(directParameter: any, option?: StandardAdditions.MovingFolderWindowForOptionalParameter): void;
+
+     /**
+      * Called after new items have been added to a folder
+      * @param directParameter Folder receiving the new items
+      * @param option
+      * 
+      */
+     addingFolderItemsTo(directParameter: any, option?: StandardAdditions.AddingFolderItemsToOptionalParameter): void;
+
+     /**
+      * Called after items have been removed from a folder
+      * @param directParameter the folder losing the items
+      * @param option
+      * 
+      */
+     removingFolderItemsFrom(directParameter: any, option?: StandardAdditions.RemovingFolderItemsFromOptionalParameter): void;
+
+     /**
+      * Opens a URL with the appropriate program
+      * @param directParameter the URL to open
+      * @param option
+      * 
+      */
+     openLocation(directParameter?: string, option?: StandardAdditions.OpenLocationOptionalParameter): void;
+
+     /**
+      * Sent to a script to process a Common Gateway Interface request
+      * @param directParameter the path of the URL
+      * @param option
+      * @return An HTML page resulting from the CGI execution
+      */
+     handleCGIRequest(directParameter: string, option?: StandardAdditions.HandleCgiRequestOptionalParameter): any;
 }
-
-
-
-
