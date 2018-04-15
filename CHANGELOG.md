@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/JXA-userland/JXA/compare/v0.2.1...v0.2.2) (2018-04-15)
+
+
+### Bug Fixes
+
+* **global-type:** use index.d.ts ([a90f0b7](https://github.com/JXA-userland/JXA/commit/a90f0b7))
+
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/JXA-userland/JXA/compare/v0.2.0...v0.2.1) (2018-04-15)
 
