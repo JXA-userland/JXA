@@ -46,6 +46,12 @@ const isCommand = (node: Node): node is Command => {
 const isRecord = (node: Node): node is Record => {
     return node.name === "record-type";
 };
+const isClass = (node: Node): node is Class => {
+    return node.name === "class";
+};
+const isClassExtend = (node: Node): node is ClassExtend => {
+    return node.name === "class-extend";
+};
 
 interface Command extends RootNode {
     name: "command";
@@ -55,6 +61,13 @@ interface Record extends RootNode {
     name: "record";
 }
 
+interface ClassExtend extends RootNode {
+    name: "class-extend";
+}
+
+interface Class extends RootNode {
+    name: "class";
+}
 
 const convertJSONSchemaType = (type: string): string => {
     switch (type) {
@@ -125,7 +138,7 @@ const createOptionalParameter = (name: string, parameters: Node[]): Promise<stri
 };
 
 
-const recordToJSONSchema = (command: Record): JSONSchema => {
+const recordToJSONSchema = (command: Record | Class): JSONSchema => {
     // https://www.npmjs.com/package/json-schema-to-typescript
     const pascalCaseName = pascalCase(command.attributes.name);
     const description = command.attributes.description;
@@ -222,6 +235,18 @@ ${directParametersDocs.join("\n")}${
     }
 };
 
+
+const schemaToInterfaces = async (schemas: JSONSchema[]): Promise<string> => {
+    const results = await Promise.all(schemas.map(schema => {
+        const title = schema.title!;
+        return compile(schema, title).then(schema => {
+            // TODO: prevent UIElement -> UiElement
+            // https://github.com/bcherny/json-schema-to-typescript/blob/fadb879a5373f20fd9d1f441168494003e825239/src/utils.ts#L56
+            return schema.replace(new RegExp(`interface ${title}`, "i"), `interface ${title}`);
+        });
+    }));
+    return results.join("\n");
+};
 export const transform = async (namespace: string, sdefContent: string) => {
     if (!isVarName(namespace)) {
         throw new Error(`${namespace} can not to be used for namespace, because it includes invalid string.`);
@@ -231,6 +256,8 @@ export const transform = async (namespace: string, sdefContent: string) => {
     const suites = dictionary.children.filter(node => node.name === "suite");
     const commands: Command[] = [];
     const records: Record[] = [];
+    const classes: Class[] = [];
+    const classExtends: ClassExtend[] = [];
     // TODO: support enum
     suites.forEach(suite => {
         suite.children.forEach((node: Node) => {
@@ -238,25 +265,33 @@ export const transform = async (namespace: string, sdefContent: string) => {
                 commands.push(node);
             } else if (isRecord(node)) {
                 records.push(node);
+            } else if (isClass(node)) {
+                classes.push(node)
+            } else if (isClassExtend(node)) {
+                classExtends.push(node);
             }
         })
     });
     const recordSchema = records.map(record => {
         return recordToJSONSchema(record);
     });
-    const recordDefinitions = await Promise.all(recordSchema.map(schema => {
-        return compile(schema, schema.title!)
-    }));
+    const classSchema = classes.map(node => {
+        return recordToJSONSchema(node);
+    });
+    const recordDefinitions = await schemaToInterfaces(recordSchema);
+    const classDefinitions = await schemaToInterfaces(classSchema);
     const optionalBindingMap = new Map<string, number>();
     const functionDefinitions = await Promise.all(commands.map(command => {
-        return commandToDeclare(namespace, command, recordSchema, optionalBindingMap);
+        return commandToDeclare(namespace, command, recordSchema.concat(classSchema), optionalBindingMap);
     }));
     const functionDefinitionHeaders = functionDefinitions.map(def => def.header);
     const functionDefinitionBodies = functionDefinitions.map(def => def.body);
     return `
 export namespace ${namespace} {
+    // Class
+${indentString(classDefinitions)}    
     // Records
-${indentString(recordDefinitions.join("\n"), 4)}
+${indentString(recordDefinitions)}
     // Function options
 ${indentString(functionDefinitionHeaders.join("\n"), 4)}
 }
