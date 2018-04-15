@@ -1,5 +1,5 @@
 {
-  "name": "global-type",
+  "name": "@jxa/global-type",
   "version": "1.0.0",
   "description": "JXA typing for global",
   "keywords": [
@@ -31,6 +31,9 @@
   },
   "scripts": {
     "test": "tsc -p test/"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@jxa/types": "^0.1.0"

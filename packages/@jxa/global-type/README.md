@@ -1,4 +1,4 @@
-# global-type
+# @jxa/global-type
 
 JXA typing for global
 
@@ -6,11 +6,12 @@ JXA typing for global
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install global-type
+    npm install @jxa/global-type
 
 ## Usage
 
-- [ ] Write usage instructions
+Install and includes `@jxa/global-type` as typing.
+Then, automatically inject `Application` to `global`
 
 ## Changelog
 
