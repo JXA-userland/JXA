@@ -1,5 +1,11 @@
 
 export namespace SpeechRecognitionServer {
+    // Default Application
+ export interface Application {}
+    // Class
+    
+    // CLass Extension
+    
     // Records
 
     // Function options
@@ -67,7 +73,7 @@ export namespace SpeechRecognitionServer {
 
 
 }
-export interface SpeechRecognitionServer {
+export interface SpeechRecognitionServer extends SpeechRecognitionServer.Application {
     // Functions
 
      /**

@@ -49,8 +49,8 @@ const isRecord = (node: Node): node is Record => {
 const isClass = (node: Node): node is Class => {
     return node.name === "class";
 };
-const isClassExtend = (node: Node): node is ClassExtend => {
-    return node.name === "class-extend";
+const isClassExtension = (node: Node): node is ClassExtension => {
+    return node.name === "class-extension";
 };
 
 interface Command extends RootNode {
@@ -61,8 +61,8 @@ interface Record extends RootNode {
     name: "record";
 }
 
-interface ClassExtend extends RootNode {
-    name: "class-extend";
+interface ClassExtension extends RootNode {
+    name: "class-extension";
 }
 
 interface Class extends RootNode {
@@ -82,6 +82,7 @@ const convertJSONSchemaType = (type: string): string => {
         case "type class":
             return "any";
     }
+    // TODO: can we support custom type?
     return "any";
 };
 const convertType = (type: string, namespace: string, definedJSONSchemaList: JSONSchema[]): "number" | "string" | "boolean" | string => {
@@ -138,9 +139,9 @@ const createOptionalParameter = (name: string, parameters: Node[]): Promise<stri
 };
 
 
-const recordToJSONSchema = (command: Record | Class): JSONSchema => {
+const recordToJSONSchema = (command: Record | Class | ClassExtension): JSONSchema => {
     // https://www.npmjs.com/package/json-schema-to-typescript
-    const pascalCaseName = pascalCase(command.attributes.name);
+    const pascalCaseName = isClassExtension(command) ? pascalCase(command.attributes.extends) : pascalCase(command.attributes.name);
     const description = command.attributes.description;
     const propertiesList = command.children.filter(node => {
         return node.type === "element" && node.name === "property" && typeof node.attributes === "object";
@@ -149,7 +150,7 @@ const recordToJSONSchema = (command: Record | Class): JSONSchema => {
         return {
             name: camelCase(param.attributes.name),
             description: param.attributes.description,
-            type: param.attributes.type
+            type: convertJSONSchemaType(param.attributes.type)
         }
     });
     const properties: { [index: string]: any } = {};
@@ -257,7 +258,7 @@ export const transform = async (namespace: string, sdefContent: string) => {
     const commands: Command[] = [];
     const records: Record[] = [];
     const classes: Class[] = [];
-    const classExtends: ClassExtend[] = [];
+    const classExtensions: ClassExtension[] = [];
     // TODO: support enum
     suites.forEach(suite => {
         suite.children.forEach((node: Node) => {
@@ -267,35 +268,43 @@ export const transform = async (namespace: string, sdefContent: string) => {
                 records.push(node);
             } else if (isClass(node)) {
                 classes.push(node)
-            } else if (isClassExtend(node)) {
-                classExtends.push(node);
+            } else if (isClassExtension(node)) {
+                classExtensions.push(node);
             }
         })
     });
-    const recordSchema = records.map(record => {
+    const recordSchemaList = records.map(record => {
         return recordToJSONSchema(record);
     });
-    const classSchema = classes.map(node => {
+    const classSchemaList = classes.map(node => {
         return recordToJSONSchema(node);
     });
-    const recordDefinitions = await schemaToInterfaces(recordSchema);
-    const classDefinitions = await schemaToInterfaces(classSchema);
+    const classExtendSchemaList = classExtensions.map(node => {
+        return recordToJSONSchema(node);
+    });
+    const recordDefinitions = await schemaToInterfaces(recordSchemaList);
+    const classDefinitions = await schemaToInterfaces(classSchemaList);
+    const classExtensionDefinitions = await schemaToInterfaces(classExtendSchemaList);
     const optionalBindingMap = new Map<string, number>();
     const functionDefinitions = await Promise.all(commands.map(command => {
-        return commandToDeclare(namespace, command, recordSchema.concat(classSchema), optionalBindingMap);
+        return commandToDeclare(namespace, command, recordSchemaList.concat(classSchemaList, classExtendSchemaList), optionalBindingMap);
     }));
     const functionDefinitionHeaders = functionDefinitions.map(def => def.header);
     const functionDefinitionBodies = functionDefinitions.map(def => def.body);
     return `
 export namespace ${namespace} {
+    // Default Application
+${indentString(`export interface Application {}`)}
     // Class
 ${indentString(classDefinitions)}    
+    // CLass Extension
+${indentString(classExtensionDefinitions)}    
     // Records
 ${indentString(recordDefinitions)}
     // Function options
 ${indentString(functionDefinitionHeaders.join("\n"), 4)}
 }
-export interface ${namespace} {
+export interface ${namespace} extends ${namespace}.Application {
     // Functions
 ${indentString(functionDefinitionBodies.join("\n"), 4)}
 }
