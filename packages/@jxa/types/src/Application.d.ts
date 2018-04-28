@@ -23,7 +23,6 @@ import { Reminders } from "./core/Reminders";
 import { Safari } from "./core/Safari";
 import { DVDPlayer } from "./core/DVDPlayer";
 import { iTunes } from "./core/iTunes";
-
 export = Application;
 export as namespace Application;
 
