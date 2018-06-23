@@ -31,7 +31,8 @@
     "url": "https://github.com/JXA-userland/JXA.git"
   },
   "scripts": {
-    "test": "tsc -p test/"
+    "test": "tsc -p test/",
+    "clean": "rimraf lib/"
   },
   "publishConfig": {
     "access": "public"
@@ -42,6 +43,7 @@
   "devDependencies": {
     "@types/node": "^9.6.5",
     "cross-env": "^5.1.4",
+    "rimraf": "^2.6.2",
     "typescript": "^2.8.1"
   }
 }
