@@ -32,9 +32,7 @@ See [Releases page](https://github.com/JXA-userland/JXA/releases).
 
 ## Running tests
 
-Install devDependencies and Run `npm test`:
-
-    npm i -d && npm test
+    yarn test
 
 ## Contributing
 

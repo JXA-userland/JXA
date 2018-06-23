@@ -22,15 +22,13 @@ If you want to modify `global`, see [@jxa/global-type](../global-type).
     
     yarn run dts:update
 
+## Running tests
+
+    yarn test
+
 ## Changelog
 
 See [Releases page](https://github.com/JXA-userland/JXA/releases).
-
-## Running tests
-
-Install devDependencies and Run `npm test`:
-
-    npm i -d && npm test
 
 ## Contributing
 

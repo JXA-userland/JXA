@@ -1,6 +1,6 @@
 # @jxa/sdef-to-dts
 
-Convert Scripting definition files (sdefs) to TypeScript(d.ts)
+Convert Scripting definition files (`.sdefs`) to TypeScript(d.ts)
 
 ## Install
 
@@ -10,7 +10,30 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
-- [ ] Write usage instructions
+Convert `./input/*.sdef` file and output it as `d.ts` to `./output` directory.
+
+```ts
+const fs = require("fs");
+const path = require("path");
+const { transform } = require("@jxa/sdef-to-dts");
+const sdefDir = path.join(__dirname, "./input");
+const outputDir = path.join(__dirname, "./output");
+const promises = fs.readdirSync(sdefDir).map(async caseName => {
+    const fileName = path.basename(caseName, ".sdef");
+    const normalizedTestName = fileName.replace(/\s/g, "");
+    const actualContent = fs.readFileSync(path.join(fixturesDir, caseName), "utf-8");
+    console.log("transform " + normalizedTestName);
+    const actual = await transform(normalizedTestName, actualContent);
+    fs.writeFileSync(path.join(outputDir, normalizedTestName) + ".d.ts", actual, "utf-8");
+});
+Promise.all(promises).then(() => {
+    console.log("All write");
+});
+```
+
+## Running tests
+
+    yarn test
 
 ## Changelog
 
