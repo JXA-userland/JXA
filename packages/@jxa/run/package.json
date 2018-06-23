@@ -1,6 +1,6 @@
 {
   "name": "@jxa/run",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Run JXA code and get result.",
   "keywords": [
     "applescript",
@@ -43,6 +43,7 @@
     "tabWidth": 4
   },
   "devDependencies": {
+    "@jxa/global-type": "^0.3.0",
     "@types/mocha": "^5.2.3",
     "@types/node": "^10.3.5",
     "cross-env": "^5.2.0",
@@ -51,8 +52,7 @@
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",
     "ts-node-test-register": "^4.0.0",
-    "typescript": "^2.9.2",
-    "@jxa/global-type": "^0.2.2"
+    "typescript": "^2.9.2"
   },
   "publishConfig": {
     "access": "public"
