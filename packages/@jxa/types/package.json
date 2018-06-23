@@ -1,6 +1,6 @@
 {
   "name": "@jxa/types",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "TypeScript definition for JXA core.",
   "keywords": [
     "JXA",
@@ -50,7 +50,7 @@
     "macos-version": "^4.1.0"
   },
   "devDependencies": {
-    "@jxa/sdef-to-dts": "^0.3.0",
+    "@jxa/sdef-to-dts": "^0.3.1",
     "@types/mocha": "^5.0.0",
     "@types/node": "^9.6.5",
     "camelcase": "^5.0.0",
