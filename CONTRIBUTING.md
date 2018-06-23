@@ -4,13 +4,12 @@ This contributing guide is how to development `@jxa` pacakages.
 
 This repository is monorepo using [lerna/lerna: A tool for managing JavaScript projects with multiple packages.](https://github.com/lerna/lerna).
 
-## Development
-
-### Requirement
+## Requirement
 
 - [Yarn](https://yarnpkg.com/docs/install)
+- Node.js LTS
 
-### Installation for development
+## Installation for development
 
 ```shell-session
 yarn install
@@ -27,4 +26,4 @@ yarn test
 
 ## Conclusion
 
-Issue and PR is always webcome!
+Issue and PR is always welcome!
