@@ -3,9 +3,9 @@ import { run } from "@jxa/run";
 
 /**
  * get safari version
- * This function execute JXA code
  */
 export const safariVersion = () => {
+    // This function is JXA
     return run(() => {
         const Safari = Application("Safari");
         return Safari.version();
@@ -14,9 +14,9 @@ export const safariVersion = () => {
 
 /**
  * get current mac system user
- * This function execute JXA code
  */
 export const currentUserName = () => {
+    // This function is JXA
     return run(() => {
         const sys = Application("System Events");
         return sys.currentUser().name();

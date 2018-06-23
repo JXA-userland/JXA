@@ -63,3 +63,4 @@ typings/
 .next
 
 /packages/**/lib/
+/example/lib/
