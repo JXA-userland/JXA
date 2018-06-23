@@ -1,0 +1,60 @@
+{
+  "name": "@jxa/run",
+  "version": "1.0.0",
+  "description": "Run JXA code and get result.",
+  "keywords": [
+    "applescript",
+    "jxa",
+    "node.js",
+    "run"
+  ],
+  "homepage": "https://github.com/JXA-userland/JXA/tree/master/packages/@jxa/run/",
+  "bugs": {
+    "url": "https://github.com/JXA-userland/JXA/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/run.js",
+  "types": "lib/run.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JXA-userland/JXA.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "tsc -p . --watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.3",
+    "@types/node": "^10.3.5",
+    "cross-env": "^5.2.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.5",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.0",
+    "ts-node-test-register": "^4.0.0",
+    "typescript": "^2.9.2",
+    "@jxa/global-type": "^0.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

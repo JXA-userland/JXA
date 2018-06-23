@@ -13,6 +13,19 @@ Install with [npm](https://www.npmjs.com/):
 Install and includes `@jxa/global-type` as typing.
 Then, automatically inject `Application` to `global`
 
+### via tsconfig.json
+
+- [ ] welcome PR
+
+### Via reference comment
+
+```ts
+/// <reference path="./node_modules/@jxa/global-type/lib/index.d.ts" />
+
+// your JXA application
+var userName = Application("System Events").currentUser().name();
+```
+
 ## Changelog
 
 See [Releases page](https://github.com/JXA-userland/JXA/releases).

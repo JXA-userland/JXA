@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "test": "lerna run test",
     "build": "lerna run build",
     "clean": "lerna run clean",
     "publish": "lerna publish --conventional-commits"
