@@ -1,4 +1,4 @@
-# types
+# @jxa/types
 
 TypeScript definition for JXA core.
 
@@ -6,11 +6,14 @@ TypeScript definition for JXA core.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install types
+    npm install @jxa/types
 
 ## Usage
 
-- [ ] Write usage instructions
+This library is just TypeScript definition files.
+In other words, this library only used for importing.
+
+If you want to modify `global`, see [@jxa/global-type](../global-type).
 
 ### Update Core d.ts
 
