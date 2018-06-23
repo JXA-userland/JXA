@@ -1,5 +1,6 @@
 const execSync = require('child_process').execSync;
 const makeDir = require("make-dir");
+// generate test code 
 [
     "http://www.openspc2.org/reibun/JXA/Yosemite/Application/Standard/application/0001/sample.zip",
     "http://www.openspc2.org/reibun/JXA/Yosemite/Application/Standard/dialog/0001/sample.zip",
