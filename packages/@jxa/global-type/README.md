@@ -13,6 +13,17 @@ Install with [npm](https://www.npmjs.com/):
 Install and includes `@jxa/global-type` as typing.
 Then, automatically inject `Application` to `global`
 
+### via `import("@jxa/global-type")`
+
+You can add JSX types to `global` by import `@jxa/global-type`:
+
+```ts
+import "@jxa/global-type";
+
+// your JXA application
+var userName = Application("System Events").currentUser().name();
+```
+
 ### via tsconfig.json
 
 - [ ] welcome PR
@@ -20,7 +31,7 @@ Then, automatically inject `Application` to `global`
 ### Via reference comment
 
 ```ts
-/// <reference path="./node_modules/@jxa/global-type/lib/index.d.ts" />
+/// <reference path="./node_modules/@jxa/global-type/src/index.d.ts" />
 
 // your JXA application
 var userName = Application("System Events").currentUser().name();

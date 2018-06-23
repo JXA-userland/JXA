@@ -1,4 +1,4 @@
-/// <reference path="../../global-type/src/index.d.ts" />
+import "@jxa/global-type";
 import { run } from "../src/run";
 import * as assert from "assert";
 

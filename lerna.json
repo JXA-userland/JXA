@@ -3,6 +3,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
+    "example/",
     "packages/*",
     "packages/@jxa/*"
   ],

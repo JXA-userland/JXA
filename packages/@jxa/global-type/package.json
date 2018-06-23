@@ -20,7 +20,7 @@
     "lib/",
     "src/"
   ],
-  "main": "src/index.d.ts",
+  "main": "src/index.js",
   "types": "src/index.d.ts",
   "directories": {
     "lib": "lib",

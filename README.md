@@ -17,6 +17,10 @@ JavaScript for Automation(JXA) packages.
 - [@jxa/global-type](./packages/@jxa/global-type)
 - [@jxa/sdef-to-dts](./packages/@jxa/sdef-to-dts)
 
+## Example
+
+See [example/](./example/).
+
 ## Contributing
 
 Issue and PR is always welcome!
