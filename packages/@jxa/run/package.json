@@ -1,6 +1,6 @@
 {
   "name": "@jxa/run",
-  "version": "1.0.0",
+  "version": "0.2.2",
   "description": "Run JXA code and get result.",
   "keywords": [
     "applescript",
