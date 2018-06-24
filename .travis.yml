@@ -4,3 +4,4 @@ node_js: stable
 install:
   - yarn
   - yarn bootstrap
+  - yarn run build
