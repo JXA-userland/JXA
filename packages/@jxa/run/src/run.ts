@@ -1,7 +1,6 @@
 const execFile = require("child_process").execFile;
 const macosVersion = require("macos-version");
 
-// prettier-ignore
 export function run<R>(jxaCodeFunction: (...args: any[]) => void, ...args: any[]): Promise<R>;
 export function run<R, A1>(jxaCodeFunction: (a1: A1) => void, a1: A1): Promise<R>;
 export function run<R, A1, A2>(jxaCodeFunction: (a1: A1, a2: A2) => void, a1: A1, a2: A2): Promise<R>;
