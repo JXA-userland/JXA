@@ -1,6 +1,6 @@
 {
   "name": "@jxa/types",
-  "version": "0.3.1",
+  "version": "1.0.3",
   "description": "TypeScript definition for JXA core.",
   "keywords": [
     "JXA",
