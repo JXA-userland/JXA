@@ -1,6 +1,6 @@
 {
   "name": "@jxa/run",
-  "version": "0.3.1",
+  "version": "1.0.1",
   "description": "Run JXA code and get result.",
   "keywords": [
     "applescript",
@@ -43,7 +43,7 @@
     "tabWidth": 4
   },
   "devDependencies": {
-    "@jxa/global-type": "^0.3.1",
+    "@jxa/global-type": "^1.0.1",
     "@types/mocha": "^5.2.3",
     "@types/node": "^10.3.5",
     "cross-env": "^5.2.0",
