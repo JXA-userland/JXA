@@ -1,4 +1,4 @@
-# JXA
+# JXA [![Build Status](https://travis-ci.org/JXA-userland/JXA.svg?branch=master)](https://travis-ci.org/JXA-userland/JXA)
 
 JavaScript for Automation(JXA) packages. 
 
