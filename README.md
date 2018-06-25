@@ -6,13 +6,14 @@ JavaScript for Automation(JXA) packages.
 
 - Integration JXA with [TypeScript](https://www.typescriptlang.org/index.html)
 - Run JXA from [Node.js](https://nodejs.org/)
-    - See [@jxa/run](./packages/@jxa/run)
+    - See [@jxa/run](./packages/@jxa/run) and [@jxa/repl](./packages/@jxa/repl)
 - Support Auto complete for editor/IDE via [TypeScript](https://www.typescriptlang.org/index.html) definition file(`.d.ts`)
     - See [@jxa/types](./packages/@jxa/types) and [@jxa/global-type](./packages/@jxa/global-type)
 
 ## Packages
 
 - [@jxa/run](./packages/@jxa/run)
+- [@jxa/repl](./packages/@jxa/repl)
 - [@jxa/types](./packages/@jxa/types)
 - [@jxa/global-type](./packages/@jxa/global-type)
 - [@jxa/sdef-to-dts](./packages/@jxa/sdef-to-dts)
