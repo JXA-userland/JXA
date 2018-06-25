@@ -1,0 +1,65 @@
+{
+  "name": "@jxa/repl",
+  "version": "1.0.0",
+  "description": "REPL for JXA.",
+  "keywords": [
+    "cli",
+    "jxa",
+    "node.js",
+    "repl"
+  ],
+  "homepage": "https://github.com/JXA-userland/JXA/tree/master/packages/@jxa/repl/",
+  "bugs": {
+    "url": "https://github.com/JXA-userland/JXA/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/repl.js",
+  "types": "lib/repl.d.ts",
+  "bin": {
+    "jxa-repl": "./bin/cmd.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JXA-userland/JXA.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "tsc -p . --watch"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "dependencies": {
+    "@jxa/run": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.3",
+    "@types/node": "^10.3.5",
+    "cross-env": "^5.2.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.0",
+    "ts-node-test-register": "^4.0.0",
+    "typescript": "^2.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

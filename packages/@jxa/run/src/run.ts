@@ -1,6 +1,10 @@
 const execFile = require("child_process").execFile;
 const macosVersion = require("macos-version");
 
+export function runJXACode(jxaCode: string) {
+    return executeInOsa(jxaCode, []);
+}
+
 export function run<R>(jxaCodeFunction: (...args: any[]) => void, ...args: any[]): Promise<R>;
 export function run<R, A1>(jxaCodeFunction: (a1: A1) => void, a1: A1): Promise<R>;
 export function run<R, A1, A2>(jxaCodeFunction: (a1: A1, a2: A2) => void, a1: A1, a2: A2): Promise<R>;
@@ -73,8 +77,15 @@ ObjC.import('Foundation');
 var args = JSON.parse(ObjC.unwrap($.NSProcessInfo.processInfo.environment.objectForKey("OSA_ARGS")));
 var fn   = (${jxaCodeFunction.toString()});
 var out  = fn.apply(null, args);
-JSON.stringify(out);
+JSON.stringify({ result: out });
 `;
+    return executeInOsa(code, args);
+}
+
+/**
+ * execute the `code` in `osascript`
+ */
+function executeInOsa(code: string, args: any[]) {
     return new Promise((resolve, reject) => {
         macosVersion.assertGreaterThanOrEqualTo("10.10");
         const child = execFile(
@@ -99,9 +110,10 @@ JSON.stringify(out);
                 }
 
                 try {
-                    resolve(JSON.parse(stdout.toString()));
+                    const result = JSON.parse(stdout.toString().trim()).result;
+                    resolve(result);
                 } catch (errorOutput) {
-                    reject(errorOutput);
+                    resolve(stdout.toString().trim());
                 }
             }
         );
