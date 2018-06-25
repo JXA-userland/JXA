@@ -8,6 +8,10 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install -g @jxa/rep
 
+**Requirement:**
+
+- Node.js 10+
+
 ## Usage
 
     $ npx @jxa/repl

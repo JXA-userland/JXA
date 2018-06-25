@@ -19,7 +19,7 @@ export class JXARepl {
                 return callback(null);
             }
             const existCode = cmdStack.join("\n");
-            let code = existCode + "\n" + cmd;
+            const code = existCode + "\n" + cmd;
             runJXACode(code).then(output => {
                 cmdStack.push(cmd);
                 callback(null, util.inspect(output));
