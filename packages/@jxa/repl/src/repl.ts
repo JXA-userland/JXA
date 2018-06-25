@@ -13,7 +13,11 @@ export class JXARepl {
             cmdStack.length = 0;
             (this.replServer as any).clearBufferedCommand()
         });
+
         function myEval(cmd: string, _context: any, _filename: string, callback: (error: Error | null, cmd?: string) => void) {
+            if (cmd.length === 0) {
+                return callback(null);
+            }
             const existCode = cmdStack.join("\n");
             let code = existCode + "\n" + cmd;
             runJXACode(code).then(output => {
