@@ -1,6 +1,12 @@
 # @jxa/global-type
 
-JXA typing for global
+JXA typing for global.
+
+This typing enable auto-complete in your editor.
+
+![auto complete example](./docs/example.gif)
+
+- [TypeScript Editor Support · Microsoft/TypeScript Wiki](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
 
 ## Install
 

@@ -2,6 +2,8 @@
 
 JavaScript for Automation(JXA) packages. 
 
+[![auto complete example](./packages/@jxa/global-type/docs/example.gif)](./packages/@jxa/global-type)
+
 ## Purposes
 
 - Integration JXA with [TypeScript](https://www.typescriptlang.org/index.html)
