@@ -15,6 +15,20 @@ In other words, this library only used for importing.
 
 If you want to modify `global`, see [@jxa/global-type](../global-type).
 
+### Use with custom Application type
+
+`Application` support [generics type](https://www.typescriptlang.org/docs/handbook/generics.html) that return `T & Application`
+
+Example: `GoogleChrome` Application
+
+```ts
+import { Application } from "@jxa/types";
+import { GoogleChrome } from "./fixtures/GoogleChrome";
+// Pass Custom Application type as generics
+const chrome = Application<GoogleChrome>("Google Chrome");
+const frontWindow: GoogleChrome.Window = chrome.app.windows[0];
+```
+
 ### Update Core d.ts
 
 1. Update `tools/sdefs/*.sdefes`
