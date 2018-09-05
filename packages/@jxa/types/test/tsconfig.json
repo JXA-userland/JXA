@@ -1,0 +1,20 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../out/",
+        "noImplicitAny": true,
+        /* Additional Checks */
+        "noUnusedLocals": false,
+        /* Report errors on unused locals. */
+        "noUnusedParameters": false,
+        /* Report errors on unused parameters. */
+        "noImplicitReturns": false,
+        /* Report error when not all code paths in function return a value. */
+        "noFallthroughCasesInSwitch": false,
+        "noEmit": true
+    },
+    "include": [
+        "../src/*",
+        "**/*"
+    ]
+}
