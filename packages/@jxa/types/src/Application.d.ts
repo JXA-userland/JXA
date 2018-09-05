@@ -23,6 +23,7 @@ import { Reminders } from "./core/Reminders";
 import { Safari } from "./core/Safari";
 import { DVDPlayer } from "./core/DVDPlayer";
 import { iTunes } from "./core/iTunes";
+
 export = Application;
 export as namespace Application;
 
@@ -32,6 +33,11 @@ type App = typeof Application & Application._StandardAdditions & Application.Any
  * bundle ID or name or path or remote machine
  */
 declare function Application(name: string): typeof Application & Application._StandardAdditions & Application.AnyValue;
+/**
+ * Pass custom Application type as generics
+ * Return Application's StandardAdditions & T type
+ */
+declare function Application<T>(name: string): typeof Application & Application._StandardAdditions & Application.AnyValue & T;
 declare function Application(name: "Calendar"): App & Application._Calendar;
 declare function Application(name: "Contacts"): App & Application._Contacts;
 declare function Application(name: "Database Events"): App & Application._DatabaseEvents;
@@ -60,6 +66,7 @@ declare function Application(name: "VoiceOver"): App & Application._VoiceOver;
  * process ID
  */
 declare function Application(id: number): typeof Application & Application._StandardAdditions & Application.AnyValue;
+declare function Application<T>(id: number): typeof Application & Application._StandardAdditions & Application.AnyValue & T;
 
 declare namespace Application {
     // FIXME: very hack to avoid the Error

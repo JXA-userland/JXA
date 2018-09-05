@@ -549,10 +549,6 @@ cross-spawn@^6.0.5:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-crypto-random-string@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -1267,7 +1263,7 @@ lru-queue@0.1:
   dependencies:
     es5-ext "~0.10.2"
 
-macos-version@^4.0.0, macos-version@^4.1.0:
+macos-version@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/macos-version/-/macos-version-4.1.0.tgz#028e44adb28037e50395e2285bef054ef9b08ffa"
   dependencies:
@@ -1791,14 +1787,6 @@ run-async@^2.2.0:
   dependencies:
     is-promise "^2.1.0"
 
-run-jxa@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/run-jxa/-/run-jxa-1.2.0.tgz#41062a4cdcdb32cebd00a28af03acc7299d50cf0"
-  dependencies:
-    execa "^0.8.0"
-    macos-version "^4.0.0"
-    subsume "^1.0.0"
-
 rx-lite-aggregates@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite-aggregates/-/rx-lite-aggregates-4.0.8.tgz#753b87a89a11c95467c4ac1626c4efc4e05c67be"
@@ -1989,13 +1977,6 @@ strong-log-transformer@^1.0.6:
     moment "^2.6.0"
     through "^2.3.4"
 
-subsume@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/subsume/-/subsume-1.0.0.tgz#da977c7b43da53064e1eb8842a47486aa00a173c"
-  dependencies:
-    escape-string-regexp "^1.0.5"
-    unique-string "^1.0.0"
-
 supports-color@4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.4.0.tgz#883f7ddabc165142b2a61427f3352ded195d1a3e"
@@ -2154,12 +2135,6 @@ uglify-js@^2.6:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
-
-unique-string@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unique-string/-/unique-string-1.0.0.tgz#9e1057cca851abb93398f8b33ae187b99caec11a"
-  dependencies:
-    crypto-random-string "^1.0.0"
 
 universalify@^0.1.0:
   version "0.1.1"

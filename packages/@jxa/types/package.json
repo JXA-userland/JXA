@@ -36,7 +36,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production tsc -p .",
     "prepublish": "npm run --if-present build",
-    "test": "npm run build",
+    "test": "tsc -p test",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "watch": "tsc -p . --watch",
     "dts:update": "node tools/sdef-to-dts.js"
