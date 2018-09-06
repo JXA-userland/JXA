@@ -22,6 +22,7 @@
   ],
   "main": "lib/sdef-to-dts.js",
   "types": "lib/sdef-to-dts.d.ts",
+  "bin": "bin/cmd.js",
   "directories": {
     "lib": "lib",
     "test": "test"
