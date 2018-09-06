@@ -11,12 +11,12 @@ const cli = meow(`
         Usage
           $ npx @jxa/sdef-to-dts <input> --output <output>
 
-          <input> - path to an Application.app to read
+          <input>       path to an Application.app to read
 
         Options
-          --output, -o - path to an Application.d.ts or a directory to write to
-          --version    - show the version
-          --help       - show this help page
+          --output, -o  path to an Application.d.ts or a directory to write to
+          --version     show the version
+          --help        show this help page
 
         Examples
           $ npx @jxa/sdef-to-dts /Applications/Safari.app --output ./safari.d.ts
