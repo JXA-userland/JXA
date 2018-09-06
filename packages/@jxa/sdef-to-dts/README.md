@@ -36,12 +36,20 @@ Promise.all(promises).then(() => {
 Convert application bundles (e.g. `/Applications/Safari.app`) and output as `d.ts`.
 
 ```
-Usage: npx @jxa/sdef-to-dts inFile [out]
+  Scripting definition files (sdefs) to TypeScript (d.ts)
 
-  Converts Script Definitions into TypeScript Type Definitions
+  Usage
+    $ npx @jxa/sdef-to-dts <input> --output <output>
 
-  inFile - path to an Application.app to read"
-  out - path to an Application.d.ts or a directory to write to
+    <input>       path to an Application.app to read
+
+  Options
+    --output, -o  path to an Application.d.ts or a directory to write to
+    --version     show the version
+    --help        show this help page
+
+  Examples
+    $ npx @jxa/sdef-to-dts /Applications/Safari.app --output ./safari.d.ts
 ```
 
 ## Running tests
