@@ -4,28 +4,41 @@ const fs = require("fs");
 const path = require("path");
 const child_process = require("child_process");
 const transform = require("../lib/sdef-to-dts").transform;
+const meow = require("meow");
 
-function usage() {
-  console.log();
-  console.log("Usage: npx @jxa/sdef-to-dts inFile [out]");
-  console.log();
-  console.log("  Converts Script Definitions into TypeScript Type Definitions")
-  console.log();
-  console.log("  inFile - path to an Application.app to read");
-  console.log("  out - path to an Application.d.ts or a directory to write to");
-  console.log();
-}
+const cli = meow(`
+        Usage
+          $ npx @jxa/sdef-to-dts <input> --output <output>
 
-if (process.argv.length !== 3 && process.argv.length !== 4) {
-  usage();
-  process.exit(1);
-}
+          <input> - path to an Application.app to read
 
-const [node, cmd, inFile, out] = process.argv;
+        Options
+          --output, -o - path to an Application.d.ts or a directory to write to
+          --version    - show the version
+          --help       - show this help page
 
-run(inFile, out);
+        Examples
+          $ npx @jxa/sdef-to-dts /Applications/Safari.app --output ./safari.d.ts
+`, {
+	flags: {
+		output: {
+			type: 'string',
+			alias: 'o'
+		}
+	},
+  autoVersion: true,
+  autoHelp: true
+});
+
+run(cli.input[0], cli.flags.output);
 
 function run(inPath, out) {
+  if (!inPath) {
+    console.error("Error: Missing output parameter.");
+    cli.showHelp();
+    process.exit(1);
+  }
+
   const appName = path.basename(inPath, ".app").replace(/\s/g, "");
   const outPath = outFile(appName, out);
 
@@ -53,7 +66,7 @@ function readSdef(path) {
     return child_process.execSync("sdef " + path, {stdio: ["ignore"]}).toString();
   } catch (e) {
     console.error(e.toString());
-    usage();
+    cli.showHelp();
     process.exit(2);
   }
 }
@@ -63,7 +76,7 @@ function writeDTS(appName, outPath, sdef) {
     fs.writeFileSync(outPath, content, "utf-8");
   }).catch(err => {
     console.error(err.toString());
-    usage();
+    cli.showHelp();
     process.exit(3);
   });
 }

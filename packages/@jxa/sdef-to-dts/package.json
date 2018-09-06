@@ -1,7 +1,7 @@
 {
   "name": "@jxa/sdef-to-dts",
   "version": "0.3.1",
-  "description": "Scripting definition files (sdefs) to TypeScript(d.ts)",
+  "description": "Scripting definition files (sdefs) to TypeScript (d.ts)",
   "keywords": [
     "applescript",
     "dts",
@@ -66,6 +66,7 @@
     "indent-string": "^3.2.0",
     "is-keyword": "^1.2.2",
     "is-var-name": "^2.0.0",
-    "json-schema-to-typescript": "^5.4.0"
+    "json-schema-to-typescript": "^5.4.0",
+    "meow": "^5.0.0"
   }
 }
