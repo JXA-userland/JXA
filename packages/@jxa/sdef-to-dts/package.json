@@ -1,7 +1,7 @@
 {
   "name": "@jxa/sdef-to-dts",
   "version": "0.3.1",
-  "description": "Scripting definition files (sdefs) to TypeScript(d.ts)",
+  "description": "Scripting definition files (sdefs) to TypeScript (d.ts)",
   "keywords": [
     "applescript",
     "dts",
@@ -22,6 +22,7 @@
   ],
   "main": "lib/sdef-to-dts.js",
   "types": "lib/sdef-to-dts.d.ts",
+  "bin": "bin/cmd.js",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -62,9 +63,11 @@
     "@rgrove/parse-xml": "^1.1.1",
     "@types/camelcase": "^4.1.0",
     "camelcase": "^5.0.0",
+    "execa": "^1.0.0",
     "indent-string": "^3.2.0",
     "is-keyword": "^1.2.2",
     "is-var-name": "^2.0.0",
-    "json-schema-to-typescript": "^5.4.0"
+    "json-schema-to-typescript": "^5.4.0",
+    "meow": "^5.0.0"
   }
 }

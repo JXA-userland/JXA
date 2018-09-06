@@ -8,7 +8,7 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install @jxa/sdef-to-dts
 
-## Usage
+## Usage as library
 
 Convert `./input/*.sdef` file and output it as `d.ts` to `./output` directory.
 
@@ -29,6 +29,27 @@ const promises = fs.readdirSync(sdefDir).map(async caseName => {
 Promise.all(promises).then(() => {
     console.log("All write");
 });
+```
+
+## Usage as command
+
+Convert application bundles (e.g. `/Applications/Safari.app`) and output as `d.ts`.
+
+```
+  Scripting definition files (sdefs) to TypeScript (d.ts)
+
+  Usage
+    $ npx @jxa/sdef-to-dts <input> --output <output>
+
+    <input>       path to an Application.app to read
+
+  Options
+    --output, -o  path to an Application.d.ts or a directory to write to
+    --version     show the version
+    --help        show this help page
+
+  Examples
+    $ npx @jxa/sdef-to-dts /Applications/Safari.app --output ./safari.d.ts
 ```
 
 ## Running tests
