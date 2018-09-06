@@ -5,6 +5,7 @@ const path = require("path");
 const child_process = require("child_process");
 const transform = require("../lib/sdef-to-dts").transform;
 const meow = require("meow");
+const execa = require("execa");
 
 const cli = meow(`
         Usage
@@ -63,7 +64,7 @@ function outFile(appName, out) {
 
 function readSdef(path) {
   try {
-    return child_process.execSync("sdef " + path, {stdio: ["ignore"]}).toString();
+    return execa.sync("sdef", [path], {stdio: ["ignore"]}).stdout;
   } catch (e) {
     console.error(e.toString());
     cli.showHelp();
