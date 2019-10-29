@@ -81,7 +81,9 @@ JSON.stringify({ result: out });
 `;
     return executeInOsa(code, args);
 }
-
+// Same with execa
+// https://github.com/sindresorhus/execa
+const DEFAULT_MAX_BUFFER = 1000 * 1000 * 100;
 /**
  * execute the `code` in `osascript`
  */
@@ -94,7 +96,8 @@ function executeInOsa(code: string, args: any[]) {
             {
                 env: {
                     OSA_ARGS: JSON.stringify(args)
-                }
+                },
+                maxBuffer: DEFAULT_MAX_BUFFER
             },
             (err: Error, stdout: any, stderr: any) => {
                 if (err) {
