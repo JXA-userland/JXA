@@ -17,7 +17,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "prepublish": "npm-run-all clean build",
+    "prepublish": "npm run clean && npm run build",
     "versionup": "lerna version --conventional-commits",
     "versionup:patch": "lerna version patch --conventional-commits",
     "versionup:minor": "lerna version minor --conventional-commits",
