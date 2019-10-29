@@ -1,6 +1,6 @@
 # CONTRIBUTING
 
-This contributing guide is how to development `@jxa` pacakages.
+This contributing guide is how to development `@jxa` packages.
 
 This repository is monorepo using [lerna/lerna: A tool for managing JavaScript projects with multiple packages.](https://github.com/lerna/lerna).
 
