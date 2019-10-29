@@ -5,7 +5,7 @@ import {
 } from "@jxa/types";
 
 declare global {
-    const Application: typeof Application_ & object;
+    const Application: typeof Application_;
     const Automation: typeof Automation_;
     const ObjectSpecifier: typeof ObjectSpecifier_;
 
