@@ -24,6 +24,12 @@ Run all tests of packages by following command:
 yarn test
 ```
 
-## Conclusion
+## Release Flow
 
-Issue and PR is always welcome!
+1. Version up each packages
+2. Relase each packages
+
+```
+npm run versionup
+npm run release
+```
