@@ -4,5 +4,5 @@ selection.map(function(item: any) {
     var kind = item.kind(); // 選択された項目の種類を取得する
     var appName: string = item.displayedName(); // 選択された項目名を取得する
     Finder.includeStandardAdditions = true; // 標準コマンドを使用可能にする
-    Finder.displayAlert(name + " : " + kind.toString()); // アラートダイアログを表示する
+    Finder.displayAlert(appName + " : " + kind.toString()); // アラートダイアログを表示する
 });
