@@ -1,10 +1,10 @@
 {
   "private": true,
   "dependencies": {
-    "lerna": "^2.10.1",
-    "make-dir": "^1.2.0"
+    "lerna": "^3.18.3",
+    "make-dir": "^3.0.0"
   },
-  "name": "JXA",
+  "name": "root",
   "version": "1.0.0",
   "license": "MIT",
   "workspaces": [
@@ -13,10 +13,15 @@
     "packages/@jxa/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap && yarn run build",
     "test": "lerna run test",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "publish": "lerna run clean && lerna publish --conventional-commits"
+    "prepublishOnly": "npm run clean && npm run build",
+    "versionup": "lerna version --conventional-commits",
+    "versionup:patch": "lerna version patch --conventional-commits",
+    "versionup:minor": "lerna version minor --conventional-commits",
+    "versionup:major": "lerna version major --conventional-commits",
+    "release": "lerna publish from-package"
   }
 }

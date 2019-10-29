@@ -2,6 +2,5 @@ os: osx
 language: node_js
 node_js: stable
 install:
-  - yarn
+  - yarn install
   - yarn bootstrap
-  - yarn run build

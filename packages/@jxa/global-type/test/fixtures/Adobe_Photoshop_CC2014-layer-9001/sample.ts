@@ -4,7 +4,7 @@ var doc = PS.documents[0]; // ドキュメントを取得する
 var text = "";
 for (var i = 0; i < doc.layers.length; i++) {
     var appName: string = doc.layers[i].name(); // レイヤー名を読み出す
-    text = text + name + "\n";
+    text = text + appName + "\n";
 }
 // TextEdit側の処理
 var TextEdit = Application("TextEdit");

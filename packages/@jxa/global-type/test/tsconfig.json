@@ -11,7 +11,10 @@
         "noImplicitReturns": false,
         /* Report error when not all code paths in function return a value. */
         "noFallthroughCasesInSwitch": false,
-        "noEmit": true
+        "noEmit": true,
+        "lib": [
+            "es2017"
+        ]
     },
     "include": [
         "../src/*",
