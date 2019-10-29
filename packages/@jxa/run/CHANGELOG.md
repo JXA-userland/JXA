@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/JXA-userland/JXA/compare/v1.3.1...v1.3.2) (2019-10-29)
+
+
+### Bug Fixes
+
+* **run:** update default buffer to 100MB ([9fbe9f4](https://github.com/JXA-userland/JXA/commit/9fbe9f4cc2ddc076dba84c77968c4bedcd12e016)), closes [#18](https://github.com/JXA-userland/JXA/issues/18)
+
+
+
+
+
 ## [1.3.1](https://github.com/JXA-userland/JXA/compare/v1.3.0...v1.3.1) (2019-10-29)
 
 **Note:** Version bump only for package @jxa/run
