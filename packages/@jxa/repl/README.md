@@ -6,7 +6,7 @@ REPL for JXA.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install -g @jxa/rep
+    npm install -g @jxa/repl
 
 **Requirement:**
 
