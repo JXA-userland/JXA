@@ -73,8 +73,8 @@ export function run<R, A1, A2, A3, A4, A5, A6, A7, A8, A9>(
 ): Promise<R>;
 export function run(jxaCodeFunction: (...args: any[]) => void, ...args: any[]) {
     const code = `
-ObjC.import('Foundation');
-var args = JSON.parse(ObjC.unwrap($.NSProcessInfo.processInfo.environment.objectForKey("OSA_ARGS")));
+ObjC.import('stdlib');
+var args = JSON.parse($.getenv('OSA_ARGS'));
 var fn   = (${jxaCodeFunction.toString()});
 var out  = fn.apply(null, args);
 JSON.stringify({ result: out });
