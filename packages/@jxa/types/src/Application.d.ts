@@ -21,8 +21,8 @@ import { Photos } from "./core/Photos";
 import { QuickTimePlayer } from "./core/QuickTimePlayer";
 import { Reminders } from "./core/Reminders";
 import { Safari } from "./core/Safari";
-import { DVDPlayer } from "./core/DVDPlayer";
-import { iTunes } from "./core/iTunes";
+import { DVDPlayer } from "./core/DvdPlayer";
+import { iTunes } from "./core/ITunes";
 
 export = Application;
 export as namespace Application;
