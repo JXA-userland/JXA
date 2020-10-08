@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/JXA-userland/JXA/compare/v1.3.3...v1.3.4) (2020-10-08)
+
+
+### Bug Fixes
+
+* **types:** fix Finder item url definition ([#29](https://github.com/JXA-userland/JXA/issues/29)) ([f2ac980](https://github.com/JXA-userland/JXA/commit/f2ac980806ebd3c2e01a8ee7eca778eb8725e8c0))
+
+
+
+
+
 ## [1.3.3](https://github.com/JXA-userland/JXA/compare/v1.3.2...v1.3.3) (2020-08-24)
 
 **Note:** Version bump only for package root
