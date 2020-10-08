@@ -24,8 +24,8 @@ const resultPromise = run(JSXFn, argumentsOfJSXFn);
 
 - `JSXFn`: This function is run as JXA.
     - :memo: This `JSXFn` is serialized(`toString`) and pass to JXA environment.
-    - :waring: **Warning:** function cannot close over variables in a parent's scope.
-    - Pass data as arguments explicitly instead. 
+    - **Warning** The function cannot close over variables in a parent's scope.
+    - You need to pass arguments as `argumentsOfJSXFn` explicitly 
 - `argumentsOfJSXFn`: An arguments of `JSXFn`
 
 **OK:**
