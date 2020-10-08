@@ -155,7 +155,7 @@
 			<property name="creation date" code="ascd" type="date" access="r" description="the date on which the item was created"/>
 			<property name="modification date" code="asmo" type="date" description="the date on which the item was last modified"/>
 			<property name="icon" code="iimg" type="icon family" description="the icon bitmap of the item"/>
-			<property name="URL" code="pURL" type="text" access="r" description="the URL of the item"/>
+			<property name="url" code="purl" type="text" access="r" description="the URL of the item"/>
 			<property name="owner" code="sown" type="text" description="the user that owns the container"/>
 			<property name="group" code="sgrp" type="text" description="the user or group that has special access to the container"/>
 			<property name="owner privileges" code="ownr" type="priv"/>

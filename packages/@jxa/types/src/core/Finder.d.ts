@@ -164,7 +164,7 @@ export namespace Finder {
    /**
     * the URL of the item
     */
-   URL(): string;
+   url(): string;
    /**
     * the user that owns the container
     */
