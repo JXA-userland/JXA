@@ -22,8 +22,8 @@ JavaScript for Automation(JXA) packages.
 
 ## Example
 
-If you want to improve your editor for JSX, use [@jxa/global-type](./packages/@jxa/global-type).
-You can just import `@jxa/global-type` and you can introduce typing and auto complete for JSX.
+If you want to improve your editor for JXA, use [@jxa/global-type](./packages/@jxa/global-type).
+You can just import `@jxa/global-type` and you can introduce typing and auto complete for JXA.
 
 :memo: Your editor should support TypeScript. For more details, see [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
 
