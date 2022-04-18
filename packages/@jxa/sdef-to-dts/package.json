@@ -1,6 +1,6 @@
 {
   "name": "@jxa/sdef-to-dts",
-  "version": "1.3.1",
+  "version": "1.3.5",
   "description": "Scripting definition files (sdefs) to TypeScript (d.ts)",
   "keywords": [
     "applescript",
