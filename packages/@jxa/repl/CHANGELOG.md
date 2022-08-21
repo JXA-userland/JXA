@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/JXA-userland/JXA/compare/v1.3.5...v1.3.6) (2022-08-21)
+
+
+### Bug Fixes
+
+* **global-type:** fix TS2303: Circular definition of import alias ([#51](https://github.com/JXA-userland/JXA/issues/51)) ([dd5c5cf](https://github.com/JXA-userland/JXA/commit/dd5c5cf0033ee4486c4999d89a879324caba14ab))
+
+
+
+
+
 ## [1.3.5](https://github.com/JXA-userland/JXA/compare/v1.3.4...v1.3.5) (2022-04-18)
 
 **Note:** Version bump only for package @jxa/repl
