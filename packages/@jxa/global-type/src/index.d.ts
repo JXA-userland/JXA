@@ -1,13 +1,13 @@
-import {
-    Application as Application_,
-    ObjectSpecifier as ObjectSpecifier_,
-    Automation as Automation_
+import type {
+    Application,
+    ObjectSpecifier,
+    Automation
 } from "@jxa/types";
 
 declare global {
-    const Application: typeof Application_;
-    const Automation: typeof Automation_;
-    const ObjectSpecifier: typeof ObjectSpecifier_;
+    const Application: typeof Application;
+    const Automation: typeof Automation;
+    const ObjectSpecifier: typeof ObjectSpecifier;
 
     function Path(name: string): object;
 
