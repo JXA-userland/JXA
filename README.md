@@ -1,4 +1,4 @@
-# JXA [![Build Status](https://travis-ci.org/JXA-userland/JXA.svg?branch=master)](https://travis-ci.org/JXA-userland/JXA)
+# JXA [![Actions Status: test](https://github.com/JXA-userland/JXA/workflows/test/badge.svg)](https://github.com/JXA-userland/JXA/actions?query=workflow%3A"test")
 
 JavaScript for Automation(JXA) packages. 
 
