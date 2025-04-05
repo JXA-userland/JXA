@@ -165,9 +165,11 @@ const recordToJSONSchema = (command: Record | Class | ClassExtension): JSONSchem
     }).map(param => {
         return camelCase(param.attributes.name);
     });
+    const inherits = command.attributes.inherits == null ? undefined : pascalCase(command.attributes.inherits)
     return {
         "title": pascalCaseName,
         "description": description,
+        "_jxa_inherits": inherits,
         "type": "object",
         "properties": properties,
         "additionalProperties": false,
@@ -243,8 +245,12 @@ const schemaToInterfaces = async (schemas: JSONSchema[]): Promise<string> => {
         return compile(schema, title).then(definition => {
             // TODO: prevent UIElement -> UiElement
             // https://github.com/bcherny/json-schema-to-typescript/blob/fadb879a5373f20fd9d1f441168494003e825239/src/utils.ts#L56
+            let interfaceHeader = `interface ${title}`;
+            if (schema._jxa_inherits != null) {
+                interfaceHeader += ` extends ${schema._jxa_inherits}`;
+            }
             return definition
-                .replace(new RegExp(`interface ${title}`, "i"), `interface ${title}`)
+                .replace(new RegExp(`interface ${title}`, "i"), interfaceHeader)
                 // Fix property to method: name -> name()
                 .replace(/(\w+):(.*;)/g, "$1():$2");
         });
