@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/JXA-userland/JXA/compare/v1.3.6...v1.4.0) (2025-04-06)
+
+
+### Features
+
+* Support inherit by very hacky way ([#60](https://github.com/JXA-userland/JXA/issues/60)) ([285331a](https://github.com/JXA-userland/JXA/commit/285331abb98b015a6b0d0ebc6d918632f4f26372))
+
+
+
+
+
 ## [1.3.6](https://github.com/JXA-userland/JXA/compare/v1.3.5...v1.3.6) (2022-08-21)
 
 
